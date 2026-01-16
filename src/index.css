@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fdfaf1;
+  --color-ink: #2c3e50;
+  --color-pencil: #5d6d7e;
+  --color-scrapbook-bg: #e5e1d8;
+  --color-highlighter-pink: #ffadad;
+  --color-highlighter-yellow: #fdffb6;
+  --color-highlighter-blue: #9bf6ff;
+  --color-highlighter-green: #caffbf;
+
+  --font-handwritten: "Architects Daughter", cursive;
+  --font-doodle: "Gochi Hand", cursive;
+  --font-note: "Patrick Hand", cursive;
+  --font-header: "Caveat", cursive;
+  --font-scrapbook: "Indie Flower", cursive;
+}
+
+:root {
+  font-family: "Patrick Hand", cursive;
+  color: var(--color-ink);
+  background-color: var(--color-scrapbook-bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(#d1ccc0 1px, transparent 1px),
+    linear-gradient(to right, #e5e1d8 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e1d8 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom Utilities */
+.paper-sheet {
+  @apply relative bg-paper shadow-xl p-8 transform transition-transform;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+  background-size: 100% 2.5rem;
+}
+
+.torn-edge {
+  clip-path: polygon(0% 0%, 100% 0%, 98% 5%, 100% 10%, 97% 15%, 100% 20%, 98% 25%, 100% 30%, 97% 35%, 100% 40%, 99% 45%, 100% 50%, 98% 55%, 100% 60%, 97% 65%, 100% 70%, 98% 75%, 100% 80%, 97% 85%, 100% 90%, 99% 95%, 100% 100%, 0% 100%, 2% 95%, 0% 90%, 3% 85%, 0% 80%, 2% 75%, 0% 70%, 3% 65%, 0% 60%, 1% 55%, 0% 50%, 2% 45%, 0% 40%, 3% 35%, 0% 30%, 2% 25%, 0% 20%, 3% 15%, 0% 10%, 2% 5%);
+}
+
+.polaroid {
+  @apply bg-white p-3 pb-12 shadow-md inline-block;
+  border: 1px solid #ddd;
+}
+
+.tape {
+  @apply absolute bg-white/40 backdrop-blur-[1px] w-24 h-8;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sticky-note {
+  @apply p-4 shadow-md bg-yellow-100 rotate-2 text-ink;
+}
+
+.scribble {
+  font-family: 'Gochi Hand', cursive;
+  color: #3498db;
+}
+
+.pattern-paper {
+  background-image: radial-gradient(#ffffff 15%, transparent 16%), radial-gradient(#ffffff 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}

@@ -1,0 +1,29 @@
+{
+    "images": [
+        {
+            "key": "paper_texture",
+            "description": "A high-quality white/off-white crumpled paper texture for the 'sheet' backgrounds.",
+            "placeholder_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAbCyLRcQ3pGwGsuInA_Ic8oGQ3zBab7EY1J_cm8tkOM_5hKvNFRR2tbsjSMaflIUsRK3MPAn8vvOg94xxO00aNmcimL5_fbE2CMFg9iqbeNN-Biia_TPEKUnyXpyu0UfOzqcfFMAzWrFQCRCGyE6lHcZLzY_lgw11kN89ZCLQ8Vvomp1u4xD-8Zv65LRDMVx8_vfMWJo-xLG1lq0qm2kD9xZCLmrJ_bNvFviJyBxMJOMIbC3ckJZDi4lP-xtzLpx_yXIhqB8Pahuk6",
+            "usage": "Background for torn paper headers and cards."
+        },
+        {
+            "key": "craft_paper_texture",
+            "description": "A brown/tan craft paper texture.",
+            "placeholder_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAYh9ZgdAYVurp2sr2ceBl3xBnAOVu0qb6ty-ABod9QTcagTE-Dw61tJ4WeRgwjrFjY-f8UqEunogi-Z1GyzCOafLEQ9z8hvyTKtjD93XoHRJvVCHYEytdf6rdz-qFFyC2lgJNwCgfP8OzMx36tiv2LsivVcrzs8VPM9pcvkjdnWcQ3umLxbY0FRwsR0YeYY7vaWyXRHCY-LEFTXRYfHIxNiBRhoZadU_9gYszXOd5PJI14BIdINozGEguHnphxwYsW06VrqSh2YPIg",
+            "usage": "Background for the 'AI Toolbox' section."
+        },
+        {
+            "key": "luna_avatar",
+            "description": "A photo of Luna (preferably with bunny ears as per design).",
+            "placeholder_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCoEbVQQC3V8n1HIGIbDv6cS9gs72jZccFowdcyk2s2r6JH7YSFmSYUrgWd3QKVOhtZIX-5iESTIi9uyjCn1wBPhaa2o0_q5LSJUuCOmYXePstNHcU2DsiMpBXYsjm62RYBtxoV6tJR4m7UeIxaj6tCF_OdWnP3xc8wLWbDrVKbdI3xBTNY_ZoqQjkQybeOll4VTKScSC3uFQoWi-q0__4ecIvthNT8reQCvlvAMAAv_OkeidmVkvfqKKwV0PDlz-tmNrwTpfpBcBrW",
+            "usage": "Home page main polaroid."
+        },
+        {
+            "key": "wayne_cat",
+            "description": "A photo of Wayne the cat.",
+            "placeholder_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBBRkbybPm15O7f6OgYUkP0Qal1OAhZ2_o4BNY957B_szE-IISBhUNngot4GcmK0itFHi5jMK98QJIN_GEf2rh_euhF-IVq0jYzaVXBdBgSRJWWkvh4kjjPzZgwYDcbOobCtI21ftORbHklAiN1Sg6FIU1w-BGhQfaqczeJ3szDLr34iN8v9WyeQ-za05EY9WziPs2bkvG5CMaNwYOgTcSm2ySergu4MRd02UxvHtrUNcGfrp7QJDOANxYQnp033bG7CWEbcbY9bo9x",
+            "usage": "Wayne's Wisdom section."
+        }
+    ],
+    "instructions": "Please provide these images. You can place them in the 'public/assets' folder and I will update the code to reference them relatively."
+}
