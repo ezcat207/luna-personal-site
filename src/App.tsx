@@ -15,7 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
-          <Route path="life" element={<Life />} />
+          <Route path="blog" element={<Life />} />
           <Route path="blog/gemini-report" element={<GeminiReport />} />
           <Route path="blog/superlinear" element={<Superlinear />} />
         </Route>

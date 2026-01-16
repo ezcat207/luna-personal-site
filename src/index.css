@@ -15,6 +15,10 @@
   --font-note: "Patrick Hand", cursive;
   --font-header: "Caveat", cursive;
   --font-scrapbook: "Indie Flower", cursive;
+  --font-marker: "Permanent Marker", cursive;
+
+  --shadow-lifted: 5px 5px 15px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.05);
+  --shadow-deep: 10px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 :root {

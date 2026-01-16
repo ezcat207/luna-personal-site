@@ -11,7 +11,7 @@ const Navbar = () => {
         { name: 'Home', path: '/', color: 'bg-highlighter-pink', rotate: '-rotate-2' },
         { name: 'Portfolio', path: '/portfolio', color: 'bg-highlighter-yellow', rotate: 'rotate-1' },
         { name: 'Future', path: '/future', color: 'bg-paper', rotate: '-rotate-1' },
-        { name: 'Life', path: '/life', color: 'bg-highlighter-green', rotate: 'rotate-2' },
+        { name: 'Blog', path: '/blog', color: 'bg-highlighter-green', rotate: 'rotate-2' },
     ];
 
     return (

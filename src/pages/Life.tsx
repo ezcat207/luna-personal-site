@@ -8,10 +8,9 @@ const Life = () => {
                 <div className="inline-block relative">
                     <div className="tape -top-6 left-1/2 -translate-x-1/2 w-48 rotate-[-2deg]"></div>
                     <div className="paper-sheet rotate-1 max-w-3xl mx-auto">
-                        <h1 className="font-header text-6xl text-ink mb-6">The Human Behind the Code</h1>
+                        <h1 className="font-header text-6xl text-ink mb-6">Luna's Blog</h1>
                         <p className="font-handwritten text-xl text-pencil leading-relaxed max-w-2xl mx-auto">
-                            Hi! I'm Luna. I'm 8 years old, and I love building things.
-                            When I'm not coding, I'm usually playing badminton, practicing piano, or reading about the universe.
+                            My thoughts, stories, and research notes. 📝
                         </p>
                     </div>
                 </div>
