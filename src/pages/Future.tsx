@@ -128,8 +128,43 @@ const Future = () => {
                 </div>
             </div>
 
+
+
+            {/* Photo Scrapbook Section */}
+            <section className="relative mt-24 max-w-6xl mx-auto px-4">
+                <h3 className="font-header text-4xl text-center mb-16 relative">
+                    <span className="relative z-10 bg-white px-4 border-2 border-dashed border-gray-300 transform -rotate-1 inline-block p-2 shadow-sm">
+                        Classroom Memories 📸
+                    </span>
+                    <div className="absolute top-1/2 left-0 w-full h-1 bg-pencil/10 -z-10"></div>
+                </h3>
+
+                <div className="flex flex-wrap justify-center gap-12 md:gap-16 relative z-10">
+                    {/* Wayne Portrait */}
+                    <div className="polaroid rotate-[-3deg] hover:rotate-0 transition-transform duration-300">
+                        <div className="tape -top-3 left-1/2 -translate-x-1/2 w-24"></div>
+                        <img src="/assets/wayne-avatar.jpg" alt="Wayne" className="w-64 h-64 object-cover filter sepia-[0.2]" />
+                        <p className="font-handwritten text-center text-xl mt-4 text-ink">The Architect 🐈</p>
+                    </div>
+
+                    {/* Teaching 1 */}
+                    <div className="polaroid rotate-2 hover:rotate-0 transition-transform duration-300 mt-8 md:mt-0">
+                        <div className="tape -top-3 left-10 w-24 rotate-[-45deg] opacity-80"></div>
+                        <img src="/assets/teaching-1.jpg" alt="In the classroom" className="w-64 h-64 object-cover" />
+                        <p className="font-handwritten text-center text-xl mt-4 text-ink">Classroom Vibes 🎓</p>
+                    </div>
+
+                    {/* Teaching 2 */}
+                    <div className="polaroid rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+                        <div className="tape -top-3 right-10 w-24 rotate-[20deg] opacity-80"></div>
+                        <img src="/assets/teaching-2.jpg" alt="Whiteboard session" className="w-64 h-64 object-cover" />
+                        <p className="font-handwritten text-center text-xl mt-4 text-ink">Whiteboard Magic ✨</p>
+                    </div>
+                </div>
+            </section>
+
             {/* Reading Stash */}
-            <section className="relative mt-12 px-4 max-w-5xl mx-auto">
+            <section className="relative mt-24 px-4 max-w-5xl mx-auto">
                 <div className="tape top-[-20px] left-10 z-10 rotate-[-15deg]"></div>
                 <div className="paper-sheet rotate-[0.5deg]">
                     <h3 className="font-header text-4xl mb-8 flex items-center gap-4">
@@ -167,7 +202,7 @@ const Future = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 };
 
