@@ -38,7 +38,7 @@ const Home = () => {
                         <div className="polaroid-frame bg-white max-w-xs mx-auto md:mr-0 z-20">
                             <div className="aspect-square bg-gray-100 overflow-hidden border border-gray-200 relative">
                                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                                    <img alt="Luna Avatar" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoEbVQQC3V8n1HIGIbDv6cS9gs72jZccFowdcyk2s2r6JH7YSFmSYUrgWd3QKVOhtZIX-5iESTIi9uyjCn1wBPhaa2o0_q5LSJUuCOmYXePstNHcU2DsiMpBXYsjm62RYBtxoV6tJR4m7UeIxaj6tCF_OdWnP3xc8wLWbDrVKbdI3xBTNY_ZoqQjkQybeOll4VTKScSC3uFQoWi-q0__4ecIvthNT8reQCvlvAMAAv_OkeidmVkvfqKKwV0PDlz-tmNrwTpfpBcBrW" />
+                                    <img alt="Luna Avatar" className="w-full h-full object-cover" src="/assets/luna-avatar.jpg" />
                                 </div>
                             </div>
                             <div className="mt-4 text-center font-marker text-ink text-xl rotate-1">Me &amp; My Bunny Ears 🐰</div>
@@ -95,7 +95,7 @@ const Home = () => {
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-sm border border-red-700 z-20"></div>
                         <div className="flex flex-row items-start gap-4">
                             <div className="shrink-0 w-24 h-24 border-4 border-white shadow-sm rotate-[-5deg] overflow-hidden bg-gray-200">
-                                <img alt="Wayne the Cat" className="w-full h-full object-cover grayscale sepia-[0.4] contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBRkbybPm15O7f6OgYUkP0Qal1OAhZ2_o4BNY957B_szE-IISBhUNngot4GcmK0itFHi5jMK98QJIN_GEf2rh_euhF-IVq0jYzaVXBdBgSRJWWkvh4kjjPzZgwYDcbOobCtI21ftORbHklAiN1Sg6FIU1w-BGhQfaqczeJ3szDLr34iN8v9WyeQ-za05EY9WziPs2bkvG5CMaNwYOgTcSm2ySergu4MRd02UxvHtrUNcGfrp7QJDOANxYQnp033bG7CWEbcbY9bo9x" />
+                                <img alt="Wayne the Cat" className="w-full h-full object-cover grayscale sepia-[0.4] contrast-125" src="/assets/wayne-avatar.jpg" />
                             </div>
                             <div>
                                 <h4 className="font-marker text-2xl text-ink mb-2">Wayne's Wisdom 🐱</h4>

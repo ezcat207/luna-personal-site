@@ -47,7 +47,7 @@ const Future = () => {
                         <img
                             alt="Wayne"
                             className="w-72 h-72 object-cover grayscale sepia-[0.3]"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBRkbybPm15O7f6OgYUkP0Qal1OAhZ2_o4BNY957B_szE-IISBhUNngot4GcmK0itFHi5jMK98QJIN_GEf2rh_euhF-IVq0jYzaVXBdBgSRJWWkvh4kjjPzZgwYDcbOobCtI21ftORbHklAiN1Sg6FIU1w-BGhQfaqczeJ3szDLr34iN8v9WyeQ-za05EY9WziPs2bkvG5CMaNwYOgTcSm2ySergu4MRd02UxvHtrUNcGfrp7QJDOANxYQnp033bG7CWEbcbY9bo9x"
+                            src="/assets/wayne-avatar.jpg"
                         />
                         <div className="mt-4 text-center">
                             <p className="font-doodle text-2xl font-bold text-ink">Mentor: Wayne</p>
@@ -111,6 +111,19 @@ const Future = () => {
                             <span className="font-bold">Neural Nets</span>
                             <span className="text-[10px]">Python Mastery req.</span>
                         </div>
+                    </div>
+                </div>
+
+                {/* Teaching Snapshots */}
+                <div className="absolute right-4 top-4 hidden xl:block">
+                    <div className="polaroid rotate-6 scale-75 hover:scale-100 transition-transform duration-300 absolute -right-20 top-20 z-20">
+                        <img src="/assets/teaching-1.jpg" alt="Teaching Moment" className="w-40 h-40 object-cover" />
+                        <p className="font-handwritten text-center text-xs mt-2">Classroom Vibes</p>
+                    </div>
+                    <div className="polaroid -rotate-3 scale-75 hover:scale-100 transition-transform duration-300 absolute -right-20 top-60 z-10">
+                        <div className="tape -top-3 left-10 w-20"></div>
+                        <img src="/assets/teaching-2.jpg" alt="Teaching Moment" className="w-40 h-40 object-cover" />
+                        <p className="font-handwritten text-center text-xs mt-2">Whiteboard Magic</p>
                     </div>
                 </div>
             </div>
