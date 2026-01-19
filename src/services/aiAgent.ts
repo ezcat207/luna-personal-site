@@ -7,22 +7,6 @@
 
 const API_BASE_URL = "https://space.ai-builders.com/backend/v1";
 
-interface ToolCall {
-    id: string;
-    type: string;
-    function: {
-        name: string;
-        arguments: string;
-    };
-}
-
-interface Message {
-    role: 'user' | 'assistant' | 'system' | 'tool';
-    content: string | null;
-    tool_calls?: ToolCall[];
-    id?: string;
-    name?: string;
-}
 
 // Tool 1: Web Search
 async function webSearch(query: string, apiKey: string) {
@@ -126,7 +110,7 @@ export async function runAgent(userMessage: string, onUpdate?: (msg: string) => 
         });
 
         if (!response.ok) {
-            const errData = await response.json();
+            const errData = await response.json().catch(() => ({ detail: response.statusText }));
             throw new Error(errData.detail || `AI call failed: ${response.statusText}`);
         }
 

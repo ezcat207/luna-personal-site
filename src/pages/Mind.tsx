@@ -34,17 +34,20 @@ const Mind = () => {
         setThinkingStatus('Bunny is thinking... 🐰');
 
         try {
-            const answer = await runAgent(input, (status) => {
-                setThinkingStatus(status);
-            });
-
+            const answer = await runAgent(input, (status) => setThinkingStatus(status));
             setMessages(prev => [...prev, { role: 'assistant', content: answer }]);
-        } catch (err) {
-            console.error(err);
-            setMessages(prev => [...prev, { role: 'assistant', content: `Oops! My brain hit a snag: ${(err as Error).message}. Check your console and .env!` }]);
+        } catch (error) {
+            console.error('Agent Error:', error);
+            let errorMsg = (error as Error).message;
+            if (errorMsg.includes('VITE_SUPER_MIND_API_KEY')) {
+                errorMsg = "⚠️ I can't find my API Key! Please make sure VITE_SUPER_MIND_API_KEY is set in your Vercel Environment Variables.";
+            } else if (errorMsg.includes('Failed to fetch')) {
+                errorMsg = "🌐 Connection lost! It might be a CORS issue or a network glitch. (Internal hint: Is VITE_SUPER_MIND_API_KEY set correctly?)";
+            }
+            setMessages(prev => [...prev, { role: 'assistant', content: `Oops! My brain hit a snag: ${errorMsg}` }]);
         } finally {
             setIsLoading(false);
-            setThinkingStatus('');
+            setThinkingStatus("");
         }
     };
 
