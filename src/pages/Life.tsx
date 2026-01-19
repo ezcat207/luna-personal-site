@@ -19,60 +19,28 @@ const Life = () => {
             {/* Timeline Section */}
             <div className="relative border-l-4 border-dashed border-gray-300 ml-4 md:ml-12 pl-8 md:pl-12 pb-24 space-y-16">
 
-                {/* Entry 5: Jan 10 */}
+                {/* Entry 2: Oct 2025 */}
                 <TimelineItem
-                    date="Jan 10, 2026"
-                    title="I Built an AI Agent! (Mr. Wayne)"
-                    desc="Meeting my new AI friends: Mr. Wayne (Teacher) and Luna (Student)."
-                    link="/blog/building-agents"
-                    color="bg-pink-50"
-                    rotate="rotate-1"
+                    date="Oct 2025"
+                    title="The AI Architect Report"
+                    desc="Gemini Canvas, NotebookLM, and AI Quests. How I learned to co-build with AI."
+                    link="/blog/gemini-report"
+                    color="bg-blue-50"
+                    rotate="rotate-[-1deg]"
                     emoji="🤖"
                 />
 
-                {/* Entry 4: Jan 05 */}
-                <TimelineItem
-                    date="Jan 05, 2026"
-                    title="Quest Completed: Market Marshes"
-                    desc="Saving a town from floods using AI. Responsible AI is hard!"
-                    link="/blog/ai-quests"
-                    color="bg-green-50"
-                    rotate="rotate-[-1deg]"
-                    emoji="🌍"
-                />
-
-                {/* Entry 3: Dec 28 */}
-                <TimelineItem
-                    date="Dec 28, 2025"
-                    title="My Second Brain: NotebookLM"
-                    desc="Chatting with my library. It feels like talking to a family of books."
-                    link="/blog/notebooklm"
-                    color="bg-blue-50"
-                    rotate="rotate-2"
-                    emoji="🧠"
-                />
-
-                {/* Entry 2: Dec 24 */}
-                <TimelineItem
-                    date="Dec 24, 2025"
-                    title="New Tools: Gemini & Canvas"
-                    desc="Building a fireworks generator with Gemini Canvas. Mind blown!"
-                    link="/blog/gemini-canvas"
-                    color="bg-yellow-50"
-                    rotate="rotate-[-2deg]"
-                    emoji="🎨"
-                />
-
-                {/* Entry 1: Dec 15 */}
+                {/* Entry 1: Dec 2025 */}
                 <TimelineItem
                     date="Dec 15, 2025"
-                    title="What is Superlinear?"
-                    desc="Learning why 1.1 is so much bigger than 1. The start of it all."
-                    link="/blog/superlinear-start"
-                    color="bg-gray-50"
+                    title="The Superlinear Path"
+                    desc="Learning why 1 + 1 = 10. The start of my journey."
+                    link="/blog/superlinear"
+                    color="bg-yellow-50"
                     rotate="rotate-1"
-                    emoji="📈"
+                    emoji="🚀"
                 />
+
             </div>
         </div>
     );

@@ -38,7 +38,7 @@ const Home = () => {
                         <div className="polaroid-frame bg-white max-w-xs mx-auto md:mr-0 z-20">
                             <div className="aspect-square bg-gray-100 overflow-hidden border border-gray-200 relative">
                                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                                    <img alt="Luna Avatar" className="w-full h-full object-cover" src="/assets/luna-avatar.jpg" />
+                                    <img alt="Luna Avatar" className="w-full h-full object-cover" src="/assets/luna-avatar.png" />
                                 </div>
                             </div>
                             <div className="mt-4 text-center font-marker text-ink text-xl rotate-1">Me &amp; My Bunny Ears 🐰</div>

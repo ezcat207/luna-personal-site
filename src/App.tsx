@@ -4,12 +4,10 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Future from './pages/Future';
 import Life from './pages/Life';
+import Mind from './pages/Mind';
 
-import SuperlinearStart from './pages/blog/SuperlinearStart';
-import GeminiCanvas from './pages/blog/GeminiCanvas';
-import NotebookLM from './pages/blog/NotebookLM';
-import AIQuests from './pages/blog/AIQuests';
-import BuildingAgents from './pages/blog/BuildingAgents';
+import GeminiReport from './pages/blog/GeminiReport';
+import Superlinear from './pages/blog/Superlinear';
 
 function App() {
   return (
@@ -19,12 +17,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
+          <Route path="mind" element={<Mind />} />
           <Route path="blog" element={<Life />} />
-          <Route path="blog/superlinear-start" element={<SuperlinearStart />} />
-          <Route path="blog/gemini-canvas" element={<GeminiCanvas />} />
-          <Route path="blog/notebooklm" element={<NotebookLM />} />
-          <Route path="blog/ai-quests" element={<AIQuests />} />
-          <Route path="blog/building-agents" element={<BuildingAgents />} />
+          <Route path="blog/superlinear" element={<Superlinear />} />
+          <Route path="blog/gemini-report" element={<GeminiReport />} />
         </Route>
       </Routes>
     </Router>
