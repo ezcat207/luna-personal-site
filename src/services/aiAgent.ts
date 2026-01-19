@@ -1,24 +1,18 @@
-
 /**
  * Bunny AI Agent Service
  * This service handles the agentic loop and tool calls directly in the frontend.
- * Eliminates the need for a separate Python backend.
+ * It routes requests through /api/chat (Vercel proxy) to avoid CORS issues.
  */
 
-const API_BASE_URL = "https://space.ai-builders.com/backend/v1";
-
-
 // Tool 1: Web Search
-async function webSearch(query: string, apiKey: string) {
+async function webSearch(query: string) {
     console.log(`[Agent] Decided to call tool: 'web_search' with query: "${query}"`);
     try {
-        const response = await fetch(`${API_BASE_URL}/search/`, {
+        const response = await fetch('/api/chat', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
+                path: '/search/',
                 keywords: [query],
                 max_results: 3
             })
@@ -34,7 +28,6 @@ async function webSearch(query: string, apiKey: string) {
 async function readPage(url: string) {
     console.log(`[Agent] Decided to call tool: 'read_page' with url: "${url}"`);
     try {
-        // Note: Using a proxy or direct fetch depending on target site's CORS
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Failed to read page: ${response.statusText}`);
         const html = await response.text();
@@ -48,7 +41,7 @@ async function readPage(url: string) {
     }
 }
 
-// Tools Definition (Matching Python Reference)
+// Tools Definition
 const tools = [
     {
         "type": "function",
@@ -81,12 +74,6 @@ const tools = [
 ];
 
 export async function runAgent(userMessage: string, onUpdate?: (msg: string) => void) {
-    const apiKey = import.meta.env.VITE_SUPER_MIND_API_KEY;
-
-    if (!apiKey || apiKey === "your_api_key_here") {
-        throw new Error("VITE_SUPER_MIND_API_KEY is not set in .env. Please add your key!");
-    }
-
     const messages: any[] = [
         { role: 'user', content: userMessage }
     ];
@@ -95,13 +82,11 @@ export async function runAgent(userMessage: string, onUpdate?: (msg: string) => 
     for (let turn = 0; turn < 10; turn++) {
         console.log(`--- Agent Turn ${turn} ---`);
 
-        const response = await fetch(`${API_BASE_URL}/chat/completions`, {
+        const response = await fetch('/api/chat', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
+                path: '/chat/completions',
                 model: "gpt-5",
                 messages: messages,
                 tools: tools,
@@ -125,7 +110,7 @@ export async function runAgent(userMessage: string, onUpdate?: (msg: string) => 
 
                 if (toolCall.function.name === 'web_search') {
                     if (onUpdate) onUpdate(`🐰 Searching for: ${args.query}...`);
-                    const result = await webSearch(args.query, apiKey);
+                    const result = await webSearch(args.query);
                     toolResult = JSON.stringify(result);
                 } else if (toolCall.function.name === 'read_page') {
                     if (onUpdate) onUpdate(`🐰 Visiting: ${args.url}...`);
