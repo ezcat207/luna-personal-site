@@ -7,12 +7,15 @@ interface Message {
     content: string;
 }
 
+import { runAgent } from '../services/aiAgent';
+
 const Mind = () => {
     const [messages, setMessages] = useState<Message[]>([
         { role: 'assistant', content: "Hi! I'm your Bunny Universe AI assistant. I can search the web and read pages to help you explore. What's on your mind?" }
     ]);
     const [input, setInput] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [thinkingStatus, setThinkingStatus] = useState<string>('');
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -28,25 +31,20 @@ const Mind = () => {
         setMessages(prev => [...prev, userMsg]);
         setInput('');
         setIsLoading(true);
+        setThinkingStatus('Bunny is thinking... 🐰');
 
         try {
-            const response = await fetch('http://localhost:8000/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    user_message: input,
-                    history: messages
-                })
+            const answer = await runAgent(input, (status) => {
+                setThinkingStatus(status);
             });
 
-            if (!response.ok) throw new Error('Failed to reach AI brain');
-
-            const data = await response.json();
-            setMessages(prev => [...prev, { role: 'assistant', content: data.content }]);
+            setMessages(prev => [...prev, { role: 'assistant', content: answer }]);
         } catch (err) {
-            setMessages(prev => [...prev, { role: 'assistant', content: "Oops! My brain hit a snag. Is the backend running?" }]);
+            console.error(err);
+            setMessages(prev => [...prev, { role: 'assistant', content: `Oops! My brain hit a snag: ${(err as Error).message}. Check your console and .env!` }]);
         } finally {
             setIsLoading(false);
+            setThinkingStatus('');
         }
     };
 
@@ -92,7 +90,7 @@ const Mind = () => {
                         <div className="flex justify-start">
                             <div className="bg-white p-4 shadow-sm -rotate-1 border-l-4 border-pink-400 flex items-center gap-3">
                                 <Loader2 className="animate-spin text-pink-400" size={20} />
-                                <span className="font-handwritten text-pencil italic">Gathering brain cells...</span>
+                                <span className="font-handwritten text-pencil italic">{thinkingStatus || "Gathering brain cells..."}</span>
                             </div>
                         </div>
                     )}

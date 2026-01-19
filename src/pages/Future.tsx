@@ -1,4 +1,7 @@
-
+import wayneAvatar from '../assets/wayne-avatar.jpg';
+import teaching0 from '../assets/teaching-0.jpg';
+import teaching1 from '../assets/teaching-1.jpg';
+import teaching2 from '../assets/teaching-2.jpg';
 
 const Future = () => {
     return (
@@ -42,13 +45,11 @@ const Future = () => {
 
                 {/* Mentor Section */}
                 <div className="lg:col-span-5 relative space-y-12">
-                    <div className="polaroid rotate-[-3deg] hover:rotate-0 transition-transform cursor-pointer mx-auto lg:mx-0 block">
+                    <div className="polaroid rotate-[-3deg] hover:rotate-0 transition-transform cursor-pointer mx-auto lg:mx-0 block w-72">
                         <div className="tape -top-4 left-1/2 -translate-x-1/2 rotate-1 z-10"></div>
-                        <img
-                            alt="Wayne"
-                            className="w-72 h-72 object-cover grayscale sepia-[0.3]"
-                            src="/assets/wayne-avatar.jpg"
-                        />
+                        <div className="aspect-square w-full overflow-hidden bg-gray-50 mb-4">
+                            <img alt="Wayne the Cat" className="w-full h-full object-cover" src={wayneAvatar} />
+                        </div>
                         <div className="mt-4 text-center">
                             <p className="font-doodle text-2xl font-bold text-ink">Mentor: Wayne</p>
                             <p className="font-handwritten text-sm text-pencil">"The Architect"</p>
@@ -117,12 +118,12 @@ const Future = () => {
                 {/* Teaching Snapshots */}
                 <div className="absolute right-4 top-4 hidden xl:block">
                     <div className="polaroid rotate-6 scale-75 hover:scale-100 transition-transform duration-300 absolute -right-20 top-20 z-20">
-                        <img src="/assets/teaching-1.jpg" alt="Teaching Moment" className="w-40 h-40 object-cover" />
+                        <img src={teaching1} alt="Teaching Moment" className="w-40 h-40 object-cover" />
                         <p className="font-handwritten text-center text-xs mt-2">Classroom Vibes</p>
                     </div>
                     <div className="polaroid -rotate-3 scale-75 hover:scale-100 transition-transform duration-300 absolute -right-20 top-60 z-10">
                         <div className="tape -top-3 left-10 w-20"></div>
-                        <img src="/assets/teaching-2.jpg" alt="Teaching Moment" className="w-40 h-40 object-cover" />
+                        <img src={teaching2} alt="Teaching Moment" className="w-40 h-40 object-cover" />
                         <p className="font-handwritten text-center text-xs mt-2">Whiteboard Magic</p>
                     </div>
                 </div>
@@ -139,26 +140,32 @@ const Future = () => {
                     <div className="absolute top-1/2 left-0 w-full h-1 bg-pencil/10 -z-10"></div>
                 </h3>
 
-                <div className="flex flex-wrap justify-center gap-12 md:gap-16 relative z-10">
-                    {/* Wayne Portrait */}
-                    <div className="polaroid rotate-[-3deg] hover:rotate-0 transition-transform duration-300">
-                        <div className="tape -top-3 left-1/2 -translate-x-1/2 w-24"></div>
-                        <img src="/assets/wayne-avatar.jpg" alt="Wayne" className="w-64 h-64 object-cover filter sepia-[0.2]" />
-                        <p className="font-handwritten text-center text-xl mt-4 text-ink">The Architect 🐈</p>
+                <div className="flex flex-wrap justify-center items-start gap-8 md:gap-12 relative z-10 px-4">
+                    {/* Teaching 0 - NEW */}
+                    <div className="polaroid w-[280px] rotate-3 hover:rotate-0 transition-transform duration-300">
+                        <div className="tape top-[-10px] left-1/3 w-20 rotate-12 opacity-70"></div>
+                        <div className="aspect-square w-full overflow-hidden bg-gray-50 mb-4">
+                            <img src={teaching0} alt="Mentoring session" className="w-full h-full object-cover" />
+                        </div>
+                        <p className="font-handwritten text-center text-xl text-ink">Mentor Moment 💡</p>
                     </div>
 
                     {/* Teaching 1 */}
-                    <div className="polaroid rotate-2 hover:rotate-0 transition-transform duration-300 mt-8 md:mt-0">
+                    <div className="polaroid w-[280px] rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
                         <div className="tape -top-3 left-10 w-24 rotate-[-45deg] opacity-80"></div>
-                        <img src="/assets/teaching-1.jpg" alt="In the classroom" className="w-64 h-64 object-cover" />
-                        <p className="font-handwritten text-center text-xl mt-4 text-ink">Classroom Vibes 🎓</p>
+                        <div className="aspect-square w-full overflow-hidden bg-gray-50 mb-4">
+                            <img src={teaching1} alt="In the classroom" className="w-full h-full object-cover" />
+                        </div>
+                        <p className="font-handwritten text-center text-xl text-ink">Classroom Vibes 🎓</p>
                     </div>
 
                     {/* Teaching 2 */}
-                    <div className="polaroid rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+                    <div className="polaroid w-[280px] rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
                         <div className="tape -top-3 right-10 w-24 rotate-[20deg] opacity-80"></div>
-                        <img src="/assets/teaching-2.jpg" alt="Whiteboard session" className="w-64 h-64 object-cover" />
-                        <p className="font-handwritten text-center text-xl mt-4 text-ink">Whiteboard Magic ✨</p>
+                        <div className="aspect-square w-full overflow-hidden bg-gray-50 mb-4">
+                            <img src={teaching2} alt="Whiteboard session" className="w-full h-full object-cover" />
+                        </div>
+                        <p className="font-handwritten text-center text-xl text-ink">Whiteboard Magic ✨</p>
                     </div>
                 </div>
             </section>
