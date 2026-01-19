@@ -19,6 +19,17 @@ const Life = () => {
             {/* Timeline Section */}
             <div className="relative border-l-4 border-dashed border-gray-300 ml-4 md:ml-12 pl-8 md:pl-12 pb-24 space-y-16">
 
+                {/* Entry 3: Jan 2026 */}
+                <TimelineItem
+                    date="Jan 19, 2026"
+                    title="The Mars Bunny Wiki"
+                    desc="Everything you need to know about our long-eared Martian neighbors. A field guide for colonists."
+                    link="/blog/mars-bunny-wiki"
+                    color="bg-orange-50"
+                    rotate="rotate-1"
+                    emoji="🥕"
+                />
+
                 {/* Entry 2: Oct 2025 */}
                 <TimelineItem
                     date="Oct 2025"
