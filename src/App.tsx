@@ -10,6 +10,7 @@ import Mind from './pages/Mind';
 import GeminiReport from './pages/blog/GeminiReport';
 import Superlinear from './pages/blog/Superlinear';
 import MarsBunnyWiki from './pages/blog/MarsBunnyWiki';
+import GenesisMars from './pages/blog/GenesisMars';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
           <Route path="blog/superlinear" element={<Superlinear />} />
           <Route path="blog/gemini-report" element={<GeminiReport />} />
           <Route path="blog/mars-bunny-wiki" element={<MarsBunnyWiki />} />
+          <Route path="blog/genesis-mars" element={<GenesisMars />} />
         </Route>
       </Routes>
     </AnimatePresence>

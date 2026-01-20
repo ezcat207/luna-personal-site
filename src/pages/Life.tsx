@@ -19,6 +19,17 @@ const Life = () => {
             {/* Timeline Section */}
             <div className="relative border-l-4 border-dashed border-gray-300 ml-4 md:ml-12 pl-8 md:pl-12 pb-24 space-y-16">
 
+                {/* Entry 4: Jan 2026 */}
+                <TimelineItem
+                    date="Jan 20, 2026"
+                    title="Genesis on Mars: Crimson Dawn"
+                    desc="A sci-fi short story: The tragedy of the Orion and the beginning of a new era on Mars. Feat. Wayne & Luna."
+                    link="/blog/genesis-mars"
+                    color="bg-red-50"
+                    rotate="rotate-[-2deg]"
+                    emoji="🚀"
+                />
+
                 {/* Entry 3: Jan 2026 */}
                 <TimelineItem
                     date="Jan 19, 2026"
