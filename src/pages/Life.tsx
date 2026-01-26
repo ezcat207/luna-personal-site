@@ -19,6 +19,17 @@ const Life = () => {
             {/* Timeline Section */}
             <div className="relative border-l-4 border-dashed border-gray-300 ml-4 md:ml-12 pl-8 md:pl-12 pb-24 space-y-16">
 
+                {/* Entry 5: Jan 25 2026 */}
+                <TimelineItem
+                    date="Jan 25, 2026"
+                    title="Strategic Radar 📡"
+                    desc="The missing puzzle piece: Real life information and context."
+                    link="/blog/strategic-radar"
+                    color="bg-purple-50"
+                    rotate="rotate-1"
+                    emoji="🧩"
+                />
+
                 {/* Entry 4: Jan 2026 */}
                 <TimelineItem
                     date="Jan 20, 2026"

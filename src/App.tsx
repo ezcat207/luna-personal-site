@@ -11,6 +11,7 @@ import GeminiReport from './pages/blog/GeminiReport';
 import Superlinear from './pages/blog/Superlinear';
 import MarsBunnyWiki from './pages/blog/MarsBunnyWiki';
 import GenesisMars from './pages/blog/GenesisMars';
+import StrategicRadar from './pages/blog/StrategicRadar';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function AnimatedRoutes() {
           <Route path="mind" element={<Mind />} />
           <Route path="blog" element={<Life />} />
           <Route path="blog/superlinear" element={<Superlinear />} />
+          <Route path="blog/strategic-radar" element={<StrategicRadar />} />
           <Route path="blog/gemini-report" element={<GeminiReport />} />
           <Route path="blog/mars-bunny-wiki" element={<MarsBunnyWiki />} />
           <Route path="blog/genesis-mars" element={<GenesisMars />} />
