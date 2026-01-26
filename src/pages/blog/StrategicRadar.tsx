@@ -1,4 +1,10 @@
 import { Link } from 'react-router-dom';
+import strategicRadarBusiness from '../../assets/strategic-radar-business.png';
+import strategicRadarPersonal from '../../assets/strategic-radar-personal.png';
+import strategicRadarDetail from '../../assets/strategic-radar-detail.png';
+import comicStrip1 from '../../assets/comic-strip-1.jpeg';
+import comicStrip2 from '../../assets/comic-strip-2.jpeg';
+import comicStrip3 from '../../assets/comic-strip-3.jpeg';
 
 const StrategicRadar = () => {
     return (
@@ -28,6 +34,23 @@ const StrategicRadar = () => {
                         <p className="font-bold text-ink mt-4">
                             What information? Real life information.
                         </p>
+                    </div>
+
+                    {/* The Journey in Comics */}
+                    <div className="space-y-8 mb-12">
+                        <h3 className="font-header text-3xl text-ink mb-6 text-center border-b-2 border-dotted border-gray-300 pb-2">The Journey in Comics 🎨</h3>
+
+                        <div className="space-y-8 px-4">
+                            <div className="rounded-xl overflow-hidden shadow-md border-4 border-white rotate-2 bg-white transform hover:scale-[1.02] transition-transform duration-300">
+                                <img src={comicStrip1} alt="Development Journey Comic Part 1" className="w-full h-auto" />
+                            </div>
+                            <div className="rounded-xl overflow-hidden shadow-md border-4 border-white rotate-[-1deg] bg-white transform hover:scale-[1.02] transition-transform duration-300">
+                                <img src={comicStrip2} alt="Development Journey Comic Part 2" className="w-full h-auto" />
+                            </div>
+                            <div className="rounded-xl overflow-hidden shadow-md border-4 border-white rotate-1 bg-white transform hover:scale-[1.02] transition-transform duration-300">
+                                <img src={comicStrip3} alt="Development Journey Comic Part 3" className="w-full h-auto" />
+                            </div>
+                        </div>
                     </div>
 
                     {/* The Missing Prompts */}
@@ -79,6 +102,61 @@ const StrategicRadar = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Errors, Trials, and Triumphs */}
+                    <div className="space-y-8">
+                        <h3 className="font-header text-3xl text-ink mb-6 text-center border-b-2 border-dotted border-gray-300 pb-2">Errors, Trials, and Triumphs 🛠️</h3>
+
+                        <div className="bg-red-50 p-6 rounded-lg shadow-sm border-l-4 border-red-400">
+                            <h4 className="font-bold text-lg text-red-800 mb-2">1. The "Connection Refused" Error</h4>
+                            <p className="text-sm"><span className="font-bold">The Issue:</span> Early in testing, we tried to view the web page but got a browser error (ERR_CONNECTION_REFUSED).</p>
+                            <p className="text-sm"><span className="font-bold">The Cause:</span> I had run the automated tests (test_app.py) but forgot to leave the actual uvicorn server running as a background process.</p>
+                            <p className="text-sm"><span className="font-bold">The Fix:</span> Started the server with <code>uvicorn main:app --reload</code>.</p>
+                        </div>
+
+                        <div className="bg-yellow-50 p-6 rounded-lg shadow-sm border-l-4 border-yellow-400">
+                            <h4 className="font-bold text-lg text-yellow-800 mb-2">2. The "Static Content" Limitation</h4>
+                            <p className="text-sm"><span className="font-bold">The Issue:</span> The initial prototype returned the exact same hardcoded "mock" results every time.</p>
+                            <p className="text-sm"><span className="font-bold">The Feedback:</span> User requested: "Make it so that every time you run the scan, it's different."</p>
+                            <p className="text-sm"><span className="font-bold">The Fix:</span> Modified scanner.py to use random.sample() from a pool of topics and findings, creating a dynamic feel for the demo.</p>
+                        </div>
+
+                        <div className="bg-purple-50 p-6 rounded-lg shadow-sm border-l-4 border-purple-400">
+                            <h4 className="font-bold text-lg text-purple-800 mb-2">3. UI Overhaul (The "Radar" Look)</h4>
+                            <p className="text-sm"><span className="font-bold">The Issue:</span> The initial dark-mode UI was generic.</p>
+                            <p className="text-sm"><span className="font-bold">The Feedback:</span> User provided a specific design image ("Strategic Information Radar" with light theme and two distinct sections).</p>
+                            <p className="text-sm"><span className="font-bold">The Fix:</span> Rewrote style.css, updated index.html, and added realistic finding data.</p>
+                        </div>
+
+                        <div className="bg-green-50 p-6 rounded-lg shadow-sm border-l-4 border-green-400">
+                            <h4 className="font-bold text-lg text-green-800 mb-2">4. The Pivot to Real AI</h4>
+                            <p className="text-sm"><span className="font-bold">The Issue:</span> The "mock" data was good for a demo, but the goal was a real tool.</p>
+                            <p className="text-sm"><span className="font-bold">The Fix:</span> Integrated AI Builder Student Portal API and implemented Two-Stage Logic (Search &rarr; Analyze).</p>
+                        </div>
+
+                        <div className="bg-blue-50 p-6 rounded-lg shadow-sm border-l-4 border-blue-400">
+                            <h4 className="font-bold text-lg text-blue-800 mb-2">5. Personalization (The "Cool Stuff" Tab)</h4>
+                            <p className="text-sm"><span className="font-bold">The Issue:</span> The scanner was stuck on "Business Mode".</p>
+                            <p className="text-sm"><span className="font-bold">The Fix:</span> Created interview.md to capture user interests and refactored backend.</p>
+                        </div>
+
+                        <div className="space-y-6 mt-8">
+                            <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white rotate-1">
+                                <img src={strategicRadarBusiness} alt="Strategic Radar Business View" className="w-full h-auto" />
+                                <div className="bg-gray-800 text-white text-xs p-2 text-center">Strategic Radar (Business Mode)</div>
+                            </div>
+                            <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white rotate-[-1deg]">
+                                <img src={strategicRadarPersonal} alt="Strategic Radar Personal View" className="w-full h-auto" />
+                                <div className="bg-gray-800 text-white text-xs p-2 text-center">My Cool Stuff (Personal Mode)</div>
+                            </div>
+                            <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white rotate-1">
+                                <img src={strategicRadarDetail} alt="Strategic Radar Detail View" className="w-full h-auto" />
+                                <div className="bg-gray-800 text-white text-xs p-2 text-center">Broad Scan & Deep Dive Details</div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     {/* Technical Retrospective */}
                     <div className="bg-gray-100 p-6 rounded-lg rotate-[-1deg] shadow-inner">
