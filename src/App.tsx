@@ -13,6 +13,8 @@ import MarsBunnyWiki from './pages/blog/MarsBunnyWiki';
 import GenesisMars from './pages/blog/GenesisMars';
 import StrategicRadar from './pages/blog/StrategicRadar';
 import DadBirthday from './pages/blog/DadBirthday';
+import FandomTriviaV1 from './pages/blog/FandomTriviaV1';
+import FandomTriviaV2 from './pages/blog/FandomTriviaV2';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -31,6 +33,8 @@ function AnimatedRoutes() {
           <Route path="blog/gemini-report" element={<GeminiReport />} />
           <Route path="blog/mars-bunny-wiki" element={<MarsBunnyWiki />} />
           <Route path="blog/genesis-mars" element={<GenesisMars />} />
+          <Route path="blog/fandomtrivia-v1" element={<FandomTriviaV1 />} />
+          <Route path="blog/fandomtrivia-v2" element={<FandomTriviaV2 />} />
         </Route>
       </Routes>
     </AnimatePresence>

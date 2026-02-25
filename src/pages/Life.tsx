@@ -19,6 +19,28 @@ const Life = () => {
             {/* Timeline Section */}
             <div className="relative border-l-4 border-dashed border-gray-300 ml-4 md:ml-12 pl-8 md:pl-12 pb-24 space-y-16">
 
+                {/* Entry 8: Feb 24 2026 */}
+                <TimelineItem
+                    date="Feb 24, 2026"
+                    title="NotebookLM + Antigravity: Scaling Up 🚀"
+                    desc="Trivia for all 7 HP books, random questions, and Supabase auth — like following a treasure map!"
+                    link="/blog/fandomtrivia-v2"
+                    color="bg-amber-50"
+                    rotate="rotate-[-1deg]"
+                    emoji="🗺️"
+                />
+
+                {/* Entry 7: Feb 23 2026 */}
+                <TimelineItem
+                    date="Feb 23, 2026"
+                    title="Building with AI: FandomTrivia Begins ⚡"
+                    desc="Using AI to build a website, fix errors, and add a Harry Potter quiz."
+                    link="/blog/fandomtrivia-v1"
+                    color="bg-purple-50"
+                    rotate="rotate-1"
+                    emoji="⚡"
+                />
+
                 {/* Entry 6: Feb 01 2026 */}
                 <TimelineItem
                     date="Feb 01, 2026"
