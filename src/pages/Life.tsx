@@ -19,6 +19,17 @@ const Life = () => {
             {/* Timeline Section */}
             <div className="relative border-l-4 border-dashed border-gray-300 ml-4 md:ml-12 pl-8 md:pl-12 pb-24 space-y-16">
 
+                {/* Entry 6: Feb 01 2026 */}
+                <TimelineItem
+                    date="Feb 01, 2026"
+                    title="Happy Birthday Dad! 🎂"
+                    desc="Celebrating a classic man and a great coder. A special digital card."
+                    link="/blog/dad-birthday"
+                    color="bg-green-50"
+                    rotate="rotate-[-1deg]"
+                    emoji="🎁"
+                />
+
                 {/* Entry 5: Jan 25 2026 */}
                 <TimelineItem
                     date="Jan 25, 2026"
