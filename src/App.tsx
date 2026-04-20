@@ -15,6 +15,7 @@ import StrategicRadar from './pages/blog/StrategicRadar';
 import DadBirthday from './pages/blog/DadBirthday';
 import FandomTriviaV1 from './pages/blog/FandomTriviaV1';
 import FandomTriviaV2 from './pages/blog/FandomTriviaV2';
+import Roadmap from './pages/Roadmap';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function AnimatedRoutes() {
           <Route path="future" element={<Future />} />
           <Route path="mind" element={<Mind />} />
           <Route path="blog" element={<Life />} />
+          <Route path="roadmap" element={<Roadmap />} />
           <Route path="blog/superlinear" element={<Superlinear />} />
           <Route path="blog/strategic-radar" element={<StrategicRadar />} />
           <Route path="blog/dad-birthday" element={<DadBirthday />} />

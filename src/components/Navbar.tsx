@@ -13,6 +13,7 @@ const Navbar = () => {
         { name: 'Mind', path: '/mind', color: 'bg-highlighter-pink', rotate: 'rotate-[-2deg]' },
         { name: 'Future', path: '/future', color: 'bg-paper', rotate: '-rotate-1' },
         { name: 'Blog', path: '/blog', color: 'bg-highlighter-green', rotate: 'rotate-2' },
+        { name: 'Roadmap', path: '/roadmap', color: 'bg-highlighter-blue', rotate: 'rotate-1' },
     ];
 
     return (
