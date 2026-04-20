@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ExternalLink, BookOpen, Route, Code, Gamepad2, BrainCircuit, ArrowRight, CheckCircle2, AlertCircle, GitBranch, RotateCcw, Languages, Terminal, Briefcase, Globe, Shield } from 'lucide-react';
+import { useState } from 'react';
+import { ExternalLink, BookOpen, Route, Code, Gamepad2, BrainCircuit, ArrowRight, CheckCircle2, AlertCircle, GitBranch, RotateCcw, Languages, Terminal, Briefcase, Globe } from 'lucide-react';
 
 // --- 多语言数据字典 ---
 const DICTIONARY = {
@@ -465,9 +465,9 @@ const DICTIONARY = {
 
 const DecisionTree = ({ t }: { t: any }) => {
   const [currentNodeId, setCurrentNodeId] = useState('n1');
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState<string[]>([]);
 
-  const handleOptionClick = (nextId) => {
+  const handleOptionClick = (nextId: string) => {
     setHistory([...history, currentNodeId]);
     setCurrentNodeId(nextId);
   };
@@ -477,7 +477,7 @@ const DecisionTree = ({ t }: { t: any }) => {
     const prevHistory = [...history];
     const prevNode = prevHistory.pop();
     setHistory(prevHistory);
-    setCurrentNodeId(prevNode);
+    if (prevNode) setCurrentNodeId(prevNode);
   };
 
   const resetTree = () => {
@@ -491,7 +491,7 @@ const DecisionTree = ({ t }: { t: any }) => {
 
   if (isResultNode) {
     const resId = currentNodeId.replace('result_', '');
-    const resourceInfo = t.resources.find(r => r.id === resId);
+    const resourceInfo = t.resources.find((r: any) => r.id === resId);
 
     content = (
       <div className="bg-white rounded-xl shadow-sm border border-green-200 p-8 animate-in fade-in zoom-in duration-300">
@@ -513,7 +513,7 @@ const DecisionTree = ({ t }: { t: any }) => {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-          {resourceInfo.tools.map((tool, idx) => (
+          {resourceInfo.tools.map((tool: any, idx: number) => (
              <a 
                key={idx}
                href={tool.url}
@@ -550,7 +550,7 @@ const DecisionTree = ({ t }: { t: any }) => {
         </div>
         
         <div className="space-y-4">
-          {node.options.map((option, idx) => (
+          {node.options.map((option: any, idx: number) => (
             <button
               key={idx}
               onClick={() => handleOptionClick(option.next)}
@@ -594,7 +594,7 @@ const Timeline = ({ t }: { t: any }) => (
   <div className="space-y-8 animate-in fade-in duration-500">
     <h2 className="text-2xl font-bold text-gray-800 border-b pb-4">{t.ui.journeyTitle}</h2>
     <div className="relative border-l border-gray-200 ml-3 md:ml-6 space-y-12">
-      {t.stages.map((stage) => (
+      {t.stages.map((stage: any) => (
         <div key={stage.id} className="relative pl-8 md:pl-12">
           <div className="absolute -left-4 md:-left-4 bg-white p-1 rounded-full shadow-sm border border-gray-100">
             {stage.icon}
@@ -610,7 +610,7 @@ const Timeline = ({ t }: { t: any }) => (
                   <CheckCircle2 className="w-4 h-4 mr-1 text-green-600" /> {t.ui.keyActions}
                 </h4>
                 <ul className="list-disc list-inside text-gray-600 text-sm space-y-1 ml-1">
-                  {stage.actions.map((action, idx) => (
+                  {stage.actions.map((action: any, idx: number) => (
                     <li key={idx}>{action}</li>
                   ))}
                 </ul>
@@ -634,7 +634,7 @@ const ResourceMatrix = ({ t }: { t: any }) => (
     </div>
     
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {t.resources.map((res, idx) => (
+      {t.resources.map((res: any, idx: number) => (
         <div key={idx} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col transition-all hover:shadow-md hover:border-indigo-300">
           <div className="p-6 flex-grow space-y-4">
             <div className="flex justify-between items-start">
@@ -673,7 +673,7 @@ const ResourceMatrix = ({ t }: { t: any }) => (
           </div>
           
           <div className="bg-gray-50 p-4 border-t border-gray-100 flex flex-wrap gap-3">
-            {res.tools.map((tool, tIdx) => (
+            {res.tools.map((tool: any, tIdx: number) => (
               <a 
                 key={tIdx}
                 href={tool.url}
@@ -691,9 +691,11 @@ const ResourceMatrix = ({ t }: { t: any }) => (
   </div>
 );
 
+type Lang = keyof typeof DICTIONARY;
+
 export default function Roadmap() {
   const [activeTab, setActiveTab] = useState('resources'); 
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState<Lang>('en');
   
   const t = DICTIONARY[lang]; // Current language dictionary
 
