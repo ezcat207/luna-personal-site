@@ -29,6 +29,11 @@ import StrategicRadar from './pages/blog/StrategicRadar';
 import DadBirthday from './pages/blog/DadBirthday';
 import FandomTriviaV1 from './pages/blog/FandomTriviaV1';
 import FandomTriviaV2 from './pages/blog/FandomTriviaV2';
+import AIQuests from './pages/blog/AIQuests';
+import BuildingAgents from './pages/blog/BuildingAgents';
+import GeminiCanvas from './pages/blog/GeminiCanvas';
+import NotebookLM from './pages/blog/NotebookLM';
+import SuperlinearStart from './pages/blog/SuperlinearStart';
 import Roadmap from './pages/Roadmap';
 
 function AppRoutes() {
@@ -69,6 +74,11 @@ function AppRoutes() {
           <Route path="blog/genesis-mars" element={<GenesisMars />} />
           <Route path="blog/fandomtrivia-v1" element={<FandomTriviaV1 />} />
           <Route path="blog/fandomtrivia-v2" element={<FandomTriviaV2 />} />
+          <Route path="blog/ai-quests" element={<AIQuests />} />
+          <Route path="blog/building-agents" element={<BuildingAgents />} />
+          <Route path="blog/gemini-canvas" element={<GeminiCanvas />} />
+          <Route path="blog/notebooklm" element={<NotebookLM />} />
+          <Route path="blog/superlinear-start" element={<SuperlinearStart />} />
         </Route>
       </Routes>
     );
@@ -83,6 +93,19 @@ function AppRoutes() {
         <Route path="luna" element={<LunaHome />} />
         <Route path="luna/:weekNum" element={<LunaEntry />} />
         <Route path="roadmap" element={<Roadmap />} />
+        <Route path="blog/superlinear" element={<Superlinear />} />
+        <Route path="blog/strategic-radar" element={<StrategicRadar />} />
+        <Route path="blog/dad-birthday" element={<DadBirthday />} />
+        <Route path="blog/gemini-report" element={<GeminiReport />} />
+        <Route path="blog/mars-bunny-wiki" element={<MarsBunnyWiki />} />
+        <Route path="blog/genesis-mars" element={<GenesisMars />} />
+        <Route path="blog/fandomtrivia-v1" element={<FandomTriviaV1 />} />
+        <Route path="blog/fandomtrivia-v2" element={<FandomTriviaV2 />} />
+        <Route path="blog/ai-quests" element={<AIQuests />} />
+        <Route path="blog/building-agents" element={<BuildingAgents />} />
+        <Route path="blog/gemini-canvas" element={<GeminiCanvas />} />
+        <Route path="blog/notebooklm" element={<NotebookLM />} />
+        <Route path="blog/superlinear-start" element={<SuperlinearStart />} />
       </Route>
       <Route path="/" element={<WayneLayout />}>
         <Route path="wayne" element={<WayneHome />} />

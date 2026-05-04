@@ -14,6 +14,42 @@ export interface WayneWeek {
 
 export const wayneWeeks: WayneWeek[] = [
   {
+    week: 0,
+    date: '2026-02-24',
+    title: 'Building FandomTrivia: Teaching Real App Development with AI Tools',
+    summary:
+      "Two back-to-back sessions where Luna built a full Harry Potter trivia app — from scratch — using AI as a co-pilot. Day 1: directed AI to scaffold a quiz site, debug errors live, and add a HP question bank. Day 2: scaled to all 7 books using NotebookLM to generate 100 questions, then added Google login with Supabase auth. The live site at fandom-trivia.com is real and still running.",
+    tools: ['Antigravity (AI coding assistant)', 'NotebookLM', 'Supabase', 'Vercel'],
+    resources: [
+      {
+        label: 'Live site: FandomTrivia',
+        url: 'https://www.fandom-trivia.com/',
+      },
+      {
+        label: 'NotebookLM (question generation from uploaded books)',
+        url: 'https://notebooklm.google.com/',
+      },
+      {
+        label: 'Supabase (auth + database, free tier)',
+        url: 'https://supabase.com/',
+      },
+      {
+        label: 'Antigravity (AI coding tool for kids)',
+        url: 'https://antigravity.dev/',
+      },
+    ],
+    whatWeTaught:
+      "Three things across two sessions. First, the AI-as-co-pilot model: Luna directed the AI with natural language instructions ('add a score counter', 'make the question text bigger', 'fix this error') rather than writing code herself. The skill being trained was specification — how to describe what you want precisely enough that a machine can execute it. Second, sourcing and structuring data: we used NotebookLM to upload the HP book summaries and generate 100 trivia questions organized by book. This taught the concept of AI as a specialized research tool, not just a code generator. Third, auth: adding Google login via Supabase showed that 'user accounts' are a solved problem — you don't build them, you integrate a service. That mental model matters for every future project.",
+    whyThisTopic:
+      "Luna wanted to build something real that her friends could actually use. That motivation is rare and worth exploiting fully. A trivia app is achievable in a session but has enough real complexity — data, UI, auth, deployment — that she'd touch all the layers of a real product. Using AI tools meant she could punch above her technical weight and ship something she was proud of, which matters more than whether she wrote the code herself at this stage.",
+    lunaReaction:
+      "She was shocked that the first version worked at all — she kept expecting it to fail. Once it didn't, she immediately wanted to make it bigger ('can we do all 7 books?'). The Google login was the moment she felt like she'd built a 'real' app — not a toy. She texted the link to her friends before the session was over.",
+    parentLesson:
+      "Ship something. An imperfect real product that friends can use is worth 10x a polished demo that lives on your laptop. Luna learned more from her friends trying the app and hitting bugs than from any tutorial. Build the feedback loop first, then optimize.",
+    nextWeekPreview:
+      "The app had a bug: it was pulling from main branch but Vercel was showing a preview from dev. Luna didn't understand why the live site looked different from what she'd just changed. That discrepancy became the seed for the Git/GitHub lesson.",
+  },
+  {
     week: 1,
     date: '2026-05-07',
     title: 'Git vs GitHub: Teaching Version Control Through a Real Broken Project',
