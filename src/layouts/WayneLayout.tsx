@@ -2,6 +2,7 @@ import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Menu, X, BookOpen, Map, Home } from 'lucide-react';
+import { SEOHead } from '../components/SEOHead';
 
 const lunaSubdomain = import.meta.env.PROD
   ? 'https://luna.bunnyuniverse.com'
@@ -122,6 +123,7 @@ const WayneLayout = () => {
   const location = useLocation();
   return (
     <div className="min-h-screen bg-slate-50" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
+      <SEOHead />
       <WayneNav />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         <AnimatePresence mode="wait">

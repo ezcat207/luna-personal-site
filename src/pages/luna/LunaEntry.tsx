@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { getLunaWeekByNumber } from '../../data/lunaWeeks';
+import { LunaEntrySEO } from '../../components/SEOHead';
 
 const Section = ({ emoji, label, children, rotate = 0, delay = 0 }: {
   emoji: string;
@@ -38,6 +39,8 @@ const LunaEntry = () => {
 
   return (
     <div className="max-w-2xl mx-auto space-y-8 px-4 md:px-0">
+      <LunaEntrySEO week={week.week} title={week.title} summary={week.summary} />
+
       {/* Back */}
       <Link to="/luna" className="font-handwritten text-pink-500 hover:text-pink-700 inline-flex items-center gap-1">
         ← My Journey

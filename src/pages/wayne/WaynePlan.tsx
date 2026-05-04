@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
 import { getWayneWeekByNumber, wayneWeeks } from '../../data/wayneWeeks';
+import { WaynePlanSEO } from '../../components/SEOHead';
 
 const lunaSubdomain = import.meta.env.PROD
   ? 'https://luna.bunnyuniverse.com'
@@ -42,6 +43,7 @@ const WaynePlan = () => {
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
+      <WaynePlanSEO week={week.week} title={week.title} summary={week.summary} />
 
       {/* Breadcrumb */}
       <div className="flex items-center gap-1 text-xs text-slate-400">

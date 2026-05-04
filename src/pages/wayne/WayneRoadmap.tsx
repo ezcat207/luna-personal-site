@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ExternalLink, BookOpen, Route, Code, Gamepad2, BrainCircuit, ArrowRight, CheckCircle2, AlertCircle, GitBranch, RotateCcw, Languages, Terminal, Briefcase, Globe } from 'lucide-react';
+import { RoadmapSEO } from '../../components/SEOHead';
 
 // --- 多语言数据字典 ---
 const DICTIONARY = {
@@ -701,6 +702,7 @@ export default function WayneRoadmap() {
 
   return (
     <div className="space-y-8">
+      <RoadmapSEO />
 
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">

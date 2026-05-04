@@ -3,12 +3,14 @@ import Navbar from '../components/Navbar';
 import { Outlet, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CustomCursor from '../components/CustomCursor';
+import { SEOHead } from '../components/SEOHead';
 
 const Layout = () => {
     const location = useLocation();
 
     return (
         <div className="min-h-screen pt-24 font-note text-ink overflow-x-hidden">
+            <SEOHead />
             <CustomCursor />
             <Navbar />
             <main className="max-w-6xl mx-auto px-4 pb-20">
