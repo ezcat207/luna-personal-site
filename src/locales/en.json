@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Bunny Universe",
+    "tagline": "A family learning together with AI"
+  },
+  "nav": {
+    "home": "Home",
+    "plans": "Teaching Plans",
+    "journey": "Learning Journey",
+    "about": "About"
+  },
+  "hub": {
+    "wayne_title": "Wayne's Plans",
+    "wayne_subtitle": "Weekly teaching notes from a dad figuring it out",
+    "wayne_cta": "Read Plans →",
+    "luna_title": "Luna's Journey",
+    "luna_subtitle": "What I learned this week (I'm 8!)",
+    "luna_cta": "See My Journey →",
+    "latest": "Latest This Week"
+  },
+  "wayne": {
+    "hero_title": "Teaching Plans",
+    "hero_subtitle": "Every week I plan what Luna will learn. Here's the honest version — what I tried, what worked, what didn't.",
+    "week_label": "Week",
+    "tools_label": "Tools Used",
+    "read_more": "Read Full Plan →",
+    "sections": {
+      "what_we_taught": "What We Covered",
+      "why_this_topic": "Why This Topic",
+      "luna_reaction": "Luna's Reaction",
+      "parent_lesson": "What I Learned (as a parent)",
+      "next_week": "Next Week Preview",
+      "resources": "Resources to Replicate This Session"
+    }
+  },
+  "luna": {
+    "hero_title": "My Learning Journey",
+    "hero_subtitle": "Every week I learn something new. Here's what happened!",
+    "week_label": "Week",
+    "read_more": "Read More →",
+    "sections": {
+      "what_i_learned": "What I Learned",
+      "what_i_made": "What I Made",
+      "hardest_part": "The Hardest Part",
+      "coolest_thing": "The Coolest Thing",
+      "skills_unlocked": "Skills Unlocked This Week"
+    },
+    "stats": {
+      "practice": "Practice Sessions",
+      "works": "Works Completed",
+      "new_skills": "Skills Unlocked"
+    }
+  },
+  "footer": {
+    "bunny": "Bunny Universe",
+    "wayne_link": "wayne.bunnyuniverse.com",
+    "luna_link": "luna.bunnyuniverse.com",
+    "tagline": "A real family. Real learning. Real AI."
+  }
+}

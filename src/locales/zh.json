@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "兔兔宇宙",
+    "tagline": "一家人一起用 AI 学习"
+  },
+  "nav": {
+    "home": "首页",
+    "plans": "教学计划",
+    "journey": "学习旅程",
+    "about": "关于"
+  },
+  "hub": {
+    "wayne_title": "Wayne 的计划",
+    "wayne_subtitle": "一个爸爸每周的教学记录",
+    "wayne_cta": "查看计划 →",
+    "luna_title": "Luna 的旅程",
+    "luna_subtitle": "这周我学了什么（我8岁！）",
+    "luna_cta": "看我的旅程 →",
+    "latest": "本周最新"
+  },
+  "wayne": {
+    "hero_title": "教学计划",
+    "hero_subtitle": "每周我都会规划 Luna 要学的内容。这是真实版本——我尝试了什么，什么有效，什么没有。",
+    "week_label": "第",
+    "tools_label": "使用的工具",
+    "read_more": "阅读完整计划 →",
+    "sections": {
+      "what_we_taught": "本周内容",
+      "why_this_topic": "为什么选这个主题",
+      "luna_reaction": "Luna 的反应",
+      "parent_lesson": "我的收获（作为家长）",
+      "next_week": "下周预告",
+      "resources": "复刻本节课的资源"
+    }
+  },
+  "luna": {
+    "hero_title": "我的学习旅程",
+    "hero_subtitle": "每周我都学新东西，看看发生了什么！",
+    "week_label": "第",
+    "read_more": "阅读更多 →",
+    "sections": {
+      "what_i_learned": "我学了什么",
+      "what_i_made": "我做了什么",
+      "hardest_part": "最难的部分",
+      "coolest_thing": "最酷的事",
+      "skills_unlocked": "本周解锁技能"
+    },
+    "stats": {
+      "practice": "练习次数",
+      "works": "完成作品",
+      "new_skills": "技能解锁数"
+    }
+  },
+  "footer": {
+    "bunny": "兔兔宇宙",
+    "wayne_link": "wayne.bunnyuniverse.com",
+    "luna_link": "luna.bunnyuniverse.com",
+    "tagline": "真实的家庭。真实的学习。真实的 AI。"
+  }
+}
