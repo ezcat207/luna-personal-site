@@ -23,7 +23,7 @@ const BASE = {
     defaultTitle: "Wayne's Teaching Plans | Bunny Universe",
     defaultDesc:
       "Weekly AI teaching plans from a real parent. What we covered, what worked, what didn't — and all the resources to replicate it with your own kid. Published every Wednesday.",
-    ogImage: 'https://wayne.bunnyuniverse.com/og-wayne.png',
+    ogImage: 'https://wayne.bunnyuniverse.com/og-wayne.jpg',
     twitterHandle: '@bunnyuniverse',
   },
   luna: {
@@ -32,7 +32,7 @@ const BASE = {
     defaultTitle: "Luna's Learning Journey | Bunny Universe",
     defaultDesc:
       "An 8-year-old's honest learning log. From Git basics to CTF hacking challenges — real results, no sugarcoating. Published every Sunday.",
-    ogImage: 'https://luna.bunnyuniverse.com/og-luna.png',
+    ogImage: 'https://luna.bunnyuniverse.com/og-luna.jpg',
     twitterHandle: '@bunnyuniverse',
   },
 };
