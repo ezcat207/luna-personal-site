@@ -9,7 +9,7 @@ const Layout = () => {
     const location = useLocation();
 
     return (
-        <div className="min-h-screen pt-24 font-note text-ink overflow-x-hidden">
+        <div className="min-h-screen pt-24 overflow-x-hidden bg-white text-slate-900" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
             <SEOHead />
             <CustomCursor />
             <Navbar />
