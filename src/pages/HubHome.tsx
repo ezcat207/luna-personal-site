@@ -167,6 +167,15 @@ const HubHome = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             {
+              emoji: '⚡',
+              name: 'FandomTrivia',
+              desc: 'Harry Potter trivia for all 7 books. 100 questions, Google login, built by Luna in 2 days.',
+              url: 'https://www.fandom-trivia.com',
+              tag: 'Game',
+              color: 'border-amber-200 hover:border-amber-400',
+              tagColor: 'bg-amber-50 text-amber-600',
+            },
+            {
               emoji: '🧠',
               name: 'VRAM Calculator',
               desc: 'Can your GPU run this LLM? Instant VRAM estimates for 60+ models across Nvidia and Apple Silicon.',
@@ -176,15 +185,6 @@ const HubHome = () => {
               tagColor: 'bg-violet-50 text-violet-600',
             },
             {
-              emoji: '🧪',
-              name: 'SBTI Test',
-              desc: 'A satirical personality test — 26 types, 15 dimensions, 30 questions. MBTI\'s chaotic cousin.',
-              url: 'https://sbti.bunnyuniverse.com',
-              tag: 'Fun',
-              color: 'border-pink-200 hover:border-pink-400',
-              tagColor: 'bg-pink-50 text-pink-600',
-            },
-            {
               emoji: '🎬',
               name: 'DramaScout',
               desc: 'Find your next Asian drama. Smart recommendations across genres, countries, and vibes.',
@@ -192,15 +192,6 @@ const HubHome = () => {
               tag: 'Entertainment',
               color: 'border-red-200 hover:border-red-400',
               tagColor: 'bg-red-50 text-red-600',
-            },
-            {
-              emoji: '⚡',
-              name: 'FandomTrivia',
-              desc: 'Harry Potter trivia for all 7 books. 100 questions, Google login, built by Luna in 2 days.',
-              url: 'https://www.fandom-trivia.com',
-              tag: 'Game',
-              color: 'border-amber-200 hover:border-amber-400',
-              tagColor: 'bg-amber-50 text-amber-600',
             },
           ].map((project, i) => (
             <motion.a
