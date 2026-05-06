@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Map, Calendar } from 'lucide-react';
+import { ArrowRight, BookOpen, Map, Calendar, Lightbulb } from 'lucide-react';
 import { wayneWeeks } from '../../data/wayneWeeks';
 import wayneAvatar from '../../assets/wayne-avatar.jpg';
 
@@ -42,6 +42,13 @@ const WayneHome = () => {
             >
               <BookOpen className="w-4 h-4" />
               All Teaching Plans
+            </Link>
+            <Link
+              to="/wayne/insights"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-colors"
+            >
+              <Lightbulb className="w-4 h-4" />
+              Insights
             </Link>
             <Link
               to="/wayne/roadmap"

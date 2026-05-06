@@ -1,7 +1,7 @@
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { Menu, X, BookOpen, Map, Home } from 'lucide-react';
+import { Menu, X, BookOpen, Map, Home, Lightbulb } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
 const lunaSubdomain = import.meta.env.PROD
@@ -15,6 +15,7 @@ const hubSubdomain = import.meta.env.PROD
 const navItems = [
   { name: 'Home', path: '/wayne', icon: Home, end: true },
   { name: 'Teaching Plans', path: '/wayne/plans', icon: BookOpen, end: false },
+  { name: 'Insights', path: '/wayne/insights', icon: Lightbulb, end: false },
   { name: 'Roadmap', path: '/wayne/roadmap', icon: Map, end: false },
 ];
 

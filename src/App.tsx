@@ -11,6 +11,8 @@ import WayneHome from './pages/wayne/WayneHome';
 import WaynePlans from './pages/wayne/WaynePlans';
 import WaynePlan from './pages/wayne/WaynePlan';
 import WayneRoadmap from './pages/wayne/WayneRoadmap';
+import WayneInsights from './pages/wayne/WayneInsights';
+import WayneInsight from './pages/wayne/WayneInsight';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -48,6 +50,8 @@ function AppRoutes() {
           <Route path="wayne/plans" element={<WaynePlans />} />
           <Route path="wayne/plan/:weekNum" element={<WaynePlan />} />
           <Route path="wayne/roadmap" element={<WayneRoadmap />} />
+          <Route path="wayne/insights" element={<WayneInsights />} />
+          <Route path="wayne/insights/:id" element={<WayneInsight />} />
         </Route>
       </Routes>
     );
@@ -112,6 +116,8 @@ function AppRoutes() {
         <Route path="wayne/plans" element={<WaynePlans />} />
         <Route path="wayne/plan/:weekNum" element={<WaynePlan />} />
         <Route path="wayne/roadmap" element={<WayneRoadmap />} />
+        <Route path="wayne/insights" element={<WayneInsights />} />
+        <Route path="wayne/insights/:id" element={<WayneInsight />} />
       </Route>
     </Routes>
   );
