@@ -153,6 +153,79 @@ const HubHome = () => {
         </motion.a>
       </section>
 
+      {/* What We've Built */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="px-4 md:px-0"
+        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}
+      >
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-2">🛠️ What We've Built</h2>
+          <p className="text-slate-500 text-sm">Real tools and projects — made by this family, free to use.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {
+              emoji: '🧠',
+              name: 'VRAM Calculator',
+              desc: 'Can your GPU run this LLM? Instant VRAM estimates for 60+ models across Nvidia and Apple Silicon.',
+              url: 'https://vram.bunnyuniverse.com',
+              tag: 'AI Tool',
+              color: 'border-violet-200 hover:border-violet-400',
+              tagColor: 'bg-violet-50 text-violet-600',
+            },
+            {
+              emoji: '🧪',
+              name: 'SBTI Test',
+              desc: 'A satirical personality test — 26 types, 15 dimensions, 30 questions. MBTI\'s chaotic cousin.',
+              url: 'https://sbti.bunnyuniverse.com',
+              tag: 'Fun',
+              color: 'border-pink-200 hover:border-pink-400',
+              tagColor: 'bg-pink-50 text-pink-600',
+            },
+            {
+              emoji: '🎬',
+              name: 'DramaScout',
+              desc: 'Find your next Asian drama. Smart recommendations across genres, countries, and vibes.',
+              url: 'https://dramascout.com',
+              tag: 'Entertainment',
+              color: 'border-red-200 hover:border-red-400',
+              tagColor: 'bg-red-50 text-red-600',
+            },
+            {
+              emoji: '⚡',
+              name: 'FandomTrivia',
+              desc: 'Harry Potter trivia for all 7 books. 100 questions, Google login, built by Luna in 2 days.',
+              url: 'https://www.fandom-trivia.com',
+              tag: 'Game',
+              color: 'border-amber-200 hover:border-amber-400',
+              tagColor: 'bg-amber-50 text-amber-600',
+            },
+          ].map((project, i) => (
+            <motion.a
+              key={project.name}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.07 }}
+              whileHover={{ scale: 1.03 }}
+              className={`block bg-white border-2 ${project.color} rounded-2xl p-5 transition-all group`}
+            >
+              <div className="text-3xl mb-3">{project.emoji}</div>
+              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${project.tagColor}`}>
+                {project.tag}
+              </span>
+              <h3 className="font-bold text-slate-900 mt-2 mb-1 group-hover:text-slate-700">{project.name}</h3>
+              <p className="text-slate-500 text-xs leading-relaxed">{project.desc}</p>
+              <p className="text-xs text-slate-400 mt-3 font-mono truncate">{project.url.replace('https://', '')}</p>
+            </motion.a>
+          ))}
+        </div>
+      </motion.section>
+
       {/* How It Works */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
