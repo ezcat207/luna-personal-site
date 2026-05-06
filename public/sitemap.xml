@@ -1,112 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Hub: bunnyuniverse.com -->
-  <url>
-    <loc>https://bunnyuniverse.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <sitemap>
+    <loc>https://bunnyuniverse.com/sitemap-hub.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://wayne.bunnyuniverse.com/sitemap-wayne.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://luna.bunnyuniverse.com/sitemap-luna.xml</loc>
+  </sitemap>
 
-  <!-- Wayne: wayne.bunnyuniverse.com -->
-  <url>
-    <loc>https://wayne.bunnyuniverse.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://wayne.bunnyuniverse.com/wayne/plans</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wayne.bunnyuniverse.com/wayne/plan/0</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://wayne.bunnyuniverse.com/wayne/plan/1</loc>
-    <changefreq>never</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wayne.bunnyuniverse.com/wayne/roadmap</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Luna: luna.bunnyuniverse.com — weekly entries -->
-  <url>
-    <loc>https://luna.bunnyuniverse.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/luna/1</loc>
-    <changefreq>never</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Luna: archive blog posts -->
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/fandomtrivia-v2</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/fandomtrivia-v1</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/dad-birthday</loc>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/strategic-radar</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/genesis-mars</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/mars-bunny-wiki</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/superlinear</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/gemini-report</loc>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/ai-quests</loc>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/building-agents</loc>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/gemini-canvas</loc>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://luna.bunnyuniverse.com/blog/notebooklm</loc>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-</urlset>
+</sitemapindex>

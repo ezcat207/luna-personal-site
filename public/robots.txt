@@ -2,5 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bunnyuniverse.com/sitemap.xml
-Sitemap: https://wayne.bunnyuniverse.com/sitemap.xml
-Sitemap: https://luna.bunnyuniverse.com/sitemap.xml
