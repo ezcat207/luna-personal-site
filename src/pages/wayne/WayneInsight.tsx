@@ -101,11 +101,20 @@ export default function WayneInsight() {
 
           {/* Content */}
           <div className="prose prose-lg prose-slate max-w-none mb-12">
-            {insight.content.map((paragraph, idx) => (
-              <p key={idx} className="text-slate-700 leading-relaxed mb-4">
-                {paragraph}
-              </p>
-            ))}
+            {insight.content.map((paragraph, idx) => {
+              if (paragraph.startsWith('## ')) {
+                return (
+                  <h2 key={idx} className="text-2xl font-bold text-slate-900 mt-10 mb-4">
+                    {paragraph.slice(3)}
+                  </h2>
+                );
+              }
+              return (
+                <p key={idx} className="text-slate-700 leading-relaxed mb-4">
+                  {paragraph}
+                </p>
+              );
+            })}
           </div>
 
           {/* Key Takeaways */}

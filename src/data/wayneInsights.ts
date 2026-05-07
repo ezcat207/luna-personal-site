@@ -77,6 +77,76 @@ export const wayneInsights: WayneInsight[] = [
   },
 ];
 
+  {
+    id: 2,
+    date: '2026-05-06',
+    title: 'From Scratch to Agentic AI: Luna\'s 3-Year Learning Journey',
+    subtitle: 'How an 8-year-old built a genuine engineering foundation—one milestone at a time',
+    summary:
+      'Three years ago, Luna couldn\'t write a line of code. Today she ships agentic AI workflows, manages GitHub projects, and understands why computers think the way they do. This is the map we followed—and what every milestone actually taught her.',
+    imageUrl: '/images/luna-growth-roadmap.png',
+    content: [
+      'I want to share something I\'ve been thinking about a lot lately: the map.',
+      'Not the destination—the actual map of how an 8-year-old goes from "what\'s a variable?" to shipping real software products in three years.',
+      'Because people always ask: "How do you teach a kid AI?" And I think they\'re asking the wrong question. You don\'t teach a kid AI. You build foundations, and AI is what happens when the foundations are solid.',
+
+      '## Phase 1: Graphical Programming (2023)',
+
+      'We started with Scratch. Not because it\'s "easy"—but because it makes the invisible visible.',
+      'When Luna dragged a "move 10 steps" block and watched her sprite cross the screen, she wasn\'t playing a game. She was learning that computers execute instructions sequentially. That cause precedes effect. That the machine does exactly what you tell it—no more, no less.',
+      'From Scratch, we moved to Micro:bit. Now code had physical consequences: LEDs lit up, motors turned, sensors responded. The abstract became tangible. Programming wasn\'t something that happened inside a screen—it was something that shaped the physical world.',
+      'This phase sounds simple, but it builds the most important mental model: that you are giving instructions to a system that will follow them precisely. Everything else in engineering is a variation on this idea.',
+
+      '## Phase 2: AI Prompting & Real Programming (2025)',
+
+      'By 2025, the landscape had changed. Large language models weren\'t science fiction anymore—they were tools. So we made a deliberate pivot.',
+      'Luna started learning Python. Not through textbooks, but through projects: small scripts that did real things. Alongside Python, we introduced Claude Code—using AI as a pair programmer, not a replacement for thinking.',
+      'This is where something clicked for her. She learned that AI Prompting isn\'t just talking to a chatbot. It\'s structured communication with a system that has capabilities and limitations. Knowing how to prompt well means knowing what you want clearly enough to express it—which turns out to be most of the work.',
+      'We also introduced Codex and explored how AI can write code, debug code, and explain code. Luna\'s role shifted from "write every line" to "direct what gets built." She started to feel what it\'s like to be an architect rather than just a bricklayer.',
+      'The FandomTrivia project came out of this phase. Luna didn\'t just use AI—she designed a product, iterated on it with AI help, and shipped it to real users. That experience compressed years of learning into weeks.',
+
+      '## Phase 3: Agentic AI (2026 → Now)',
+
+      'April 2026 marked the start of something different.',
+      'Agentic AI isn\'t just prompting a model to answer a question. It\'s designing systems where AI takes sequences of actions, manages state across steps, and operates with increasing autonomy. The skill required isn\'t typing—it\'s thinking in systems.',
+      'Luna is now learning GitHub Project Management: how to structure work, track progress, communicate across a team. She\'s building Business Foundations: understanding why products exist, who they serve, what makes something worth building.',
+      'CS101 runs in parallel—not because she needs it to use AI tools, but because understanding how computers actually work changes how you think about what AI can and can\'t do. Terminal usage, front-end, back-end: the full stack of how software is built and delivered.',
+      'And on the horizon: CTF (Capture the Flag) challenges. Security thinking. The adversarial perspective. Because understanding how systems can be broken is part of understanding how to build systems that hold.',
+
+      '## What the Map Actually Teaches',
+
+      'Looking back at three years, the pattern is clear: each phase didn\'t just add skills—it changed what Luna thought was possible.',
+      'In 2023, "possible" meant making a sprite move on a screen. In 2025, "possible" meant shipping a real product to real users. In 2026, "possible" means designing systems that work even when she\'s not actively running them.',
+      'This is what compounding learning looks like. Not linear progress—exponential leverage.',
+      'The children who will thrive in the next decade aren\'t the ones who learned the most AI tools. They\'re the ones who built deep enough foundations that they can use any tool, evaluate any tool, and know when to put the tool down.',
+      'Luna is eight years old. She has time. But we started early not to rush her—we started early to give the foundations time to settle before the real complexity arrives.',
+      'The map exists. You just have to be willing to follow it.',
+    ],
+    keyTakeaways: [
+      'Start with graphical programming (Scratch, Micro:bit) to build the mental model: computers follow instructions exactly',
+      'AI Prompting is structured communication—knowing what you want clearly enough to express it is most of the work',
+      'Phase a child from consumer → director → architect: each shift expands what they think is possible',
+      'Agentic AI requires systems thinking, not just typing—teach GitHub, business fundamentals, and full-stack context',
+      'Compounding learning is exponential: each foundation makes the next phase accessible faster',
+    ],
+    relatedResources: [
+      {
+        label: 'FandomTrivia — Luna\'s first shipped product',
+        url: 'https://www.fandom-trivia.com/',
+      },
+      {
+        label: 'Luna\'s Learning Journal',
+        url: 'https://luna.bunnyuniverse.com/',
+      },
+      {
+        label: 'Wayne\'s Teaching Plans',
+        url: 'https://wayne.bunnyuniverse.com/wayne/plans',
+      },
+    ],
+    tags: ['Learning Journey', 'Kids & AI', 'Curriculum Design', 'Agentic AI', 'Parenting'],
+  },
+];
+
 export function getLatestWayneInsight(): WayneInsight | undefined {
   return wayneInsights.at(-1);
 }

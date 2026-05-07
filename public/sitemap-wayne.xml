@@ -26,5 +26,20 @@
     <changefreq>never</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://wayne.bunnyuniverse.com/wayne/insights</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wayne.bunnyuniverse.com/wayne/insight/1</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wayne.bunnyuniverse.com/wayne/insight/2</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>
