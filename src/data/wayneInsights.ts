@@ -95,18 +95,18 @@ export const wayneInsights: WayneInsight[] = [
       'From Scratch, we moved to Micro:bit. Now code had physical consequences: LEDs lit up, motors turned, sensors responded. The abstract became tangible. Programming wasn\'t something that happened inside a screen—it was something that shaped the physical world.',
       'This phase sounds simple, but it builds the most important mental model: that you are giving instructions to a system that will follow them precisely. Everything else in engineering is a variation on this idea.',
 
-      '## Phase 2: AI Prompting & Real Programming (2025)',
+      '## Phase 2: AI Prompting & Vibe Coding (2025)',
 
-      'By 2025, the landscape had changed. Large language models weren\'t science fiction anymore—they were tools. So we made a deliberate pivot.',
-      'Luna started learning Python. Not through textbooks, but through projects: small scripts that did real things. Alongside Python, we introduced Claude Code—using AI as a pair programmer, not a replacement for thinking.',
-      'This is where something clicked for her. She learned that AI Prompting isn\'t just talking to a chatbot. It\'s structured communication with a system that has capabilities and limitations. Knowing how to prompt well means knowing what you want clearly enough to express it—which turns out to be most of the work.',
-      'We also introduced Codex and explored how AI can write code, debug code, and explain code. Luna\'s role shifted from "write every line" to "direct what gets built." She started to feel what it\'s like to be an architect rather than just a bricklayer.',
-      'The FandomTrivia project came out of this phase. Luna didn\'t just use AI—she designed a product, iterated on it with AI help, and shipped it to real users. That experience compressed years of learning into weeks.',
+      'By 2025, the landscape had changed. AI coding tools weren\'t science fiction anymore—they were accessible to anyone willing to learn how to direct them. So we introduced a new kind of making: vibe coding.',
+      'Luna\'s first experiments were on Lovable, a no-code AI builder. But the outputs were real, deployed products. She built a travel journal app—"Desert Wanderings," a December 2025 trip diary with entries, editing, and timeline organization. Then came Stella\'s Travel Adventures, a city exploration app she designed around a character named Stella.',
+      'She also built a Roblox jumping game from scratch. If you\'ve watched a kid navigate Roblox Studio, you know it\'s not trivial—game physics, spawn points, obstacle design. Luna shipped it publicly.',
+      'This is where something fundamental shifted. She stopped thinking "I can\'t make that because I don\'t know how to code it" and started thinking "what do I want to build next?" The constraint moved from technical skill to imagination and product judgment—which is exactly where it should be.',
+      'AI Prompting isn\'t just talking to a chatbot. It\'s structured communication with a system that has capabilities and limitations. Knowing how to prompt well means knowing what you want clearly enough to express it—which turns out to be most of the work.',
 
       '## Phase 3: Agentic AI (2026 → Now)',
 
-      'April 2026 marked the start of something different.',
-      'Agentic AI isn\'t just prompting a model to answer a question. It\'s designing systems where AI takes sequences of actions, manages state across steps, and operates with increasing autonomy. The skill required isn\'t typing—it\'s thinking in systems.',
+      'January 2026 marked the start of something different. Luna built FandomTrivia—a real web product with a real domain, real users, and real iterations. She didn\'t just use AI to generate it; she managed the product cycle: designed the concept, directed the build with AI help, tested with users, and shipped improvements.',
+      'Then in April 2026, we deliberately escalated: Agentic AI. This isn\'t just prompting a model to answer a question. It\'s designing systems where AI takes sequences of actions, manages state across steps, and operates with increasing autonomy. The skill required isn\'t typing—it\'s thinking in systems.',
       'Luna is now learning GitHub Project Management: how to structure work, track progress, communicate across a team. She\'s building Business Foundations: understanding why products exist, who they serve, what makes something worth building.',
       'CS101 runs in parallel—not because she needs it to use AI tools, but because understanding how computers actually work changes how you think about what AI can and can\'t do. Terminal usage, front-end, back-end: the full stack of how software is built and delivered.',
       'And on the horizon: CTF (Capture the Flag) challenges. Security thinking. The adversarial perspective. Because understanding how systems can be broken is part of understanding how to build systems that hold.',
@@ -114,7 +114,7 @@ export const wayneInsights: WayneInsight[] = [
       '## What the Map Actually Teaches',
 
       'Looking back at three years, the pattern is clear: each phase didn\'t just add skills—it changed what Luna thought was possible.',
-      'In 2023, "possible" meant making a sprite move on a screen. In 2025, "possible" meant shipping a real product to real users. In 2026, "possible" means designing systems that work even when she\'s not actively running them.',
+      'In 2023, "possible" meant making a sprite move on a screen. In 2025, "possible" meant shipping three real products with AI as a co-builder. In 2026, "possible" means designing systems that work even when she\'s not actively running them.',
       'This is what compounding learning looks like. Not linear progress—exponential leverage.',
       'The children who will thrive in the next decade aren\'t the ones who learned the most AI tools. They\'re the ones who built deep enough foundations that they can use any tool, evaluate any tool, and know when to put the tool down.',
       'Luna is eight years old. She has time. But we started early not to rush her—we started early to give the foundations time to settle before the real complexity arrives.',
@@ -129,16 +129,24 @@ export const wayneInsights: WayneInsight[] = [
     ],
     relatedResources: [
       {
-        label: 'FandomTrivia — Luna\'s first shipped product',
+        label: 'Desert Wanderings — Travel Journal App (2025)',
+        url: 'https://journal-making.lovable.app',
+      },
+      {
+        label: 'Stella\'s Travel Adventures — City Explorer App (2025)',
+        url: 'https://stella-explores-cities.lovable.app',
+      },
+      {
+        label: 'Jumping Game on Roblox (2025)',
+        url: 'https://www.roblox.com/games/134287711519230/Jumping-Game',
+      },
+      {
+        label: 'FandomTrivia — Luna\'s first owned product (2026)',
         url: 'https://www.fandom-trivia.com/',
       },
       {
         label: 'Luna\'s Learning Journal',
         url: 'https://luna.bunnyuniverse.com/',
-      },
-      {
-        label: 'Wayne\'s Teaching Plans',
-        url: 'https://wayne.bunnyuniverse.com/wayne/plans',
       },
     ],
     tags: ['Learning Journey', 'Kids & AI', 'Curriculum Design', 'Agentic AI', 'Parenting'],
