@@ -75,8 +75,6 @@ export const wayneInsights: WayneInsight[] = [
     tags: ['AI Workflows', 'Team Management', 'System Design', 'Meta-Learning'],
     imageUrl: '/images/ai-workflow-architecture.png', // We'll add the Excalidraw diagram here
   },
-];
-
   {
     id: 2,
     date: '2026-05-06',
