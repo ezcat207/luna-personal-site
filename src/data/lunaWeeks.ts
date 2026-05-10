@@ -13,6 +13,7 @@ export interface LunaWeek {
     newSkills: string[]; // multiple skills per week
   };
   images?: string[]; // asset paths
+  companion?: { label: string; url: string }; // cross-link to Wayne's paired post
 }
 
 export const lunaWeeks: LunaWeek[] = [
@@ -38,6 +39,35 @@ export const lunaWeeks: LunaWeek[] = [
         'White Hat Hacking: Command Injection',
         'Bash: Semicolon vs Pipe Operators',
       ],
+    },
+  },
+  {
+    week: 2,
+    date: '2026-05-09',
+    title: 'I Beat a 1-Second Computer Challenge! (Binary CTF)',
+    summary:
+      "The server was sending us a scrambled secret message in computer code, and we had to decode it AND send the answer back in under one second. A human could never do that — so we made a robot do it for us.",
+    whatILearned:
+      "Hex is just another way computers write numbers. Instead of 0-9, computers use 0-9 AND A-F, so 'FF' means 255. The server sent us a whole program written in hex, and hidden inside that program was a secret number. We couldn't read it by hand because the server would disconnect us after 1 second! That's when I learned: some problems exist specifically to teach you that automation is necessary. Computers can read and respond in milliseconds. Humans can't. When the time limit is 1 second, the lesson is: stop trying to be the fast part.",
+    whatIMade:
+      "We wrote solve.py — a Python script that automatically connected to the server, grabbed all the hex code, found the secret pattern (c745fc followed by 8 hex characters), converted those hex characters from computer-format to a regular number, and sent the answer back — all before the 1-second timer ran out! And it worked! The flag appeared on screen: picoCTF solved! 🏆",
+    hardestPart:
+      "Gemini (our AI helper) kept forgetting the port number! The challenge servers use expiring ports like 57056 or 58790, and every time we reconnected, the port was different. We got 'ConnectionRefusedError' over and over. I had to keep telling Gemini the right port. Also at the very start, we thought we could just copy the hex code by hand and decode it ourselves — but the server closed the connection before we could even finish copying one line.",
+    coolestThing:
+      "The moment solve.py actually worked and printed 'FLAG: picoCTF{...}' to the screen! Also Dad explained what 'c745fc' means — it's a secret instruction written in the computer's own language that says 'store this value right here.' We used that pattern like a treasure map: wherever we see c745fc, the next 8 characters are the secret. It's like reading the computer's mind.",
+    stats: {
+      practiceCount: 4,
+      worksCompleted: 1,
+      newSkills: [
+        'Hexadecimal Decoding',
+        'Socket Programming',
+        'Binary Reverse Engineering',
+        'Python Automation',
+      ],
+    },
+    companion: {
+      label: "Dad's full technical breakdown →",
+      url: 'https://wayne.bunnyuniverse.com/wayne/insights/5',
     },
   },
 ];

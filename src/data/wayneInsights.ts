@@ -151,8 +151,6 @@ export const wayneInsights: WayneInsight[] = [
     ],
     tags: ['Learning Journey', 'Kids & AI', 'Curriculum Design', 'Agentic AI', 'Parenting'],
   },
-];
-
   {
     id: 3,
     date: '2026-05-07',
@@ -289,6 +287,76 @@ export const wayneInsights: WayneInsight[] = [
       },
     ],
     tags: ['Career Transition', 'History', 'Tech Industry', 'Workforce', 'AI Disruption'],
+  },
+  {
+    id: 5,
+    date: '2026-05-09',
+    title: 'One Second to Teach Automation: A CTF Binary Reversing Session with Luna',
+    subtitle: 'How a server-enforced 1-second timeout made an 8-year-old understand why scripts exist',
+    summary:
+      'Luna came into this session expecting to type answers at the keyboard. The picoCTF challenge had other ideas: dynamically generated ELF binaries delivered as hex streams, a 1-second response window, and expiring ports. By the end, she had written a working Python exploit from scratch and captured her first binary reversing flag. Here is exactly what happened and what it actually taught.',
+    content: [
+      'The challenge URL was from CyLab Academy. The actual server: mysterious-sea.picoctf.net. The mechanic: every time you connected, the server streamed a freshly generated ELF binary to your terminal as a continuous wall of hexadecimal characters, then asked a simple question — "What\'s the secret?" — and gave you one second to answer.',
+      'One second. Not two. Not five. One.',
+      'Luna\'s first instinct was completely logical: copy the hex, paste it somewhere, decode it, type the answer. This is how 8-year-olds approach problems. This is how most adults approach problems. It was also exactly wrong.',
+
+      '## The Technical Architecture',
+
+      'The binary the server generated was a small ELF executable. Inside its .text section — the machine code that the CPU runs — was a single instruction that held the secret: mov DWORD PTR [rbp-0x4], <secret_value>.',
+      'In raw machine code, this instruction always starts with the same three bytes: c7 45 fc. In the hex stream, that appears as c745fc followed by exactly 8 hex characters (4 bytes) representing the secret integer in little-endian format. Little-endian means the least significant byte comes first — the computer\'s native byte order on x86-64.',
+      'The server generated a new binary with a new secret value every connection. You could not reuse a previous answer. You could not look the flag up. You had to compute it, every time, faster than a human can read.',
+
+      '## First Attempt: Just Read It',
+
+      'We connected with nc and stared at the screen. The hex stream arrived — thousands of characters filling the terminal. Luna started trying to find the pattern visually. The server disconnected.',
+      'Connection attempt two. Same result. At this point the lesson was already in progress, even if we hadn\'t named it: the problem is not unsolvable, but it is unsolvable by hand. The constraint is a design choice, not an accident. It exists specifically to force you toward automation.',
+
+      '## Building solve.py: Line by Line',
+
+      'We switched to writing a script. The structure Luna and Gemini built together: open a socket connection to the server, create a file-like interface for reading and writing, then loop — read chunks of incoming data into a buffer, check if the flag has already appeared (picoCTF{...} format), and if the server asks "What\'s the secret?", search the buffer for the c745fc opcode pattern.',
+      'When the pattern is found, extract the next 8 hex characters. Convert them from little-endian bytes to a base-10 integer using struct.unpack(\'<I\', bytes.fromhex(...)). Send that integer back as a string followed by a newline. Clear the buffer. Repeat until the flag arrives.',
+      'The critical insight: regex. We used the pattern c745fc([0-9a-f]{8}) to find the opcode and capture the 4-byte secret in one operation. Regular expressions are exact pattern matching — the computer equivalent of saying "find me this specific sequence anywhere in this wall of text, instantly."',
+
+      '## The Mistakes That Taught the Most',
+
+      'First mistake: manual hex decoding. Burned two connections before accepting the time constraint was real.',
+      'Second mistake: the ports. The challenge instances expire. A port that was valid ten minutes ago throws ConnectionRefusedError now. Gemini kept reusing stale port numbers from earlier in the session. Luna had to intervene — she recognized the error message, pulled up the challenge page, found the current port, and updated the script. This is debugging. Not "the script is broken." The environment changed.',
+      'Third mistake: running python3 solve.py while still inside the challenge binary\'s prompt. The binary treated "python3 solve.py" as a literal answer to "What\'s the secret?" and rejected it. The lesson: there are layers. The shell, the binary, the script — you need to know which layer is currently listening to you.',
+
+      '## When It Clicked',
+
+      'The script connected, buffered the stream, found c745fc in 40 milliseconds, unpacked the little-endian integer, sent it back, and the server responded: FLAG: picoCTF{bytemancy_0_...}.',
+      'Luna\'s reaction was one word: "Finally." Then immediately: "Can we make it faster?"',
+      'That question — not "what does this mean?" but "can we optimize it?" — is the moment a learner becomes a builder.',
+
+      '## What This Actually Teaches',
+
+      'Binary reversing sounds intimidating. In practice, this challenge taught four things: hex is just a number encoding; machine code has recognizable patterns you can grep for; automation is not optional when the human is the slow component; and debugging is not failure — it is the process.',
+      'The picoCTF "bytemancy" category name is perfect. Byte-mancy: divination through bytes. Reading the computer\'s intentions from its native language. Luna can now look at c745fc and know something is stored nearby. That is a genuine capability, not a vocabulary word.',
+      'We will build on this. CTF challenges are ideal for children because the feedback is immediate and unambiguous: you have the flag or you don\'t. There is no partial credit, no rubric, no interpretation. The computer either accepted your answer in time or it didn\'t. This kind of clarity is rare in education and invaluable in engineering.',
+    ],
+    keyTakeaways: [
+      'The 1-second time constraint was the lesson: some problems are designed to be unsolvable by hand — automation is the intended solution',
+      'The key pattern: opcode c745fc (mov [rbp-0x4]) always precedes the secret value in this binary structure — a grep-able fingerprint in machine code',
+      'struct.unpack(\'<I\', ...) converts little-endian hex bytes to a Python integer — the CPU\'s native byte order on x86-64',
+      'Port expiration errors are environment bugs, not code bugs — recognizing which layer is failing is a core debugging skill',
+      'When a child asks "can we make it faster?" after solving something, the session worked',
+    ],
+    relatedResources: [
+      {
+        label: "Luna's take on this session — her diary entry",
+        url: 'https://luna.bunnyuniverse.com/luna/2',
+      },
+      {
+        label: 'CyLab Academy — Challenge Library',
+        url: 'https://learn.cylabacademy.org/library/754',
+      },
+      {
+        label: 'picoCTF — Competitive CTF Platform for Beginners',
+        url: 'https://picoctf.org',
+      },
+    ],
+    tags: ['CTF', 'Security', 'Binary Reversing', 'Automation', 'Kids & AI'],
   },
 ];
 

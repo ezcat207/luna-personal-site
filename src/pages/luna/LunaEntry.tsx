@@ -139,9 +139,15 @@ const LunaEntry = () => {
       {/* Nav */}
       <div className="flex justify-between pt-2 pb-4">
         <Link to="/luna" className="text-pink-500 hover:text-pink-700 font-medium text-sm">← My Journey</Link>
-        <Link to={`/wayne/plan/${week.week}`} className="text-slate-400 hover:text-slate-700 font-medium text-sm transition-colors">
-          Wayne's plan for Week {week.week} →
-        </Link>
+        {week.companion ? (
+          <a href={week.companion.url} className="text-slate-400 hover:text-slate-700 font-medium text-sm transition-colors">
+            {week.companion.label}
+          </a>
+        ) : (
+          <Link to={`/wayne/plan/${week.week}`} className="text-slate-400 hover:text-slate-700 font-medium text-sm transition-colors">
+            Wayne's plan for Week {week.week} →
+          </Link>
+        )}
       </div>
     </div>
   );
