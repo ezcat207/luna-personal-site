@@ -70,6 +70,35 @@ export const lunaWeeks: LunaWeek[] = [
       url: 'https://wayne.bunnyuniverse.com/wayne/insights/5',
     },
   },
+  {
+    week: 3,
+    date: '2026-05-10',
+    title: 'Two Flags in One Day! (Plus a Competition)',
+    summary:
+      "We hacked into a server with broken-up files, then flooded another server until it surrendered and gave us the flag. Oh — and we had a competition. Stella and Mom tied for first place. Dad got third.",
+    whatILearned:
+      "SSH is how you log into a computer over the internet — but the command has to be EXACTLY right. Uppercase SSH doesn't work. You can't use a colon before the port number, you need -p. For the first challenge, zip files can be split into pieces like a puzzle — you have to join all the pieces back together before you can open it. And here's a sneaky trick: the file was named .tar.gz but it was secretly a zip file inside! For the second challenge — computers that are too busy will give up and switch to a backup. We made the main server SO busy that it gave up, and then the backup server, which had the flag, had to take over!",
+    whatIMade:
+      "Two flags in one session! Flag 1 (Piece by Piece): SSH'd into the server, found five puzzle pieces (part_aa through part_ae), joined them into one file with cat part_* > combined.zip, unzipped it using the password 'supersecret' that was hidden in instructions.txt, and read flag.txt. Flag 2 (Failure Failure): wrote solve.py using 50 threads to send 400 requests all at once, overwhelmed the main server until it said 503 (overloaded!), the traffic manager saw that and switched everything to the backup server — and that's where the flag was.",
+    hardestPart:
+      "SSH syntax was really confusing at first — I typed SSH in uppercase, used a colon before the port instead of -p, and got connection errors every time. It turns out computers are very strict about lowercase commands and exact flag formats. Also for the zip file, if you just looked at the filename you'd think it was a .tar.gz file and use the wrong command. The trick is to use the file command to see what's ACTUALLY inside instead of trusting the name.",
+    coolestThing:
+      "The flooding attack felt like a heist movie! We sent 400 requests almost at the exact same time using 50 threads, the main server got so overwhelmed it started sending 503 errors (that means 'I'm broken!'), the load balancer saw those errors and thought the server crashed, so it switched ALL the traffic to the backup — and that's where the flag was hiding. We didn't find a secret door, we made the security system think there was an emergency and redirect itself!",
+    stats: {
+      practiceCount: 4,
+      worksCompleted: 2,
+      newSkills: [
+        'SSH Remote Login',
+        'File Fragment Assembly (cat part_*)',
+        'Magic Bytes vs Filename (file command)',
+        'Load Balancer Failover Exploitation',
+      ],
+    },
+    companion: {
+      label: "Dad's technical breakdown →",
+      url: 'https://wayne.bunnyuniverse.com/wayne/insights/6',
+    },
+  },
 ];
 
 export function getLatestLunaWeek(): LunaWeek | undefined {

@@ -358,6 +358,66 @@ export const wayneInsights: WayneInsight[] = [
     ],
     tags: ['CTF', 'Security', 'Binary Reversing', 'Automation', 'Kids & AI'],
   },
+  {
+    id: 6,
+    date: '2026-05-10',
+    title: 'Two CTFs, Two Lessons: File Forensics and Infrastructure Attacks',
+    subtitle: "Why 'never trust the filename' and 'concurrency beats sequence' are the same insight wearing different clothes",
+    summary:
+      'May 10 was a double-header: a file forensics challenge about fragment reassembly and extension deception, followed by an infrastructure attack requiring concurrent request flooding to trigger an HAProxy failover. Both challenges shared a single underlying lesson — read the environment before you attack.',
+    content: [
+      'Two challenges in one afternoon. Different mechanics, different domains, same root principle. This is the kind of day that accelerates learning faster than any curriculum.',
+
+      '## Challenge 1: Piece by Piece',
+
+      'The setup: SSH into a remote server, navigate the filesystem, and extract a flag hidden inside a password-protected archive. Simple in description, layered in execution.',
+      'The first obstacle was SSH syntax. The connection required ssh -p [port] ctf-player@dolphin-cove.picoctf.net with the -p flag explicitly. Common mistakes Luna hit immediately: uppercase SSH (the shell is case-sensitive), using host:port notation instead of the -p flag, and forgetting that the host key verification prompt requires typing yes before any password prompt appears. These are not logic errors — they are syntax errors. The computer does exactly what you say, not what you mean.',
+      'Once connected, the flag was inside a zip archive. But the archive had been split into five fragments: part_aa, part_ab, part_ac, part_ad, part_ae. The reassembly command: cat part_* > combined.zip. The glob wildcard sorts alphabetically, so the fragments concatenate in the correct order. This is a real technique — large files are split for transfer and must be reassembled on receipt.',
+      'Here is where it gets interesting. The reassembled file had a .tar.gz extension. The natural instinct is to run tar -xvzf combined.zip. This fails. The file command reveals why: the actual magic bytes inside the file identify it as a Zip archive, not a Gzip tarball. The filename lied. unzip combined.zip succeeds immediately.',
+      'The password was not the SSH login password — a common assumption that leads to an infinite unzip prompt loop. It was stored in instructions.txt on the server. Alternatively, the strings command strips printable characters from the binary, often exposing embedded passwords. The lesson: the environment contains the information you need. Read it before attacking.',
+
+      '## Challenge 2: Failure Failure',
+
+      'The second challenge required infrastructure thinking rather than application thinking. The target was an HAProxy load balancer sitting in front of two Flask servers. The flag was exclusively on the backup server (s2), which only received traffic when the primary server (s1) was marked DOWN by HAProxy.',
+      'The application code contained a deliberate trap: the rate limiter (300 requests per minute, globally keyed — not per-IP) was configured to return 503 Service Unavailable when the limit was hit, instead of the standard 429 Too Many Requests. This matters because HAProxy was configured with http-check expect status 200. Any non-200 response from s1 counts as a failed health check.',
+      'HAProxy was set to inter 2s fall 2 — check every 2 seconds, mark DOWN after 2 consecutive failures. This means the attack window requires exhausting the 300-request limit within 60 seconds and then sustaining the failure state long enough for two health checks to register.',
+      'The solution: concurrent flooding. Luna used a Python script with ThreadPoolExecutor at 50 workers, sending 400 requests simultaneously. Why concurrent? Because sequential requests — one after another — cannot breach a per-minute limit fast enough if the window resets between requests. Concurrency compresses 400 requests into seconds, not minutes. The primary server hits its ceiling, starts returning 503s, HAProxy sees two consecutive failures, marks s1 DOWN, and routes all subsequent traffic to s2.',
+      'The Wayne Gemini analysis added an elegant one-liner alternative: for i in {1..330}; do curl -s -o /dev/null URL & done; sleep 5; curl -s URL. The & operator backgrounds each curl, creating a concurrent burst from a shell loop. The sleep 5 provides the exact window for HAProxy to complete its fall 2 cycle. The final curl retrieves from s2.',
+      'A critical detail: Flask-Limiter defaults to in-memory storage per process. If s1 and s2 shared a Redis instance for rate tracking, exhausting s1 would also lock s2. The challenge was designed around this isolation.',
+
+      '## The Connecting Thread',
+
+      'Both challenges reward the same behavior: read the environment before you act. In Piece by Piece, the password was in instructions.txt and the file type was in the magic bytes — both visible without attacking anything. In Failure Failure, the HAProxy configuration file was provided in the challenge materials. Reading inter 2s fall 2 immediately tells you the timing window. The attack follows from the config.',
+      'This is an important pattern to establish early. CTF challenges are designed to teach that reconnaissance precedes exploitation. The information needed to solve the problem is almost always already present — in a config file, an environment variable, a strings output, or the structure of the filesystem itself.',
+
+      '## Bonus: The Competition',
+
+      'After the CTF session, a competition. Final standings: Stella and Mom tied for first ($15 prize each). Dad placed third.',
+      'For the record: third place in a competition where you designed the curriculum is a perfectly acceptable outcome. Luna will remember that Stella and Mom beat Dad. That is an excellent motivator for the next session.',
+    ],
+    keyTakeaways: [
+      'SSH syntax is exact: lowercase ssh, -p for port, not colon notation — the shell does what you say, not what you mean',
+      'cat part_* > combined.zip reassembles split archives; glob sorts alphabetically, preserving correct order',
+      'Never trust the filename: use the file command to check magic bytes — .tar.gz can secretly be a zip',
+      'HAProxy failover requires concurrent flooding: sequential requests cannot breach a per-minute limit fast enough before the window resets',
+      'Both challenges: read the environment first (instructions.txt, HAProxy config) — the solution is always already present',
+    ],
+    relatedResources: [
+      {
+        label: "Luna's diary entry for May 10",
+        url: 'https://luna.bunnyuniverse.com/luna/3',
+      },
+      {
+        label: 'CyLab Academy — Piece by Piece (Flag 1)',
+        url: 'https://learn.cylabacademy.org/library/740',
+      },
+      {
+        label: 'CyLab Academy — Failure Failure (Flag 2)',
+        url: 'https://learn.cylabacademy.org/library/756',
+      },
+    ],
+    tags: ['CTF', 'Security', 'Linux', 'Infrastructure', 'Kids & AI'],
+  },
 ];
 
 export function getLatestWayneInsight(): WayneInsight | undefined {
