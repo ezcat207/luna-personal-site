@@ -95,8 +95,8 @@ export const lunaWeeks: LunaWeek[] = [
       ],
     },
     companion: {
-      label: "Dad's technical breakdown →",
-      url: 'https://wayne.bunnyuniverse.com/wayne/insights/6',
+      label: "See the competition results →",
+      url: 'https://wayne.bunnyuniverse.com/wayne/insights/7',
     },
   },
 ];

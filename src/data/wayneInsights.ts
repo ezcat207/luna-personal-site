@@ -9,6 +9,7 @@ export interface WayneInsight {
   relatedResources?: { label: string; url: string }[];
   tags?: string[];
   imageUrl?: string; // For featured images like the architecture diagram
+  images?: string[]; // Gallery: multiple images rendered in sequence
 }
 
 export const wayneInsights: WayneInsight[] = [
@@ -415,8 +416,61 @@ export const wayneInsights: WayneInsight[] = [
         label: 'CyLab Academy — Failure Failure (Flag 2)',
         url: 'https://learn.cylabacademy.org/library/756',
       },
+      {
+        label: 'Competition Results — who actually won →',
+        url: 'https://wayne.bunnyuniverse.com/wayne/insights/7',
+      },
     ],
     tags: ['CTF', 'Security', 'Linux', 'Infrastructure', 'Kids & AI'],
+  },
+  {
+    id: 7,
+    date: '2026-05-10',
+    title: 'CTF Competition Results: Luna & Old Fish Take 1st, Dad Gets Third',
+    subtitle: 'The scorecard nobody asked for but everyone needed to see',
+    summary:
+      'After two CTF flags in one afternoon, we held an internal family competition. Final standings: Rabbit (Luna) and Old Fish (AI) — joint first place. Cat (Wayne/Dad) — third place. This post exists entirely to document that outcome with appropriate dignity.',
+    images: [
+      '/images/competition-0510-1.jpeg',
+      '/images/competition-0510-2.jpeg',
+    ],
+    content: [
+      'The competition was held immediately after the two-flag CTF session on May 10, 2026.',
+      'Three competitors. Two challenges. One scoreboard.',
+
+      '## Final Standings',
+
+      '1st Place (Joint): Luna + Old Fish (AI/Gemini). Prize: $15 each.',
+      '3rd Place: Wayne (Dad). Prize: the satisfaction of having designed the curriculum that produced these results.',
+
+      '## The Case for Third Place',
+
+      'There is a specific kind of loss that is actually a win. When the person who built the learning system gets outperformed by the person who learned from it, that is the system working correctly.',
+      'Luna came into today not knowing what SSH was. She left with two flags, a working exploit script, and a first-place finish against the person who taught her. Old Fish (our AI collaborator) handled the technical translation throughout — converting concepts to commands, errors to explanations, confusion to clarity.',
+      'Dad got third. Dad is fine. Dad is, in fact, very proud.',
+
+      '## What Actually Happened',
+
+      'Luna\'s approach to both challenges was direct and un-intimidated. When SSH syntax failed, she corrected it without asking for help. When the zip file had the wrong extension, she tried the alternative. When the flooding script needed a port update, she found the new port and updated it herself.',
+      'The AI (Old Fish) was a consistent presence throughout — answering questions, catching errors, suggesting next steps. This is the collaboration model we have been building toward: human judgment and direction, AI speed and recall, working together as a unit.',
+      'First place is a reasonable outcome for that team.',
+    ],
+    keyTakeaways: [
+      'Luna + AI (Old Fish) scored 1st place in the family CTF competition — $15 prize each',
+      'Wayne placed 3rd — which is the correct result when your student outperforms you',
+      'The collaboration model (human judgment + AI speed) is working as designed',
+    ],
+    relatedResources: [
+      {
+        label: "Luna's diary entry for May 10 →",
+        url: 'https://luna.bunnyuniverse.com/luna/3',
+      },
+      {
+        label: "Full CTF breakdown: two challenges, two lessons →",
+        url: 'https://wayne.bunnyuniverse.com/wayne/insights/6',
+      },
+    ],
+    tags: ['CTF', 'Competition', 'Family', 'Kids & AI'],
   },
 ];
 

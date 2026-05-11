@@ -99,6 +99,21 @@ export default function WayneInsight() {
             </div>
           )}
 
+          {/* Image Gallery */}
+          {insight.images && insight.images.length > 0 && (
+            <div className="mb-12 space-y-6">
+              {insight.images.map((src, idx) => (
+                <div key={idx} className="rounded-xl overflow-hidden border border-slate-200 bg-white p-4">
+                  <img
+                    src={src}
+                    alt={`${insight.title} — ${idx + 1}`}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
           {/* Content */}
           <div className="prose prose-lg prose-slate max-w-none mb-12">
             {insight.content.map((paragraph, idx) => {
