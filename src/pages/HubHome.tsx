@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { getLatestWayneWeek } from '../data/wayneWeeks';
 import { getLatestLunaWeek } from '../data/lunaWeeks';
+import { wayneInsights } from '../data/wayneInsights';
 import lunaAvatar from '../assets/luna-avatar.jpg';
 import wayneAvatar from '../assets/wayne-avatar.jpg';
 
@@ -17,6 +18,9 @@ const HubHome = () => {
   const { t } = useTranslation();
   const latestWayne = getLatestWayneWeek();
   const latestLuna = getLatestLunaWeek();
+  const sortedInsights = [...wayneInsights].reverse();
+  const featuredInsight = sortedInsights[0];
+  const recentInsights = sortedInsights.slice(1, 4);
 
   return (
     <div className="space-y-24">
@@ -152,6 +156,74 @@ const HubHome = () => {
           </div>
         </motion.a>
       </section>
+
+      {/* Latest from the Blog */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="px-4 md:px-0"
+      >
+        <div className="text-center mb-8">
+          <h2 className="font-header text-4xl text-ink mb-2">📓 Latest from the Blog</h2>
+          <p className="font-handwritten text-pencil text-lg">What we've been learning, building, and cracking open</p>
+        </div>
+
+        {/* Pinned / Featured post */}
+        {featuredInsight && (
+          <motion.a
+            href={`${wayneSubdomain}/wayne/insights/${featuredInsight.id}`}
+            whileHover={{ scale: 1.01, rotate: 0 }}
+            className="block mb-6"
+          >
+            <div className="bg-white border-4 border-indigo-200 rounded-2xl p-8 shadow-lifted transform -rotate-1 hover:rotate-0 transition-all relative overflow-hidden">
+              <div className="absolute -top-3 left-16 w-24 h-6 bg-indigo-200/60 rotate-1"></div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wide">📌 Latest</span>
+                <span className="font-handwritten text-xs text-pencil">{featuredInsight.date}</span>
+                {featuredInsight.tags?.slice(0, 2).map(tag => (
+                  <span key={tag} className="text-xs px-2 py-0.5 bg-slate-100 text-slate-500 rounded-full hidden sm:inline">{tag}</span>
+                ))}
+              </div>
+              <h3 className="font-bold text-2xl text-slate-900 leading-tight mb-2">{featuredInsight.title}</h3>
+              {featuredInsight.subtitle && (
+                <p className="text-slate-500 text-sm mb-3 italic">{featuredInsight.subtitle}</p>
+              )}
+              <p className="font-note text-pencil text-sm leading-relaxed line-clamp-2">{featuredInsight.summary}</p>
+              <p className="font-marker text-indigo-600 text-sm mt-4">Read more →</p>
+            </div>
+          </motion.a>
+        )}
+
+        {/* Recent posts grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          {recentInsights.map((insight, i) => (
+            <motion.a
+              key={insight.id}
+              href={`${wayneSubdomain}/wayne/insights/${insight.id}`}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.08 }}
+              whileHover={{ scale: 1.02 }}
+              className="block bg-white border-2 border-slate-200 hover:border-indigo-300 rounded-2xl p-5 transition-all group"
+            >
+              <p className="font-handwritten text-xs text-pencil mb-2">{insight.date}</p>
+              <h4 className="font-bold text-slate-900 text-sm leading-snug mb-2 group-hover:text-indigo-700 line-clamp-2">{insight.title}</h4>
+              <p className="text-xs text-slate-400 leading-relaxed line-clamp-2">{insight.summary}</p>
+              <div className="mt-3 flex gap-1 flex-wrap">
+                {insight.tags?.slice(0, 2).map(tag => (
+                  <span key={tag} className="text-xs px-2 py-0.5 bg-slate-50 text-slate-400 rounded-full">{tag}</span>
+                ))}
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <a href={`${wayneSubdomain}/wayne/insights`} className="font-marker text-indigo-600 hover:text-indigo-800 text-xl transition-colors">
+            All posts →
+          </a>
+        </div>
+      </motion.section>
 
       {/* What We've Built */}
       <motion.section
