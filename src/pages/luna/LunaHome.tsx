@@ -244,6 +244,48 @@ const LunaHome = () => {
         </div>
       </section>
 
+      {/* My Playground */}
+      <section className="px-4 md:px-0 space-y-6">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-900">🎮 My Playground</h2>
+          <p className="text-slate-500 text-sm mt-1">Cool tools and websites I actually use to learn!</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <motion.a
+            href="https://www.ixl.com/standards/arizona/science/grade-5"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0 }}
+            whileHover={{ scale: 1.03 }}
+            className="block bg-white border-2 border-purple-100 rounded-2xl p-5 hover:border-purple-300 hover:shadow-sm transition-all"
+          >
+            <div className="text-3xl mb-3">🔬</div>
+            <div className="text-xs text-slate-400 font-medium mb-1 uppercase tracking-wide">Science Practice</div>
+            <h3 className="font-bold text-lg text-slate-900 mb-2">IXL Arizona Science — Grade 5</h3>
+            <p className="text-slate-500 text-sm leading-relaxed">The whole Arizona science curriculum turned into games and practice problems. Standards don't have to be boring!</p>
+            <p className="text-purple-500 text-sm font-medium mt-3">Play →</p>
+          </motion.a>
+          <motion.a
+            href="https://www.ixl.com/science/grade-5/compare-physical-and-chemical-changes"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.06 }}
+            whileHover={{ scale: 1.03 }}
+            className="block bg-white border-2 border-blue-100 rounded-2xl p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+          >
+            <div className="text-3xl mb-3">⚗️</div>
+            <div className="text-xs text-slate-400 font-medium mb-1 uppercase tracking-wide">Exam Practice</div>
+            <h3 className="font-bold text-lg text-slate-900 mb-2">Physical vs Chemical Changes</h3>
+            <p className="text-slate-500 text-sm leading-relaxed">Grade 5 science quiz — can you tell a physical change from a chemical one? Practice questions to nail the test!</p>
+            <p className="text-blue-500 text-sm font-medium mt-3">Practice →</p>
+          </motion.a>
+        </div>
+      </section>
+
       {/* Archives */}
       <section className="px-4 md:px-0 space-y-6">
         <div>
