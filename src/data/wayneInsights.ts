@@ -472,6 +472,93 @@ export const wayneInsights: WayneInsight[] = [
     ],
     tags: ['CTF', 'Competition', 'Family', 'Kids & AI'],
   },
+  {
+    id: 8,
+    date: '2026-05-14',
+    title: 'The Daily Prophet Method: Teaching HTML, CSS, and JavaScript Through Harry Potter\'s Magical Newspaper',
+    subtitle: 'If you can explain why the photos move, you can explain the entire web stack',
+    summary:
+      'Most kids hit a wall when you say "HTML is markup, CSS is styling, JavaScript is behavior." Nobody\'s eyes light up at that sentence. But say "here\'s why the photos in the Daily Prophet move" — and an 8-year-old who\'s read Harry Potter six times leans forward. This is how we used wizarding journalism to explain the three languages of the web, and why the metaphor holds up technically, not just narratively.',
+    content: [
+      'The Daily Prophet is the best web development textbook ever accidentally written.',
+      'If you\'ve read Harry Potter, you know the newspaper. Front page headlines. Opinion columns. Classified ads. And photographs — moving photographs. Wizards in black-and-white newsprint, waving at the reader, ducking out of frame, occasionally shouting.',
+      'Every time I looked at that detail in the books, I thought: that\'s a perfect description of how the web works. Static content that has been animated by something underneath it.',
+      'So that\'s where we started.',
+
+      '## HTML: The Newspaper Itself',
+
+      'HTML is the Prophet\'s content and structure. Nothing more.',
+      'A newspaper has headlines — big text at the top, announcing what matters most. It has bylines — smaller text, author and date. It has columns — the body of the story, flowing in organized blocks. It has photographs — rectangles of visual content placed within the text. It has advertisements — boxes cordoned off from the editorial content.',
+      'None of that is design. None of it is behavior. It\'s just structure: what exists, and in what order.',
+      'HTML works the same way. <h1> is the headline. <p> is a paragraph of column text. <img> is a photograph. <div> is a named section — "this is the front page," "this is the classified ads section." You\'re not describing how anything looks. You\'re describing what exists and how it\'s organized.',
+      'Luna grasped this immediately when I framed it this way: "If you printed out a webpage and the ink was black and white with no design at all — just the words and images in order — that\'s the HTML." She nodded. That\'s Muggle journalism. Functional. Readable. No magic.',
+
+      '## CSS: The Prophet\'s Visual Identity',
+
+      'The Daily Prophet doesn\'t look like just any newspaper. It has a specific aesthetic — slightly gothic serif fonts, dense column layouts, dramatic headlines that lean into the horror of whatever Voldemort did this week. The obituary section has a particular visual weight. The Quidditch scores use a different column width than front-page news.',
+      'All of that is CSS.',
+      'CSS is a set of rules that says: every headline on this page should be in this font, at this size, in this color. Every photograph should have a thin black border and sit to the right of the column text. The front page should use a three-column layout; the classified ads should run in six narrow columns at the bottom.',
+      'CSS doesn\'t add new content. It doesn\'t make anything happen. It only describes how the existing content should look.',
+      'The practical implication: you can take the exact same HTML — the same structure — and apply two completely different CSS stylesheets. One makes it look like the Daily Prophet. One makes it look like the New York Times. The content is identical. The presentation is entirely controlled by CSS.',
+      'This is a concept most adults haven\'t consciously grasped even after years of using the web. Luna got it in about four minutes because she already understood that the Prophet and the Times are both newspapers — same category, completely different look.',
+
+      '## JavaScript: Why the Photos Move',
+
+      'Here\'s where it gets interesting.',
+      'In Muggle newspapers, photographs are frozen. A moment in time, chemically fixed to paper, never changing. You can look at the photo for an hour and the subject won\'t blink.',
+      'In the Daily Prophet, something is different. The photos are alive. The subjects move, react, leave the frame, come back. A photograph of Minister Fudge will show him nervously adjusting his bowler hat. A Quidditch action shot will loop through the save, over and over.',
+      'That\'s JavaScript.',
+      'JavaScript is the layer that takes a static page and makes things happen over time. It runs continuously while the page is open. It can watch for events — a reader hovering over a photo, a new edition arriving — and respond to them. It can update the content of the page without reloading it. It can animate elements.',
+      'Without JavaScript, the Daily Prophet\'s photos are stuck. The structure (HTML) is there. The design (CSS) is applied. But there\'s no behavior — nothing that watches, responds, or changes.',
+      'JavaScript is the magic. It\'s the spell that makes the ink move.',
+      'I asked Luna: "What spell do you think makes a Prophet photo move?" She thought for a second and said "Animatus?" (making up a spell, which is exactly right — that\'s what programming is, naming operations that didn\'t exist before). I said: in JavaScript, you\'d write something like photo.animate(). You\'re telling the photo: start moving. The browser — the magical enforcement mechanism — runs that instruction continuously.',
+
+      '## The Hands-On Part',
+
+      'After the metaphor, we built a tiny "Daily Prophet" in the browser using just HTML and CSS. A fake front page with a headline, a byline, a two-column layout, and an image placeholder.',
+      'Then we added JavaScript. Just one thing: made the image slowly pulse — scaling up by 5% and back down, every two seconds, in a loop. The "photo" was alive.',
+      'Luna\'s reaction when she saw it loop: "Oh. So the page is just... running? While we\'re looking at it?"',
+      'Yes. Exactly. JavaScript doesn\'t execute once and stop. It runs in the background, continuously, like a spell that sustains itself. The browser is the wand.',
+      'That framing — JavaScript as a continuous spell, not a one-time instruction — is the most important conceptual shift for beginners. Once she had that, the rest of the session flowed naturally.',
+
+      '## Why This Metaphor Works Technically',
+
+      'The reason the Daily Prophet analogy holds up is because it accidentally maps to a real separation in web architecture.',
+      'HTML is a document format. It describes content declaratively — here is a heading, here is a paragraph, here is an image. It doesn\'t describe appearance or behavior.',
+      'CSS is a presentation layer. Its rules apply to elements selected by type, class, or position, and describe only visual properties. It has no state, no memory, no behavior.',
+      'JavaScript is a programming language. It has state, it executes over time, it responds to events, it can modify the HTML and CSS while the page is running. It\'s the only one of the three that actually does things.',
+      'This separation isn\'t incidental — it\'s a design principle. You\'re supposed to keep structure, presentation, and behavior in separate layers. When they get tangled together, pages become fragile and hard to maintain. When they\'re clean, one layer can change without breaking the others.',
+      'The Daily Prophet has clean separation: the events of the wizarding world (content), the Prophet\'s visual identity (design), and the magic that animates it (behavior). Same architecture.',
+
+      '## For Parents Trying This',
+
+      'Start with a real copy of a newspaper, physical or on screen. Point at specific elements — headline, byline, photo, caption, column — and give each one its HTML tag name. Then change fonts and colors with CSS in the browser\'s developer tools (right-click → inspect on any webpage). Then add a single JavaScript animation. Don\'t explain what the code means line by line — explain what it does. The code is the spell. The browser is the magic enforcing it.',
+      'Most kids will ask "but how does JavaScript actually make things move?" before you\'ve explained it. That question — the curiosity arriving before the explanation — is the signal you want. Answer it by showing, not by telling.',
+      'The Daily Prophet photographs move because someone cast a spell. The spell runs continuously while you\'re looking at the page. JavaScript is that spell. You\'re the wizard now.',
+    ],
+    keyTakeaways: [
+      'HTML = the newspaper\'s structure: what exists and in what order. No design, no behavior — just content organized into named sections',
+      'CSS = the Prophet\'s visual identity: fonts, colors, column layouts, borders. Same HTML, different CSS → completely different newspaper',
+      'JavaScript = the magic that makes photos move: it runs continuously, watches for events, and can change HTML and CSS while the page is open',
+      'The three-layer separation (structure / presentation / behavior) is a real architectural principle, not just a teaching device',
+      'Lead with "why do the photos move?" — curiosity that arrives before the explanation is the signal that learning is happening',
+    ],
+    relatedResources: [
+      {
+        label: 'MDN Web Docs: Getting started with the web (HTML, CSS, JS intro)',
+        url: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website',
+      },
+      {
+        label: 'CodePen — browser sandbox for building pages live',
+        url: 'https://codepen.io',
+      },
+      {
+        label: 'CS Unplugged — offline activities for computing concepts',
+        url: 'https://csunplugged.org',
+      },
+    ],
+    tags: ['Teaching', 'HTML/CSS/JS', 'Kids & AI', 'Curriculum Design', 'Harry Potter'],
+  },
 ];
 
 export function getLatestWayneInsight(): WayneInsight | undefined {
