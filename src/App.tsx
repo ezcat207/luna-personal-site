@@ -13,6 +13,9 @@ import WaynePlan from './pages/wayne/WaynePlan';
 import WayneRoadmap from './pages/wayne/WayneRoadmap';
 import WayneInsights from './pages/wayne/WayneInsights';
 import WayneInsight from './pages/wayne/WayneInsight';
+import WayneTools from './pages/wayne/WayneTools';
+import WayneToolGapGain from './pages/wayne/WayneToolGapGain';
+import WayneToolMustHave from './pages/wayne/WayneToolMustHave';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -52,6 +55,9 @@ function AppRoutes() {
           <Route path="wayne/roadmap" element={<WayneRoadmap />} />
           <Route path="wayne/insights" element={<WayneInsights />} />
           <Route path="wayne/insights/:id" element={<WayneInsight />} />
+          <Route path="wayne/tools" element={<WayneTools />} />
+          <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
+          <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
         </Route>
       </Routes>
     );
@@ -118,6 +124,9 @@ function AppRoutes() {
         <Route path="wayne/roadmap" element={<WayneRoadmap />} />
         <Route path="wayne/insights" element={<WayneInsights />} />
         <Route path="wayne/insights/:id" element={<WayneInsight />} />
+        <Route path="wayne/tools" element={<WayneTools />} />
+        <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
+        <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
       </Route>
     </Routes>
   );
