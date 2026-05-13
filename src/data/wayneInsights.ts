@@ -477,6 +477,7 @@ export const wayneInsights: WayneInsight[] = [
     date: '2026-05-12',
     title: 'The Daily Prophet Method: Teaching HTML, CSS, and JavaScript Through Harry Potter\'s Magical Newspaper',
     subtitle: 'If you can explain why the photos move, you can explain the entire web stack',
+    imageUrl: '/images/daily-prophet-html-css-js.png',
     summary:
       'Most kids hit a wall when you say "HTML is markup, CSS is styling, JavaScript is behavior." Nobody\'s eyes light up at that sentence. But say "here\'s why the photos in the Daily Prophet move" — and an 8-year-old who\'s read Harry Potter six times leans forward. This is how we used wizarding journalism to explain the three languages of the web, and why the metaphor holds up technically, not just narratively.',
     content: [
