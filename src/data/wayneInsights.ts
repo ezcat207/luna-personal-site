@@ -474,7 +474,7 @@ export const wayneInsights: WayneInsight[] = [
   },
   {
     id: 8,
-    date: '2026-05-14',
+    date: '2026-05-12',
     title: 'The Daily Prophet Method: Teaching HTML, CSS, and JavaScript Through Harry Potter\'s Magical Newspaper',
     subtitle: 'If you can explain why the photos move, you can explain the entire web stack',
     summary:
