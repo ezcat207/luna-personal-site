@@ -18,7 +18,7 @@ const HubHome = () => {
   const { t } = useTranslation();
   const latestWayne = getLatestWayneWeek();
   const latestLuna = getLatestLunaWeek();
-  const sortedInsights = [...wayneInsights].reverse();
+  const sortedInsights = [...wayneInsights].filter((i) => !i.draft).reverse();
   const featuredInsight = sortedInsights[0];
   const recentInsights = sortedInsights.slice(1, 4);
 

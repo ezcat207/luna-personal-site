@@ -3,9 +3,9 @@ import { wayneInsights } from '../../data/wayneInsights';
 import { SEOHead } from '../../components/SEOHead';
 
 export default function WayneInsights() {
-  const sortedInsights = [...wayneInsights].sort((a, b) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  const sortedInsights = [...wayneInsights]
+    .filter((i) => !i.draft)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <>
