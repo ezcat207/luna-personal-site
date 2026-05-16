@@ -575,11 +575,10 @@ export const wayneInsights: WayneInsight[] = [
   },
   {
     id: 11,
-    date: '2026-06-03',
+    date: '2026-05-15',
     title: 'Unplanning Your Child\'s Life: From Roadmaps to Capability Maps',
     subtitle: 'The problem with planning your child\'s future is that it\'s your future, not theirs',
     summary: 'Parents plan children\'s lives out of love and pattern recognition. We know what worked for us, we can see which paths seem stable, and we want to spare our children the cost of figuring it out from scratch. The problem: those patterns were calibrated for a world that\'s being rebuilt. And the planning instinct — however well-intentioned — often produces children who are optimized for someone else\'s destination.',
-    draft: true,
     content: [
       'I caught myself doing it last year.',
       'Luna showed a strong aptitude for writing and narrative construction — really unusual for her age. And my first instinct, watching her, was to think about what that would unlock: strong essays, strong college applications, certain career paths. I started mentally sketching a roadmap.',
