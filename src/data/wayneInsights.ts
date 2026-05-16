@@ -475,11 +475,10 @@ export const wayneInsights: WayneInsight[] = [
   },
   {
     id: 9,
-    date: '2026-05-20',
+    date: '2026-05-18',
     title: 'AI in Your Child\'s World: The Opportunity — and the 4 Traps',
     subtitle: 'Most parents see the upside. Few see what\'s hiding underneath.',
     summary: 'Generative AI is genuinely transforming what\'s possible for children\'s learning. But every tool that amplifies capability also amplifies risk. Before you hand your child an AI and call it education, you need to understand the four specific failure modes — hallucination, logical fallacy, algorithm bias, and toxic emotional attachment — and what to do about each.',
-    draft: true,
     content: [
       'The most dangerous moment in the adoption of a powerful new tool is when it starts working.',
       'When something works — when ChatGPT explains a concept better than a textbook, when AI generates a story your child loves, when a prompt turns a blank page into a structured essay — the natural response is to lean in. Trust it. Use it more.',
@@ -530,11 +529,10 @@ export const wayneInsights: WayneInsight[] = [
   },
   {
     id: 10,
-    date: '2026-05-27',
+    date: '2026-05-20',
     title: 'Stop Fixing Weaknesses: The Barrel Theory Is Dead',
     subtitle: 'AI just made the most common parenting instinct in education obsolete',
     summary: 'Every parent I know has done this: looked at a child\'s report card, found the lowest score, and started planning how to fix it. This instinct comes from the barrel theory — the idea that a system\'s capacity is limited by its weakest component. It\'s a reasonable metaphor. It\'s also completely wrong for the world our children are growing into.',
-    draft: true,
     content: [
       'The barrel theory says: a barrel can only hold as much water as its shortest stave. Applied to education: a child\'s success is limited by their weakest subject. So the rational parenting strategy is to find the weakness and eliminate it.',
       'This logic has produced an entire industry. Supplemental tutoring. Summer catch-up programs. The relentless prioritization of weaker subjects over stronger ones. I did it myself with Luna. I noticed she was behind in math relative to her reading and writing, and my first instinct was to add math practice.',
