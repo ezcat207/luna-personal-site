@@ -623,11 +623,10 @@ export const wayneInsights: WayneInsight[] = [
   },
   {
     id: 12,
-    date: '2026-06-10',
+    date: '2026-05-25',
     title: 'Teaching Your Child How to Learn: Metacognition in the AI Age',
     subtitle: 'The most important skill isn\'t knowing things. It\'s knowing how you\'re learning.',
     summary: 'I had a dormmate in high school who studied harder than anyone I\'ve ever met. She was in the bathroom under the light after curfew most nights. Her grades were mediocre. She wasn\'t unintelligent — she was working tactically without working strategically. Metacognition is the ability to step back from learning and observe it: what am I trying to accomplish, is this method working, what should I change? With AI in the picture, this skill becomes both more important and more difficult.',
-    draft: true,
     content: [
       'My dormmate\'s problem had a name, even if neither of us knew it at the time: she was tactically diligent and strategically lazy.',
       'She worked hard at the wrong things. She reread notes that she\'d already understood. She drilled problem types she\'d already mastered. She extended study sessions past the point of diminishing returns because extended effort felt virtuous. She never paused to ask: is this working? Is this the right thing to work on? What would make next week\'s studying more effective than last week\'s?',
@@ -664,11 +663,10 @@ export const wayneInsights: WayneInsight[] = [
   },
   {
     id: 13,
-    date: '2026-06-17',
+    date: '2026-05-27',
     title: 'Raising a Critical Thinker: The Detective Lens and 2 More Tools',
     subtitle: 'In an age when AI can make any argument sound convincing, the ability to evaluate arguments is survival-critical',
     summary: 'The problem isn\'t that children encounter bad information. They always have. The problem is that AI has industrialized the production of plausible-sounding content — and can now generate a well-structured, evidence-referencing, internally consistent argument for almost any position. Teaching children to think critically isn\'t a nice-to-have. It\'s the primary defense against a world where persuasion is infinitely scalable.',
-    draft: true,
     content: [
       'Luna came to me last year with an AI-generated essay "proving" that a particular historical figure was actually a hero rather than a villain — a revisionist position with some legitimate scholarly basis but also some significant motivated reasoning.',
       'The essay was well-written. It had a clear thesis, supporting paragraphs, appropriate transitions, and a confident conclusion. It would have earned a solid grade from any teacher who didn\'t know the underlying literature.',
