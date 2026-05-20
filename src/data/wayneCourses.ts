@@ -152,6 +152,73 @@ export const wayneCourses: WayneCourse[] = [
       'Submit your first flag in picoCTF',
     ],
     tools: ['picoCTF', 'CyberChef', 'browser DevTools', 'Python basics'],
-    modules: [],
+    modules: [
+      {
+        number: 1,
+        title: 'What is CTF? (And Why Kids Love It)',
+        description: "Intro to the competition format. Register on picoCTF. Wayne explains why this is the best way to learn security.",
+        lessons: [
+          { title: 'Jeopardy-style CTF: How the Game Works', type: 'article', duration: '8 min' },
+          { title: 'picoCTF: Create Your Account + Explore', type: 'practice', duration: '15 min' },
+          { title: "Wayne's Take: Why CTF > Security Textbooks", type: 'article', duration: '5 min' },
+          { title: "Luna's Reaction: My First CTF Session", type: 'video', duration: '4 min' },
+        ],
+      },
+      {
+        number: 2,
+        title: 'Cryptography: Secret Messages',
+        description: 'The most beginner-friendly CTF category. Caesar cipher, ROT13, Base64, and CyberChef.',
+        lessons: [
+          { title: 'Caesar Cipher & ROT13: Manual + Tool', type: 'practice', duration: '20 min' },
+          { title: 'Base64: What It Is and How to Decode It', type: 'article', duration: '10 min' },
+          { title: 'CyberChef: Your Crypto Swiss Army Knife', type: 'practice', duration: '15 min' },
+          { title: 'Solve 3 Real picoCTF Crypto Challenges', type: 'practice', duration: '30 min' },
+        ],
+      },
+      {
+        number: 3,
+        title: 'Web Exploitation: Hidden in Plain Sight',
+        description: "Every webpage hides secrets. Learn to find them with DevTools.",
+        lessons: [
+          { title: 'View Source: What\'s Inside Every Webpage', type: 'article', duration: '10 min' },
+          { title: 'DevTools: Elements, Network, and Console Tabs', type: 'practice', duration: '20 min' },
+          { title: 'robots.txt, Hidden Paths & URL Tricks', type: 'practice', duration: '15 min' },
+          { title: 'Cookie Inspection + Simple Parameter Manipulation', type: 'practice', duration: '20 min' },
+        ],
+      },
+      {
+        number: 4,
+        title: 'Forensics & Steganography: Files with Secrets',
+        description: 'Images can hide messages. Files can hide other files. Learn to look deeper.',
+        lessons: [
+          { title: 'File Types & Magic Bytes: What Makes a File', type: 'article', duration: '8 min' },
+          { title: 'Steganography: Images that Hide Data', type: 'practice', duration: '20 min' },
+          { title: 'Strings Command: Read Any File Like a Pro', type: 'practice', duration: '15 min' },
+          { title: 'Solve 2 Forensics Challenges on picoCTF', type: 'practice', duration: '25 min' },
+        ],
+      },
+      {
+        number: 5,
+        title: 'Binary Basics: The Hacker\'s Foundation',
+        description: 'A gentle intro to binary, hex, and what programs actually are.',
+        lessons: [
+          { title: 'Binary & Hex: Numbers Computers Speak', type: 'article', duration: '12 min' },
+          { title: 'ASCII Table: How Computers Store Text', type: 'article', duration: '8 min' },
+          { title: 'ELF Files & the `strings` Command', type: 'practice', duration: '20 min' },
+          { title: 'Using AI to Understand Disassembly Output', type: 'practice', duration: '15 min' },
+        ],
+      },
+      {
+        number: 6,
+        title: 'Family Mini-CTF: Your First Competition',
+        description: 'A 24-hour live challenge. Wayne designs it, Luna competes, you both play.',
+        lessons: [
+          { title: 'Competition Strategy: Time, Hints, Team Roles', type: 'article', duration: '10 min' },
+          { title: '24-Hour Family Mini-CTF Challenge', type: 'practice', duration: '24 hrs' },
+          { title: 'Wayne + Luna Debrief: What We Learned', type: 'video', duration: '10 min' },
+          { title: 'How to Enter picoCTF — Next Steps', type: 'article', duration: '5 min' },
+        ],
+      },
+    ],
   },
 ];

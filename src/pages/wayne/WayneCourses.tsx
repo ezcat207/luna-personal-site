@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   ChevronDown,
@@ -313,13 +314,23 @@ export default function WayneCourses() {
                     </span>
                   </div>
 
-                  <a
-                    href={`mailto:wayne@bunnyuniverse.com?subject=Waitlist: ${encodeURIComponent(course.title)}&body=Hi Wayne, I'd like to join the waitlist for "${course.title}". My child is __ years old.`}
-                    className="flex items-center justify-center gap-2 w-full border border-indigo-300 text-indigo-700 hover:bg-indigo-50 font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
-                  >
-                    <Lock className="w-3.5 h-3.5" />
-                    Join Waitlist — Early Bird ${Math.round((course.price ?? 0) * 0.8)}
-                  </a>
+                  {course.id === 'ctf-intro' ? (
+                    <Link
+                      to="/wayne/courses/ctf"
+                      className="flex items-center justify-center gap-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5" />
+                      See Full Course Details
+                    </Link>
+                  ) : (
+                    <a
+                      href={`mailto:wayne@bunnyuniverse.com?subject=Waitlist: ${encodeURIComponent(course.title)}&body=Hi Wayne, I'd like to join the waitlist for "${course.title}". My child is __ years old.`}
+                      className="flex items-center justify-center gap-2 w-full border border-indigo-300 text-indigo-700 hover:bg-indigo-50 font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
+                    >
+                      <Lock className="w-3.5 h-3.5" />
+                      Join Waitlist — Early Bird ${Math.round((course.price ?? 0) * 0.8)}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
