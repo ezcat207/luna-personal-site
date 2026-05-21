@@ -16,8 +16,9 @@ export interface WayneCourse {
   title: string;
   subtitle: string;
   description: string;
-  tier: 'free' | 'paid';
+  tier: 'free' | 'paid' | 'limited-free';
   price?: number;
+  freeSlots?: number;       // For limited-free courses: total free spots
   status: 'live' | 'coming-soon';
   duration: string;
   level: 'Beginner' | 'Intermediate';
@@ -217,6 +218,112 @@ export const wayneCourses: WayneCourse[] = [
           { title: '24-Hour Family Mini-CTF Challenge', type: 'practice', duration: '24 hrs' },
           { title: 'Wayne + Luna Debrief: What We Learned', type: 'video', duration: '10 min' },
           { title: 'How to Enter picoCTF — Next Steps', type: 'article', duration: '5 min' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ai-leadership',
+    title: 'AI 领导力：带人带 AI 的六项核心能力',
+    subtitle: '从"会用 AI"升级为"用 AI 带团队"的系统方法',
+    description:
+      '大多数人用 AI 一年后能力没有真正增长。这门课把 AI 领导力拆解成六项可训练的具体能力：管理上下文、拆解任务、判断人机分工、路由工具、诊断错误、沉淀经验。前 97 人限免。',
+    tier: 'limited-free',
+    price: 199,
+    freeSlots: 97,
+    status: 'live',
+    duration: '6 周',
+    level: 'Intermediate',
+    tags: ['AI管理', '团队协作', '提示词工程', '工作流', '领导力'],
+    learningOutcomes: [
+      '建立"目标=团队+开会"的 AI 领导力框架',
+      '掌握上下文管理：什么信息给 AI，什么信息不给',
+      '学会任务拆解：把复杂需求切成可执行序列',
+      '设计人机分工：知道哪些事 AI 做，哪些必须人来',
+      '建立诊断能力：出错时追根因而不是盲目重试',
+      '形成沉淀习惯：把每次成功变成可复用的资产',
+    ],
+    tools: ['Claude', 'ChatGPT', 'Cursor', 'Notion', 'CLAUDE.md / Skill Files'],
+    modules: [
+      {
+        number: 0,
+        title: '为什么你需要一套系统',
+        description: '会用 AI 和用好 AI 的本质区别。公式：目标 = 团队 + 开会。',
+        lessons: [
+          { title: '会用 AI 和用好 AI 的本质区别', type: 'article', duration: '10 min' },
+          { title: '公式解析：目标 = 团队 + 开会', type: 'article', duration: '8 min' },
+          { title: '自我评估：你现在在哪个层次？', type: 'practice', duration: '10 min' },
+        ],
+      },
+      {
+        number: 1,
+        title: '管理：上下文就是控制权',
+        description: '什么信息该给 AI，什么不该给？长期信息 vs 当前任务信息，原文 vs 摘要。',
+        lessons: [
+          { title: '上下文的四个层次', type: 'article', duration: '12 min' },
+          { title: '信息过滤：什么该给，什么不该给', type: 'article', duration: '10 min' },
+          { title: '长期信息 vs 当前任务信息的管理方式', type: 'article', duration: '10 min' },
+          { title: '练习：把 500 字背景压缩成 80 字上下文', type: 'practice', duration: '20 min' },
+        ],
+      },
+      {
+        number: 2,
+        title: '拆解：任务不拆解，结果不可控',
+        description: '为什么复杂任务必须拆解。拆解顺序、检查点设计、三类场景模板。',
+        lessons: [
+          { title: '为什么复杂任务必须拆解', type: 'article', duration: '10 min' },
+          { title: '拆解的顺序：先做什么，后做什么', type: 'article', duration: '12 min' },
+          { title: '检查点设计：什么时候介入，什么时候让 AI 继续', type: 'article', duration: '10 min' },
+          { title: '练习：用拆解模板处理你的真实需求', type: 'practice', duration: '25 min' },
+        ],
+      },
+      {
+        number: 3,
+        title: '判断：设计人机分工',
+        description: 'AI 天然适合什么，人必须负责什么。串联/并联/迭代三种协作模式。',
+        lessons: [
+          { title: 'AI 擅长什么，人必须负责什么', type: 'article', duration: '10 min' },
+          { title: '人机分工的三种模式：串联、并联、迭代', type: 'article', duration: '12 min' },
+          { title: '如何避免 AI 依赖症', type: 'article', duration: '8 min' },
+        ],
+      },
+      {
+        number: 4,
+        title: '路由：把任务交给对的「人」',
+        description: '不只是哪个模型最好——这一步该由谁来做？工具匹配与流程路由图。',
+        lessons: [
+          { title: '任务类型与工具匹配逻辑', type: 'article', duration: '12 min' },
+          { title: '多步骤任务的路由图设计', type: 'practice', duration: '20 min' },
+          { title: '动态路由：根据结果调整工具选择', type: 'article', duration: '10 min' },
+        ],
+      },
+      {
+        number: 5,
+        title: '诊断：出错不是重试，是追因',
+        description: 'AI 出错的六类根本原因。诊断流程，从现象到根因到定向修复。',
+        lessons: [
+          { title: 'AI 出错的六个根本原因', type: 'article', duration: '15 min' },
+          { title: '诊断流程：从现象到根因', type: 'practice', duration: '20 min' },
+          { title: '建立你的诊断记录本', type: 'practice', duration: '15 min' },
+        ],
+      },
+      {
+        number: 6,
+        title: '沉淀：让每次成功变成下次的起点',
+        description: '四类可沉淀资产。沉淀的形式和工具。如何让团队越用越强。',
+        lessons: [
+          { title: '什么值得沉淀：四类可复用资产', type: 'article', duration: '10 min' },
+          { title: '沉淀的形式：Prompt 库、Skill File、SOP', type: 'practice', duration: '20 min' },
+          { title: '团队级沉淀：让组织越用越强', type: 'article', duration: '10 min' },
+        ],
+      },
+      {
+        number: 7,
+        title: '实战：从大目标到可执行任务',
+        description: '综合应用六项能力，完成一个真实项目的目标拆解与复盘。',
+        lessons: [
+          { title: '目标拆解完整流程演示', type: 'video', duration: '20 min' },
+          { title: '复盘框架：四个核心问题', type: 'article', duration: '10 min' },
         ],
       },
     ],

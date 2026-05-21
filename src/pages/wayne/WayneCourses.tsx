@@ -13,6 +13,7 @@ import {
   Users,
   Clock,
   BarChart2,
+  Flame,
 } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { wayneCourses, type CourseModule } from '../../data/wayneCourses';
@@ -240,6 +241,57 @@ export default function WayneCourses() {
             </div>
           </div>
         </motion.div>
+
+        {/* ── Limited Free Course: AI Leadership ── */}
+        {(() => {
+          const leadership = wayneCourses.find((c) => c.id === 'ai-leadership')!;
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.13 }}
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <h2 className="text-2xl font-bold text-slate-900">限时免费</h2>
+                <span className="flex items-center gap-1 px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">
+                  <Flame className="w-3 h-3" /> 前 97 人免费
+                </span>
+              </div>
+              <Link
+                to="/wayne/courses/ai-leadership"
+                className="block bg-white border-2 border-emerald-200 rounded-2xl overflow-hidden hover:border-emerald-400 hover:shadow-md transition-all"
+              >
+                <div className="bg-gradient-to-r from-slate-900 to-indigo-950 px-7 py-6 text-white">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-wide">中文课程</p>
+                      <h3 className="text-xl font-bold mb-1">{leadership.title}</h3>
+                      <p className="text-slate-300 text-sm">{leadership.subtitle}</p>
+                    </div>
+                    <div className="flex-shrink-0 text-right">
+                      <p className="text-2xl font-bold text-emerald-400">免费</p>
+                      <p className="text-xs text-slate-400 line-through mt-0.5">${leadership.price}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="px-7 py-5 flex items-center justify-between">
+                  <div className="space-y-1">
+                    {leadership.learningOutcomes.slice(0, 3).map((o) => (
+                      <div key={o} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-xs text-slate-600">{o}</span>
+                      </div>
+                    ))}
+                    <p className="text-xs text-slate-400 pl-5">+ {leadership.learningOutcomes.length - 3} 项...</p>
+                  </div>
+                  <div className="flex-shrink-0 ml-6 text-indigo-600 flex items-center gap-1 font-semibold text-sm">
+                    查看课程 <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          );
+        })()}
 
         {/* ── Paid / Coming Soon ── */}
         <motion.div
