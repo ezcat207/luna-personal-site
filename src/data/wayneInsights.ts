@@ -1180,7 +1180,7 @@ export const wayneInsights: WayneInsight[] = [
     relatedResources: [
       {
         label: 'AI 领导力课程：带人带 AI 的六项核心能力（前 97 人免费）',
-        url: '/wayne/courses/ai-leadership',
+        url: '/wayne/courses/ai-leadership/zh',
       },
     ],
     tags: ['AI 领导力', 'AI Management', 'Productivity', 'Team Building', 'Chinese'],

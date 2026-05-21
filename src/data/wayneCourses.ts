@@ -223,6 +223,112 @@ export const wayneCourses: WayneCourse[] = [
     ],
   },
   {
+    id: 'ai-leadership-en',
+    title: 'AI Leadership: Six Core Skills',
+    subtitle: 'Upgrade from AI user to AI team leader — systematically',
+    description:
+      "Most people who've used AI for a year haven't actually gotten stronger. This course breaks AI leadership into six trainable skills: Brief, Stage, Own, Route, Debug, Distill. First 97 students free.",
+    tier: 'limited-free',
+    price: 199,
+    freeSlots: 97,
+    status: 'live',
+    duration: '6 weeks',
+    level: 'Intermediate',
+    tags: ['AI Leadership', 'Team Management', 'Prompt Engineering', 'Workflow'],
+    learningOutcomes: [
+      'Build a "Goal = Team + Meeting" framework for AI leadership',
+      'Master Brief: what context to give AI and what to withhold',
+      'Learn Stage: break complex requests into executable sequences',
+      'Design Own: decide what AI handles vs. what humans must own',
+      'Build Debug skills: trace root causes instead of blindly retrying',
+      'Form a Distill habit: turn every success into a reusable asset',
+    ],
+    tools: ['Claude', 'ChatGPT', 'Cursor', 'Notion', 'CLAUDE.md / Skill Files'],
+    modules: [
+      {
+        number: 0,
+        title: 'Why You Need a System',
+        description: 'The difference between using AI and leading with AI. The formula: Goal = Team + Meeting.',
+        lessons: [
+          { title: 'Using AI vs. Leading with AI: The Real Difference', type: 'article', duration: '10 min' },
+          { title: 'The Formula: Goal = Team + Meeting', type: 'article', duration: '8 min' },
+          { title: 'Self-Assessment: Where Are You Now?', type: 'practice', duration: '10 min' },
+        ],
+      },
+      {
+        number: 1,
+        title: 'Brief — Context Is Control',
+        description: 'What to feed AI, what not to. Long-term context vs. task-specific context, raw vs. compressed.',
+        lessons: [
+          { title: 'The Four Layers of Context', type: 'article', duration: '12 min' },
+          { title: 'Information Filtering: What to Include, What to Leave Out', type: 'article', duration: '10 min' },
+          { title: 'Persistent vs. Task-Specific Context', type: 'article', duration: '10 min' },
+          { title: 'Practice: Compress 500 Words of Background into 80 Words', type: 'practice', duration: '20 min' },
+        ],
+      },
+      {
+        number: 2,
+        title: 'Stage — Unstaged Tasks Always Fail',
+        description: 'Why complex tasks must be staged. Sequencing, checkpoint design, three scenario templates.',
+        lessons: [
+          { title: 'Why Complex Tasks Must Be Staged', type: 'article', duration: '10 min' },
+          { title: 'Sequencing: What Comes First, What Comes Next', type: 'article', duration: '12 min' },
+          { title: 'Checkpoint Design: When to Intervene vs. Let AI Continue', type: 'article', duration: '10 min' },
+          { title: 'Practice: Stage a Real Task Using the Template', type: 'practice', duration: '25 min' },
+        ],
+      },
+      {
+        number: 3,
+        title: 'Own — Design Human-AI Division of Labor',
+        description: 'What AI does naturally well, and what humans must own. Serial, parallel, and iterative modes.',
+        lessons: [
+          { title: 'What AI Does Well, What Humans Must Own', type: 'article', duration: '10 min' },
+          { title: 'Three Collaboration Modes: Serial, Parallel, Iterative', type: 'article', duration: '12 min' },
+          { title: 'How to Avoid AI Dependency', type: 'article', duration: '8 min' },
+        ],
+      },
+      {
+        number: 4,
+        title: 'Route — Dispatch to the Right Tool',
+        description: "Not just which model is best — which tool handles this step. Tool matching and dispatch maps.",
+        lessons: [
+          { title: 'Task Types and Tool Matching Logic', type: 'article', duration: '12 min' },
+          { title: 'Building a Multi-Step Dispatch Map', type: 'practice', duration: '20 min' },
+          { title: 'Dynamic Routing: Adjust Tool Selection Based on Results', type: 'article', duration: '10 min' },
+        ],
+      },
+      {
+        number: 5,
+        title: 'Debug — Root Cause, Not Retry',
+        description: 'The six root causes of AI errors. Debugging workflow from symptom to root cause to targeted fix.',
+        lessons: [
+          { title: 'The Six Root Causes of AI Errors', type: 'article', duration: '15 min' },
+          { title: 'Debugging Workflow: From Symptom to Root Cause', type: 'practice', duration: '20 min' },
+          { title: 'Build Your Debug Log', type: 'practice', duration: '15 min' },
+        ],
+      },
+      {
+        number: 6,
+        title: 'Distill — Turn Success into Reusable Assets',
+        description: 'Four types of distillable assets. Forms, tools, and how to make your whole team stronger.',
+        lessons: [
+          { title: "What's Worth Distilling: Four Types of Reusable Assets", type: 'article', duration: '10 min' },
+          { title: 'Forms of Distillation: Prompt Library, Skill Files, SOPs', type: 'practice', duration: '20 min' },
+          { title: 'Team-Level Distillation: Making the Organization Stronger', type: 'article', duration: '10 min' },
+        ],
+      },
+      {
+        number: 7,
+        title: 'Capstone — From Goal to Executable Plan',
+        description: 'Apply all six skills: full goal decomposition walkthrough and retrospective.',
+        lessons: [
+          { title: 'Full Goal Decomposition Walkthrough', type: 'video', duration: '20 min' },
+          { title: 'Retrospective Framework: Four Core Questions', type: 'article', duration: '10 min' },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-leadership',
     title: 'AI 领导力：带人带 AI 的六项核心能力',
     subtitle: '从"会用 AI"升级为"用 AI 带团队"的系统方法',

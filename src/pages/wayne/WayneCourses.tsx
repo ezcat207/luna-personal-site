@@ -244,7 +244,7 @@ export default function WayneCourses() {
 
         {/* ── Limited Free Course: AI Leadership ── */}
         {(() => {
-          const leadership = wayneCourses.find((c) => c.id === 'ai-leadership')!;
+          const leadership = wayneCourses.find((c) => c.id === 'ai-leadership-en')!;
           return (
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -252,9 +252,9 @@ export default function WayneCourses() {
               transition={{ duration: 0.3, delay: 0.13 }}
             >
               <div className="flex items-center gap-3 mb-5">
-                <h2 className="text-2xl font-bold text-slate-900">限时免费</h2>
+                <h2 className="text-2xl font-bold text-slate-900">Limited Free</h2>
                 <span className="flex items-center gap-1 px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">
-                  <Flame className="w-3 h-3" /> 前 97 人免费
+                  <Flame className="w-3 h-3" /> First 97 Free
                 </span>
               </div>
               <Link
@@ -264,12 +264,12 @@ export default function WayneCourses() {
                 <div className="bg-gradient-to-r from-slate-900 to-indigo-950 px-7 py-6 text-white">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-wide">中文课程</p>
+                      <p className="text-xs font-bold text-emerald-400 mb-2 uppercase tracking-wide">Intermediate · 6 weeks</p>
                       <h3 className="text-xl font-bold mb-1">{leadership.title}</h3>
                       <p className="text-slate-300 text-sm">{leadership.subtitle}</p>
                     </div>
                     <div className="flex-shrink-0 text-right">
-                      <p className="text-2xl font-bold text-emerald-400">免费</p>
+                      <p className="text-2xl font-bold text-emerald-400">Free</p>
                       <p className="text-xs text-slate-400 line-through mt-0.5">${leadership.price}</p>
                     </div>
                   </div>
@@ -282,13 +282,19 @@ export default function WayneCourses() {
                         <span className="text-xs text-slate-600">{o}</span>
                       </div>
                     ))}
-                    <p className="text-xs text-slate-400 pl-5">+ {leadership.learningOutcomes.length - 3} 项...</p>
+                    <p className="text-xs text-slate-400 pl-5">+ {leadership.learningOutcomes.length - 3} more outcomes</p>
                   </div>
                   <div className="flex-shrink-0 ml-6 text-indigo-600 flex items-center gap-1 font-semibold text-sm">
-                    查看课程 <ArrowRight className="w-4 h-4" />
+                    See Course <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
               </Link>
+              <p className="text-xs text-slate-400 mt-2 pl-1">
+                Also available:{' '}
+                <Link to="/wayne/courses/ai-leadership/zh" className="text-slate-500 hover:text-slate-700 underline underline-offset-2">
+                  中文版 →
+                </Link>
+              </p>
             </motion.div>
           );
         })()}

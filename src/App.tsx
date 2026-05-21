@@ -19,6 +19,7 @@ import WayneToolMustHave from './pages/wayne/WayneToolMustHave';
 import WayneCourses from './pages/wayne/WayneCourses';
 import WayneCourseCtf from './pages/wayne/WayneCourseCtf';
 import WayneCourseLeadership from './pages/wayne/WayneCourseLeadership';
+import WayneCourseLeadershipEn from './pages/wayne/WayneCourseLeadershipEn';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -60,7 +61,8 @@ function AppRoutes() {
           <Route path="wayne/insights/:id" element={<WayneInsight />} />
           <Route path="wayne/courses" element={<WayneCourses />} />
           <Route path="wayne/courses/ctf" element={<WayneCourseCtf />} />
-          <Route path="wayne/courses/ai-leadership" element={<WayneCourseLeadership />} />
+          <Route path="wayne/courses/ai-leadership" element={<WayneCourseLeadershipEn />} />
+          <Route path="wayne/courses/ai-leadership/zh" element={<WayneCourseLeadership />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -132,6 +134,8 @@ function AppRoutes() {
         <Route path="wayne/insights/:id" element={<WayneInsight />} />
         <Route path="wayne/courses" element={<WayneCourses />} />
         <Route path="wayne/courses/ctf" element={<WayneCourseCtf />} />
+        <Route path="wayne/courses/ai-leadership" element={<WayneCourseLeadershipEn />} />
+        <Route path="wayne/courses/ai-leadership/zh" element={<WayneCourseLeadership />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
