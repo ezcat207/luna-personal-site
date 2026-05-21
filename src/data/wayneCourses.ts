@@ -227,7 +227,7 @@ export const wayneCourses: WayneCourse[] = [
     title: 'AI 领导力：带人带 AI 的六项核心能力',
     subtitle: '从"会用 AI"升级为"用 AI 带团队"的系统方法',
     description:
-      '大多数人用 AI 一年后能力没有真正增长。这门课把 AI 领导力拆解成六项可训练的具体能力：管理上下文、拆解任务、判断人机分工、路由工具、诊断错误、沉淀经验。前 97 人限免。',
+      '大多数人用 AI 一年后能力没有真正增长。这门课把 AI 领导力拆解成六项可训练的具体能力：投喂上下文、分步任务、分工人机、调度工具、追因错误、提炼经验。前 97 人限免。',
     tier: 'limited-free',
     price: 199,
     freeSlots: 97,
@@ -237,11 +237,11 @@ export const wayneCourses: WayneCourse[] = [
     tags: ['AI管理', '团队协作', '提示词工程', '工作流', '领导力'],
     learningOutcomes: [
       '建立"目标=团队+开会"的 AI 领导力框架',
-      '掌握上下文管理：什么信息给 AI，什么信息不给',
-      '学会任务拆解：把复杂需求切成可执行序列',
-      '设计人机分工：知道哪些事 AI 做，哪些必须人来',
-      '建立诊断能力：出错时追根因而不是盲目重试',
-      '形成沉淀习惯：把每次成功变成可复用的资产',
+      '掌握投喂（Brief）：什么信息给 AI，什么信息不给',
+      '学会分步（Stage）：把复杂需求切成可执行序列',
+      '设计分工（Own）：知道哪些事 AI 做，哪些必须人来',
+      '建立追因（Debug）能力：出错时追根因而不是盲目重试',
+      '形成提炼（Distill）习惯：把每次成功变成可复用的资产',
     ],
     tools: ['Claude', 'ChatGPT', 'Cursor', 'Notion', 'CLAUDE.md / Skill Files'],
     modules: [
@@ -257,7 +257,7 @@ export const wayneCourses: WayneCourse[] = [
       },
       {
         number: 1,
-        title: '管理：上下文就是控制权',
+        title: '投喂（Brief）：上下文就是控制权',
         description: '什么信息该给 AI，什么不该给？长期信息 vs 当前任务信息，原文 vs 摘要。',
         lessons: [
           { title: '上下文的四个层次', type: 'article', duration: '12 min' },
@@ -268,18 +268,18 @@ export const wayneCourses: WayneCourse[] = [
       },
       {
         number: 2,
-        title: '拆解：任务不拆解，结果不可控',
-        description: '为什么复杂任务必须拆解。拆解顺序、检查点设计、三类场景模板。',
+        title: '分步（Stage）：任务不分步，结果不可控',
+        description: '为什么复杂任务必须分步。分步顺序、检查点设计、三类场景模板。',
         lessons: [
-          { title: '为什么复杂任务必须拆解', type: 'article', duration: '10 min' },
-          { title: '拆解的顺序：先做什么，后做什么', type: 'article', duration: '12 min' },
+          { title: '为什么复杂任务必须分步', type: 'article', duration: '10 min' },
+          { title: '分步的顺序：先做什么，后做什么', type: 'article', duration: '12 min' },
           { title: '检查点设计：什么时候介入，什么时候让 AI 继续', type: 'article', duration: '10 min' },
-          { title: '练习：用拆解模板处理你的真实需求', type: 'practice', duration: '25 min' },
+          { title: '练习：用分步模板处理你的真实需求', type: 'practice', duration: '25 min' },
         ],
       },
       {
         number: 3,
-        title: '判断：设计人机分工',
+        title: '分工（Own）：设计人机分工',
         description: 'AI 天然适合什么，人必须负责什么。串联/并联/迭代三种协作模式。',
         lessons: [
           { title: 'AI 擅长什么，人必须负责什么', type: 'article', duration: '10 min' },
@@ -289,32 +289,32 @@ export const wayneCourses: WayneCourse[] = [
       },
       {
         number: 4,
-        title: '路由：把任务交给对的「人」',
-        description: '不只是哪个模型最好——这一步该由谁来做？工具匹配与流程路由图。',
+        title: '调度（Route）：把任务交给对的「人」',
+        description: '不只是哪个模型最好——这一步该由谁来做？工具匹配与流程调度图。',
         lessons: [
           { title: '任务类型与工具匹配逻辑', type: 'article', duration: '12 min' },
-          { title: '多步骤任务的路由图设计', type: 'practice', duration: '20 min' },
-          { title: '动态路由：根据结果调整工具选择', type: 'article', duration: '10 min' },
+          { title: '多步骤任务的调度图设计', type: 'practice', duration: '20 min' },
+          { title: '动态调度：根据结果调整工具选择', type: 'article', duration: '10 min' },
         ],
       },
       {
         number: 5,
-        title: '诊断：出错不是重试，是追因',
-        description: 'AI 出错的六类根本原因。诊断流程，从现象到根因到定向修复。',
+        title: '追因（Debug）：出错不是重试，是追因',
+        description: 'AI 出错的六类根本原因。追因流程，从现象到根因到定向修复。',
         lessons: [
           { title: 'AI 出错的六个根本原因', type: 'article', duration: '15 min' },
-          { title: '诊断流程：从现象到根因', type: 'practice', duration: '20 min' },
-          { title: '建立你的诊断记录本', type: 'practice', duration: '15 min' },
+          { title: '追因流程：从现象到根因', type: 'practice', duration: '20 min' },
+          { title: '建立你的追因记录本', type: 'practice', duration: '15 min' },
         ],
       },
       {
         number: 6,
-        title: '沉淀：让每次成功变成下次的起点',
-        description: '四类可沉淀资产。沉淀的形式和工具。如何让团队越用越强。',
+        title: '提炼（Distill）：让每次成功变成下次的起点',
+        description: '四类可提炼资产。提炼的形式和工具。如何让团队越用越强。',
         lessons: [
-          { title: '什么值得沉淀：四类可复用资产', type: 'article', duration: '10 min' },
-          { title: '沉淀的形式：Prompt 库、Skill File、SOP', type: 'practice', duration: '20 min' },
-          { title: '团队级沉淀：让组织越用越强', type: 'article', duration: '10 min' },
+          { title: '什么值得提炼：四类可复用资产', type: 'article', duration: '10 min' },
+          { title: '提炼的形式：Prompt 库、Skill File、SOP', type: 'practice', duration: '20 min' },
+          { title: '团队级提炼：让组织越用越强', type: 'article', duration: '10 min' },
         ],
       },
       {

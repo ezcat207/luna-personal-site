@@ -46,44 +46,50 @@ const SIX_SKILLS = [
   {
     num: '01',
     icon: <MessageSquare className="w-5 h-5 text-indigo-600" />,
-    name: '管理',
-    tagline: '上下文就是控制权',
-    desc: '什么信息该给 AI，什么信息不该给？长期信息 vs 当前任务，原文保留 vs 压缩摘要——上下文管理能力决定你能从 AI 拿到多高质量的输出。',
+    name: '投喂',
+    nameEn: 'Brief',
+    tagline: '你喂什么，它输出什么',
+    desc: '上下文是你最重要的资产。什么信息给 AI、什么不给，长期项目信息 vs 单次任务信息，原文保留 vs 压缩摘要——投喂的质量直接决定输出的质量。垃圾进，垃圾出。',
   },
   {
     num: '02',
     icon: <GitBranch className="w-5 h-5 text-indigo-600" />,
-    name: '拆解',
-    tagline: '不拆解，复杂需求必然失败',
-    desc: '一个复杂需求不能直接丢给 AI。你要知道先让它理解背景还是先让它列问题，先让它给方案还是先让它做局部执行，什么时候检查，什么时候回滚。',
+    name: '分步',
+    nameEn: 'Stage',
+    tagline: '复杂任务必须一步一步来',
+    desc: '把一个大需求切成可执行的序列：先让 AI 确认背景，再让它列疑问，然后局部执行，检查，继续。跳过分步直接要结果，几乎必然得到一个看起来像样但实际不可用的答案。',
   },
   {
     num: '03',
     icon: <BrainCircuit className="w-5 h-5 text-indigo-600" />,
-    name: '判断',
-    tagline: '设计人机分工，不是盲目外包',
-    desc: 'AI 适合整理资料、生成初稿、提取结构、批量改写。但方向判断、关键取舍、风险承担，仍然要有人负责。真正会用 AI 的人会设计人和 AI 的配合方式。',
+    name: '分工',
+    nameEn: 'Own',
+    tagline: '人做人的事，AI 做 AI 的事',
+    desc: 'AI 擅长整理资料、生成初稿、提取结构、批量改写。但方向选择、关键取舍、风险承担，必须人来负责。真正会用 AI 的人，设计人机配合方式，而不是把所有事情都扔给 AI。',
   },
   {
     num: '04',
     icon: <Route className="w-5 h-5 text-indigo-600" />,
-    name: '路由',
-    tagline: '这一步该由谁来做',
-    desc: '问题不只是"哪个模型最好"，更重要的是"这一步该由谁来做"。长上下文模型、搜索工具、代码工具、结构化输出——每类任务有对应的最佳路由。',
+    name: '调度',
+    nameEn: 'Route',
+    tagline: '把任务派给对的工具和模型',
+    desc: '不只是"哪个模型最好"，更重要的是"这一步派给谁"。长上下文任务、联网搜索、代码执行、结构化输出——每类任务有最合适的工具。好的调度员知道怎么排兵布阵。',
   },
   {
     num: '05',
     icon: <Stethoscope className="w-5 h-5 text-indigo-600" />,
-    name: '诊断',
-    tagline: '出错不是重试，是追因',
-    desc: '只会重试，每次都像重新摇骰子。AI 出错有六类根本原因：上下文、指令、拆解、模型能力、工具调用、评估标准。能诊断，系统才会越来越稳定。',
+    name: '追因',
+    nameEn: 'Debug',
+    tagline: '出错不是重试，是找根因',
+    desc: '只会重试，每次都像重新摇骰子，没有系统改善。AI 出错有六类根本原因：投喂、指令、分步、模型能力、工具调用、评估标准。能追因，系统才会越来越稳定。',
   },
   {
     num: '06',
     icon: <Layers className="w-5 h-5 text-indigo-600" />,
-    name: '沉淀',
-    tagline: '让每次成功变成下次的起点',
-    desc: '一个好 Prompt、一套检查清单、一个项目规范、一次有效的人机协作流程，都不应该只停留在某次对话里。普通人每次重新开始，高手越用越强。',
+    name: '提炼',
+    nameEn: 'Distill',
+    tagline: '把每次成功提炼成下次的资产',
+    desc: '一个好 Prompt、一套检查清单、一个项目规范、一次有效的人机协作 SOP——这些都不应该只停留在某次对话里。普通人每次重新开始，高手越用越强，差距就在这里。',
   },
 ];
 
@@ -110,7 +116,7 @@ const faqs = [
   },
   {
     q: '学完后我会得到什么？',
-    a: '7 个可直接使用的模板/工具（上下文管理模板、任务拆解模板、人机分工决策树、工具路由地图、诊断记录本、Prompt 资产库、复盘框架）。还有一套可以复用到每个新项目的工作系统。',
+    a: '7 个可直接使用的模板/工具（投喂上下文模板、任务分步模板、人机分工决策树、工具调度地图、追因记录本、Prompt 资产库、复盘框架）。还有一套可以复用到每个新项目的工作系统。',
   },
 ];
 
@@ -249,11 +255,11 @@ function EnrollSidebar({ totalLessons }: { totalLessons: number }) {
       <div className="px-6 py-4">
         <p className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">课程交付物</p>
         {[
-          '上下文管理模板',
-          '任务拆解模板（3 个场景版本）',
+          '投喂上下文模板',
+          '任务分步模板（3 个场景版本）',
           '人机分工决策树',
-          '工具路由地图',
-          '诊断记录本',
+          '工具调度地图',
+          '追因记录本',
           'Prompt 资产库框架',
           '项目复盘模板',
         ].map((item) => (
@@ -275,7 +281,7 @@ export default function WayneCourseLeadership() {
     <>
       <SEOHead
         title={'AI 领导力：带人带 AI 的六项核心能力 | Wayne\'s Plans'}
-        description={'从"会用 AI"升级为"用 AI 带团队"的系统方法。六项核心能力：管理、拆解、判断、路由、诊断、沉淀。前 97 人限免。'}
+        description={'从"会用 AI"升级为"用 AI 带团队"的系统方法。六项核心能力：投喂、分步、分工、调度、追因、提炼。前 97 人限免。'}
       />
 
       {/* Breadcrumb */}
@@ -396,7 +402,7 @@ export default function WayneCourseLeadership() {
               </div>
               <div className="bg-white rounded-xl p-3 border border-indigo-100">
                 <p className="font-bold text-indigo-700 mb-1">开会</p>
-                <p className="text-xs text-slate-500">拆解、分工、复盘的协调过程</p>
+                <p className="text-xs text-slate-500">分步、分工、复盘的协调过程</p>
               </div>
             </div>
             <p className="text-sm text-slate-500 mt-4">
