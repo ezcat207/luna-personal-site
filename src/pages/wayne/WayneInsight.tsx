@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router';
 import { getWayneInsightById } from '../../data/wayneInsights';
 import { SEOHead } from '../../components/SEOHead';
+import { ShareBar } from '../../components/ShareBar';
 
 export default function WayneInsight() {
   const { id } = useParams<{ id: string }>();
@@ -83,9 +84,10 @@ export default function WayneInsight() {
             {insight.subtitle && (
               <p className="text-2xl text-slate-600 mb-6">{insight.subtitle}</p>
             )}
-            <p className="text-xl text-slate-700 leading-relaxed">
+            <p className="text-xl text-slate-700 leading-relaxed mb-6">
               {insight.summary}
             </p>
+            <ShareBar title={insight.title} summary={insight.summary} />
           </header>
 
           {/* Featured Image */}
@@ -130,6 +132,17 @@ export default function WayneInsight() {
                 </p>
               );
             })}
+          </div>
+
+          {/* Share — bottom */}
+          <div className="flex items-center justify-between py-6 border-t border-slate-200 mb-8">
+            <Link
+              to="/wayne/insights"
+              className="text-sm text-slate-400 hover:text-slate-700 transition-colors"
+            >
+              ← All Insights
+            </Link>
+            <ShareBar title={insight.title} summary={insight.summary} />
           </div>
 
           {/* Key Takeaways */}
