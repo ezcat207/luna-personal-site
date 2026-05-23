@@ -380,6 +380,14 @@ export default function WayneCourses() {
                       <ArrowRight className="w-3.5 h-3.5" />
                       See Full Course Details
                     </Link>
+                  ) : course.id === 'ai-visuals' ? (
+                    <Link
+                      to="/wayne/courses/ai-visuals"
+                      className="flex items-center justify-center gap-2 w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5" />
+                      See Full Course Details
+                    </Link>
                   ) : (
                     <a
                       href={`mailto:wayne@bunnyuniverse.com?subject=Waitlist: ${encodeURIComponent(course.title)}&body=Hi Wayne, I'd like to join the waitlist for "${course.title}". My child is __ years old.`}
