@@ -1393,87 +1393,228 @@ export const wayneInsights: WayneInsight[] = [
     subtitle: 'Three AI models, one interface, and a glimpse at where creative tools are heading',
     summary:
       'Google Flow is Google\'s answer to the question "what happens when you put Veo, Gemini, and an image model behind one interface?" I spent an afternoon testing it end-to-end: generating images from prompts, editing with precision, creating videos from stills, and assembling scenes. The result is genuinely impressive — and the limitations are as instructive as the capabilities.',
-    images: [
-      '/images/google-flow-intro.jpg',
-      '/images/google-flow-project.jpg',
-      '/images/google-flow-edit.jpg',
-      '/images/google-flow-video.jpg',
-      '/images/google-flow-mention.jpg',
-      '/images/google-flow-scene.jpg',
-    ],
     content: [
       'I spent an afternoon inside Google Flow — Google\'s AI creative studio that combines three of their models into a single workspace. The promise is simple: generate images, edit them, animate them into videos, and assemble the results — all without leaving the browser. I wanted to understand whether it\'s genuinely useful or just a demo wrapped in good design.',
 
-      'The short answer: it\'s useful. The longer answer reveals something interesting about where creative AI tools are heading — and why the combination of models matters more than any single capability.',
+      'The short answer: it\'s useful — and the way it\'s useful tells us something important about where AI creative tools are heading. Google Flow is not the best at any single thing. What it does that nothing else does is combine image generation, image editing, video generation, and scene assembly into a single workspace where outputs from one model become inputs for the next. The magic is in the integration.',
 
       '## Three Models, One Workspace',
 
-      'Google Flow brings together three AI models, each responsible for a different creative function.',
+      'Google Flow brings together three distinct AI models, each responsible for a different creative function, and presents them through a unified interface.',
 
-      'Veo (currently Veo 3.1) is the video generation engine. It takes text prompts or images and turns them into moving clips — with options for quality versus speed, camera controls, and start/end frame composition. Think of it as a director that works on demand.',
+      '**Veo** (currently Veo 3.1) is Google\'s dedicated video generation model. Think of it as your personal movie director — it takes text prompts or still images and turns them into moving clips. It supports different quality tiers (Fast vs Quality), camera controls (dolly, orbit, pan), and start/end frame composition for controlled transitions between two images.',
 
-      'Nano Banana 2 handles image generation and editing. Given a text prompt, it generates high-fidelity images. Given an existing image plus an edit instruction, it modifies specific regions with surprising precision. It\'s the painter in the studio.',
+      '**Nano Banana 2** handles image generation and editing. Given a text prompt, it generates high-fidelity images at resolutions up to 1920×1080. Given an existing image plus an edit instruction, it modifies specific regions with surprising precision — either through text-only edits or via a lasso tool that lets you draw the region you want to change.',
 
-      'Gemini runs underneath as the language layer — parsing natural language prompts, understanding references to existing assets, and making the interaction feel conversational rather than technical. You\'re not writing API calls; you\'re describing what you want.',
+      '**Gemini** runs underneath as the language layer — parsing natural language prompts, understanding references to existing assets, and making the interaction feel conversational rather than technical. You\'re not writing API calls or complex configuration; you\'re describing what you want in plain English.',
 
-      'The interface presents all three as tabs within a single project view. You start a project, pick your tool, generate, and the output lives in the same workspace. This unified model is the key design decision: instead of switching between separate apps for image generation, video generation, and editing, everything happens in one place.',
+      'The interface presents all three as tabs within a single project view. You start a project, pick your tool (Images or Video), enter your prompt, and the output lives in the same workspace. This unified model is the key design decision: instead of switching between separate apps for image generation, video generation, and editing — each with its own file system, history, and workflow — everything happens in one place. The outputs are automatically organized, searchable, and reusable within the same project.',
 
-      '## Image Generation: The Baseline',
+      '## Credit System Deep Dive',
 
-      'I started with a simple prompt: "A futuristic cityscape at sunset, neon lights reflecting on wet streets." Generated three variants in parallel. The results took about 10 seconds each — 1920×1080, coherent lighting, decent composition.',
+      'Before you start creating, it\'s worth understanding how Google Flow charges for usage. The economics tell you a lot about what Google considers expensive vs cheap.',
 
-      'What impressed me was not the quality of a single image (which was good) but the variety across the three outputs. Different framing, different color temperatures, different architectural details. The "generate 3 at once" pattern is smart — it transforms generation from "get one answer" to "explore a space of possibilities," which is how creative work actually happens.',
+      'Flow operates on a **credit system**, not a subscription. Every action — generating an image, editing, upscaling, creating a video — costs a certain number of credits. The exact cost depends on the complexity of the operation.',
 
-      'Editing was where it got more interesting. Using Nano Banana 2\'s lasso tool, I selected a region of the sky and prompted "Add a large flying blimp." The model understood that I wanted the blimp only in the selected area, not throughout the image. This targeted editing — specifying both what and where — is the feature that separates a creative tool from a novelty.',
+      'The **Free tier** gives you a daily credit allowance that resets each day. Crucially, these daily credits do not roll over. If you don\'t use them, you lose them. This creates a "use it or lose it" dynamic that encourages daily experimentation but makes it difficult to save up for larger projects.',
 
-      'Upscaling to 4K worked as advertised. One caveat: the tool explicitly warns against running multiple upscaling jobs simultaneously, which suggests the operation is resource-intensive even for Google\'s infrastructure.',
+      'The **Google AI Pro plan** provides a monthly credit pool. Unlike the free tier, monthly credits roll over for up to 12 months. Top-up credits (additional credits purchased mid-cycle) also carry over for 12 months. This means you can accumulate credits over time for larger projects.',
 
-      '## Video Generation: Where It Gets Real',
+      'The pricing structure tells you something revealing: **generation is expensive, storage is cheap**. Google wants to smooth out usage rather than encourage bursts. The daily free credits are just enough to learn the interface and run small experiments, but any serious project — especially one involving video generation — will require the paid plan.',
 
-      'Video generation is where Flow distinguishes itself from the current generation of AI tools. I tested two modes.',
+      'Practical implication: you can absolutely prototype and learn on the free tier. But budget for the Pro plan if you\'re planning to use Flow for actual creative work. A complex project with multiple image generations, edits, upscaling, and video clips can consume credits faster than you\'d expect.',
 
-      'Veo 3.1 Fast generates clips in about 30 seconds with acceptable quality — good for ideation and rough cuts. Veo 3.1 Quality takes several minutes but produces noticeably better physics, lighting coherence, and character consistency. The tradeoff is exactly the one you\'d expect from a production tool: speed for iteration, quality for delivery.',
+      '## Getting Started: Project Grid and Navigation',
 
-      'The start/end frame feature was the most technically impressive. You provide an image for the first frame and another for the last frame, and Veo generates a video transition between them. This is essentially keyframe animation generated by AI — a workflow that previously required either manual animation expertise or complex video editing software. Now it\'s a two-image input.',
+      'When you first open Google Flow, you\'re greeted by the project grid — a visual gallery of all your past projects. If you\'re a new user, it will be empty. Returning users see thumbnails of their previous work, organized by recency.',
 
-      'Camera controls — dolly in, orbit up, pan left — worked but with varying reliability. Simple camera moves were clean. Complex multi-axis movements sometimes produced artifacts. This feels like a v1 capability that will improve rapidly.',
+      'You can customize the view in several ways: grid layout (default), batch view (compact thumbnails for scanning many projects), and tile details (more information per project). There\'s also a search bar to find specific projects by name, and filter options to narrow down by asset type or date.',
+
+      'Each project is essentially a container for a collection of assets — images, videos, and scenes. Assets within a project can be renamed, searched, and filtered by category (images vs videos). This organizational layer is simple but sufficient. The key habit to adopt: **rename your assets immediately after generating them**. A project with 20 untitled images is a mess; a project with 20 named assets is a creative library.',
+
+      'Starting a new project is straightforward: click the "New Project" button (a plus icon or "Start new project" text), and you\'re dropped into an empty workspace with the prompt box at the bottom waiting for your input.',
+
+      '## Generating Images: From Prompt to Screen',
+
+      'Image generation is the entry point. Let me walk through the exact workflow.',
+
+      'Inside a project, the bottom of the screen has a prompt input box. On the left side, you can switch between the "Images" tab and the "Video" tab. For image generation, select the Images tab.',
+
+      'You have a few configuration options before generating. First, **aspect ratio**: choose from presets like 1:1 (square), 16:9 (widescreen), 9:16 (portrait), and others. This is important — getting the aspect ratio right from the start saves cropping later. Second, **amount of generations**: you can ask for 1, 2, or 3 variants at once. Generating multiple variants is the smarter default because it gives you options to choose from.',
+
+      'I tested with a prompt: "A futuristic cityscape at sunset, neon lights reflecting on wet streets," with 3 generations at 16:9. The results took about 10 seconds to appear — three distinct interpretations of the same prompt, rendered at 1920×1080. Different framing, different color temperatures, different architectural details. None were "wrong" — they were different creative directions.',
+
+      'This "generate multiple variants" pattern is one of the smartest design decisions in Flow. It transforms generation from "get one answer" to "explore a space of possibilities," which is how creative work actually happens. You don\'t iterate by refining a single output; you pick the best direction from several options and take that forward.',
+
+      '## Editing Images: Precision Beyond the Prompt',
+
+      '@img:/images/google-flow-edit.jpg',
+
+      'Editing is where Nano Banana 2 shows its real capabilities. There are two modes of editing:',
+
+      '**Text-only editing**: Open an existing image, and the prompt box reappears. Type a new instruction — "Make the sky darker," "Add a flying blimp" — and the model generates a new version of the image modified according to your instruction. The model understands what to change and what to keep. Adding a blimp doesn\'t change the cityscape below it; darkening the sky doesn\'t affect the neon reflections on the street.',
+
+      '**Precision editing with the lasso tool**: For targeted edits, click the box icon next to the prompt box twice to reveal the lasso tool. You can then draw a selection around a specific region of the image — say, an area of the sky — and your edit instruction only applies within that region. This is the feature that separates a genuine creative tool from a novelty. You\'re not prompting for a full image change; you\'re saying "in this specific area, do this specific thing."',
+
+      'The lasso tool also supports a drawing mode where you can sketch rough shapes directly on the image — for example, drawing a rough rectangle where you want a new object to appear, and then describing what that object should be. This combines visual and textual input in a way that feels natural for creative work.',
+
+      '**Removing objects**: Select the object you want to remove with the lasso, and prompt "Remove this" or just leave the prompt empty. The model will fill the selected area with contextually appropriate content — effectively a content-aware fill, similar to Photoshop\'s feature but driven by AI rather than algorithmic heuristics.',
+
+      '**Adding objects with location mapping**: Select a region and prompt "Add a street lamp here." The model doesn\'t just paste a lamp — it renders one that matches the lighting, perspective, and style of the original image. The object is integrated, not composited.',
+
+      '## Downloading and Upscaling',
+
+      'When you\'re happy with an image, you can download it or upscale it.',
+
+      '**Download** gives you the raw generated resolution (1920×1080 by default). **Upscaling to 4K** enhances the resolution significantly — the results are genuinely sharper, with more detail in textures and edges.',
+
+      'Important caveat: the tool explicitly warns against running multiple upscaling jobs simultaneously. This suggests the operation is resource-intensive even for Google\'s infrastructure. Do one upscaling at a time.',
+
+      'Also critical: after generating or editing, you must explicitly click "Save to Project" to keep the image in your project workspace. If you forget this step and navigate away, the generated image is lost. This is a minor UX friction point worth remembering.',
+
+      '## Video Generation: Speed vs Quality',
+
+      '@img:/images/google-flow-video.jpg',
+
+      'Video generation is where Google Flow distinguishes itself most clearly from the current generation of competing products.',
+
+      'From an image, you click the "Animate" button or switch to the Video tab. The interface lets you choose between two modes:',
+
+      '**Veo 3.1 Fast** generates a video clip in about 30 seconds. The quality is acceptable — motion is relatively smooth, and the connection to the source image is clear. However, physics can be wonky, and character consistency degrades over longer clips. Fast mode is ideal for ideation and rough cuts — getting a sense of motion and timing before committing to a higher-quality render.',
+
+      '**Veo 3.1 Quality** takes several minutes but produces noticeably better results. Physics are more accurate, lighting remains coherent throughout the clip, and characters or objects stay consistent from frame to frame. The difference is immediately visible in side-by-side comparisons. Quality mode is for delivery — when the clip needs to look good in a final product.',
+
+      'The tradeoff is exactly the one you\'d expect from a professional creative tool: speed for iteration, quality for delivery. Both modes have their place, and the smart workflow uses Fast for exploration and Quality for final renders.',
+
+      'You can generate multiple video variations from the same prompt, just like with images. Reviewing variations is done through hover previews — hovering over a thumbnail plays a quick preview of the clip without needing to open it fully. This makes it fast to scan through options before committing.',
+
+      'If a generated clip doesn\'t look good, you can regenerate it with the same settings or adjust your prompt. A more detailed prompt almost always yields better results — specifying camera movement, lighting, and the relationship between foreground and background elements helps Veo understand what you want.',
+
+      '## Start and End Frames: AI Keyframing',
+
+      'The start/end frame feature is the most technically impressive capability in Flow\'s video toolkit.',
+
+      'The concept is simple: you provide two images — one for the first frame of the video, one for the last frame — and Veo generates a video that transitions smoothly between them. This is essentially AI-powered keyframe animation, a workflow that previously required either manual animation expertise or complex video editing software with motion tracking and interpolation.',
+
+      'To use it: upload or generate your start frame image, then under video settings, select "Start frame" and choose the image. Do the same for "End frame" with a different image. Veo then interpolates the motion and transformation between the two.',
+
+      'One UX quirk: when selecting start/end frames, hover over the image thumbnails to preview them. Clicking them will actually remove them from the selection rather than selecting them. The interaction pattern is slightly non-standard, worth remembering.',
+
+      'The results vary depending on how different the start and end frames are. Simple transitions — a landscape at day turning to night, a character moving from left to right — work very well. More dramatic transformations — completely different scenes — can produce morphing artifacts where the AI struggles to create a coherent bridge between two unrelated visuals.',
+
+      '## Camera Actions: Dolly, Orbit, Pan',
+
+      'Beyond basic generation, Veo supports camera actions that give you directional control over the virtual camera:',
+
+      '**Dolly in/out**: The camera moves toward or away from the subject. Creates a sense of depth and immersion. Reliable even at moderate distances.',
+
+      '**Orbit up/down/left/right**: The camera circles around a central point. Useful for revealing a scene or creating dramatic reveals. Works best when there\'s a clear central subject.',
+
+      '**Pan left/right**: The camera pivots horizontally. Good for landscape shots and establishing scenes.',
+
+      'In testing, simple camera moves were clean and usable. Complex multi-axis movements — combining a dolly with an orbit, for example — sometimes produced artifacts where the motion physics broke down. This feels like a v1 capability that will improve rapidly as Veo\'s underlying model continues to evolve.',
+
+      'You can also upscale videos, similar to images. Standard upscaling improves resolution modestly; 4K upscaling is available but consumes more credits and takes longer.',
+
+      '## Video Post-Production: Insert, Remove, Extend',
+
+      'Flow includes several video editing capabilities that go beyond simple generation:',
+
+      '**Inserting elements into an existing video**: Similar to image editing, you can select a region within a video frame and prompt "Add a bird flying here." The model modifies the video to include the new element, maintaining consistency across frames. This works better for static or slow-moving scenes than fast-paced action.',
+
+      '**Removing elements from a video**: Select an unwanted object and remove it. The model fills the removed area with background content, though the results are less consistent than with images — frame-to-frame flickering can occur.',
+
+      '**Extending video clips**: If a generated clip is too short, you can extend it. Flow generates additional frames that continue the motion and scene logic of the original clip. The extension quality depends heavily on the complexity of the original scene — simple landscapes extend well; complex character animations less so.',
+
+      '**Saving frames from videos**: Any video clip can be "frozen" — you can save a specific frame as a standalone image. This is useful for creating thumbnails, extracting a key moment for social sharing, or using a video frame as the start image for a new generation.',
 
       '## The @ Referencing System: A Genuine Innovation',
 
-      'The @ mention feature was the biggest surprise. You can name your generated assets — images, videos — and then reference them in new prompts using @.',
+      '@img:/images/google-flow-mention.jpg',
 
-      'The practical workflow: generate a character ("yellow orc character design, white background, 3D render"), rename it to "Michael." Generate a vehicle ("fantasy mega truck design, white background, 3D render"), rename it to "MegaTruck." Generate a background. Then prompt: "@Michael driving his @MegaTruck in the @FantasyLandscape."',
+      'The @ mention feature was the biggest surprise in my testing, and I believe it\'s the most genuinely innovative part of Google Flow.',
 
-      'Flow understands that @ followed by a name refers to a specific existing asset. It composes a new image or video using those visual references as ingredients. This is composition, not just generation — and it\'s the workflow pattern that makes Flow more than the sum of its models.',
+      'The concept is straightforward: you can name any generated asset in your project — an image, a video — and then reference it by name in future prompts using the @ symbol. Flow understands that @ followed by a name refers to a specific existing asset and composes new outputs using those visual references.',
 
-      'This pattern — naming assets, referencing them, composing new outputs from existing ones — mirrors how real creative work happens. You build a library of elements and combine them. AI usually excels at creation-from-scratch but struggles with composition-from-existing-material. Flow\'s @ system addresses this directly.',
+      'Here\'s a concrete workflow that demonstrates the power:',
 
-      '## The Scene Builder: Final Assembly',
+      'Step 1: Generate an image — "yellow orc character design, white background, 3D render." Once generated, click the name field and rename it to "Michael."',
 
-      'The Scene Builder lets you sequence multiple video clips into a linear narrative. It\'s basic — trim, reorder, combine — but its existence in the same tool as generation is the point. You don\'t export clips to an external editor; you finish the project inside Flow.',
+      'Step 2: Generate another image — "fantasy mega truck design, white background, 3D render." Rename it to "MegaTruck."',
 
-      'This end-to-end integration is the competitive moat. A tool that only generates is replaceable. A tool that generates, edits, composes, and assembles becomes a workflow — and workflows are much harder to leave than features.',
+      'Step 3: Generate a background — "spooky fantasy medieval landscape, dark forest, moonlight." Rename it to "FantasyLandscape."',
 
-      '## The Credit System: What It Reveals About Economics',
+      'Step 4: Start a new image generation. In the prompt box, type: "@Michael driving his @MegaTruck in the @FantasyLandscape."',
 
-      'Flow operates on a credit system. Free tier: daily credits that don\'t roll over. Paid tier: monthly credits with 12-month carryover for top-ups. The pricing structure tells you something about Google\'s cost model: generation is expensive, storage is cheap, and they want to smooth out usage rather than encourage bursts.',
+      'Step 5: Generate. Flow composes a new image where Michael is driving the MegaTruck through the FantasyLandscape — using the visual characteristics of each referenced asset.',
 
-      'The practical implication: you can prototype and learn on the free tier, but any serious project requires the paid plan. This is reasonable but worth knowing upfront. A complex project with multiple image generations, edits, upscaling, and video clips can consume credits faster than expected.',
+      'This is **composition, not generation**. And it\'s the workflow pattern that makes Flow more than the sum of its models.',
+
+      'The @ system solves a fundamental problem in AI creative tools: consistency. Most AI image generators create from scratch every time. If you want the same character in multiple scenes, you either get lucky with a consistent seed or you manually composite in Photoshop. Flow\'s @ system lets you build a library of reusable assets and compose them together programmatically.',
+
+      'For character design, storyboarding, product visualization, and any workflow that needs visual consistency across multiple outputs, this feature alone justifies exploring Flow. It mirrors how real creative work happens: you build a library of elements and combine them, rather than generating every output from a blank canvas.',
+
+      'One organizational tip: the search feature within a project becomes essential as your asset library grows. You can filter by asset type (images vs videos) and search by name. Combined with the @ naming convention, this turns a collection of generated files into a structured creative toolkit.',
+
+      '## Scene Builder: Final Assembly',
+
+      '@img:/images/google-flow-scene.jpg',
+
+      'The Scene Builder is the final piece of the puzzle — an editor that lets you sequence multiple video clips into a linear narrative.',
+
+      'The interface is basic: you drag video clips into a timeline, reorder them, trim start/end points, and preview the combined result. There\'s no crossfade, no audio track, no text overlay — it\'s bare-bones by traditional video editing standards.',
+
+      'But what makes it significant is not what it does — it\'s where it lives. The Scene Builder exists inside the same tool that generated all the clips. You don\'t export your AI-generated clips to Adobe Premiere or DaVinci Resolve. You finish the project inside Flow.',
+
+      'This end-to-end integration is the competitive moat. A tool that only generates images is replaceable by any other image generator. A tool that only generates video is replaceable by any video generator. But a tool that lets you generate, edit, compose with @ references, and assemble in a scene editor becomes a workflow — and workflows are much harder to leave than individual features.',
+
+      'The current limitations of the Scene Builder (no transitions, no audio, no text) are clearly v1 constraints. Google has a clear roadmap: each missing feature is a future update. The architectural decision to build the Scene Builder as part of Flow, rather than as a separate product, is the right call.',
+
+      '## Prompt Engineering Best Practices',
+
+      'Across all of Flow\'s capabilities, one theme emerges consistently: prompt quality determines output quality. Here are the patterns that work best:',
+
+      '**Be specific, not generic**: "A red car" produces a generic red car. "A vintage cherry-red 1967 Ford Mustang, parked on a wet cobblestone street at dusk, cinematic volumetric lighting, 85mm lens, shallow depth of field" produces something you\'d use. The additional details about lighting, lens, and atmosphere give the model concrete constraints that guide it toward a specific visual result.',
+
+      '**Include style and mood cues**: Words like "cinematic," "photorealistic," "watercolor," "3D render," "concept art," and "studio lighting" dramatically change the output style. If you want a specific aesthetic, name it.',
+
+      '**Iterate from broad to specific**: Start with a broad prompt to explore directions, then refine. Generate 2-3 variants at each step. The iterative approach — broad prompt → pick a winner → detailed prompt on the winner — produces better results than trying to get the perfect output in one shot.',
+
+      '**Use @ references for multi-asset compositions**: Instead of describing every visual element in a single prompt, build your assets separately and compose them with @. This gives you more control over each element and enables easy swapping.',
+
+      '## Troubleshooting Common Issues',
+
+      'Based on my testing, here are the most common issues and their solutions:',
+
+      '"My generated images/videos don\'t look good" — Refine your prompt with more descriptive words. Switch from Veo 3.1 Fast to Veo 3.1 Quality for videos. Generate multiple variations and pick the best one rather than refining a single output.',
+
+      '"I ran out of credits too quickly" — Check the credit cost before generating, especially for videos and upscaling. Each operation shows its cost before you confirm. Free daily credits don\'t roll over, so use them or lose them — but plan your serious work around the paid tier.',
+
+      '"My images aren\'t saving to my project" — After generating or editing, click the explicit "Save to Project" button. Generated outputs are ephemeral until saved.',
+
+      '"My videos have weird physics or morphing" — This is common with Veo 3.1 Fast. Switch to Veo 3.1 Quality for better physics and consistency. More detailed prompts also help the model understand the scene structure better.',
+
+      '"The start/end frame image disappeared when I clicked it" — Hover over thumbnails to preview them. Clicking selects/removes them from the selection rather than previewing. The interaction is non-standard but consistent once you know it.',
 
       '## What This Means for Creative Work',
 
-      'Google Flow is not revolutionary in any single capability. Other tools generate better images. Other tools generate better video. Other tools have better editing interfaces.',
+      'Google Flow is not revolutionary in any single capability. Midjourney generates better images. Runway generates better video. Photoshop has better editing tools. What Flow does that nothing else does is combine all of these — plus the @ composition system and Scene Builder — in a single workspace with a unified asset library.',
 
-      'What Flow does that nothing else does is combine all three — plus the @ composition system — in one workspace with a unified asset library. The whole is meaningfully greater than the sum of the parts, because the parts share context, assets, and workflow state.',
+      'The whole is meaningfully greater than the sum of the parts, because the parts share context, share assets, and share workflow state. An image you generate in the Images tab is immediately available in the Video tab for animation. A video you create can be referenced by @ in a new image composition. A collection of clips can be assembled in the Scene Builder without leaving the project.',
 
       'This is the direction creative AI tools are heading: not standalone generators, but integrated studios where generation is one step in an end-to-end creative process. The models improve continuously. The integration advantage compounds.',
+
+      'The @ system, in particular, points toward a future where AI tools aren\'t just "prompt in, output out" — they\'re environments where you build libraries of reusable assets, compose them, iterate on them, and assemble them into finished products. That\'s a genuinely new creative workflow, and Google Flow is the first tool I\'ve seen that executes it well.',
     ],
     keyTakeaways: [
-      'Google Flow combines three models (Veo 3.1 for video, Nano Banana 2 for images, Gemini for language) behind a single interface — the integration is the differentiator, not any single capability',
-      'The @ asset referencing system is the real innovation: name your generated elements, compose new outputs from existing ones — mirrors how real creative work happens',
-      'Video generation offers a speed/quality tradeoff (Fast ~30s, Quality ~several minutes) plus start/end frame keyframing for controlled transitions',
-      'Targeted editing via lasso tool + text prompt allows region-specific modification — a genuine creative control feature, not just a prompt wrapper',
-      'End-to-end integration (generate → edit → compose → assemble) creates a workflow moat that standalone generators cannot replicate',
+      'Google Flow combines three models (Veo 3.1 for video, Nano Banana 2 for images, Gemini for language) behind a single interface — the integration matters more than any single model capability',
+      'The @ asset referencing system is the real innovation: name your generated elements, compose new outputs from existing ones, enabling consistency across a project — solves the "same character in different scenes" problem',
+      'Video generation offers a deliberate speed/quality tradeoff: Fast (~30s, for ideation) vs Quality (~several minutes, for delivery) — plus start/end frame keyframing and camera controls',
+      'Targeted editing via lasso tool + text prompt allows region-specific modification — a genuine creative control feature that separates a professional tool from a toy',
+      'Credit system economics reveal Google\'s cost model: generation is expensive, storage is cheap — free tier is for learning, serious work requires the monthly plan',
+      'End-to-end integration (generate → edit → compose with @ → assemble in Scene Builder) creates a workflow moat that standalone generators cannot replicate',
+      'Best practice pattern: generate multiple variants, pick a direction, refine with detailed prompts, use @ for multi-asset compositions',
+      'Common issue: saving requires explicit "Save to Project" action — generated outputs are ephemeral until saved',
     ],
     relatedResources: [
       {

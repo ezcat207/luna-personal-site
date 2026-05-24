@@ -126,6 +126,18 @@ export default function WayneInsight() {
                   </h2>
                 );
               }
+              if (paragraph.startsWith('@img:')) {
+                const src = paragraph.slice(5);
+                return (
+                  <div key={idx} className="my-8 rounded-xl overflow-hidden border border-slate-200 bg-white p-4">
+                    <img
+                      src={src}
+                      alt=""
+                      className="w-full h-auto"
+                    />
+                  </div>
+                );
+              }
               return (
                 <p key={idx} className="text-slate-700 leading-relaxed mb-4">
                   {paragraph}
