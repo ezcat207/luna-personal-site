@@ -1671,6 +1671,46 @@ export const wayneInsights: WayneInsight[] = [
     ],
     tags: ['AI 领导力', 'Knowledge Management', '经验沉淀', 'Chinese'],
   },
+  {
+    id: 28,
+    date: '2026-05-24',
+    title: 'Brief: Context Is the Most Valuable Gift You Give AI',
+    subtitle: 'Garbage in, garbage out — the flip side of that is where AI leadership begins',
+    summary:
+      'Most people brief AI carelessly. They toss in a request and feel disappointed by the result. But output quality is never just an AI problem — it\'s a mirror of your briefing quality. This insight explains what "Brief" means, why it\'s the flywheel\'s starting point, and how context architecture changes everything.',
+    content: [
+      '## Where It Sits in the Flywheel',
+      'If you think of AI leadership as a flywheel — Brief → Stage → Own → Route → Debug → Distill — then Brief is the starting point. Without a good brief, every downstream step runs on contaminated fuel. You can stage your tasks perfectly, but if the context was wrong at the top, the output will still miss.',
+      '## What "Brief" Actually Means',
+      'Briefing isn\'t just "giving AI background information." It\'s an information architecture skill: deciding what to include, what to leave out, how much, and in what form. All four dimensions affect output quality.',
+      'Context has four layers: **Project-level** (the long-term background of this work), **Task-level** (the specific problem this conversation needs to solve), **Role-level** (what role AI is playing in this task), and **Constraint-level** (output format, length, tone, and hard limits). Most people only provide the task layer and leave the other three blank.',
+      '## A Direct Comparison',
+      'Same request — write a customer email — two different briefs:',
+      '**Bad brief:** "Write me an email to a customer." Result: a generic, boilerless email with no specific information that you can\'t actually use.',
+      '**Good brief:** "I\'m a BD manager at a B2B SaaS company. This customer expressed interest last week but said their budget is tight. I want to reply acknowledging the budget pressure and raising the possibility of phased payment. Tone: professional but warm. Under 150 words. No corporate jargon."',
+      'The gap isn\'t "I thought harder." It\'s that the good brief supplied role-level (BD manager), task-level (the specific situation), and constraint-level (tone / length / restrictions) context. The output quality difference is enormous.',
+      '## The Two Most Common Mistakes',
+      '**Over-briefing:** Dumping every piece of background information at once. A thousand-word context document where only two sentences actually matter. Too much noise dilutes the key information — AI "pays uniform attention" instead of responding precisely.',
+      '**Under-briefing:** Saying nothing, then stating the request. AI fills in the gaps with its default assumptions — which are almost never aligned with your expectations.',
+      'The real skill is **compression**: distilling 500 words of background into 80 words of effective context. This takes practice, but it\'s trainable.',
+      '## Back to the Flywheel',
+      'A good brief directly determines how accurately you can Stage the work — when AI genuinely understands the context, the way it decomposes tasks will be far closer to your actual needs. Brief also benefits most from Distill at the end: when you capture effective context templates from past work, your next similar brief is automatically better. That\'s how the flywheel builds speed.',
+    ],
+    keyTakeaways: [
+      'Brief is the flywheel\'s starting point — output quality is never just an AI problem, it\'s a mirror of your briefing quality',
+      'Context has four layers: Project-level / Task-level / Role-level / Constraint-level — most people only provide Task-level',
+      'Over-briefing (noise) and under-briefing (starvation) both degrade output quality',
+      'The core skill is compression: distilling 500 words of background into 80 words of effective context',
+      'Effective brief templates can be captured and reused via Distill — this is how the flywheel accelerates',
+    ],
+    relatedResources: [
+      { label: 'AI Leadership Course: Six Core Skills (First 97 Free)', url: '/wayne/courses/ai-leadership' },
+      { label: 'Overview: Why Your AI Gets Weaker the More You Use It', url: '/wayne/insights/21' },
+      { label: '中文版：投喂（Brief）：上下文是你给 AI 最贵的礼物', url: '/wayne/insights/22' },
+    ],
+    tags: ['AI Leadership', 'Prompt Engineering', 'Context Management', 'Flywheel'],
+    imageUrl: '/images/insight-28-brief-comic.jpeg',
+  },
 ];
 
 export function getLatestWayneInsight(): WayneInsight | undefined {
