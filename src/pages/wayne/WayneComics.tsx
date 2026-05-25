@@ -1,0 +1,116 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight, BookOpen } from 'lucide-react';
+import { SEOHead } from '../../components/SEOHead';
+
+const comicSeries = [
+  {
+    id: 'grand-canyon',
+    title: "Luna & Wayne's Canyon Dreams",
+    subtitle: 'Three stories from Grand Canyon National Park',
+    date: 'Summer 2024',
+    strips: 3,
+    themes: ['Safety', 'Leave No Trace', 'Learning to See'],
+    description:
+      'What happens when a curious rabbit meets a mile-deep canyon. Three comic strips about fences, ancient rocks, and how to actually look at something that doesn\'t perform for you.',
+    cover: '/images/comics/grand-canyon/cover.jpeg',
+    path: '/wayne/comics/grand-canyon',
+    tag: 'Travel Adventure',
+    tagColor: 'bg-amber-100 text-amber-700',
+  },
+];
+
+export default function WayneComics() {
+  return (
+    <>
+      <SEOHead
+        title="Comics — Luna & Wayne's Adventures | Wayne's Plans"
+        description="Illustrated parent-child adventures with lessons. Luna the rabbit and Wayne the cat explore the world — and come back with something learned."
+      />
+
+      <div className="space-y-12">
+        {/* ── Hero ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="text-center pt-4 pb-2"
+        >
+          <span className="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full mb-4 tracking-wide uppercase">
+            Comics
+          </span>
+          <h1 className="text-4xl font-bold text-slate-900 mb-4 leading-tight">
+            Adventures in the Real World
+          </h1>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Luna and Wayne go places, ask questions, make mistakes, and come back with something learned.
+            Every comic comes with the story behind it — and lessons for the parents reading along.
+          </p>
+        </motion.div>
+
+        {/* ── Series Grid ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.08 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
+          {comicSeries.map((series) => (
+            <Link
+              key={series.id}
+              to={series.path}
+              className="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-indigo-300 hover:shadow-md transition-all"
+            >
+              <div className="aspect-[16/9] overflow-hidden">
+                <img
+                  src={series.cover}
+                  alt={series.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`px-2.5 py-1 text-xs font-semibold rounded-full ${series.tagColor}`}>
+                    {series.tag}
+                  </span>
+                  <span className="text-xs text-slate-400">{series.date}</span>
+                  <span className="text-xs text-slate-400">· {series.strips} strips</span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-indigo-700 transition-colors">
+                  {series.title}
+                </h2>
+                <p className="text-sm text-slate-500 mb-3">{series.subtitle}</p>
+                <p className="text-sm text-slate-600 leading-relaxed mb-4">{series.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {series.themes.map((theme) => (
+                    <span key={theme} className="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded-md">
+                      {theme}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center gap-1 text-indigo-600 text-sm font-semibold">
+                  Read the comic <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+          ))}
+
+          {/* Placeholder — more coming */}
+          <div className="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center min-h-[280px]">
+            <BookOpen className="w-8 h-8 text-slate-300 mb-3" />
+            <p className="text-slate-400 font-medium text-sm mb-1">More adventures coming</p>
+            <p className="text-slate-400 text-xs max-w-xs">
+              Luna and Wayne are always going somewhere. Follow along on Wayne's weekly updates.
+            </p>
+            <Link
+              to="/wayne/insights"
+              className="mt-4 text-xs text-indigo-600 hover:text-indigo-800 font-medium"
+            >
+              Read Wayne's Insights →
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </>
+  );
+}
