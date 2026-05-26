@@ -18,6 +18,20 @@ const comicSeries = [
     tag: 'Travel Adventure',
     tagColor: 'bg-amber-100 text-amber-700',
   },
+  {
+    id: 'genesis-mars',
+    title: 'Genesis on Mars: Crimson Dawn',
+    subtitle: 'Earth is gone. Mars is all that\'s left.',
+    date: 'Jan 2026',
+    strips: 5,
+    themes: ['Survival', 'Trust', 'Resilience'],
+    description:
+      'When a gravitational collapse destroys Earth, Wayne and Luna are left adrift in a broken escape lander — one eye between them, expired antibiotics, and a hand-drawn star chart. A sci-fi short story about planting the last seed of human civilization.',
+    cover: '/images/comics/genesis-mars/cover.png',
+    path: '/wayne/comics/genesis-mars',
+    tag: 'Sci-Fi Short',
+    tagColor: 'bg-red-100 text-red-700',
+  },
 ];
 
 export default function WayneComics() {

@@ -23,6 +23,7 @@ import WayneCourseLeadershipEn from './pages/wayne/WayneCourseLeadershipEn';
 import WayneCourseAiVisuals from './pages/wayne/WayneCourseAiVisuals';
 import WayneComics from './pages/wayne/WayneComics';
 import WayneComicGrandCanyon from './pages/wayne/WayneComicGrandCanyon';
+import WayneComicGenesisMars from './pages/wayne/WayneComicGenesisMars';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -69,6 +70,7 @@ function AppRoutes() {
           <Route path="wayne/courses/ai-visuals" element={<WayneCourseAiVisuals />} />
           <Route path="wayne/comics" element={<WayneComics />} />
           <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
+          <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -145,6 +147,7 @@ function AppRoutes() {
         <Route path="wayne/courses/ai-visuals" element={<WayneCourseAiVisuals />} />
         <Route path="wayne/comics" element={<WayneComics />} />
         <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
+        <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
