@@ -299,6 +299,56 @@ export default function WayneCourses() {
           );
         })()}
 
+        {/* ── GEO Course (Waitlist) ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
+        >
+          <div className="flex items-center gap-3 mb-5">
+            <h2 className="text-2xl font-bold text-slate-900">新课预售</h2>
+            <span className="px-2.5 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">
+              WAITLIST OPEN
+            </span>
+          </div>
+          <Link
+            to="/wayne/courses/geo"
+            className="block bg-white border-2 border-amber-200 rounded-2xl overflow-hidden hover:border-amber-400 hover:shadow-md transition-all"
+          >
+            <div className="bg-gradient-to-r from-indigo-700 to-indigo-900 px-7 py-6 text-white">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wide">中文 · 进阶 · 6模块</p>
+                  <h3 className="text-xl font-bold mb-1">GEO：让AI主动引用你的内容</h3>
+                  <p className="text-indigo-200 text-sm">SEO已死？不，它进化了——你的内容能被ChatGPT引用吗？</p>
+                </div>
+                <div className="flex-shrink-0 text-right">
+                  <p className="text-xs text-indigo-300 mb-1">早鸟价</p>
+                  <p className="text-2xl font-bold text-amber-300">$79</p>
+                  <p className="text-xs text-indigo-400 line-through mt-0.5">$99</p>
+                </div>
+              </div>
+            </div>
+            <div className="px-7 py-5 flex items-center justify-between">
+              <div className="space-y-1">
+                {[
+                  '理解RAG原理，知道AI为什么引用某些内容',
+                  '掌握Answer-first写作框架，让AI抢着引用你',
+                  '建立GEO追踪系统，量化内容优化效果',
+                ].map((o) => (
+                  <div key={o} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-slate-600">{o}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex-shrink-0 ml-6 text-indigo-600 flex items-center gap-1 font-semibold text-sm">
+                加入候补 <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+
         {/* ── Paid / Coming Soon ── */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}

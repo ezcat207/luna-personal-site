@@ -21,6 +21,7 @@ import WayneCourseCtf from './pages/wayne/WayneCourseCtf';
 import WayneCourseLeadership from './pages/wayne/WayneCourseLeadership';
 import WayneCourseLeadershipEn from './pages/wayne/WayneCourseLeadershipEn';
 import WayneCourseAiVisuals from './pages/wayne/WayneCourseAiVisuals';
+import WayneCourseGeo from './pages/wayne/WayneCourseGeo';
 import WayneComics from './pages/wayne/WayneComics';
 import WayneComicGrandCanyon from './pages/wayne/WayneComicGrandCanyon';
 import WayneComicGenesisMars from './pages/wayne/WayneComicGenesisMars';
@@ -68,6 +69,7 @@ function AppRoutes() {
           <Route path="wayne/courses/ai-leadership" element={<WayneCourseLeadershipEn />} />
           <Route path="wayne/courses/ai-leadership/zh" element={<WayneCourseLeadership />} />
           <Route path="wayne/courses/ai-visuals" element={<WayneCourseAiVisuals />} />
+          <Route path="wayne/courses/geo" element={<WayneCourseGeo />} />
           <Route path="wayne/comics" element={<WayneComics />} />
           <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
           <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
@@ -145,6 +147,7 @@ function AppRoutes() {
         <Route path="wayne/courses/ai-leadership" element={<WayneCourseLeadershipEn />} />
         <Route path="wayne/courses/ai-leadership/zh" element={<WayneCourseLeadership />} />
         <Route path="wayne/courses/ai-visuals" element={<WayneCourseAiVisuals />} />
+        <Route path="wayne/courses/geo" element={<WayneCourseGeo />} />
         <Route path="wayne/comics" element={<WayneComics />} />
         <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
         <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
