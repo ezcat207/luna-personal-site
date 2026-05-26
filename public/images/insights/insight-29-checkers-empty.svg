@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="640" style="background:#f8fafc;font-family:sans-serif">
+<defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#e44"/>
+  </marker>
+</defs><rect width="100%" height="100%" fill="#f8fafc" rx="16"/>
+<text x="260" y="22" text-anchor="middle" font-size="15" fill="#0f172a" font-weight="bold">空跳攻略：对方营地为空时的最优路线</text>
+<text x="260" y="22" text-anchor="middle" font-size="12" fill="#4f46e5" font-weight="bold">🎯 目标营地（空）</text>
+<text x="260" y="168" text-anchor="middle" font-size="11" fill="#64748b">── 中间棋盘 ──</text>
+<text x="260" y="572" text-anchor="middle" font-size="12" fill="#312e81" font-weight="bold">🐰 你的棋子（10枚）</text>
+<circle cx="260.0" cy="40.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="243.0" cy="70.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="277.0" cy="70.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="226.0" cy="100.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="260.0" cy="100.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="294.0" cy="100.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="209.0" cy="130.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="243.0" cy="130.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="277.0" cy="130.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="311.0" cy="130.0" r="12" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.95"/>
+<circle cx="192.0" cy="180.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="226.0" cy="180.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="260.0" cy="180.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="294.0" cy="180.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="328.0" cy="180.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="175.0" cy="210.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="209.0" cy="210.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="243.0" cy="210.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="277.0" cy="210.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="311.0" cy="210.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="345.0" cy="210.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="192.0" cy="240.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="226.0" cy="240.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="260.0" cy="240.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="294.0" cy="240.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="328.0" cy="240.0" r="12" fill="#e0e7ff" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+<circle cx="209.0" cy="430.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="243.0" cy="430.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="277.0" cy="430.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="311.0" cy="430.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="226.0" cy="460.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="260.0" cy="460.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="294.0" cy="460.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="243.0" cy="490.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="277.0" cy="490.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<circle cx="260.0" cy="520.0" r="12" fill="#4f46e5" stroke="#312e81" stroke-width="2" opacity="1.0"/>
+<line x1="243.0" y1="430.0" x2="260.0" y2="195.0" stroke="#e44" stroke-width="2.5" marker-end="url(#arr)" opacity="0.85"/>
+<line x1="260.0" y1="195.0" x2="243.0" y2="225.0" stroke="#e44" stroke-width="2.5" marker-end="url(#arr)" opacity="0.85"/>
+<line x1="243.0" y1="225.0" x2="260.0" y2="255.0" stroke="#e44" stroke-width="2.5" marker-end="url(#arr)" opacity="0.85"/>
+<line x1="260.0" y1="255.0" x2="243.0" y2="130.0" stroke="#e44" stroke-width="2.5" marker-end="url(#arr)" opacity="0.85"/>
+<rect x="30" y="550" width="460" height="75" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+<circle cx="55" cy="568" r="9" fill="#4f46e5" stroke="#312e81" stroke-width="2"/>
+<text x="70" y="573" font-size="11" fill="#334155">你的棋子</text>
+<circle cx="155" cy="568" r="9" fill="none" stroke="#4f46e5" stroke-width="2"/>
+<text x="170" y="573" font-size="11" fill="#334155">空目标格</text>
+<line x1="45" y1="594" x2="70" y2="594" stroke="#e44" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="78" y="599" font-size="11" fill="#334155">推荐跳跃路径</text>
+<text x="30" y="620" font-size="10" fill="#64748b">  独自过营最少 27 步（Levenspiel, 1971）· 关键：先建立"桥"，再以连跳扫营</text>
+</svg>

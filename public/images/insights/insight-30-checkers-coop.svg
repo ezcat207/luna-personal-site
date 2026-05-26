@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="580" style="background:#f8fafc;font-family:sans-serif">
+<defs>
+  <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+  </marker>
+</defs><defs><marker id="arrB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#4f46e5"/></marker><marker id="arrR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker></defs>
+<rect width="100%" height="100%" fill="#f8fafc" rx="16"/>
+<text x="260" y="22" text-anchor="middle" font-size="15" fill="#0f172a" font-weight="bold">两人合作最少步：各走 15 步，共 30 步完成换营</text>
+<text x="260" y="29" text-anchor="middle" font-size="12" fill="#b91c1c" font-weight="bold">🔴 Wayne 棋子（从顶部出发）</text>
+<circle cx="260.0" cy="45.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="243.0" cy="75.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="277.0" cy="75.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="226.0" cy="105.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="260.0" cy="105.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="294.0" cy="105.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="209.0" cy="135.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="243.0" cy="135.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="277.0" cy="135.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<circle cx="311.0" cy="135.0" r="12" fill="#fca5a5" stroke="#ef4444" stroke-width="2" opacity="1.0"/>
+<text x="260" y="180" text-anchor="middle" font-size="10" fill="#64748b">── 双方在中间形成"桥"，互为对方铺路 ──</text>
+<circle cx="192.0" cy="190.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="226.0" cy="190.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="260.0" cy="190.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="294.0" cy="190.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="328.0" cy="190.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="192.0" cy="220.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="226.0" cy="220.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="260.0" cy="220.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="294.0" cy="220.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<circle cx="328.0" cy="220.0" r="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2" opacity="0.6"/>
+<text x="260" y="522" text-anchor="middle" font-size="12" fill="#1e40af" font-weight="bold">🔵 Luna 棋子（从底部出发）</text>
+<circle cx="209.0" cy="380.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="243.0" cy="380.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="277.0" cy="380.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="311.0" cy="380.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="226.0" cy="410.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="260.0" cy="410.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="294.0" cy="410.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="243.0" cy="440.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="277.0" cy="440.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<circle cx="260.0" cy="470.0" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2" opacity="1.0"/>
+<line x1="200" y1="390" x2="200" y2="185" stroke="#4f46e5" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrB)" opacity="0.8"/>
+<line x1="320" y1="55" x2="320" y2="510" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrR)" opacity="0.8"/>
+<rect x="20" y="500" width="480" height="68" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+<circle cx="45" cy="518" r="9" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
+<text x="60" y="523" font-size="11" fill="#334155">Luna（蓝）向上进营</text>
+<circle cx="190" cy="518" r="9" fill="#fca5a5" stroke="#ef4444" stroke-width="2"/>
+<text x="205" y="523" font-size="11" fill="#334155">Wayne（红）向下进营</text>
+<text x="20" y="546" font-size="11" fill="#15803d" font-weight="bold">  ✅ 理论最小值：各 15 步 = 合计 30 步（David Fabian, 1979 · George I. Bell 验证, 2009）</text>
+<text x="20" y="563" font-size="10" fill="#64748b">  关键：双方在中间互建"桥"（ladder），后到者借前者棋子连跳</text>
+</svg>
