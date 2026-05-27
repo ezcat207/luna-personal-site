@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight,
   BookOpen,
+  Bot,
   CheckCircle2,
   Clock,
   ChevronRight,
@@ -14,6 +15,8 @@ import {
   Zap,
   Star,
 } from 'lucide-react';
+
+const SEO_SIGNUP_URL = 'https://forms.gle/noJPhc9rz5StsH7x7';
 import { SEOHead } from '../../components/SEOHead';
 import { SEO_MODULES } from '../../data/seoCourseModules';
 
@@ -25,6 +28,7 @@ const MODULE_ICONS = [
   <BarChart2 className="w-5 h-5" />,
   <Link2 className="w-5 h-5" />,
   <Globe className="w-5 h-5" />,
+  <Bot className="w-5 h-5" />,
 ];
 
 export default function WayneCourseSeo() {
@@ -32,7 +36,7 @@ export default function WayneCourseSeo() {
     <>
       <SEOHead
         title="SEO初级课程：从零到首页排名 — Wayne's Courses"
-        description="7个模块，完整的SEO初级课程。免费学习：关键词研究、页面优化、技术SEO、外链建设，适合出海站长和内容创业者。"
+        description="8个模块，完整的SEO初级课程。免费学习：关键词研究、页面优化、技术SEO、外链建设，含AI工具辅助SEO Bonus，适合出海站长和内容创业者。"
       />
 
       <div className="space-y-16">
@@ -55,16 +59,26 @@ export default function WayneCourseSeo() {
             SEO从零开始：<br className="sm:hidden" />让Google主动找到你
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
-            7个模块，系统学习搜索引擎优化的完整方法论。
-            从关键词研究到外链建设，每个模块都有实践任务——学完就能动手做。
+            8个模块，系统学习搜索引擎优化的完整方法论。
+            从关键词研究到外链建设，含AI工具辅助SEO Bonus——每个模块都有实践任务，学完就能动手做。
           </p>
-          <Link
-            to="/wayne/courses/seo/1"
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
-          >
-            从第一章开始
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/wayne/courses/seo/1"
+              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
+            >
+              从第一章开始
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a
+              href={SEO_SIGNUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-slate-300 hover:border-indigo-400 text-slate-700 hover:text-indigo-700 font-semibold px-6 py-3.5 rounded-xl transition-colors text-base"
+            >
+              订阅课程更新
+            </a>
+          </div>
           <p className="text-xs text-slate-400 mt-3">无需注册 · 永久免费 · 随时中断随时继续</p>
         </motion.div>
 
@@ -76,10 +90,10 @@ export default function WayneCourseSeo() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { num: '7', label: '个模块' },
+            { num: '8', label: '个模块' },
             { num: '¥0', label: '永久免费' },
-            { num: '7h+', label: '学习时长' },
-            { num: '21+', label: '实践任务' },
+            { num: '8h+', label: '学习时长' },
+            { num: '24+', label: '实践任务' },
           ].map((s) => (
             <div key={s.label} className="bg-white border border-slate-200 rounded-xl p-5 text-center">
               <p className="text-3xl font-bold text-indigo-600 mb-1">{s.num}</p>
@@ -250,13 +264,23 @@ export default function WayneCourseSeo() {
             SEO没有捷径，但有正确的方法。
             每个模块都有明确的实践任务——边学边做，3个月后你会看到结果。
           </p>
-          <Link
-            to="/wayne/courses/seo/1"
-            className="inline-flex items-center gap-2 bg-white text-indigo-700 font-semibold px-8 py-3 rounded-xl hover:bg-indigo-50 transition-colors"
-          >
-            开始学习
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/wayne/courses/seo/1"
+              className="inline-flex items-center gap-2 bg-white text-indigo-700 font-semibold px-8 py-3 rounded-xl hover:bg-indigo-50 transition-colors"
+            >
+              开始学习
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href={SEO_SIGNUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-indigo-300 hover:border-white text-indigo-100 hover:text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+            >
+              订阅课程更新
+            </a>
+          </div>
         </motion.div>
       </div>
     </>

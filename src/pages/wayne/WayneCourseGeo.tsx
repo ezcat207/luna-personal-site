@@ -21,7 +21,7 @@ import { SEOHead } from '../../components/SEOHead';
 import wayneAvatar from '../../assets/wayne-avatar.jpg';
 
 // ─── REPLACE THIS URL WITH YOUR GOOGLE FORM LINK ───────────────────────
-const WAITLIST_URL = 'https://forms.gle/REPLACE_WITH_YOUR_FORM_LINK';
+const WAITLIST_URL = 'https://forms.gle/42j7xjown7aWPRa5A';
 // ────────────────────────────────────────────────────────────────────────
 
 const MODULES = [

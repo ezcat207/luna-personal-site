@@ -212,6 +212,44 @@ export const SEO_MODULES: SeoModule[] = [
           '列出每个月的具体任务',
         ],
       },
+      {
+        id: 'module-1-chapter-6',
+        title: 'SEO工具介绍（初级版）',
+        objective: '掌握3个核心SEO工具，用数据取代感觉做决策',
+        blocks: [
+          {
+            heading: 'GSC（Google Search Console）——你的SEO体检报告',
+            items: [
+              '谷歌官方免费工具，告诉你Google如何看待你的网站',
+              '查看哪些词排在第几名、点击率多少、有没有技术错误',
+              '案例：博主通过GSC发现高展示量但低点击率的长尾词，仅修改标题后流量翻倍',
+              '关键价值：数据会告诉你用户真正想看什么——唯一的"真理来源"',
+            ],
+          },
+          {
+            heading: 'SimilarWeb——透视竞争对手的利器',
+            items: [
+              '查看竞品网站的月流量、Top Pages和流量来源',
+              '发现流量大但内容烂的网站，找到你的市场机会',
+              '案例：站长通过SimilarWeb发现爆火AI工具的垂直功能页月流量5万，开发更好用的垂直工具成功截流',
+              '核心策略：模仿成功的路径，优化失败的环节',
+            ],
+          },
+          {
+            heading: 'Ahrefs / SEMrush——战前的沙盘推演',
+            items: [
+              '查看关键词难度（KD）和搜索量（Volume），黄金准则：寻找高Volume、低KD（<30）的组合',
+              '案例：词A搜量1万KD 70 vs 词B搜量1千KD 10——对于新站，词B的KDROI远高于词A',
+              '核心原则：选择你能打赢的战场，不要用新站挑战行业巨头',
+            ],
+          },
+        ],
+        practice: [
+          '注册并验证你的Google Search Console账号，提交你的网站',
+          '使用SimilarWeb免费插件，查看你最佩服的3个竞品网站的流量情况',
+          '在Ahrefs免费版输入你的核心关键词，记录KD值和搜索量',
+        ],
+      },
     ],
   },
   {
@@ -295,6 +333,66 @@ export const SEO_MODULES: SeoModule[] = [
           '用Google Keyword Planner搜索你利基市场的5个核心词',
           '记录每个词的月均搜索量和竞争度',
           '用Google Trends对比这5个词的趋势，找出搜索量上升的词',
+        ],
+      },
+      {
+        id: 'module-2-chapter-3',
+        title: '竞争度基础判断',
+        objective: '学会用KD值和SERP分析法，找到你真正能打赢的关键词战场',
+        blocks: [
+          {
+            heading: 'KD值（关键词难度）怎么看',
+            items: [
+              'KD 0-10（简单）：新站也可以尝试，通常很快见效',
+              'KD 11-30（中等）：需要高质量内容和基础外链支持',
+              'KD 31-70（困难）：需要强大的域名权重和专业内容',
+              'KD 70+（极难）：基本被行业巨头（Amazon/Wikipedia）垄断，不建议新站尝试',
+            ],
+          },
+          {
+            heading: 'SERP分析法：不只看数字，要亲眼观察',
+            items: [
+              '如果第一页全是行业巨头（Apple/Nike）或Wikipedia官方页面，直接放弃这个词',
+              '如果前几名内容陈旧（几年前的）、篇幅短、页面丑：这是你的机会！',
+              '内容超车策略：提供"更全、更新、更美"的内容实现超越',
+              '案例：将"Best CRM software"（KD 85）改做"Best CRM for freelance graphic designers"（KD 12），2个月内排名前三',
+            ],
+          },
+        ],
+        practice: [
+          '挑选3个你心仪的关键词，用Ahrefs或SEMrush免费版记录它们的KD值',
+          '在隐私模式下搜索这3个词，观察前10名的网站类型',
+          '寻找一个第一页出现过个人博客或中小型网站的关键词——那就是你的机会',
+        ],
+      },
+      {
+        id: 'module-2-chapter-4',
+        title: '长尾关键词入门',
+        objective: '理解长尾词的价值，掌握寻找高质量长尾词的实战方法',
+        blocks: [
+          {
+            heading: '为什么长尾词是新手的红利',
+            items: [
+              '极低竞争度：大公司看不上小词，你只要把内容写好就能排上去',
+              '极高转化率：搜"适合拍Vlogs的5000元以下索尼相机"的人，已经快要下单了',
+              '积少成多：100篇长尾词文章的合力流量非常惊人，且极其稳定',
+              'SEO不是追求最大的词，而是追求最准的词',
+            ],
+          },
+          {
+            heading: '如何寻找高质量长尾词',
+            items: [
+              '修饰词组合法：核心词 + 场景（for beginners / at home）+ 时间（2024）+ 属性（cheap / free / premium）',
+              'Google下拉框：输入关键词不按回车，看下拉建议',
+              '相关搜索：页面底部的"People also search for"是长尾词金矿',
+              '案例：瑜伽垫品牌通过50篇长尾词内容（"Extra thick yoga mat for bad knees"等）实现月销10万美金',
+            ],
+          },
+        ],
+        practice: [
+          '针对你的核心产品，用修饰词组合法找出10个具体的长尾关键词',
+          '确认这些词是否具有明确的"解决问题"或"购买"意图',
+          '为其中最精准的1个长尾词写一个简要的内容大纲',
         ],
       },
     ],
@@ -385,6 +483,81 @@ export const SEO_MODULES: SeoModule[] = [
           '如有问题，制定修改计划（并记得设置301重定向）',
         ],
       },
+      {
+        id: 'module-3-chapter-3',
+        title: 'H1-H6标签使用',
+        objective: '掌握标题标签的语义逻辑，帮助搜索引擎理解页面内容架构',
+        blocks: [
+          {
+            heading: 'H1标签：页面的灵魂',
+            items: [
+              '每个页面必须有且仅有一个H1',
+              'H1中必须包含该页面的核心关键词',
+              '通常放在页面正文最上方，是搜索引擎判断页面主题的最重要标签',
+            ],
+          },
+          {
+            heading: 'H2-H3：内容的大纲和细节',
+            items: [
+              'H2：划分文章的主要章节，可以有多个，包含长尾关键词或语义相关词汇',
+              'H3：H2下的小节，大多数网页用到H3就够了',
+              '严格遵循层级：H1→H2→H3，不要跳级使用',
+              '正确序列：H1→H2→H3→H2；错误：H1→H3→H2（跳级会让搜索引擎困惑）',
+            ],
+          },
+          {
+            heading: '常见误区',
+            items: [
+              '不要把H标签当调色盘——H标签代表语义逻辑，不是用来改字体样式的',
+              '如果只是想让文字变大变粗，请用CSS',
+              '案例：一篇"2024最佳笔记本选购指南"的正确结构：H1（指南标题）→H2（品牌对比）→H3（Apple MacBook/Dell XPS）→H2（如何选配置）',
+            ],
+          },
+        ],
+        practice: [
+          '检查首页和核心产品页，确保有且只有一个H1标签',
+          '用浏览器F12检查功能确认页面标题嵌套在正确的H标签内',
+          '为超过1000字的长文章添加至少3个H2标签，使内容易于扫描',
+        ],
+      },
+      {
+        id: 'module-3-chapter-4',
+        title: '内部链接策略入门',
+        objective: '理解内链的权重传递机制，学会用内部链接让整站排名共同提升',
+        blocks: [
+          {
+            heading: '什么是内部链接，为什么重要',
+            items: [
+              '内链 = 从网站一个页面指向同一网站另一个页面的链接',
+              '作用：帮助用户导航、定义网站架构、传递页面权重（Link Equity）',
+              '没有内部链接的网站就像孤岛群岛——用户进得来出不去，爬虫也会断线',
+            ],
+          },
+          {
+            heading: '面包屑导航和上下文内链',
+            items: [
+              '面包屑（首页 > 课程中心 > SEO入门 > 页面优化）：同时告诉用户和搜索引擎页面层级关系',
+              '上下文内链（文章正文中自然引用相关文章）权重高于侧边栏的"相关阅读"',
+              '将权重高的页面（首页/高流量文章）链接到你想提升排名的新页面',
+              '策略：发布新文章后，在旧的相关文章中加入指向新文章的链接',
+            ],
+          },
+          {
+            heading: '锚文本优化',
+            items: [
+              '锚文本 = 链接上的可见文字，是搜索引擎判断目标页面内容的重要信号',
+              '避免：「点击这里」「更多」「查看详情」（含义模糊）',
+              '推荐：描述性关键词，如「查看我们的SEO实战课程」',
+              '内链必须自然且相关——不要在咖啡冲泡文章里强行链接到二手车页面',
+            ],
+          },
+        ],
+        practice: [
+          '为网站安装或启用面包屑导航功能',
+          '找出站内权重最高的前3个页面，从这些页面链接到你最新的内容',
+          '检查已发布的文章，确保每篇至少包含2-3个指向站内其他相关页面的链接',
+        ],
+      },
     ],
   },
   {
@@ -443,6 +616,124 @@ export const SEO_MODULES: SeoModule[] = [
           '选择你最重要的一个关键词，分析排名前3的内容',
           '用5步框架写一篇文章的大纲（不需要马上写全文）',
           '检查：你的大纲是否回答了用户所有可能的问题？有没有竞争对手遗漏的角度？',
+        ],
+      },
+      {
+        id: 'module-4-chapter-2',
+        title: '信息架构设计',
+        objective: '用支柱页面和内容集群构建知识图谱，告诉搜索引擎你是某领域专家',
+        blocks: [
+          {
+            heading: '支柱页面与内容集群（Pillar & Clusters）',
+            items: [
+              '支柱页面（Pillar Page）：深度覆盖某个大话题的权威页面（如：SEO终极指南）',
+              '内容集群（Topic Clusters）：围绕支柱页面产生的细分话题文章',
+              '连接：所有集群文章链接回支柱页面，支柱页面也链接到各集群，形成权重网络',
+              '效果：告诉搜索引擎"我是这个领域的专家"，显著提升主题权威性',
+            ],
+          },
+          {
+            heading: '导航与信息层级设计',
+            items: [
+              '扁平化结构：用户通过3次点击以内能到达任何页面',
+              '面包屑导航：不仅方便用户回退，也向Google明确展示页面层级',
+              '主菜单：放入最重要的分类，不是所有页面',
+              'URL语义化：/blog/seo-tips 优于 /p=123；保持URL短小精悍',
+            ],
+          },
+          {
+            heading: '信息架构改造案例',
+            items: [
+              '某垂直电商：500个产品全堆在"新闻"分类，Google对核心产品关键词认知模糊',
+              '改造：按产品线重分子分类，建立"核心购买指南"作为支柱页面',
+              '结果：网站索引量提升40%，核心品类长尾词流量2个月内翻倍',
+            ],
+          },
+        ],
+        practice: [
+          '绘制你网站的思维导图，检查目前是否有清晰的分类结构',
+          '确定1-2个核心支柱话题（Pillar Topics），为每个话题规划相关集群文章',
+          '检查并开启网站的面包屑导航功能',
+          '清理URL结构，确保包含语义关键词且层级简单（不超过3层）',
+        ],
+      },
+      {
+        id: 'module-4-chapter-3',
+        title: '图片优化和多媒体使用',
+        objective: '在保证视觉美感的同时，让图片成为SEO加分项而非拖分项',
+        blocks: [
+          {
+            heading: '图片SEO的基础',
+            items: [
+              'Alt文本：用简洁语言描述图片内容并嵌入关键词（如 alt="复古风格不锈钢咖啡机"）',
+              '文件名优化：stainless-steel-coffee-maker.jpg 优于 IMG_001.jpg',
+              'WebP格式：比JPEG/PNG小25-30%，质量几乎无损——Google推荐格式',
+              'SVG：适用于图标和插图，体积极小且无限缩放不失真',
+            ],
+          },
+          {
+            heading: '图片加载性能优化',
+            items: [
+              '永远不要直接上传单反相机导出的几MB原图',
+              '尺寸匹配：显示区域只有800px宽就不要上传4000px的图片',
+              '懒加载（Lazy Loading）：用户滚动到图片位置才加载，极大提升首屏速度（LCP）',
+              '推荐工具：TinyPNG、Squoosh.app',
+              '案例：某生活博客将图片转WebP+启用懒加载，页面加载从8秒缩短到2.5秒，移动端排名平均上升12位',
+            ],
+          },
+          {
+            heading: '视频多媒体的正确使用',
+            items: [
+              'YouTube嵌入：利用YouTube带宽，不占用自己服务器资源',
+              '视频结构化数据（Schema）：帮助Google识别视频标题/描述/缩略图，有机会获得视频大卡片展示',
+              '背景视频必须自动静音，否则严重影响用户体验',
+            ],
+          },
+        ],
+        practice: [
+          '安装WebP转换插件或用Squoosh.app处理网站现有图片',
+          '检查网站最热门的5篇文章，补全缺失的Alt标签',
+          '用Google PageSpeed Insights测试一个页面，重点查看"图片优化"建议',
+          '确保所有嵌入视频都有简短的文字说明',
+        ],
+      },
+      {
+        id: 'module-4-chapter-4',
+        title: '内容更新节奏',
+        objective: '建立科学的内容更新机制，通过持续优化维持和提升搜索排名',
+        blocks: [
+          {
+            heading: '为什么新鲜度很重要',
+            items: [
+              'Google算法中的"新鲜度（Freshness）"信号：内容常年不更新，搜索引擎认为信息已过时',
+              '爬虫频率：经常更新的网站吸引爬虫更频繁光顾，新内容被更快索引',
+              '用户CTR：搜索结果中带"2024更新版"标签的内容点击率更高',
+            ],
+          },
+          {
+            heading: '内容审计和更新策略',
+            items: [
+              '常青树内容（Evergreen）：核心指南类，每6-12个月复核一次数据和链接',
+              '内容衰减（Content Decay）：在GSC中找出流量下滑的页面，重点优化',
+              '更新的定义：不只是改日期！增加新段落、更新数据、替换失效链接、加入新案例',
+              '稳定性胜过爆发性：每周1篇高质量 > 一个月猛发20篇然后消失半年',
+            ],
+          },
+          {
+            heading: '内容再利用（Repurposing）',
+            items: [
+              '将旧的热门博客整理成电子书或PDF',
+              '将文章核心观点做成信息图（Infographic）重新发布',
+              '将深度教程录制成视频嵌入原页面，增加停留时间',
+              '案例：某科技网站半年未更新，月流量从10万跌至4万；更新前50篇核心文章的数据并加入"2024更新版"，1个月内流量恢复到8万',
+            ],
+          },
+        ],
+        practice: [
+          '在Google Search Console找出过去3个月流量下滑最严重的3个页面',
+          '为这3个页面各增加至少200字的新信息（新数据/新视角/新案例）',
+          '检查并修复这些页面中的所有失效链接',
+          '制定未来3个月的内容日历，包含新发和旧更计划',
         ],
       },
     ],
@@ -546,6 +837,86 @@ export const SEO_MODULES: SeoModule[] = [
           '在PageSpeed Insights输入你的网站地址，查看移动端得分',
           '记录最需要改进的3个问题',
           '在Chrome DevTools中用移动端模式浏览你的5个主要页面，记录可用性问题',
+        ],
+      },
+      {
+        id: 'module-5-chapter-3',
+        title: '网站速度优化',
+        objective: '理解Core Web Vitals，掌握提升页面速度的核心手段',
+        blocks: [
+          {
+            heading: 'Core Web Vitals：Google的性能量化指标',
+            items: [
+              'LCP（Largest Contentful Paint）：最大内容绘制，衡量加载性能——应在2.5秒内完成',
+              'INP（Interaction to Next Paint）：交互响应，用户点击后页面反馈应在200毫秒内',
+              'CLS（Cumulative Layout Shift）：累积布局偏移，页面元素不应在加载中乱跳——应低于0.1',
+              '现实数据：移动端加载超3秒，53%的用户会离开；速度是Google的明确排名因素',
+            ],
+          },
+          {
+            heading: '速度优化的核心手段',
+            items: [
+              '图片优化：WebP格式（比JPEG/PNG小30-80%）+ 懒加载，通常是最大的提速点',
+              'CDN（内容分发网络）：通过全球节点缓存，让用户从最近的服务器获取资源（推荐Cloudflare，有免费套餐）',
+              '代码压缩（Minification）：压缩CSS/JS/HTML，去掉多余空格和注释',
+              '浏览器缓存：让回头客直接从本地读取资源，不重新下载',
+              '案例：某旅游博客安装Cloudflare CDN + WebP + 移除3个不必要JS，LCP从6秒降至1.8秒，核心关键词重回首页前三',
+            ],
+          },
+          {
+            heading: '速度测量工具',
+            items: [
+              'Google PageSpeed Insights：测试LCP/INP/CLS分数，提供具体优化建议',
+              'Google Search Console → Core Web Vitals报告：查看真实用户数据',
+              'GTmetrix：更详细的性能分解报告',
+            ],
+          },
+        ],
+        practice: [
+          '在Google PageSpeed Insights测试你的网站，记录LCP/INP/CLS分数',
+          '将所有大于200KB的图片转换为WebP格式',
+          '开启网站的Gzip或Brotli压缩',
+          '为你的网站配置Cloudflare CDN（有免费套餐）',
+        ],
+      },
+      {
+        id: 'module-5-chapter-4',
+        title: 'XML Sitemap 和 Robots.txt 配置',
+        objective: '掌握爬虫控制文件的配置，确保Google高效索引你真正有价值的页面',
+        blocks: [
+          {
+            heading: 'XML Sitemap：网站的索引蓝图',
+            items: [
+              'Sitemap是列出你希望搜索引擎抓取的所有重要页面的文件（通常是yourdomain.com/sitemap.xml）',
+              '动态更新：用SEO插件（Yoast/Rank Math）自动生成，发布新文章时自动更新',
+              '提交到GSC：在Google Search Console中手动提交Sitemap链接',
+              '只包含高质量页面：不要把404页面、重复内容或被Noindex的页面放进Sitemap',
+            ],
+          },
+          {
+            heading: 'Robots.txt：爬虫的准入协议',
+            items: [
+              '放在网站根目录的文本文件，告诉爬虫哪些路径可以访问、哪些不可以',
+              '常见指令：User-agent: *（针对所有爬虫）；Disallow: /admin/（禁止访问后台）',
+              '在Robots.txt末尾添加 Sitemap 路径，方便爬虫发现',
+              '警告：千万不要Disallow你的CSS或JS文件夹，否则爬虫无法正常渲染页面',
+            ],
+            code: 'User-agent: *\nDisallow: /admin/\nDisallow: /user/preview/\nAllow: /\nSitemap: https://example.com/sitemap.xml',
+          },
+          {
+            heading: '配置效果案例',
+            items: [
+              '某SaaS平台的用户个人预览页（无价值内容）被Google大量索引，导致核心产品页抓取缓慢',
+              '在Robots.txt中添加Disallow: /user/preview/，更新Sitemap移除无价值页面',
+              '结果：无效索引2周内开始下降，核心产品页抓取时间从周级缩短到小时级',
+            ],
+          },
+        ],
+        practice: [
+          '确认你的网站已生成XML Sitemap，在Google Search Console中提交',
+          '访问你的robots.txt（yourdomain.com/robots.txt），确保没有误禁重要内容目录',
+          '在Robots.txt文件末尾添加你的Sitemap完整链接',
+          '用GSC的"网址检查"功能测试几个重要页面是否可以被正常爬取',
         ],
       },
     ],
@@ -810,6 +1181,127 @@ export const SEO_MODULES: SeoModule[] = [
           '如果你计划做多语言网站，选择子目录方案并规划URL结构',
           '用Google Search Console配置目标地区（设置 → 国际定向）',
           '在你的英文首页和中文首页之间添加正确的Hreflang标签，并用Google的Hreflang测试工具验证',
+        ],
+      },
+    ],
+  },
+  {
+    num: 8,
+    slug: 'module-8',
+    title: 'Bonus：AI工具辅助SEO',
+    subtitle: '用AI工具10倍提升SEO效率——从关键词到内容全流程',
+    duration: '约45分钟',
+    intro: '掌握5类AI工具的SEO应用场景，把重复性工作交给AI，把创意和策略留给自己。',
+    chapters: [
+      {
+        id: 'module-8-chapter-1',
+        title: 'AI关键词研究与竞争分析',
+        objective: '用AI工具快速发现关键词机会，10倍提升竞争分析效率',
+        blocks: [
+          {
+            heading: 'ChatGPT / Claude做关键词头脑风暴',
+            items: [
+              'Prompt模板：「我做[你的利基市场]，目标用户是[描述]，帮我列出50个他们可能搜索的长尾关键词」',
+              '快速生成修饰词变体：「把这10个关键词用"for beginners / 2024 / free / best"等修饰词扩展成50个」',
+              '发现竞争对手遗漏的角度：「分析[竞争对手URL]的内容，找出他们没有覆盖但用户可能关心的子话题」',
+            ],
+          },
+          {
+            heading: 'AI辅助SERP意图分析',
+            items: [
+              '把搜索结果前10名的标题和描述粘贴给AI，让它分析用户意图模式',
+              '识别内容缺口：「这些排名页面都在讲X，但没有人讲Y——Y就是你的差异化机会」',
+              '自动分类关键词意图：批量粘贴关键词，让AI分类为信息型/商业型/交易型',
+            ],
+          },
+          {
+            heading: '推荐工具组合',
+            items: [
+              'Ahrefs / SEMrush：获取真实搜索量和KD数据（AI无法替代这个）',
+              'ChatGPT / Claude：关键词创意、意图分析、内容缺口发现',
+              'Perplexity：实时搜索，了解某话题当前被引用最多的内容是什么',
+            ],
+          },
+        ],
+        practice: [
+          '用ChatGPT为你的核心业务生成50个长尾关键词候选',
+          '将候选词导入Ahrefs验证搜索量和KD，筛选出KD < 20的词',
+          '让AI分析你的前3个竞争对手的内容，找出他们都遗漏的角度',
+        ],
+      },
+      {
+        id: 'module-8-chapter-2',
+        title: 'AI内容写作辅助',
+        objective: '用AI加速内容生产，同时保持真实性和E-E-A-T质量标准',
+        blocks: [
+          {
+            heading: 'AI辅助内容创作的正确姿势',
+            items: [
+              '用AI起草，人工优化：AI负责80%的结构和初稿，你负责加入真实案例、数据和个人观点',
+              'Answer-first写作：让AI先写一段200字以内的直接答案，再展开细节',
+              '永远不要直接发布AI全文：Google能识别低质量AI内容，E-E-A-T要求真实的经验和专业性',
+            ],
+          },
+          {
+            heading: '高效内容生产Prompt模板',
+            items: [
+              '文章大纲：「为关键词[XXX]写一个SEO优化的文章大纲，包含H2和H3标题，涵盖用户所有可能的问题」',
+              'Meta标签：「为这篇文章写3个版本的Title（50-60字符）和Meta Description（150-160字符）」',
+              'FAQ区块：「基于这篇文章，生成8个用户最可能搜索的FAQ问答」',
+              '内容更新：「这是我2022年写的旧文章，帮我识别需要更新的部分并给出修改建议」',
+            ],
+          },
+          {
+            heading: 'AI写作工具对比',
+            items: [
+              'ChatGPT（GPT-4o）：通用能力最强，适合任何类型的内容创作',
+              'Claude：长文档处理能力出色，适合整理和改写大量内容',
+              'Perplexity：附带引用来源，适合需要数据支撑的内容',
+              'Jasper / Surfer AI：专门为SEO优化的写作工具，可以分析竞争对手并给出关键词密度建议',
+            ],
+          },
+        ],
+        practice: [
+          '选一个你想写的关键词，用AI生成文章大纲，然后人工评估：是否有遗漏的重要角度？',
+          '用AI为你最重要的5个页面重写Title和Meta Description，再人工筛选最好的版本',
+          '为你最近发布的一篇文章让AI生成FAQ区块，添加到文章末尾',
+        ],
+      },
+      {
+        id: 'module-8-chapter-3',
+        title: 'AI技术SEO工具',
+        objective: '用AI工具自动化技术SEO的检查和修复，让技术问题不再是障碍',
+        blocks: [
+          {
+            heading: 'Schema Markup自动生成',
+            items: [
+              'AI可以根据页面内容自动生成JSON-LD Schema代码（FAQ、HowTo、Article、Product类型）',
+              'Prompt：「为以下FAQ内容生成FAQPage类型的JSON-LD Schema markup代码」',
+              '直接用Claude或ChatGPT生成，粘贴到页面的<head>中即可',
+            ],
+          },
+          {
+            heading: 'AI辅助内容审计',
+            items: [
+              '将Google Search Console数据导出为CSV，让AI分析哪些页面需要优先优化',
+              '批量检查内链机会：把站内所有文章标题和URL给AI，让它推荐哪些文章之间应该互相链接',
+              '发现内容缺口：让AI对比你的内容目录和竞争对手的目录，找出你缺少的话题',
+            ],
+          },
+          {
+            heading: 'AI SEO工具推荐',
+            items: [
+              'Surfer SEO：分析竞争对手页面，给出关键词使用建议和内容评分',
+              'Clearscope：内容优化建议，确保覆盖相关语义词汇',
+              'SEO.ai：专为SEO设计的AI写作和优化一体化平台',
+              'ChatGPT + Code Interpreter：上传sitemap或爬虫数据，让AI直接分析问题',
+            ],
+          },
+        ],
+        practice: [
+          '用AI为你的核心FAQ页面生成FAQPage Schema代码，添加到页面并用Google Rich Results Test验证',
+          '将你的文章列表（标题+URL）发给AI，让它推荐5对应该相互内链的文章',
+          '让AI分析你的GSC点击率数据，找出点击率低于2%但排名在第1页的词——这些是优化Title的机会',
         ],
       },
     ],
