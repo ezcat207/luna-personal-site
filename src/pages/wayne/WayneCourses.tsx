@@ -299,6 +299,55 @@ export default function WayneCourses() {
           );
         })()}
 
+        {/* ── SEO Course (Free) ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.14 }}
+        >
+          <div className="flex items-center gap-3 mb-5">
+            <h2 className="text-2xl font-bold text-slate-900">免费课程（中文）</h2>
+            <span className="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">
+              FREE FOREVER
+            </span>
+          </div>
+          <Link
+            to="/wayne/courses/seo"
+            className="block bg-white border-2 border-indigo-200 rounded-2xl overflow-hidden hover:border-indigo-400 hover:shadow-md transition-all"
+          >
+            <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 px-7 py-6 text-white">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-bold text-indigo-200 mb-2 uppercase tracking-wide">中文 · 初级 · 7模块</p>
+                  <h3 className="text-xl font-bold mb-1">SEO从零开始：让Google主动找到你</h3>
+                  <p className="text-indigo-200 text-sm">从关键词研究到外链建设，完整的SEO初级方法论</p>
+                </div>
+                <div className="flex-shrink-0 text-right">
+                  <p className="text-2xl font-bold text-emerald-300">免费</p>
+                  <p className="text-xs text-indigo-300 mt-0.5">7h+ 内容</p>
+                </div>
+              </div>
+            </div>
+            <div className="px-7 py-5 flex items-center justify-between">
+              <div className="space-y-1">
+                {[
+                  '理解搜索引擎工作原理，知道为什么某页面能排名',
+                  '关键词研究、页面优化、技术SEO、外链建设全覆盖',
+                  '模块7专讲GEO SEO与国际化，无缝衔接下一门课',
+                ].map((o) => (
+                  <div key={o} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-slate-600">{o}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex-shrink-0 ml-6 text-indigo-600 flex items-center gap-1 font-semibold text-sm">
+                开始学习 <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+
         {/* ── GEO Course (Waitlist) ── */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
