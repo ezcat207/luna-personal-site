@@ -1,8 +1,10 @@
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Menu, X, BookOpen, Map, Home, Lightbulb, Wrench, GraduationCap, Laugh } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
+import i18n from '../i18n';
 
 const lunaSubdomain = import.meta.env.PROD
   ? 'https://luna.bunnyuniverse.com'
@@ -12,18 +14,37 @@ const hubSubdomain = import.meta.env.PROD
   ? 'https://bunnyuniverse.com'
   : '/?persona=hub';
 
-const navItems = [
-  { name: 'Home', path: '/wayne', icon: Home, end: true },
-  { name: 'Teaching Plans', path: '/wayne/plans', icon: BookOpen, end: false },
-  { name: 'Insights', path: '/wayne/insights', icon: Lightbulb, end: false },
-  { name: 'Courses', path: '/wayne/courses', icon: GraduationCap, end: false },
-  { name: 'Comics', path: '/wayne/comics', icon: Laugh, end: false },
-  { name: 'Tools', path: '/wayne/tools', icon: Wrench, end: false },
-  { name: 'Roadmap', path: '/wayne/roadmap', icon: Map, end: false },
+const NAV_ITEMS = [
+  { key: 'home',     path: '/wayne',          icon: Home,         end: true  },
+  { key: 'plans',    path: '/wayne/plans',     icon: BookOpen,     end: false },
+  { key: 'insights', path: '/wayne/insights',  icon: Lightbulb,    end: false },
+  { key: 'courses',  path: '/wayne/courses',   icon: GraduationCap,end: false },
+  { key: 'comics',   path: '/wayne/comics',    icon: Laugh,        end: false },
+  { key: 'tools',    path: '/wayne/tools',     icon: Wrench,       end: false },
+  { key: 'roadmap',  path: '/wayne/roadmap',   icon: Map,          end: false },
 ];
+
+function LangToggle() {
+  const { t } = useTranslation();
+  const toggleLang = () => {
+    const next = i18n.language === 'en' ? 'zh' : 'en';
+    i18n.changeLanguage(next);
+    try { localStorage.setItem('wayne-lang', next); } catch { /* ignore */ }
+  };
+  return (
+    <button
+      onClick={toggleLang}
+      className="text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-200 text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-colors select-none"
+      title="Switch language"
+    >
+      {t('wayne_nav.lang_switch_to')}
+    </button>
+  );
+}
 
 const WayneNav = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
@@ -41,7 +62,7 @@ const WayneNav = () => {
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-1">
-              {navItems.map(item => (
+              {NAV_ITEMS.map(item => (
                 <NavLink
                   key={item.path}
                   to={item.path}
@@ -55,25 +76,26 @@ const WayneNav = () => {
                   }
                 >
                   <item.icon className="w-3.5 h-3.5" />
-                  {item.name}
+                  {t(`wayne_nav.${item.key}`)}
                 </NavLink>
               ))}
             </nav>
           </div>
 
-          {/* Right: Luna link + Hub */}
+          {/* Right: Lang toggle + Luna link + Hub */}
           <div className="hidden md:flex items-center gap-3">
+            <LangToggle />
             <a
               href={lunaSubdomain}
               className="text-xs text-pink-500 hover:text-pink-700 font-medium transition-colors"
             >
-              🐰 Luna's Journey →
+              🐰 {t('wayne_nav.luna_link')}
             </a>
             <a
               href={hubSubdomain}
               className="text-xs text-slate-400 hover:text-slate-600 transition-colors"
             >
-              Bunny Universe
+              {t('wayne_nav.hub_link')}
             </a>
           </div>
 
@@ -96,7 +118,7 @@ const WayneNav = () => {
             exit={{ opacity: 0, y: -8 }}
             className="md:hidden border-t border-slate-100 bg-white px-4 py-3 space-y-1"
           >
-            {navItems.map(item => (
+            {NAV_ITEMS.map(item => (
               <NavLink
                 key={item.path}
                 to={item.path}
@@ -109,12 +131,15 @@ const WayneNav = () => {
                 }
               >
                 <item.icon className="w-4 h-4" />
-                {item.name}
+                {t(`wayne_nav.${item.key}`)}
               </NavLink>
             ))}
-            <div className="pt-2 border-t border-slate-100 flex gap-4 px-3">
-              <a href={lunaSubdomain} className="text-xs text-pink-500">🐰 Luna's Journey</a>
-              <a href={hubSubdomain} className="text-xs text-slate-400">Bunny Universe</a>
+            <div className="pt-2 border-t border-slate-100 flex items-center gap-4 px-3">
+              <a href={lunaSubdomain} className="text-xs text-pink-500">🐰 {t('wayne_nav.luna_link')}</a>
+              <a href={hubSubdomain} className="text-xs text-slate-400">{t('wayne_nav.hub_link')}</a>
+              <div className="ml-auto">
+                <LangToggle />
+              </div>
             </div>
           </motion.div>
         )}
@@ -125,6 +150,7 @@ const WayneNav = () => {
 
 const WayneLayout = () => {
   const location = useLocation();
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-slate-50" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
       <SEOHead />
@@ -144,8 +170,8 @@ const WayneLayout = () => {
       </main>
       <footer className="border-t border-slate-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400">
-          <span>Wayne's Plans · <a href={hubSubdomain} className="hover:text-slate-600">Bunny Universe</a></span>
-          <span>Real teaching. Real results. Every week.</span>
+          <span>Wayne's Plans · <a href={hubSubdomain} className="hover:text-slate-600">{t('wayne_nav.hub_link')}</a></span>
+          <span>{t('wayne_nav.footer_tagline')}</span>
         </div>
       </footer>
     </div>

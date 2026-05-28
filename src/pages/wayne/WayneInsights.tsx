@@ -1,8 +1,10 @@
 import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 import { wayneInsights } from '../../data/wayneInsights';
 import { SEOHead } from '../../components/SEOHead';
 
 export default function WayneInsights() {
+  const { t } = useTranslation();
   const sortedInsights = [...wayneInsights]
     .filter((i) => !i.draft)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -18,10 +20,10 @@ export default function WayneInsights() {
           {/* Header */}
           <div className="mb-12">
             <h1 className="text-4xl font-bold text-slate-900 mb-4">
-              Insights
+              {t('wayne_insights_page.title')}
             </h1>
             <p className="text-lg text-slate-600">
-              Deep dives into AI workflows, parenting strategies, and lessons learned from teaching kids to build with technology.
+              {t('wayne_insights_page.subtitle')}
             </p>
           </div>
 

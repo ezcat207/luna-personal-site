@@ -1,23 +1,25 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import { wayneWeeks } from '../../data/wayneWeeks';
 
 const WaynePlans = () => {
+  const { t } = useTranslation();
   const weeks = [...wayneWeeks].reverse();
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900">All Teaching Plans</h1>
-          <p className="text-slate-500 text-sm mt-1">Published every Wednesday · {weeks.length} plan{weeks.length !== 1 ? 's' : ''} so far</p>
+          <h1 className="text-2xl font-bold text-slate-900">{t('wayne_plans_page.title')}</h1>
+          <p className="text-slate-500 text-sm mt-1">{t('wayne_plans_page.meta', { count: weeks.length })}</p>
         </div>
       </div>
 
       {weeks.length === 0 ? (
         <div className="bg-white border border-slate-200 rounded-xl p-12 text-center">
-          <p className="text-slate-400">First plan coming this Wednesday.</p>
+          <p className="text-slate-400">{t('wayne_plans_page.empty')}</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -34,7 +36,7 @@ const WaynePlans = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="px-2 py-0.5 bg-indigo-600 text-white text-xs font-bold rounded">
-                          Week {week.week}
+                          {t('wayne_plans_page.week_fmt', { num: week.week })}
                         </span>
                         <span className="text-xs text-slate-400">{week.date}</span>
                       </div>

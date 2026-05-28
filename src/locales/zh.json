@@ -22,6 +22,7 @@
     "hero_title": "教学计划",
     "hero_subtitle": "每周我都会规划 Luna 要学的内容。这是真实版本——我尝试了什么，什么有效，什么没有。",
     "week_label": "第",
+    "week_fmt": "第{{num}}周",
     "tools_label": "使用的工具",
     "read_more": "阅读完整计划 →",
     "sections": {
@@ -32,6 +33,56 @@
       "next_week": "下周预告",
       "resources": "复刻本节课的资源"
     }
+  },
+  "wayne_nav": {
+    "home": "首页",
+    "plans": "教学计划",
+    "insights": "思考",
+    "courses": "课程",
+    "comics": "漫画",
+    "tools": "工具",
+    "roadmap": "路线图",
+    "luna_link": "Luna的旅程 →",
+    "hub_link": "兔兔宇宙",
+    "footer_tagline": "真实的教学。真实的成果。每周更新。",
+    "lang_switch_to": "EN"
+  },
+  "wayne_home": {
+    "badge": "每周三发布",
+    "title": "教学计划",
+    "title_accent": "来自一个真实爸爸",
+    "desc": "每周我都会规划 Luna 要学的内容。这是真实版本——我尝试了什么，什么有效，什么没有。有用的都拿走。",
+    "cta_plans": "所有教学计划",
+    "cta_insights": "思考",
+    "cta_roadmap": "完整路线图",
+    "latest": "最新",
+    "archive": "归档",
+    "view_all": "查看全部 →",
+    "week_fmt": "第{{num}}周",
+    "card1_title": "每周教学计划",
+    "card1_desc": "我们覆盖了什么、用了什么工具，以及一个8岁孩子的真实反应。",
+    "card2_title": "完整学习路线图",
+    "card2_desc": "一个结构化的决策树，帮你找到适合孩子当前阶段的工具。",
+    "card3_title": "看 Luna 的成果",
+    "card3_desc": "每周日，Luna 发布她真实构建和学到的东西。",
+    "card3_link": "访问 Luna 的网站"
+  },
+  "prime_free": {
+    "title": "素数免费",
+    "desc": "前2,357位注册用户永久免费获取全部课程。（2,357本身是素数——我们觉得这很合适。）",
+    "note": "荣誉制度——直接开始学习即可。"
+  },
+  "wayne_plans_page": {
+    "title": "所有教学计划",
+    "meta": "每周三发布 · 共{{count}}期",
+    "empty": "第一期计划将于本周三发布。",
+    "week_fmt": "第{{num}}周"
+  },
+  "wayne_insights_page": {
+    "title": "思考",
+    "subtitle": "深度探讨AI工作流、育儿策略，以及教孩子用技术构建事物的心得体会。",
+    "read_more": "阅读更多 →",
+    "min_read": "{{count}}分钟阅读"
   },
   "luna": {
     "hero_title": "我的学习旅程",

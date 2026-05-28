@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import {
   ArrowRight,
   BookOpen,
@@ -11,22 +12,18 @@ import {
 import { SEOHead } from '../../components/SEOHead';
 import { SEO_DEEP_MODULES } from '../../data/seoDeepModules';
 
-// ── Reusable Prime Number Free callout (also imported by WayneCourseSeo) ────
+// ── Reusable Prime Number Free callout ────────────────────────────────────────
 export function PrimeNumberFreeBadge() {
+  const { t } = useTranslation();
   return (
     <div className="flex items-start gap-4 border border-violet-200 bg-violet-50 rounded-2xl p-5">
       <div className="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center flex-shrink-0 text-lg select-none">
         🔢
       </div>
       <div>
-        <p className="font-bold text-violet-900 mb-1">Prime Number Free</p>
-        <p className="text-sm text-violet-700 leading-relaxed">
-          凡购买过我们任何<strong>素数定价</strong>产品的用户
-          （$2、$3、$5、$7、$11、$13、$17…），本课程永久免费。
-        </p>
-        <p className="text-xs text-violet-400 mt-1.5">
-          Honor system — 直接开始学习即可，无需验证。
-        </p>
+        <p className="font-bold text-violet-900 mb-1">{t('prime_free.title')}</p>
+        <p className="text-sm text-violet-700 leading-relaxed">{t('prime_free.desc')}</p>
+        <p className="text-xs text-violet-400 mt-1.5">{t('prime_free.note')}</p>
       </div>
     </div>
   );

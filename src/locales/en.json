@@ -22,6 +22,7 @@
     "hero_title": "Teaching Plans",
     "hero_subtitle": "Every week I plan what Luna will learn. Here's the honest version — what I tried, what worked, what didn't.",
     "week_label": "Week",
+    "week_fmt": "Week {{num}}",
     "tools_label": "Tools Used",
     "read_more": "Read Full Plan →",
     "sections": {
@@ -32,6 +33,56 @@
       "next_week": "Next Week Preview",
       "resources": "Resources to Replicate This Session"
     }
+  },
+  "wayne_nav": {
+    "home": "Home",
+    "plans": "Teaching Plans",
+    "insights": "Insights",
+    "courses": "Courses",
+    "comics": "Comics",
+    "tools": "Tools",
+    "roadmap": "Roadmap",
+    "luna_link": "Luna's Journey →",
+    "hub_link": "Bunny Universe",
+    "footer_tagline": "Real teaching. Real results. Every week.",
+    "lang_switch_to": "中文"
+  },
+  "wayne_home": {
+    "badge": "Publishing every Wednesday",
+    "title": "Teaching Plans",
+    "title_accent": "From a Real Dad",
+    "desc": "Every week I plan what my daughter Luna learns. This is the honest version — what I tried, what worked, what didn't. Steal anything useful.",
+    "cta_plans": "All Teaching Plans",
+    "cta_insights": "Insights",
+    "cta_roadmap": "Full Roadmap",
+    "latest": "Latest",
+    "archive": "Archive",
+    "view_all": "View all →",
+    "week_fmt": "Week {{num}}",
+    "card1_title": "Weekly Teaching Plans",
+    "card1_desc": "What we covered, what tools we used, and the honest reaction from an 8-year-old.",
+    "card2_title": "Full Learning Roadmap",
+    "card2_desc": "A structured decision tree to find the right tools for your child's current stage.",
+    "card3_title": "See Luna's Results",
+    "card3_desc": "Every Sunday, Luna publishes what she actually built and learned from my plan.",
+    "card3_link": "Visit Luna's site"
+  },
+  "prime_free": {
+    "title": "Prime Number Free",
+    "desc": "The first 2,357 registered users get lifetime access to all courses for free. (2,357 is itself a prime number — we thought that was fitting.)",
+    "note": "Honor system — just start learning."
+  },
+  "wayne_plans_page": {
+    "title": "All Teaching Plans",
+    "meta": "Published every Wednesday · {{count}} plans so far",
+    "empty": "First plan coming this Wednesday.",
+    "week_fmt": "Week {{num}}"
+  },
+  "wayne_insights_page": {
+    "title": "Insights",
+    "subtitle": "Deep dives into AI workflows, parenting strategies, and lessons learned from teaching kids to build with technology.",
+    "read_more": "Read more →",
+    "min_read": "{{count}} min read"
   },
   "luna": {
     "hero_title": "My Learning Journey",
