@@ -348,6 +348,49 @@ export default function WayneCourses() {
           </Link>
         </motion.div>
 
+        {/* ── SEO Deep Course (Free) ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.145 }}
+        >
+          <Link
+            to="/wayne/courses/seo-deep"
+            className="block bg-white border-2 border-indigo-100 rounded-2xl overflow-hidden hover:border-indigo-300 hover:shadow-md transition-all"
+          >
+            <div className="bg-gradient-to-r from-indigo-50 to-slate-50 px-7 py-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-bold text-indigo-500 mb-2 uppercase tracking-wide">中文 · 深度版 · 28章</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-1">SEO深度课程：完整阅读版</h3>
+                  <p className="text-slate-500 text-sm">28篇叙事式文章，含开篇故事、案例研究、交互清单</p>
+                </div>
+                <div className="flex-shrink-0 text-right">
+                  <p className="text-2xl font-bold text-emerald-600">免费</p>
+                  <p className="text-xs text-slate-400 mt-0.5">7模块 · 8h+</p>
+                </div>
+              </div>
+            </div>
+            <div className="px-7 py-5 flex items-center justify-between">
+              <div className="space-y-1">
+                {[
+                  '每章包含真实案例拆解和交互式行动清单',
+                  '从零开始，像读文章一样系统学SEO',
+                  '🔢 素数定价购买者永久免费',
+                ].map((o) => (
+                  <div key={o} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-slate-600">{o}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex-shrink-0 ml-6 text-indigo-600 flex items-center gap-1 font-semibold text-sm">
+                开始阅读 <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+
         {/* ── GEO Course (Waitlist) ── */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}

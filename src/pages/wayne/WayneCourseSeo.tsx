@@ -19,6 +19,7 @@ import {
 const SEO_SIGNUP_URL = 'https://forms.gle/noJPhc9rz5StsH7x7';
 import { SEOHead } from '../../components/SEOHead';
 import { SEO_MODULES } from '../../data/seoCourseModules';
+import { PrimeNumberFreeBadge } from './WayneCourseSeoDeep';
 
 const MODULE_ICONS = [
   <Search className="w-5 h-5" />,
@@ -100,6 +101,15 @@ export default function WayneCourseSeo() {
               <p className="text-sm text-slate-500">{s.label}</p>
             </div>
           ))}
+        </motion.div>
+
+        {/* ── Prime Number Free ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.07 }}
+        >
+          <PrimeNumberFreeBadge />
         </motion.div>
 
         {/* ── What You'll Learn ── */}

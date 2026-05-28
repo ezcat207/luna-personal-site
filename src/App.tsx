@@ -24,6 +24,8 @@ import WayneCourseAiVisuals from './pages/wayne/WayneCourseAiVisuals';
 import WayneCourseGeo from './pages/wayne/WayneCourseGeo';
 import WayneCourseSeo from './pages/wayne/WayneCourseSeo';
 import WayneCourseSeoModule from './pages/wayne/WayneCourseSeoModule';
+import WayneCourseSeoDeep from './pages/wayne/WayneCourseSeoDeep';
+import WayneCourseSeoDeepChapter from './pages/wayne/WayneCourseSeoDeepChapter';
 import WayneComics from './pages/wayne/WayneComics';
 import WayneComicGrandCanyon from './pages/wayne/WayneComicGrandCanyon';
 import WayneComicGenesisMars from './pages/wayne/WayneComicGenesisMars';
@@ -74,6 +76,8 @@ function AppRoutes() {
           <Route path="wayne/courses/geo" element={<WayneCourseGeo />} />
           <Route path="wayne/courses/seo" element={<WayneCourseSeo />} />
           <Route path="wayne/courses/seo/:moduleNum" element={<WayneCourseSeoModule />} />
+          <Route path="wayne/courses/seo-deep" element={<WayneCourseSeoDeep />} />
+          <Route path="wayne/courses/seo-deep/:moduleNum/:chapterNum" element={<WayneCourseSeoDeepChapter />} />
           <Route path="wayne/comics" element={<WayneComics />} />
           <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
           <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
