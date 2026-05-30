@@ -1629,13 +1629,6 @@ export const SEO_DEEP_MODULES: DeepModule[] = [
     duration: '45min',
     chapters: M6_CHAPTERS,
   },
-  {
-    num: 7,
-    title: '地理SEO与国际化',
-    subtitle: '多地区、多语言站点的SEO策略与GEO基础',
-    duration: '45min',
-    chapters: M7_CHAPTERS,
-  },
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
