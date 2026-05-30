@@ -190,7 +190,7 @@ const WayneLayout = () => {
       <WayneNav onSearchOpen={() => setSearchOpen(true)} />
       <WayneSearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={location.pathname}
             initial={{ opacity: 0, y: 8 }}
