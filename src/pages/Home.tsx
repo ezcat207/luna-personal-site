@@ -39,16 +39,16 @@ const Home = () => {
                             <div className="border-4 border-dashed border-gray-200 p-6 relative">
                                 <span className="absolute -top-8 -left-8 text-6xl text-gray-300 font-header opacity-50 select-none">#01</span>
                                 <h1 className="font-header text-6xl md:text-8xl text-ink leading-tight text-center md:text-left drop-shadow-sm">
-                                    Hello, <br />
+                                    Welcome to <br />
                                     <motion.span
                                         animate={{ rotate: [-3, -1, -3] }}
                                         transition={{ repeat: Infinity, duration: 4 }}
-                                        className="text-pink-500 font-marker transform inline-block"
-                                    >I am Luna!</motion.span>
+                                        className="text-pink-500 font-marker transform inline-block whitespace-nowrap"
+                                    >Bunny Universe!</motion.span>
                                 </h1>
                                 <p className="mt-6 font-handwritten text-xl md:text-2xl text-pencil leading-relaxed">
-                                    Welcome to my digital <span className="bg-yellow-100 px-2 transform -rotate-1 inline-block border-b-2 border-yellow-400">brain dump!</span>
-                                    I'm 8 years old (almost 9!) and I turn <span className="font-mono text-purple-600 bg-purple-100 px-1 rounded text-sm">candy</span> into <span className="font-mono text-green-600 bg-green-100 px-1 rounded text-sm">code</span>.
+                                    Hi, I'm Luna! Welcome to Bunny Universe, my digital <span className="bg-yellow-100 px-2 transform -rotate-1 inline-block border-b-2 border-yellow-400">brain dump!</span>
+                                    I'm 9 years old and I turn <span className="font-mono text-purple-600 bg-purple-100 px-1 rounded text-sm">candy</span> into <span className="font-mono text-green-600 bg-green-100 px-1 rounded text-sm">code</span>.
                                 </p>
                             </div>
                         </motion.div>
