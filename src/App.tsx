@@ -33,6 +33,7 @@ import WayneComicGenesisMars from './pages/wayne/WayneComicGenesisMars';
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
 import LunaEntry from './pages/luna/LunaEntry';
+import LunaComicDisneyland from './pages/luna/LunaComicDisneyland';
 
 // Legacy pages
 import Portfolio from './pages/Portfolio';
@@ -96,6 +97,7 @@ function AppRoutes() {
           <Route index element={<LunaHome />} />
           <Route path="luna" element={<LunaHome />} />
           <Route path="luna/:weekNum" element={<LunaEntry />} />
+          <Route path="luna/comics/disneyland" element={<LunaComicDisneyland />} />
           {/* Legacy paths — keep alive */}
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
@@ -128,6 +130,7 @@ function AppRoutes() {
         {/* Dev convenience: reach all sections from hub */}
         <Route path="luna" element={<LunaHome />} />
         <Route path="luna/:weekNum" element={<LunaEntry />} />
+        <Route path="luna/comics/disneyland" element={<LunaComicDisneyland />} />
         <Route path="roadmap" element={<Roadmap />} />
         <Route path="blog/superlinear" element={<Superlinear />} />
         <Route path="blog/strategic-radar" element={<StrategicRadar />} />
