@@ -1,9 +1,10 @@
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, BookOpen, Map, Home, Lightbulb, Wrench, GraduationCap, Laugh } from 'lucide-react';
+import { Menu, X, BookOpen, Map, Home, Lightbulb, Wrench, GraduationCap, Laugh, Search } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
+import { WayneSearchModal } from '../components/WayneSearchModal';
 import i18n from '../i18n';
 
 const lunaSubdomain = import.meta.env.PROD
@@ -42,7 +43,7 @@ function LangToggle() {
   );
 }
 
-const WayneNav = () => {
+const WayneNav = ({ onSearchOpen }: { onSearchOpen: () => void }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t } = useTranslation();
 
@@ -82,8 +83,17 @@ const WayneNav = () => {
             </nav>
           </div>
 
-          {/* Right: Lang toggle + Luna link + Hub */}
+          {/* Right: Search + Lang toggle + Luna link + Hub */}
           <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={onSearchOpen}
+              className="flex items-center gap-1.5 text-xs text-slate-500 border border-slate-200 rounded-md px-2.5 py-1.5 hover:border-indigo-300 hover:text-indigo-600 transition-colors"
+              title="Search (⌘K)"
+            >
+              <Search className="w-3.5 h-3.5" />
+              <span>Search</span>
+              <span className="text-slate-300 font-mono text-[10px] ml-1">⌘K</span>
+            </button>
             <LangToggle />
             <a
               href={lunaSubdomain}
@@ -99,13 +109,22 @@ const WayneNav = () => {
             </a>
           </div>
 
-          {/* Mobile burger */}
+          {/* Mobile: Search + burger */}
+          <div className="flex items-center gap-1 md:hidden">
+            <button
+              onClick={onSearchOpen}
+              className="p-1.5 rounded-md text-slate-500 hover:bg-slate-100"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
           <button
-            className="md:hidden p-1.5 rounded-md text-slate-500 hover:bg-slate-100"
+            className="p-1.5 rounded-md text-slate-500 hover:bg-slate-100"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
+          </div>
         </div>
       </div>
 
@@ -151,10 +170,25 @@ const WayneNav = () => {
 const WayneLayout = () => {
   const location = useLocation();
   const { t } = useTranslation();
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  // Cmd+K / Ctrl+K to open search
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-50" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
       <SEOHead />
-      <WayneNav />
+      <WayneNav onSearchOpen={() => setSearchOpen(true)} />
+      <WayneSearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         <AnimatePresence mode="wait">
           <motion.div
