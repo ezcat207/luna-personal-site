@@ -175,6 +175,46 @@ const LunaHome = () => {
         </div>
       </motion.header>
 
+      {/* My Comics */}
+      <section className="px-4 md:px-0 space-y-6">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-900">📖 comics!</h2>
+          <p className="text-slate-500 text-sm mt-1">Illustrated stories from our real-life adventures and fantasy worlds!</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {comics.map((c, i) => (
+            <motion.div
+              key={c.title}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.06 }}
+              whileHover={{ scale: 1.01 }}
+              className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden hover:border-pink-300 hover:shadow-sm transition-all"
+            >
+              <Link to={c.link} className="block">
+                <div className="aspect-[16/9] overflow-hidden bg-pink-50">
+                  <img src={c.cover} alt={c.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`px-2.5 py-1 text-xs font-bold rounded-full ${c.tagColor}`}>
+                      {c.tag}
+                    </span>
+                    <span className="text-xs text-slate-400">{c.date}</span>
+                    <span className="text-xs text-slate-400">· {c.panels} panels</span>
+                  </div>
+                  <h3 className="font-bold text-xl text-slate-900 mb-2 hover:text-pink-600 transition-colors">{c.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{c.desc}</p>
+                  <span className="text-pink-500 text-sm font-semibold flex items-center gap-1">
+                    Read the Comic Book →
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Weekly Journey List */}
       <section className="px-4 md:px-0 space-y-6">
         <h2 className="text-2xl font-bold text-slate-900">📅 Weekly Journal</h2>
@@ -226,46 +266,6 @@ const LunaHome = () => {
             </motion.article>
           ))
         )}
-      </section>
-
-      {/* My Comics */}
-      <section className="px-4 md:px-0 space-y-6">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-900">📖 My Comic Books</h2>
-          <p className="text-slate-500 text-sm mt-1">Illustrated stories from our real-life adventures and fantasy worlds!</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {comics.map((c, i) => (
-            <motion.div
-              key={c.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.06 }}
-              whileHover={{ scale: 1.01 }}
-              className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden hover:border-pink-300 hover:shadow-sm transition-all"
-            >
-              <Link to={c.link} className="block">
-                <div className="aspect-[16/9] overflow-hidden bg-pink-50">
-                  <img src={c.cover} alt={c.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2.5 py-1 text-xs font-bold rounded-full ${c.tagColor}`}>
-                      {c.tag}
-                    </span>
-                    <span className="text-xs text-slate-400">{c.date}</span>
-                    <span className="text-xs text-slate-400">· {c.panels} panels</span>
-                  </div>
-                  <h3 className="font-bold text-xl text-slate-900 mb-2 hover:text-pink-600 transition-colors">{c.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{c.desc}</p>
-                  <span className="text-pink-500 text-sm font-semibold flex items-center gap-1">
-                    Read the Comic Book →
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
       </section>
 
       {/* My Projects */}
