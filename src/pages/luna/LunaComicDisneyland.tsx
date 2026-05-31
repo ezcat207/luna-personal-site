@@ -523,7 +523,7 @@ export default function LunaComicDisneyland() {
 
       {/* 10 Comic Strips (vertical stack like Wayne's) */}
       <div className="space-y-8 mb-12 max-w-4xl mx-auto">
-        {strips.map((strip, i) => (
+        {strips.map((strip) => (
           <motion.div
             key={strip.number}
             initial={{ opacity: 0, y: 16 }}
