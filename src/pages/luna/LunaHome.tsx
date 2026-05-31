@@ -128,7 +128,7 @@ const comics = [
     tag: "Luxe Travel",
     tagColor: "bg-purple-100 text-purple-700",
     date: "May 2026",
-    panels: 10,
+    panels: 2,
   }
 ];
 
@@ -211,7 +211,7 @@ const LunaHome = () => {
                       {c.tag}
                     </span>
                     <span className="text-xs text-slate-400">{c.date}</span>
-                    <span className="text-xs text-slate-400">· {c.panels} panels</span>
+                    <span className="text-xs text-slate-400">· {c.panels} {c.link.includes('universal') ? 'strips' : 'panels'}</span>
                   </div>
                   <h3 className="font-bold text-xl text-slate-900 mb-2 hover:text-pink-600 transition-colors">{c.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed mb-4">{c.desc}</p>
