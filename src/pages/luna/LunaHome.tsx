@@ -119,6 +119,16 @@ const comics = [
     tagColor: "bg-pink-100 text-pink-700",
     date: "May 2026",
     panels: 10,
+  },
+  {
+    title: "Luna and Wayne's Universal Luxe Adventure",
+    desc: "First-class flights, private airplane pods, high-speed launch coasters, and opulent golden hotels. Follow their ultra-luxurious trip to Universal Studios!",
+    link: "/luna/comics/universal-luxe",
+    cover: "/images/comics/universal/cover.jpg",
+    tag: "Luxe Travel",
+    tagColor: "bg-purple-100 text-purple-700",
+    date: "May 2026",
+    panels: 10,
   }
 ];
 
