@@ -11,6 +11,14 @@ export interface WayneInsight {
   imageUrl?: string; // For featured images like the architecture diagram
   images?: string[]; // Gallery: multiple images rendered in sequence
   draft?: boolean; // true = not published yet, hidden from all listings
+  // Bilingual fields (optional English versions)
+  titleEn?: string;
+  subtitleEn?: string;
+  summaryEn?: string;
+  contentEn?: string[]; // English content array, same format as content
+  keyTakeawaysEn?: string[];
+  // Embedded PDF
+  pdfUrl?: string; // Path to PDF in /public, e.g. '/pdfs/the-token-express.pdf'
 }
 
 export const wayneInsights: WayneInsight[] = [
@@ -2383,6 +2391,92 @@ export const wayneInsights: WayneInsight[] = [
       { label: 'Google Gemini API 定价页面', url: 'https://ai.google.dev/gemini-api/docs/pricing' },
     ],
     tags: ['AI', 'token定价', '硬件原理', '超能力', 'LLM', '技术科普'],
+    pdfUrl: '/pdfs/the-token-express.pdf',
+    titleEn: 'The Token Express: Decode AI Pricing & Unlock Your Superpower',
+    subtitleEn: 'Why can the same token cost 50× more depending on how you use it? Physics.',
+    summaryEn:
+      'Have you ever noticed that "output tokens" in ChatGPT / Claude\'s API cost 5× more than "input tokens"? And that "cached tokens" are 10× cheaper than regular input? None of this is arbitrary pricing. Every price difference is dictated by the physical laws of GPU hardware. This article uses a train metaphor to explain the physics of AI pricing from scratch — so that even a 15-year-old with zero computer background can use this framework to reverse-engineer the hardware architecture of any AI company. That\'s a genuine superpower.',
+    contentEn: [
+      '## A Strange Discovery',
+      'One day I was looking at an AI API bill and noticed something bizarre.',
+      'The same unit — a "token" — the same text the AI processes, priced at 50× the difference. Output tokens cost 5× more than input tokens. "Cached tokens" cost 10× less than regular input. This wasn\'t a promotion. It wasn\'t arbitrary. Every single price difference has a strict physical reason behind it.',
+      'Once you understand that reason, you gain a strange superpower: glance at any AI company\'s pricing page, and you can infer what hardware they\'re running, where their bottleneck is, and why their speed is what it is. Not magic — physics.',
+      'Let\'s start from the basics.',
+      '## First: What Even Is a Token?',
+      'Every message you send to an AI, every reply it gives back — these aren\'t processed word by word. They\'re broken into smaller fragments called tokens.',
+      'Think of them as passengers on a train. Every word, every character, every punctuation mark you type is one passenger. The AI\'s job is to load all the passengers onto the train, take them on a journey, "think" of an answer, and then deliver the reply one passenger at a time.',
+      'Roughly speaking: 1 English token ≈ 0.75 words. A 100-word English message generates about 75–130 tokens. Every word the AI replies with generates one output token — one more charge on your bill.',
+      '## Welcome Aboard the Token Express',
+      'To explain pricing, let\'s use a metaphor: imagine the AI as a high-speed train system.',
+      'The train itself (GPU) is a massive, extremely expensive locomotive that burns enormous energy the moment it moves. The engine (model weights) is the AI\'s brain — hundreds of billions of parameters, so heavy it drags the entire train. The platform gates (memory bandwidth) control how fast passengers can board — wider gates mean faster boarding. Each token is a passenger.',
+      'One critical operating rule: this train departs every 20 milliseconds, full or not. It never waits. This rule matters a lot — we\'ll come back to it.',
+      'Now let\'s look at three completely different travel scenarios. The price differences hide in these three scenarios.',
+      '## Scenario A: The Group Tour (You Send Your Prompt)',
+      'When you send a message to the AI — say, "Write me a poem about spring" — every token in that message floods into the train simultaneously. This is called the Prefill phase.',
+      'Key point: all passengers board at once. The platform gates swing open all at once, everyone rushes in side-by-side. The AI can process all of your tokens in parallel, simultaneously, none waiting for another. In this phase, the bottleneck is the engine speed (compute), not the gate width.',
+      'Conclusion: lots of passengers, but the cost is spread thin — so input tokens are cheap. The "Input tokens" line on your API bill is from this phase.',
+      '## Scenario B: The Solo Commuter (AI Generates Your Reply)',
+      'Now the AI starts replying — one word at a time, one token after another. This is the Decode phase.',
+      'Here\'s the brutal problem. To generate each single token, the AI must reload the entire model — those hundreds of billions of parameters — from memory. The whole thing. To compute what word comes next. Then reload again. Generate one word. Reload. One more word. Reload…',
+      'In train terms: the entire massive locomotive departs just to carry one passenger. Then returns. Carries one more. Returns again. The locomotive spends most of its time waiting for the "gates" to load the heavy engine into position. The gate speed becomes the only bottleneck, not the engine itself.',
+      'This is the memory bandwidth bottleneck. The AI chip spins idle most of the time, just waiting for memory to push data through. The longer it waits, the more you pay.',
+      'Conclusion: output tokens cost much more — typically 5× the price of input. The AI company isn\'t ripping you off. Physics decided this. They can\'t do anything about it either.',
+      '## The Hidden Tax: What is KV Cache?',
+      'For the AI to generate a coherent reply, it must "remember" the entire conversation history — what you said, what it replied. This memory is called the KV Cache. Think of it as the luggage each passenger carries.',
+      'The problem: every time the AI generates a new token, that overloaded train doesn\'t just have to reload the engine — it also has to reload everyone\'s luggage from memory before it can figure out what word comes next.',
+      'When the conversation just started, the luggage is light. Fine. But when you\'re 200,000 tokens into a conversation, every passenger is dragging a massive suitcase. The platform gates are completely clogged. Moving luggage takes far more time than running the engine.',
+      'This is why very long conversations get progressively slower and more expensive — the AI isn\'t lazy, it\'s hauling heavier and heavier luggage. The "luggage tax" is hidden, but entirely real.',
+      '## Scenario C: The VIP Lounge (Prompt Caching)',
+      'Now imagine a smart optimization: instead of hauling luggage each time, rent a locker right next to the platform. Store the luggage there. Next time that passenger arrives, the bags are already at the platform — no long haul from distant memory.',
+      'This is Prompt Caching. If your AI app always starts each conversation with the same system instruction (like "You are a professional legal assistant, please respond formally"), you can cache that text. Next time you call the API, the AI pulls it straight from cache — skipping the entire processing cost.',
+      'Conclusion: cache hits are the cheapest of the three scenarios — roughly 10× cheaper than regular input. The luggage is already at the platform. No waiting for gates. Almost zero delay.',
+      '## The Station\'s Secret: Why Batch Processing?',
+      'Remember: the train departs every 20 ms, full or not. Why design it this way?',
+      'Imagine the extreme case: if this massive locomotive moves just 1 passenger at a time, that one passenger bears the entire cost of moving the whole train. Theoretically, infinite cost per token.',
+      'But if 2,000 passengers board simultaneously, the startup cost is split 2,000 ways. Each person\'s share becomes tiny. This is the core logic of Batching: pack thousands of users\' requests together, move them all on one train, share the crushing startup cost of the heavy engine.',
+      'Mathematically, when processing ~2,000 simultaneous requests, the system reaches the "minimum cost per token" sweet spot — compute time exactly equals memory load time. Below that number, costs spike sharply. Above it, costs barely fall further. So one of the biggest challenges for AI companies is keeping every "train" full. Empty trains burn money for nothing.',
+      '## The Iron Rule: You Pay for the Slowest',
+      'One physical law runs through all AI pricing, called the Roofline Rule:',
+      'Latency = max(compute time, memory load time)',
+      'In plain English: the speed of AI operation isn\'t the average of compute speed and memory speed — it\'s whichever one is slower. Like two doors at different widths: your speed through is determined by the narrower one.',
+      'Scenario A (input): compute is slow, memory is fine → compute-bound → you pay for compute. Scenario B (output): memory hauls data too slowly, chip spins idle → memory-bound → you pay for waiting. Scenario C (cache hit): luggage already at platform, neither is a bottleneck → almost no waiting.',
+      'That\'s why three types of tokens have completely different prices. They map to three different physical bottlenecks, and you\'re paying for whichever one is "stuck."',
+      '## You\'re Now a Pricing Detective',
+      'AI companies rarely publish what hardware they run, how large their models are, or what their memory bandwidth is. But they leak everything on their pricing pages.',
+      'An engineer named Reiner Pope — formerly on Google\'s TPU architecture team, later founder of chip company MatX — said in a talk: "They\'re leaking a lot of information through their pricing."',
+      'Once you understand the physics of the Token Express, you\'ve put on a special pair of glasses. Look at a pricing page and you don\'t see numbers — you see hardware architecture. Let\'s run two real deduction exercises.',
+      '## Detective Clue #1: Output Tokens Cost 5× — What Does That Tell You?',
+      'Say an AI service is priced: input $3/M tokens, output $15/M tokens.',
+      'Deduction: input (Prefill) is parallel, compute-bound; output (Decode) is sequential, memory-bound. The 5× price gap tells you that this company\'s GPU memory bandwidth is severely insufficient relative to its compute — the chip is powerful, but the memory "gates" are narrow, so every token takes a long time to generate.',
+      'Conclusion: they have a serious memory bandwidth bottleneck. They charge 5× for output because their chips spin idle for 5× longer than they compute, waiting for memory. That\'s their real cost. Your bill faithfully reflects their hardware constraints.',
+      '## Detective Clue #2: Price Jumps 50% Past 200K Tokens — Why?',
+      'Say an AI service is priced: normal price under 200K tokens; 50% surcharge beyond 200K.',
+      'Deduction: in short conversations, loading model weights takes far more memory time than loading conversation history (KV Cache). Memory bottleneck lives in the weights. But as the conversation grows longer, the KV Cache grows heavier — linearly. Its load time grows linearly; compute time stays roughly constant (it only depends on model size).',
+      'At some critical point, the KV Cache load time overtakes the compute time, and memory becomes the new primary bottleneck. That critical point is 200K tokens — the mathematical breakeven for their specific hardware. Beyond it, they start charging extra.',
+      'Conclusion: from this breakeven, you can roughly estimate the company\'s memory bandwidth configuration. This is hardware specs they "accidentally" leaked.',
+      '## The Mini-Game: Infer Hardware from Cache Expiry',
+      'This exercise comes directly from the original lecture material. An AI service offers two caching tiers: hot cache (expires in 5 minutes), warm cache (expires in 1 hour). Question: what hardware is each cache stored on?',
+      'Deduction tool: every storage medium has a "drain time" — how long it takes to fully read out its contents (storage capacity ÷ read bandwidth). HBM (high-bandwidth memory, on-chip): ~15–20 ms. DDR (regular RAM): ~1–10 seconds. Flash / SSD: ~1 minute. Mechanical hard drive: ~1 hour.',
+      'The 5-minute hot cache means data lives in a medium that can be fully read in 5 minutes. DDR drains in seconds (too fast). Flash takes about 1–5 minutes. So 5 min ≈ HBM or Flash boundary. The 1-hour warm cache — drain time ≈ 1 hour — precisely matches a mechanical hard drive.',
+      'Answer: 5-minute cache = HBM (high-bandwidth memory). 1-hour cache = Flash / HDD. They use different storage tiers, and expiry times mark which layer the cache lives on. This inference uses only physics — zero inside information.',
+      '## Summary: What Are You Really Paying For?',
+      'Four sentences to pull everything together:',
+      'Input (Prefill) = compute bottleneck, cheap. All tokens processed simultaneously — like a group tour, more people means more cost sharing. Output (Decode) = memory bandwidth bottleneck, expensive. One token at a time, the massive locomotive running for a single passenger — slow and costly. KV Cache = hidden tax. Longer conversations mean heavier luggage; memory load grows linearly until it completely blocks the platform. Cache Hit (Prompt Cache) = cheapest. Luggage already at the platform, no gate wait, train departs immediately.',
+      'The most important sentence — the one to remember: the next time you look at an AI API bill, you\'re not paying for "artificial intelligence." You\'re paying for memory bandwidth. The core cost of AI companies is not algorithms — it\'s memory. That\'s the most underestimated physical fact in the entire AI industry right now.',
+      '## Homework: Become a Real Pricing Detective',
+      'Now you have the framework. Here are three real exercises — every answer is publicly available:',
+      'Homework 1: Open Claude\'s API pricing page (anthropic.com/pricing). Find: Claude Sonnet\'s input token price and output token price. Calculate the ratio. Based on that ratio, how severe is this model\'s memory bandwidth bottleneck? The higher the ratio, the more the chip spins idle waiting for memory relative to time spent computing.',
+      'Homework 2: Open OpenAI\'s pricing page (openai.com/api/pricing). Find GPT-4o\'s input, output, and "cached input" prices. Calculate the three-way ratio. Does it match the pattern we learned — output > input > cached input? If the cached input is ~10× cheaper than regular input, you\'ve just verified the entire Token Express theory.',
+      'Homework 3: Open Google Gemini\'s API pricing page. Look for tiered pricing on Gemini 1.5 Pro — is there a context length breakpoint where price jumps? If there is, record the breakpoint in tokens, then think: using the logic from Clue #2, what does this breakpoint reveal about where Google\'s hardware hits a memory bandwidth transition?',
+      'Complete all three, and you\'ve run a real Pricing Detective investigation. You never set foot inside any of these companies. But you used physics to infer their hardware decisions. That\'s the whole point of this framework: pricing is public, and physical laws are eternal. Put them together, and you see what others can\'t.',
+    ],
+    keyTakeawaysEn: [
+      'Output tokens cost 3–5× more than input tokens — not a pricing strategy, but a direct reflection of memory bandwidth bottlenecks. Every time the AI generates one word, it reloads hundreds of billions of parameters from memory.',
+      'KV Cache (conversation memory) is a hidden tax: the longer the conversation, the heavier the "luggage," and beyond a critical point memory becomes the main bottleneck — causing sudden price spikes.',
+      'Cache hits (Prompt Cache) are ~10× cheaper than regular input — because the luggage is already at the platform, skipping the slowest memory load step.',
+      'Batch processing is the lifeline of AI economics: you need ~2,000 concurrent users "boarding" simultaneously to spread the locomotive\'s startup cost thin enough to be viable.',
+      'AI pricing leaks hardware architecture: input/output price ratios reveal memory bandwidth bottlenecks; price breakpoints reveal memory tier transitions; cache expiry times reveal storage media — you\'re not guessing, you\'re reasoning from physical laws.',
+    ],
   },
 ];
 
