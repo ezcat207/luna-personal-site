@@ -22,14 +22,13 @@ function FactBox({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-yellow-50/60 border border-yellow-200 rounded-2xl p-5">
       <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-1">
-        📍 Disneyland Fast Facts
+        📍 Universal Studios Fast Facts
       </p>
       <div className="text-sm text-slate-700 leading-relaxed space-y-2">{children}</div>
     </div>
   );
 }
 
-// Keep LessonBox and LunaTip consistent across both pages
 function LessonBox({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="bg-pink-50 border-l-4 border-pink-400 rounded-r-2xl p-5">
@@ -58,71 +57,69 @@ const strips = [
     number: 1,
     tag: 'Flight & Departure',
     tagColor: 'bg-blue-100 text-blue-700',
-    title: 'The Flight to Dreamland',
-    teaser: 'Long airport wait at the gate, boarding the cozy plane, tasting delicious Mickey-shaped cookies, and falling asleep dreaming of beautiful castles!',
-    image: '/images/comics/disneyland/strip-1-flight.jpg',
-    imageAlt: 'Luna and Wayne\'s journey to Disneyland! A 4-panel comic strip showing their airport departure wait, cozy plane takeoff, sky dining feast, and dreaming of castles.',
+    title: 'On the Plane - First Class Pods',
+    teaser: 'Here we go, Wayne! First class all the way to Orlando. Cozy private suites, gourmet meals in the clouds, and sweet dreams of adventure!',
+    image: '/images/comics/universal/strip-1-plane.jpg',
+    imageAlt: 'Luna & Wayne Go to Universal Studios! A 4-panel comic strip showing their airport departure, first-class pods, sky dining, and sleeping.',
     story: [
-      'Waiting at the airport gate feels like it takes a million years! I was so tired and lay down across the terminal chairs. Wayne was trying to read, but even he looked super bored. I just wanted to get on the plane already!',
-      'We finally boarded the plane! The seats were so cozy. I had my special travel suitcase with a Disneyland sticker on it. Since the flight was super long, we decided to take a nice nap to recharge our batteries for the big park!',
-      'Plane food can be hit or miss, but this time it was amazing! We got yummy goldfish crackers (which Wayne insisted on calling Tuna crackers) and a special Mickey-shaped chocolate cookie. Eating sweets in the sky makes them taste twice as magical!',
-      'As we flew closer and closer, I fell fast asleep. In my dream, I could see the giant pink and blue castle shining right through the clouds. I couldn\'t wait to see it in real life!'
+      'We arrived at the airport feeling like absolute royalty. Today, we weren\'t just traveling — we were flying first class to Orlando for our big Universal Studios adventure! Wayne put on a black eye patch for "dramatic effect." The cat at the boarding gate just shook his head and handed us our boarding passes.',
+      'When we boarded the plane, our seats were private pods! It felt like having a tiny, futuristic apartment in the clouds. Wayne immediately curled up on the soft cushions and let out a loud purring sound, declaring that the bed was absolutely perfect. I started playing with the built-in control screens.',
+      'Soon, the flight attendant served us a spectacular gourmet lunch. I had a fresh, colorful salad with a fancy cocktail, and Wayne got a special bento box with grilled fish and a glass of premium catnip water. He looked like the most pampered cat in the sky.',
+      'A few hours into the flight, the cabin lights dimmed. I tucked myself under a warm blanket, already dreaming of the rollercoasters and castles waiting for us, while Wayne slept peacefully next to me dreaming of the Universal Studios globe.'
     ],
     facts: (
       <>
-        <p><strong>Flight delays are most common in the afternoon</strong> due to cascading schedules. Morning flights have the best on-time record.</p>
-        <p><strong>Cruising altitude for commercial flights</strong> is typically between 30,000 and 42,000 feet. That is almost 8 miles straight up in the air!</p>
+        <p><strong>Orlando International Airport (MCO)</strong> is one of the busiest airports in the United States, welcoming over 50 million passengers annually.</p>
+        <p><strong>Modern first-class pods</strong> are designed using advanced ergonomics, featuring seats that lay completely flat to form a 2-meter bed.</p>
         <p><strong>High altitude drops our sense of taste and smell</strong> by about 20% to 30% due to low cabin humidity and pressure. That is why airplane snacks often taste different!</p>
-        <p><strong>Sleeping on a plane helps your brain adjust</strong> to new time zones faster, reducing jet lag so you are ready to run to the rides as soon as you land!</p>
+        <p><strong>Jet lag is caused by disruption to the circadian rhythm</strong>. Getting good sleep during the flight is a primary way to combat it.</p>
       </>
     ),
-    lessonTitle: 'Finding Quiet in the Waiting',
+    lessonTitle: 'Finding Joy in the Journey',
     lesson: (
       <>
-        <p>Waiting and flight times are natural buffers on a trip. Instead of feeling impatient, turning the gate delay into a rest session and the in-flight dining into a playful snack time helps keep your spirits high.</p>
+        <p>Getting to a destination is half the fun. When you start a trip with a playful attitude and allow yourself to rest, the travel itself becomes a memorable part of the adventure.</p>
       </>
     ),
-    tip: 'Pack an inflatable neck pillow and a soft eye mask in your carry-on to make airplane naps much easier.'
+    tip: 'Bring a light sweater or scarf on the plane. Even in first class, cabin temperatures are kept cool to help passengers sleep and reduce motion sickness.'
   },
   {
     number: 2,
     tag: 'Theme Park & Hotel',
     tagColor: 'bg-purple-100 text-purple-700',
-    title: 'Disneyland Park Adventure!',
-    teaser: 'Arriving at the castle gates, checking in to our hotel with a park view, riding Dumbo and the Haunted Mansion, eating warm churros, and watching nightly fireworks!',
-    image: '/images/comics/disneyland/strip-2-park.jpg',
-    imageAlt: 'Luna and Wayne at Disneyland! A 6-panel comic strip showing their arrival view, main entrance greeting, hotel check-in, rollercoaster rides, eating treats, and watching the castle fireworks at night.',
+    title: 'Universal Luxe Adventure!',
+    teaser: 'Arriving at the grand park for a day of wonder: riding high-speed launch coasters, eating opulent gold-dusted treats, and checking in to our luxury hotel stay!',
+    image: '/images/comics/universal/strip-2-park.jpg',
+    imageAlt: 'Wayne & Luna\'s Universal Luxe Adventure! A 6-panel comic strip showing their park entrance, riding the Golden Gryphon Express, eating themed treats, checking in, and enjoying their private suite.',
     story: [
-      'We landed! We grabbed our bags and pushed our luggage cart near the giant windows. Far in the distance, we could see the outline of the castle. It felt like we were walking straight into a fairy tale book!',
-      'We stood right in front of the main entrance! There was a cute Mickey Mouse flowerbed and the Disneyland train station. I felt so happy and excited, I wanted to jump up and down and run inside immediately!',
-      'First, we went to check-in at the hotel. The cast member at the front desk was super nice and welcomed us. Our room had a huge window with the most perfect view of the entire park! I stood by the window for ten minutes just staring.',
-      'We ran from ride to ride! We sailed through "It\'s a Small World" with all the singing dolls, flew high in the air on Dumbo the flying elephant, and rode in a spooky black Doom Buggy inside the Haunted Mansion! I wasn\'t even scared of the ghosts!',
-      'We walked down Main Street, U.S.A. and stopped for some treats. Wayne got a giant warm churro (churro check!), and I got a giant colorful lollipop. Running around theme parks requires a lot of sugar power!',
-      'As the day came to an end, we stood by the railing and watched the beautiful castle light up against the dark night sky. I leaned against the railing, feeling so happy and sleepy. It was the most perfect day ever.'
+      'We finally arrived at the grand entrance of Universal Studios! The weather was perfect, and the giant archway loomed over us like the gates to another world. Wayne stood tall, declaring that his "phoenix senses" were tingling. I could feel the energy in the air — we were finally here!',
+      'For our first ride, we chose the legendary Golden Gryphon Express, featuring the high-speed Baroque Blaster launcher. As we buckled into the golden carriage, Wayne yelled "Hold on tight, Luna! This has a high-speed start!" Before I could answer, we shot forward like a rocket!',
+      'We reached the highest peak of the Gryphon track. For a split second, the carriage hovered at the very top of the world. Wayne yelled "The best views!" as we looked out over the sparkling lakes, then plunged down!',
+      'All that riding made us hungry, so we stopped at The Parvenu\'s Provisions. Wayne got a golden, paw-shaped cookie called Wayne\'s Golden Bone. I got a phoenix-themed ice popsicle called Luna\'s Glowing Nektar. The taste was absolutely exquisite!',
+      'After a full day in the park, we checked in to the magnificent Golden Phoenix Plaza Hotel. The lobby was covered in gold, with huge crystal chandeliers hanging from the ceiling. Wayne immediately hopped up to inspect the check-in bell.',
+      'Our hotel room was a dream. It had a giant, plush bed with gold covers, and a private clawfoot bathtub waiting for us. Wayne took off his eye patch and curled up on the bed, while I prepared a warm bath. It was the perfect end to a lavish adventure.'
     ],
     facts: (
       <>
-        <p><strong>The Sleeping Beauty Castle is 77 feet tall</strong>. It was designed to look taller than it actually is by using forced perspective — making details get smaller near the top!</p>
-        <p><strong>The Mickey Mouse flowerbed at the entrance</strong> is replanted several times a year. It takes about 10,000 individual flowers to make Mickey\'s face!</p>
-        <p><strong>Disneyland hotel cast members are trained to create "Magical Moments"</strong> for families, which can include surprise room upgrades or greeting cards from characters!</p>
-        <p><strong>It\'s a Small World features over 300 audio-animatronic dolls</strong> representing children from all over the world singing the classic song in multiple languages.</p>
-        <p><strong>Main Street, U.S.A. is designed to smell like fresh vanilla</strong> and baked goods. Disneyland uses hidden scent machines called "Smellitizers" to blow sweet aromas into the street!</p>
-        <p><strong>Disneyland\'s nightly fireworks show</strong> uses compressed air instead of gunpowder to launch the shells, which reduces noise and smoke, making it safer and cleaner!</p>
+        <p><strong>Universal Studios Florida</strong> opened on June 7, 1990. The iconic archway design was inspired by classic Hollywood studio gates from the 1930s.</p>
+        <p><strong>Launch coasters</strong> use electromagnetic propulsion (LSM) or hydraulic launches to accelerate trains from 0 to top speed in just a few seconds.</p>
+        <p><strong>Theme park food design</strong> is a growing art form, with chefs creating custom treats that tell a story or match specific fictional worlds.</p>
+        <p><strong>Theme park resort hotels</strong> are designed to keep guests "in the story" even after they leave the park, using music, decor, and custom styling.</p>
       </>
     ),
-    lessonTitle: 'Appreciating the Magic in Details',
+    lessonTitle: 'Balancing Excitement and Rest',
     lesson: (
       <>
-        <p>A theme park is filled with tiny, designed details — from the forced perspective bricks on the castle to the smells on Main Street. Taking time to notice these details and reflecting on the day makes the memory last a lifetime.</p>
+        <p>A great vacation balances high-speed excitement with deep relaxation. After the rush of rollercoasters, taking time to savor delicious treats and rest in a quiet room makes the experience complete.</p>
       </>
     ),
-    tip: 'Go to Fantasyland first thing in the morning when the lines are shortest! You can ride Dumbo and Peter Pan without waiting forever. Save the indoor rides like Haunted Mansion for the afternoon when the sun is hot.'
+    tip: 'Staying at official premier hotels often includes perks like early park admission or free express passes!'
   }
 ];
 
-// ── Disneyland Guide (collapsible) ──────────────────────────────────
+// ── Universal Guide (collapsible) ────────────────────────────────────
 
-function DisneylandGuide() {
+function UniversalGuide() {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden shadow-sm">
@@ -135,8 +132,8 @@ function DisneylandGuide() {
             <MapPin className="w-4 h-4 text-pink-600" />
           </div>
           <div>
-            <p className="font-bold text-slate-800">Luna's Disneyland Survival Guide</p>
-            <p className="text-xs text-slate-400 mt-0.5">Best snacks, ride order, and how not to get tired!</p>
+            <p className="font-bold text-slate-800">Luna's Universal Survival Guide</p>
+            <p className="text-xs text-slate-400 mt-0.5">Luxe ride selections, themed snacks, and hotel perks!</p>
           </div>
         </div>
         {open ? <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />}
@@ -153,22 +150,22 @@ function DisneylandGuide() {
             <div className="border-t border-pink-50 px-6 py-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600 leading-relaxed font-sans">
               <div className="space-y-4">
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">🍭 The Best Snacks</p>
-                  <p>1. <strong>Churros</strong> (Wayne's favorite): Get them warm from the cart near the castle. 2. <strong>Mickey Cookies</strong>: Chocolate ears are the best part. 3. <strong>Dole Whip</strong>: Super cold pineapple ice cream near Adventureland, perfect when it gets hot!</p>
+                  <p className="font-semibold text-slate-800 mb-1">🍰 Opulent Snack Picks</p>
+                  <p>1. <strong>Wayne's Golden Bone</strong>: A rich butter cookie covered in edible gold dust. 2. <strong>Luna's Glowing Nektar</strong>: A dragon-fruit and strawberry phoenix-shaped popsicle that glows under blacklight. 3. <strong>Catnip Brew</strong>: A refreshing carbonated mint beverage served at the Plaza Hotel.</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">🎒 What to Pack in Your Bunny Bag</p>
-                  <p>A water bottle (you can refill it for free at restaurants), a light sweater (it gets chilly at night during the fireworks), and a couple of band-aids just in case your feet get sore from all the running.</p>
+                  <p className="font-semibold text-slate-800 mb-1">🏰 Express Pass Strategy</p>
+                  <p>If you stay at official premier hotels, Universal Express Unlimited is included for free! This lets you bypass regular lines at most attractions as many times as you want.</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">🎢 Ride Strategy</p>
-                  <p>Go to Fantasyland first thing in the morning when the lines are shortest! You can ride Dumbo and Peter Pan without waiting forever. Save the indoor rides like Haunted Mansion for the afternoon when the sun is super hot.</p>
+                  <p className="font-semibold text-slate-800 mb-1">🎢 Rollercoaster Order</p>
+                  <p>Ride high-launch coasters like the Golden Gryphon Express first thing in the morning. Afternoon queues can grow long, making it a perfect time to head back to the hotel for a spa session or pool break.</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">✨ Magical Fireworks Tip</p>
-                  <p>Don't stand right in front of the castle! It gets super crowded. Instead, stand a bit further down Main Street or near the train station. You get a wider view of the sky, and you can escape to the hotel quickly before everyone else starts walking!</p>
+                  <p className="font-semibold text-slate-800 mb-1">🛁 Post-Park Spa Checklist</p>
+                  <p>Prepare a warm bath with <strong>Feather Fluffing Salts</strong> to ease muscle tension, apply <strong>Whisker Wax</strong> for a soothing facial rub, and get a solid 8 hours of sleep on Egyptian cotton sheets to be ready for Day 2!</p>
                 </div>
               </div>
             </div>
@@ -260,12 +257,12 @@ function StripCard({ strip }: { strip: typeof strips[0] }) {
 
 // ── Main page ────────────────────────────────────────────────────────
 
-export default function LunaComicDisneyland() {
+export default function LunaComicUniversalLuxe() {
   return (
     <>
       <SEOHead
-        title="Adventure to Disneyland | Luna's Journey"
-        description="Follow Luna and Wayne's magical trip to Disneyland! A cute 2-strip comic adventure with travel tips and stories."
+        title="Universal Luxe Adventure | Luna's Journey"
+        description="Follow Luna and Wayne's luxurious trip to Universal Studios! A cute 2-strip comic adventure with deluxe travel tips and stories."
       />
 
       {/* Back nav */}
@@ -290,8 +287,8 @@ export default function LunaComicDisneyland() {
       >
         <div className="rounded-3xl overflow-hidden border-2 border-pink-100 shadow-md mb-7 max-w-4xl mx-auto aspect-[16/9] bg-pink-100 relative">
           <img
-            src="/images/comics/disneyland/cover.jpg"
-            alt="Luna & Wayne's Disneyland Adventure"
+            src="/images/comics/universal/cover.jpg"
+            alt="Luna & Wayne's Universal Luxe Adventure"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent flex items-end p-6 justify-center">
@@ -300,7 +297,7 @@ export default function LunaComicDisneyland() {
                 New Comic Book 🐰
               </span>
               <h1 className="text-2xl sm:text-4xl font-bold font-header drop-shadow-md">
-                Luna and Wayne's Adventure to Disneyland
+                Luna and Wayne's Universal Luxe Adventure
               </h1>
             </div>
           </div>
@@ -308,20 +305,20 @@ export default function LunaComicDisneyland() {
 
         <div className="flex flex-wrap justify-center items-center gap-3 mb-4">
           <span className="px-3 py-1 bg-pink-100 text-pink-800 text-xs font-bold rounded-full uppercase tracking-wide">
-            Travel Series · Issue #1
+            Travel Series · Issue #2
           </span>
           <span className="text-xs text-slate-400">May 2026 · 2 Strips</span>
         </div>
 
         <p className="text-slate-500 leading-relaxed mb-6 max-w-2xl mx-auto font-sans">
-          Pack your bags! Luna the rabbit and Wayne the cat go on a grand flight to the Land of Dreams. 
-          Read through 2 large comic strips following their airport wait, plane napping, and riding rollercoasters at Disneyland!
+          First-class flights, private airplane pods, high-speed launch coasters, and opulent golden hotels. 
+          Read through 2 large comic strips following their ultra-luxurious trip to Universal Studios!
         </p>
 
         <div className="flex justify-center">
           <ShareBar
-            title="Luna & Wayne's Adventure to Disneyland"
-            summary="A fun 2-strip comic travel diary to Disneyland by Luna and Wayne!"
+            title="Luna & Wayne's Universal Luxe Adventure"
+            summary="A fun 2-strip comic travel diary to Universal Studios by Luna and Wayne!"
           />
         </div>
       </motion.div>
@@ -341,14 +338,14 @@ export default function LunaComicDisneyland() {
         ))}
       </div>
 
-      {/* Disneyland Guide (collapsible) */}
+      {/* Universal Guide (collapsible) */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mb-12 max-w-4xl mx-auto"
       >
-        <DisneylandGuide />
+        <UniversalGuide />
       </motion.div>
 
       {/* Bottom Navigation / CTA */}
@@ -364,8 +361,8 @@ export default function LunaComicDisneyland() {
           ← Back to Luna's Journey
         </Link>
         <ShareBar
-          title="Luna & Wayne's Adventure to Disneyland"
-          summary="An illustrated Disneyland travel diary."
+          title="Luna & Wayne's Universal Luxe Adventure"
+          summary="An illustrated Universal Studios travel diary."
         />
       </motion.div>
 
