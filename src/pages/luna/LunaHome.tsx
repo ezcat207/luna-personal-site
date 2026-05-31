@@ -188,7 +188,7 @@ const LunaHome = () => {
       {/* My Comics */}
       <section className="px-4 md:px-0 space-y-6">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900">📖 comics!</h2>
+          <h2 className="text-2xl font-bold text-slate-900">📖 Comics!</h2>
           <p className="text-slate-500 text-sm mt-1">Illustrated stories from our real-life adventures and fantasy worlds!</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -385,11 +385,11 @@ function StripCard({ strip }: { strip: typeof strips[0] }) {
       className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden hover:border-pink-200 transition-all shadow-sm"
     >
       {/* Image */}
-      <div className="overflow-hidden bg-slate-50 border-b border-pink-50 relative">
+      <div className="overflow-hidden bg-slate-50 border-b border-pink-50 aspect-[4/3] sm:aspect-video relative">
         <img
           src={strip.image}
           alt={strip.imageAlt}
-          className="w-full h-auto object-cover"
+          className="w-full h-full object-cover"
         />
         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm border border-pink-100 rounded-xl px-3 py-1 font-bold text-pink-600 text-xs shadow-sm">
           Panel {strip.number} of 10
@@ -521,8 +521,8 @@ export default function LunaComicDisneyland() {
         </div>
       </motion.div>
 
-      {/* 10 Comic Strips (vertical stack like Wayne's) */}
-      <div className="space-y-8 mb-12 max-w-4xl mx-auto">
+      {/* 10 Comic Strips (2-column grid) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         {strips.map((strip) => (
           <motion.div
             key={strip.number}
