@@ -149,6 +149,16 @@ const comics = [
     tagColor: "bg-purple-100 text-purple-700",
     date: "May 2026",
     panels: 1,
+  },
+  {
+    title: "Wayne & Luna's Adventures in China",
+    desc: "A journey of shared wonders! Wayne the cat and Luna the rabbit travel across the sea to explore the Great Wall, practice calligraphy, drink oolong tea, and share a sunset in Beijing!",
+    link: "/luna/comics/china",
+    cover: "/images/comics/china/cover.jpg",
+    tag: "China Travel",
+    tagColor: "bg-red-100 text-red-700",
+    date: "May 2026",
+    panels: 1,
   }
 ];
 
