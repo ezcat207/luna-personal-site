@@ -129,6 +129,16 @@ const comics = [
     tagColor: "bg-purple-100 text-purple-700",
     date: "May 2026",
     panels: 2,
+  },
+  {
+    title: "Luna and Wayne's Desert Adventure",
+    desc: "Road trip to Joshua Tree! Luna the rabbit and Wayne the cat embark on a scenic drive to Joshua Tree National Park. Follow their journey from the long highway wait to becoming officially certified Junior Rangers!",
+    link: "/luna/comics/desert",
+    cover: "/images/comics/desert/cover.jpg",
+    tag: "Desert Travel",
+    tagColor: "bg-amber-100 text-amber-700",
+    date: "May 2026",
+    panels: 1,
   }
 ];
 
