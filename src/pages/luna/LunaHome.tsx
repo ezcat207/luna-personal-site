@@ -139,6 +139,16 @@ const comics = [
     tagColor: "bg-amber-100 text-amber-700",
     date: "May 2026",
     panels: 1,
+  },
+  {
+    title: "Wayne & Luna's Las Vegas Adventure",
+    desc: "Vegas baby, Vegas! Wayne the cat and Luna the rabbit take on the dazzling lights of the Las Vegas Strip. Follow their journey from planning and magic shows to staring at the giant MSG Sphere face!",
+    link: "/luna/comics/las-vegas",
+    cover: "/images/comics/las-vegas/cover.jpg",
+    tag: "Vegas Travel",
+    tagColor: "bg-purple-100 text-purple-700",
+    date: "May 2026",
+    panels: 1,
   }
 ];
 
