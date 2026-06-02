@@ -169,6 +169,16 @@ const comics = [
     tagColor: "bg-red-100 text-red-700",
     date: "June 2026",
     panels: 4,
+  },
+  {
+    title: "Luna & Wayne's Adventure to New York",
+    desc: "A chibi storybook journey through New York City! Follow Wayne and Luna as they land in NYC, get lost in the crowded subway system, discover the Statue of Liberty, row in Central Park, eat giant pizza slices, and view the sunset from a skyscraper.",
+    link: "/luna/comics/nyc",
+    cover: "/images/comics/nyc/cover.jpg",
+    tag: "NYC Travel",
+    tagColor: "bg-blue-100 text-blue-700",
+    date: "June 2026",
+    panels: 4,
   }
 ];
 
