@@ -159,6 +159,16 @@ const comics = [
     tagColor: "bg-red-100 text-red-700",
     date: "May 2026",
     panels: 1,
+  },
+  {
+    title: "China's Adventure",
+    desc: "A four-part journey through Beijing! From arriving at the airport and exploring the Great Wall, to getting separated in a crowded market, reuniting with friendly locals, and wishing on lanterns at Shichahai Lake.",
+    link: "/luna/comics/china-adventure",
+    cover: "/images/comics/china-adventure/cover.jpg",
+    tag: "China Travel",
+    tagColor: "bg-red-100 text-red-700",
+    date: "June 2026",
+    panels: 4,
   }
 ];
 
