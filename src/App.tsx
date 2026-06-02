@@ -35,6 +35,10 @@ import LunaHome from './pages/luna/LunaHome';
 import LunaEntry from './pages/luna/LunaEntry';
 import LunaComicDisneyland from './pages/luna/LunaComicDisneyland';
 import LunaComicUniversalLuxe from './pages/luna/LunaComicUniversalLuxe';
+import LunaComicDesert from './pages/luna/LunaComicDesert';
+import LunaComicLasVegas from './pages/luna/LunaComicLasVegas';
+import LunaComicChina from './pages/luna/LunaComicChina';
+import LunaComicChinaAdventure from './pages/luna/LunaComicChinaAdventure';
 
 // Legacy pages
 import Portfolio from './pages/Portfolio';
@@ -100,6 +104,10 @@ function AppRoutes() {
           <Route path="luna/:weekNum" element={<LunaEntry />} />
           <Route path="luna/comics/disneyland" element={<LunaComicDisneyland />} />
           <Route path="luna/comics/universal-luxe" element={<LunaComicUniversalLuxe />} />
+          <Route path="luna/comics/desert" element={<LunaComicDesert />} />
+          <Route path="luna/comics/las-vegas" element={<LunaComicLasVegas />} />
+          <Route path="luna/comics/china" element={<LunaComicChina />} />
+          <Route path="luna/comics/china-adventure" element={<LunaComicChinaAdventure />} />
           {/* Legacy paths — keep alive */}
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
@@ -134,6 +142,10 @@ function AppRoutes() {
         <Route path="luna/:weekNum" element={<LunaEntry />} />
         <Route path="luna/comics/disneyland" element={<LunaComicDisneyland />} />
         <Route path="luna/comics/universal-luxe" element={<LunaComicUniversalLuxe />} />
+        <Route path="luna/comics/desert" element={<LunaComicDesert />} />
+        <Route path="luna/comics/las-vegas" element={<LunaComicLasVegas />} />
+        <Route path="luna/comics/china" element={<LunaComicChina />} />
+        <Route path="luna/comics/china-adventure" element={<LunaComicChinaAdventure />} />
         <Route path="roadmap" element={<Roadmap />} />
         <Route path="blog/superlinear" element={<Superlinear />} />
         <Route path="blog/strategic-radar" element={<StrategicRadar />} />

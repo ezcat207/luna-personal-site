@@ -52,7 +52,7 @@ export function PdfViewer({ url, title }: PdfViewerProps) {
       <div ref={containerRef} className="px-4 py-4 space-y-4">
         <Document
           file={url}
-          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+          onLoadSuccess={({ numPages }: { numPages: number }) => setNumPages(numPages)}
           loading={
             <div className="space-y-4">
               {[1, 2, 3].map(i => (
