@@ -40,6 +40,7 @@ import LunaComicLasVegas from './pages/luna/LunaComicLasVegas';
 import LunaComicChina from './pages/luna/LunaComicChina';
 import LunaComicChinaAdventure from './pages/luna/LunaComicChinaAdventure';
 import LunaComicNyc from './pages/luna/LunaComicNyc';
+import LunaComics from './pages/luna/LunaComics';
 
 // Legacy pages
 import Portfolio from './pages/Portfolio';
@@ -103,6 +104,7 @@ function AppRoutes() {
           <Route index element={<LunaHome />} />
           <Route path="luna" element={<LunaHome />} />
           <Route path="luna/:weekNum" element={<LunaEntry />} />
+          <Route path="luna/comics" element={<LunaComics />} />
           <Route path="luna/comics/disneyland" element={<LunaComicDisneyland />} />
           <Route path="luna/comics/universal-luxe" element={<LunaComicUniversalLuxe />} />
           <Route path="luna/comics/desert" element={<LunaComicDesert />} />
@@ -142,6 +144,7 @@ function AppRoutes() {
         {/* Dev convenience: reach all sections from hub */}
         <Route path="luna" element={<LunaHome />} />
         <Route path="luna/:weekNum" element={<LunaEntry />} />
+        <Route path="luna/comics" element={<LunaComics />} />
         <Route path="luna/comics/disneyland" element={<LunaComicDisneyland />} />
         <Route path="luna/comics/universal-luxe" element={<LunaComicUniversalLuxe />} />
         <Route path="luna/comics/desert" element={<LunaComicDesert />} />
