@@ -73,6 +73,16 @@ const comics = [
     tagColor: "bg-blue-100 text-blue-700",
     date: "June 2026",
     panels: 4,
+  },
+  {
+    title: "Luna & Wayne: The Seattle Explorers",
+    desc: "A charming chronicle of tiny adventures in the Emerald City! Follow Luna the rabbit and Wayne the cat as they take a road trip to Seattle, visit Pike Place Market and the Space Needle, get separated in the pouring rain, and reunite at the city's highest point.",
+    link: "/luna/comics/seattle",
+    cover: "/images/comics/seattle/cover.jpg",
+    tag: "Seattle Travel",
+    tagColor: "bg-teal-100 text-teal-700",
+    date: "June 2026",
+    panels: 4,
   }
 ];
 
