@@ -145,7 +145,7 @@ const strips = [
     image: '/images/comics/paris/strip-4.jpg',
     imageAlt: "Wayne & Luna's Paris reunion. Panels show: Wayne asking a policeman with a drawing of Luna, Luna looking up at the Eiffel Tower remembering their promise, a big hug on the Eiffel Tower observation deck, and watching the tower sparkle at night from a bridge saying goodbye.",
     story: [
-      'Wayne realized I was missing and ran to a friendly gendarme. He pulled out a little sketch from his pocket — a drawing he had made of me at the café. "Ma fille! Perdue!" he explained. The policeman nodded kindly and helped him search.',
+      'Wayne realized I was missing and ran to a friendly gendarme. He pulled out a little sketch from his pocket — a drawing he had made of me at the café. "Mon amie! Perdue!" he explained. The policeman nodded kindly and helped him search.',
       'Meanwhile, I remembered our promise. If we ever got lost, meet at the highest point. I looked up — the Eiffel Tower stood tall above the city. "The highest point!" I whispered, and started walking toward it with hope.',
       'I took the elevator to the observation deck. The city stretched beneath me like a glittering map. And then I heard it — "LUNA!" I spun around. "WAYNE!" We ran into each other\'s arms, hugging so tight. "Found you," he whispered. "I knew you\'d come," I smiled.',
       'As night fell, the Eiffel Tower began to sparkle — thousands of golden lights dancing across the iron structure. "It\'s like the tower is celebrating with us," I said, leaning on the railing. Wayne put his paw on my shoulder. "Best trip ever. We have to come back."'
@@ -167,62 +167,7 @@ const strips = [
   }
 ];
 
-function ParisTravelGuide() {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden shadow-sm">
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-center justify-between px-6 py-5 hover:bg-pink-50/30 transition-colors text-left"
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
-            <MapPin className="w-4 h-4 text-pink-600" />
-          </div>
-          <div>
-            <p className="font-bold text-slate-800">Luna's Paris Travel Guide</p>
-            <p className="text-xs text-slate-400 mt-0.5">Café etiquette, Louvre shortcuts, macaron flavors, and Eiffel Tower sparkle timing!</p>
-          </div>
-        </div>
-        {open ? <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />}
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="border-t border-pink-50 px-6 py-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600 leading-relaxed font-sans">
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold text-slate-800 mb-1">☕ Café Ordering 101</p>
-                  <p>In Paris, order a <strong>café crème</strong> for a milky coffee, <strong>un espresso</strong> for a shot, or <strong>un chocolat chaud</strong> for hot chocolate. Sit inside for lower prices and always greet the server with a polite "Bonjour" before ordering.</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-800 mb-1">🎨 Louvre Survival Guide</p>
-                  <p>The Louvre is massive — 3 wings, 4 levels, 35,000+ artworks. The Mona Lisa is in the Denon Wing, Level 1. Go early or for late-night Wednesday/Friday openings to avoid the biggest crowds.</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold text-slate-800 mb-1">🥐 Macaron Tasting Tips</p>
-                  <p>Top macaron flavors to try: <strong>Pistachio</strong> (most popular), <strong>Rose</strong> (floral delight), <strong>Caramel à la Fleur de Sel</strong> (salted caramel), and <strong>Citron</strong> (lemon, refreshing!). Pair with a light tea or espresso.</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-800 mb-1">🗼 Eiffel Tower Sparkle Schedule</p>
-                  <p>The sparkle show runs for 5 minutes at the start of every hour after sunset until 1:00 AM (2:00 AM in summer). Best free viewing spots: Place du Trocadéro, Pont Alexandre III, or the banks of the Seine.</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
+
 
 function StripCard({ strip }: { strip: typeof strips[0] }) {
   const [open, setOpen] = useState(false);
@@ -370,14 +315,7 @@ export default function LunaComicParis() {
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-12 max-w-4xl mx-auto"
-      >
-        <ParisTravelGuide />
-      </motion.div>
+
 
       <motion.div
         initial={{ opacity: 0 }}
