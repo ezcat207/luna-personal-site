@@ -41,6 +41,7 @@ import LunaComicChina from './pages/luna/LunaComicChina';
 import LunaComicChinaAdventure from './pages/luna/LunaComicChinaAdventure';
 import LunaComicNyc from './pages/luna/LunaComicNyc';
 import LunaComicSeattle from './pages/luna/LunaComicSeattle';
+import LunaComicParis from './pages/luna/LunaComicParis';
 import LunaComics from './pages/luna/LunaComics';
 
 // Legacy pages
@@ -114,6 +115,7 @@ function AppRoutes() {
           <Route path="luna/comics/china-adventure" element={<LunaComicChinaAdventure />} />
           <Route path="luna/comics/nyc" element={<LunaComicNyc />} />
           <Route path="luna/comics/seattle" element={<LunaComicSeattle />} />
+          <Route path="luna/comics/paris" element={<LunaComicParis />} />
           {/* Legacy paths — keep alive */}
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
@@ -155,6 +157,7 @@ function AppRoutes() {
         <Route path="luna/comics/china-adventure" element={<LunaComicChinaAdventure />} />
         <Route path="luna/comics/nyc" element={<LunaComicNyc />} />
         <Route path="luna/comics/seattle" element={<LunaComicSeattle />} />
+        <Route path="luna/comics/paris" element={<LunaComicParis />} />
         <Route path="roadmap" element={<Roadmap />} />
         <Route path="blog/superlinear" element={<Superlinear />} />
         <Route path="blog/strategic-radar" element={<StrategicRadar />} />

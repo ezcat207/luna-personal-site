@@ -83,6 +83,16 @@ const comics = [
     tagColor: "bg-teal-100 text-teal-700",
     date: "June 2026",
     panels: 4,
+  },
+  {
+    title: "Luna & Wayne's Parisian Adventure",
+    desc: "Bonjour! Fly with Luna the rabbit and Wayne the cat to the City of Light! Follow their 4-part Parisian journey — from café croissants and the Louvre to getting lost in Montmartre and a magical reunion under the sparkling Eiffel Tower.",
+    link: "/luna/comics/paris",
+    cover: "/images/comics/paris/cover.png",
+    tag: "Paris Travel",
+    tagColor: "bg-blue-100 text-blue-700",
+    date: "June 2026",
+    panels: 4,
   }
 ];
 
