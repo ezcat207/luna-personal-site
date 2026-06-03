@@ -55,7 +55,7 @@ const strips = [
     tagColor: 'bg-blue-100 text-blue-700',
     title: '1. Bonjour, Paris!',
     teaser: "Flying over the Eiffel Tower, checking into a cozy hotel, strolling along the Seine, and toasting with croissants at a sidewalk café!",
-    image: '/images/comics/paris/strip-1.png',
+    image: '/images/comics/paris/strip-1.jpg',
     imageAlt: "Wayne & Luna's arrival in Paris. Panels show: looking out the plane window at the Eiffel Tower, a charming hotel room with a tiny balcony, walking along the Seine past green bookstalls, and toasting with croissants and hot chocolate at a café.",
     story: [
       '"Wayne! Look! There it is!" I pressed my face against the airplane window as the Eiffel Tower appeared through the clouds like a giant golden needle. Wayne leaned over, his cat eyes widening. "Paris! We\'re finally here!"',
@@ -84,7 +84,7 @@ const strips = [
     tagColor: 'bg-pink-100 text-pink-700',
     title: '2. Art and Macarons',
     teaser: 'The glass pyramid of the Louvre, gazing at the Mona Lisa, colorful Ladurée macarons, and relaxing in the Tuileries Garden.',
-    image: '/images/comics/paris/strip-2.png',
+    image: '/images/comics/paris/strip-2.jpg',
     imageAlt: "Wayne & Luna exploring Paris art and pastry. Panels show: standing awestruck in front of the Louvre pyramid, looking at the Mona Lisa with a crowd, picking out macarons at Ladurée, and eating them in the Tuileries Garden by the fountain.",
     story: [
       'We arrived at the Louvre, and the glass pyramid glittering in the sunlight took my breath away. "It\'s HUGE!" I gasped, spinning around. "We could spend a week in there," Wayne said, pulling out our museum map with a determined look.',
@@ -113,7 +113,7 @@ const strips = [
     tagColor: 'bg-amber-100 text-amber-700',
     title: '3. Lost in Montmartre',
     teaser: 'Climbing to the Sacré-Cœur, wandering artist streets, and the panic of realizing they\'ve been separated in the winding cobblestone alleys.',
-    image: '/images/comics/paris/strip-3.png',
+    image: '/images/comics/paris/strip-3.jpg',
     imageAlt: "Wayne & Luna getting separated in Montmartre. Panels show: climbing stairs to Sacré-Cœur with a Paris view, walking through narrow artist-filled streets, Luna distracted by a street painter while Wayne walks ahead, and Luna looking around in confusion at unfamiliar winding alleys alone.",
     story: [
       'We climbed the steep stairs up to the Sacré-Cœur Basilica, the white domes gleaming against the blue sky. "Almost there!" I panted. We reached the top and turned around — the most incredible view of all Paris sprawled below us.',
@@ -142,7 +142,7 @@ const strips = [
     tagColor: 'bg-rose-100 text-rose-700',
     title: '4. Amour at the Tower',
     teaser: "Asking a friendly gendarme for help, remembering their promise to meet at the highest point, and a sparkling farewell under the Eiffel Tower.",
-    image: '/images/comics/paris/strip-4.png',
+    image: '/images/comics/paris/strip-4.jpg',
     imageAlt: "Wayne & Luna's Paris reunion. Panels show: Wayne asking a policeman with a drawing of Luna, Luna looking up at the Eiffel Tower remembering their promise, a big hug on the Eiffel Tower observation deck, and watching the tower sparkle at night from a bridge saying goodbye.",
     story: [
       'Wayne realized I was missing and ran to a friendly gendarme. He pulled out a little sketch from his pocket — a drawing he had made of me at the café. "Ma fille! Perdue!" he explained. The policeman nodded kindly and helped him search.',
@@ -321,7 +321,7 @@ export default function LunaComicParis() {
       >
         <div className="rounded-3xl overflow-hidden border-2 border-pink-100 shadow-md mb-7 max-w-4xl mx-auto aspect-[16/9] bg-pink-100 relative">
           <img
-            src="/images/comics/paris/cover.png"
+            src="/images/comics/paris/cover.jpg"
             alt="Luna & Wayne's Parisian Adventure Cover"
             className="w-full h-full object-cover"
           />
