@@ -48,6 +48,7 @@ import WayneComicRiskHusk from './pages/wayne/WayneComicRiskHusk';
 import WayneComicUmamiSeafood from './pages/wayne/WayneComicUmamiSeafood';
 import WayneComicSatoyume from './pages/wayne/WayneComicSatoyume';
 import WayneComicEcoPeace from './pages/wayne/WayneComicEcoPeace';
+import WayneComicVillageTrust from './pages/wayne/WayneComicVillageTrust';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -134,6 +135,7 @@ function AppRoutes() {
           <Route path="wayne/comics/umami-seafood" element={<WayneComicUmamiSeafood />} />
           <Route path="wayne/comics/satoyume" element={<WayneComicSatoyume />} />
           <Route path="wayne/comics/ecopeace" element={<WayneComicEcoPeace />} />
+          <Route path="wayne/comics/village-trust" element={<WayneComicVillageTrust />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -263,6 +265,7 @@ function AppRoutes() {
         <Route path="wayne/comics/umami-seafood" element={<WayneComicUmamiSeafood />} />
         <Route path="wayne/comics/satoyume" element={<WayneComicSatoyume />} />
         <Route path="wayne/comics/ecopeace" element={<WayneComicEcoPeace />} />
+        <Route path="wayne/comics/village-trust" element={<WayneComicVillageTrust />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />

@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'village-trust',
+    title: "Startup Stories #20: The Girlfriend Network That Amazon Could Not Build",
+    subtitle: 'Rural Indian women as last-mile e-commerce agents.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Social Enterprise', 'E-Commerce', 'Women Empowerment'],
+    description:
+      '800 million rural Indians have no addresses, unreliable internet, and zero trust in faceless apps. Frontier Markets recruits, trains, and equips local women — "Sahelis" (best friends) — to be Amazon, UPS, and tech support for their own villages. During COVID, their network was the only supply chain still functioning. Episode 20 of 25.',
+    cover: '/images/comics/village-trust/cover.jpg',
+    path: '/wayne/comics/village-trust',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'ecopeace',
     title: "Startup Stories #19: The Roomba for Lakes",
     subtitle: 'Solar-powered autonomous robots that eat toxic algae.',
