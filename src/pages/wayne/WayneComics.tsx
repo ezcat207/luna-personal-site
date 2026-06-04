@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'ecopeace',
+    title: "Startup Stories #19: The Roomba for Lakes",
+    subtitle: 'Solar-powered autonomous robots that eat toxic algae.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Robotics', 'CleanTech', 'Water'],
+    description:
+      'Over half of US lakes are choked by toxic algae blooms. Traditional cleanup is slow, expensive, and ineffective. After nearly going bankrupt as a water equipment company, South Korea\'s EcoPeace reinvented itself as a robotics company — building autonomous solar-powered boats that skim algae, monitor water quality, and turn lake cleanup from a cost center into a profit center. Episode 19 of 25.',
+    cover: '/images/comics/ecopeace/cover.jpg',
+    path: '/wayne/comics/ecopeace',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'satoyume',
     title: "Startup Stories #18: The Village That Became a Hotel",
     subtitle: 'Turning Japan\'s dying villages into living destinations.',
