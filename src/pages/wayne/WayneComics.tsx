@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'amazon-carbon-credit',
+    title: "Startup Stories #12: Making the Amazon Rainforest More Profitable Standing Than Cut Down",
+    subtitle: 'Regenerative agroforestry at scale in the Brazilian Amazon.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Climate Tech', 'Carbon Markets', 'Agroforestry'],
+    description:
+      'Farmers in the Amazon cut down trees because cattle and soy pay the bills. Belterra is changing that equation — providing seeds, training, financing, and guaranteed buyers for regenerative agroforestry, using pre-sold carbon credits to fund the transition. Episode 12 of 25.',
+    cover: '/images/comics/amazon-carbon-credit/cover.jpg',
+    path: '/wayne/comics/amazon-carbon-credit',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'pharmexpress',
     title: "Startup Stories #11: The 'Uber for Medicine' That Built Its Own Roads",
     subtitle: 'Digitizing pharmacy supply chains across Southeast Asia.',
