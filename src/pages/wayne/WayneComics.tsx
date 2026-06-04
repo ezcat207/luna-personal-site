@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'luxwall',
+    title: "Startup Stories #6: The Window That Thinks It's a Wall",
+    subtitle: 'Vacuum insulated glass that performs like a solid wall.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['CleanTech', 'Deep Tech', 'Energy Efficiency'],
+    description:
+      'Windows are the weakest link in every building — 40% of heating and cooling energy leaks right through the glass. A trillion dollars of energy escapes through windows every year. Luxwall invented vacuum insulated glass that insulates as well as a solid wall, and their "Intel Inside" strategy partners with the industry giants instead of fighting them. Episode 6 of 25 real startup stories.',
+    cover: '/images/comics/luxwall/cover.jpg',
+    path: '/wayne/comics/luxwall',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'easy-rice',
     title: "Startup Stories #5: The AI That Checks Every Grain of Rice",
     subtitle: 'Computer vision solving a centuries-old commodity fraud problem.',

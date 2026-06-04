@@ -34,6 +34,7 @@ import WayneComicEasyRice from './pages/wayne/WayneComicEasyRice';
 import WayneComicAbridge from './pages/wayne/WayneComicAbridge';
 import WayneComicIAmGrounded from './pages/wayne/WayneComicIAmGrounded';
 import WayneComicAmpd from './pages/wayne/WayneComicAmpd';
+import WayneComicLuxwall from './pages/wayne/WayneComicLuxwall';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -105,7 +106,8 @@ function AppRoutes() {
           <Route path="wayne/comics/easy-rice" element={<WayneComicEasyRice />} />
           <Route path="wayne/comics/abridge" element={<WayneComicAbridge />} />
           <Route path="wayne/comics/i-am-grounded" element={<WayneComicIAmGrounded />} />
-          <Route path="wayne/comics/ampd" element={<WayneComicAmpd />} />
+           <Route path="wayne/comics/ampd" element={<WayneComicAmpd />} />
+          <Route path="wayne/comics/luxwall" element={<WayneComicLuxwall />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
