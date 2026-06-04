@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'forest-monitor',
+    title: "Startup Stories #23: The AI That Listens to the Forest Like a Billion Ears",
+    subtitle: 'Solar-powered smart microphones with transformer AI monitor biodiversity and detect illegal logging.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Conservation Tech', 'AI', 'Biodiversity'],
+    description:
+      'A single ranger cannot patrol 500 square miles of rainforest. Synature builds solar-powered smart microphones with transformer-based AI (the same architecture as ChatGPT) that listen to forests 24/7 — identifying animal calls, detecting chainsaws, and tracking ecosystem health. Their secret: the same AI also listens for sick chickens in poultry farms, and those farmers\' payments fund the rainforest monitoring. Episode 23 of 25.',
+    cover: '/images/comics/forest-monitor/cover.jpg',
+    path: '/wayne/comics/forest-monitor',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'zwitterco',
     title: "Startup Stories #22: The Non-Stick Membrane That Makes the World's Nastiest Water Drinkable Again",
     subtitle: 'Zwitterionic polymers that repulse fats, oils, and proteins — unlocking industrial water recycling.',
