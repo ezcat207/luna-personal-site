@@ -169,7 +169,17 @@ const comics = [
     tagColor: "bg-red-100 text-red-700",
     date: "June 2026",
     panels: 4,
-  }
+  },
+  {
+    title: "Startup Stories #1: When Grandpa's Shop Almost Closed",
+    desc: "Luna and Wayne discover their favorite neighborhood store has a sign: \"Owner Retired.\" What happens to the employees? A real startup called Teamshares has a heartwarming answer — turn the workers into owners!",
+    link: "/luna/comics/teamshares",
+    cover: "/images/comics/teamshares/cover.jpg",
+    tag: "Startup Stories",
+    tagColor: "bg-indigo-100 text-indigo-700",
+    date: "June 2026",
+    panels: 4,
+  },
 ];
 
 const LunaHome = () => {
