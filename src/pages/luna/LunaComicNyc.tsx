@@ -22,7 +22,7 @@ function FactBox({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-yellow-50/60 border border-yellow-200 rounded-2xl p-5">
       <p className="text-xs font-bold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-1">
-        📍 China Fast Facts
+        📍 NYC Fast Facts
       </p>
       <div className="text-sm text-slate-700 leading-relaxed space-y-2">{children}</div>
     </div>
@@ -55,125 +55,125 @@ function LunaTip({ children }: { children: React.ReactNode }) {
 const strips = [
   {
     number: 1,
-    tag: 'Arrival & Selfie',
+    tag: 'NYC Arrival',
     tagColor: 'bg-blue-100 text-blue-700',
-    title: '1. Welcome to Beijing!',
-    teaser: 'Flying across the ocean, landing at Beijing Capital International Airport, and snapping our very first travel selfie!',
-    image: '/images/comics/china-adventure/strip-1.jpg',
-    imageAlt: 'Wayne & Luna\'s arrival in Beijing. Panels show: looking out the plane window at the Great Wall, claiming baggage at the carousel, walking past the Welcome to Beijing sign, and taking a close-up travel selfie together.',
+    title: '1. Welcome to New York!',
+    teaser: 'Flying across the country, landing in New York City, and taking our very first yellow cab selfie!',
+    image: '/images/comics/nyc/strip-1.jpg',
+    imageAlt: "Wayne & Luna's arrival in NYC. Panels show: looking out the plane window at the skyline, taking a yellow cab through Times Square, snapping a cab selfie, and deciding between Central Park and hot dogs.",
     story: [
-      '"Nearly there, Wayne!" I pressed my face against the airplane window, pointing excitedly at the winding Great Wall and mountain ridges visible below the clouds.',
-      'After landing, we headed to Baggage Claim. "Found them! Let\'s find the exit!" Wayne cheered, pulling our matching rolling bags off the belt.',
-      'As we walked into the arrival hall, a massive red-and-yellow "WELCOME TO BEIJING" sign greeted us. "Wow, this airport is huge!" I exclaimed.',
-      '"First trip together!" I giggled. "Travel Selfie! Click!" We leaned our heads together and snapped a beautiful photo to remember our first moments in China.'
+      '"Look, Wayne! So many buildings!" I pressed my face against the airplane window, pointing at the skyscrapers. "Unbelievable! We\'re here!" Wayne marvelled as we landed.',
+      'We hopped in a yellow taxi and drove through Times Square. "So... much... light!" I gasped. "I feel so small!" Wayne whispered, looking out at the massive glowing billboards.',
+      'We pulled over and took a quick selfie in front of our cab. "Okay, smile! Our first photo!" I said as the camera clicked. "NYC is awesome!" Wayne cheered.',
+      'We stepped onto the sidewalk and opened our map. "Okay, Central Park first!" I said, pointing uptown. "No, a hot dog first!" Wayne counter-offered, patting his stomach.'
     ],
     facts: (
       <>
-        <p><strong>Beijing Capital International Airport (PEK)</strong> is one of the busiest airports in the world and serves as the main gateway to Beijing.</p>
-        <p><strong>The Great Wall</strong> can sometimes be spotted from flights landing at PEK, winding across the rugged mountain ranges north of the city.</p>
-        <p><strong>First-time travel selfies</strong> are a must-do tradition for Wayne and Luna on every new adventure they start!</p>
+        <p><strong>Times Square</strong> is famous for its bright, multi-story digital billboards and is known as "The Crossroads of the World."</p>
+        <p><strong>Yellow Cabs</strong> are an iconic symbol of New York City, first introduced in the early 20th century to standardise taxicab services.</p>
+        <p><strong>New York City Skyline</strong> features world-famous skyscrapers like the Empire State Building and the Chrysler Building.</p>
       </>
     ),
-    lessonTitle: 'Embracing the Journey',
+    lessonTitle: 'The Joy of Arrival',
     lesson: (
       <>
-        <p>The excitement of a trip starts the moment you board the plane. Keeping a visual diary, starting with a simple arrival photo, helps capture the pure joy and anticipation of exploring somewhere new.</p>
+        <p>Arriving in a huge, bustling city can be overwhelming but also incredibly exciting. Capturing those first moments of awe helps preserve the fresh anticipation of the trip.</p>
       </>
     ),
-    tip: 'Keep your passport and declaration forms handy, and remember to pick up a local SIM card or set up an eSIM before leaving the airport terminal for easy navigation.'
+    tip: 'If you take a taxi from JFK Airport, look for the official taxi stand. There is a flat fare to Manhattan plus tolls and tips, so avoid unofficial drivers offering rides inside the terminal.'
   },
   {
     number: 2,
-    tag: 'Attractions',
+    tag: 'NYC Sights',
     tagColor: 'bg-green-100 text-green-700',
-    title: '2. Great Wall & Lake Adventures',
-    teaser: 'Hiking the historic Great Wall, peeking into the Forbidden City, snacking on delicious Tanghulu, and a peaceful boat ride with a local friend.',
-    image: '/images/comics/china-adventure/strip-2.jpg',
-    imageAlt: 'Wayne & Luna exploring Beijing. Panels show: running on the Great Wall, peeking through the doors of the Forbidden City, eating candied hawthorn (Tanghulu) on a bench, and a serene boat ride on Kunming Lake where a friendly giant panda is rowing.',
+    title: '2. Exploring the Big Apple',
+    teaser: 'Seeing the Statue of Liberty from the ferry, rowing a boat in Central Park, enjoying street music in Times Square, and taking a selfie on the Brooklyn Bridge.',
+    image: '/images/comics/nyc/strip-2.jpg',
+    imageAlt: "Wayne & Luna sightseeing in NYC. Panels show: standing on a ferry looking at the Statue of Liberty, rowing a boat on Central Park lake, enjoying street performers in Times Square at night, and taking a selfie on the Brooklyn Bridge at sunset.",
     story: [
-      '"Great Wall of China! Let\'s Go!" We ran along the historic stone path, leaping into the air as the wall stretched across the green peaks under a gorgeous blue sky.',
-      'Next, we explored the Forbidden City. "Forbidden City Mysteries..." we whispered, peeking curiously through the massive red double gates.',
-      'For a sweet break, we sat down to eat "Delicious Sweet Tánghúlu!" The candied hawthorns were sticky, sweet, and perfectly crunchy.',
-      'We ended the day with a "Peaceful Boat Ride on Kunming Lake!" Wayne and I relaxed in a wooden rowboat while a friendly giant panda gently rowed us through the calm waters of the Summer Palace.'
+      'We boarded the ferry to Liberty Island. "Look, Wayne! Liberty!" I cheered, pointing at the colossal green statue. "Okay, pretty cool," Wayne smiled, adjusting his eye patch.',
+      'Next, we rented a wooden boat at Central Park. "This is the best hot dog ever!" I cheered, eating my snack in the middle of the lake. "You\'re not rowing!" Wayne complained, sweating over the oars.',
+      'At night, we walked through the neon streets. Street guitarists were playing lively tunes, and people were chatting. "The city that never sleeps!" I yelled over the music.',
+      'We walked across the historic Brooklyn Bridge. We squeezed together for one last selfie: "#NYCAdventure! Sunset view." Behind us, the bridge towers glowed in the pink and orange sunset.'
     ],
     facts: (
       <>
-        <p><strong>The Forbidden City</strong> was the imperial palace of China from the Ming dynasty to the end of the Qing dynasty, featuring 9,999 rooms.</p>
-        <p><strong>Kunming Lake</strong> is the central lake of the Summer Palace, covering three-quarters of its grounds and offering beautiful views of the Longevity Hill.</p>
-        <p><strong>Giant Pandas</strong> are native to south-central China and are widely considered a national treasure and symbol of peace.</p>
+        <p><strong>The Statue of Liberty</strong> was a gift from France to the United States and was dedicated in 1886 as a symbol of freedom and democracy.</p>
+        <p><strong>Central Park Lake</strong> allows visitors to rent classic wooden rowboats from the Loeb Boathouse to row around the 22-acre water body.</p>
+        <p><strong>The Brooklyn Bridge</strong> was completed in 1883 and is one of the oldest suspension bridges in the United States, connecting Manhattan and Brooklyn over the East River.</p>
       </>
     ),
-    lessonTitle: 'Living in the Moment',
+    lessonTitle: 'Balancing Work & Play',
     lesson: (
       <>
-        <p>Whether running on historical monuments or drifting peacefully on a lake, take the time to soak in the atmosphere. Every experience—active or quiet—adds to the rich tapestry of travel.</p>
+        <p>A great adventure requires cooperation. While one companion rows (or works), the other can provide the moral support (or eat the hot dog!). Appreciating each other\'s efforts makes the sunset views even sweeter.</p>
       </>
     ),
-    tip: 'Try the Mutianyu section of the Great Wall for great views and a fun toboggan slide down, and make sure to buy freshly made Tanghulu from street vendors—it is crunchy on the outside and tangy on the inside!'
+    tip: 'You can take the free Staten Island Ferry for a great view of the Statue of Liberty and the Manhattan skyline without waiting in long ticket lines. For Brooklyn Bridge, walk from Brooklyn to Manhattan during sunset for the best skyline views!'
   },
   {
     number: 3,
-    tag: 'Market Lost',
+    tag: 'Subway Labyrinth',
     tagColor: 'bg-amber-100 text-amber-700',
-    title: '3. Lost in the Crowded Market',
-    teaser: 'Navigating the bustling market crowd, losing sight of each other, and the anxiety of trying to find the way back.',
-    image: '/images/comics/china-adventure/strip-3.jpg',
-    imageAlt: 'Wayne & Luna getting separated. Panels show: a thick market crowd under hanging lanterns, Wayne looking around for Luna, Luna looking worriedly for Wayne, Wayne checking a map on his phone, and Luna waiting sadly on a wooden crate.',
+    title: '3. Subway Spaghetti Labyrinth',
+    teaser: 'Navigating the crowded subway stations, taking the wrong train in the wrong direction, and asking a helpful local for directions.',
+    image: '/images/comics/nyc/strip-3.jpg',
+    imageAlt: "Wayne & Luna getting lost in the subway. Panels show: crowded subway turnstiles at Times Square, looking worriedly inside a subway car going uptown, staring at a confusing subway map, and asking a local for directions on a station bench.",
     story: [
-      'The night market was teeming with people under glowing red lanterns. "Luna?!" Wayne shouted. "Wayne?!" I called out, but the thick crowd quickly separated us.',
-      '"Wait... where did he go?!" I looked around anxiously, trying to spot his eye patch through the tall sea of strangers.',
-      'Wayne searched in the opposite direction. "I can\'t see her... she\'s so small..." he murmured, looking worriedly between the shoppers.',
-      'Wayne checked his phone map in frustration: "Which way was the gate? This map doesn\'t help... and she has my phone number!" Meanwhile, I sat on a crate: "I\'ll wait here, like we said... but what if he\'s far away?"'
+      'We walked down into the 42nd Street Subway station. "I think this is it... right?" I mumbled nervously. "So... many... people," Wayne muttered, squeezed between commuters.',
+      'We rushed onto a train, but immediately realised something was wrong. "That wasn\'t our stop! It said \'Uptown\'!" I cried. "We\'re going the wrong way, aren\'t we?" Wayne sighed.',
+      'We got off and stared at a massive map on the wall. "This map... it\'s a labyrinth! Which colored line are we even on?" I asked. "I don\'t know, it just looks like a mess of spaghetti!" Wayne groaned.',
+      'Exhausted, I sat on a green station bench. "(zZz... I\'m so done...)" I sighed. Wayne walked up to a passing local: "Um, excuse me... are we... are we anywhere near Central Park?" The man smiled: "Central Park? You\'re way off, kid..."'
     ],
     facts: (
       <>
-        <p><strong>Beijing Night Markets</strong> are famous for their lively atmosphere, bright red lanterns, and diverse array of local snacks and souvenirs.</p>
-        <p><strong>Hutong Alleys</strong> around markets can form a labyrinth of narrow streets, making it easy to lose your bearings if you wander off the main path.</p>
-        <p><strong>Reunion spots</strong> are crucial when traveling in busy foreign cities where mobile signal or navigation apps might not work reliably.</p>
+        <p><strong>The New York City Subway</strong> has over 472 stations, making it one of the largest rapid transit systems in the world by number of stations.</p>
+        <p><strong>Uptown vs. Downtown</strong>: In Manhattan, trains heading north are marked "Uptown" (towards Central Park and the Bronx) and trains heading south are marked "Downtown" (towards Lower Manhattan and Brooklyn).</p>
+        <p><strong>Subway Maps</strong> use colored lines to group routes that share tracks in Midtown Manhattan, which can be tricky for first-time visitors!</p>
       </>
     ),
-    lessonTitle: 'Staying Calm & Prepared',
+    lessonTitle: 'Learning from Mistakes',
     lesson: (
       <>
-        <p>Getting separated in a crowd can be scary, but staying calm and having a plan—like waiting in the last spot you saw each other—makes all the difference in reuniting safely.</p>
+        <p>Getting lost is a normal part of exploring any new city. Taking the wrong train teaches us how to read signs more carefully and when to ask friendly locals for help.</p>
       </>
     ),
-    tip: 'Always agree on a specific landmark to meet at if you get lost, and keep a physical card with your hotel name and contact details written in Chinese in your pocket.'
+    tip: 'Use a transit app like Google Maps or Citymapper to plan subway trips. You can tap your phone or contact-less card at the OMNY readers to pay the fare directly without buying a MetroCard!'
   },
   {
     number: 4,
-    tag: 'Reunion & Farewell',
+    tag: 'NYC Ending',
     tagColor: 'bg-red-100 text-red-700',
-    title: '4. Reunion & Farewell',
-    teaser: 'Finding each other with the help of kind locals, celebrating with a Peking duck feast, releasing sky lanterns at Shichahai, and a fond farewell at PEK airport.',
-    image: '/images/comics/china-adventure/strip-4.jpg',
-    imageAlt: 'Wayne & Luna reuniting and leaving. Panels show: hugging in a traditional courtyard with helpful elders, enjoying a Peking duck dinner, releasing a wish lantern at Shichahai Lake, and saying goodbye at the airport terminal.',
+    title: '4. A Pizza-Filled Happy Ending',
+    teaser: 'Finding the way back to the surface, devouring giant NYC pizza slices, looking out over the breathtaking skyline, and saying farewell at the airport.',
+    image: '/images/comics/nyc/strip-4.jpg',
+    imageAlt: "Wayne & Luna's trip ending. Panels show: exiting the subway stairs into the sunlight, eating giant slices of pepperoni pizza at a checkerboard table, looking at the skyline from a high deck at sunset, and standing in the airport holding I Heart NY bags.",
     story: [
-      '"Wayne! I missed you!" "Luna! I found you!" We hugged tightly in a Hutong courtyard. The kind elderly neighborhood residents who helped us reunite waved and smiled.',
-      'Relieved and hungry, we celebrated with a Peking duck feast. "This is delicious!" Wayne laughed, showing me how to wrap the crispy duck with cucumbers and sweet bean sauce.',
-      'Later, at Shichahai Lake, we released a glowing sky lantern. "I wish for our friendship to last forever," I whispered. "I wish for more adventures!" Wayne added.',
-      'At PEK Airport, clutching our souvenirs, it was time to say goodbye. "Thank you, China," Wayne said as we headed to the boarding gate. "We\'ll be back!" I smiled.'
+      'Finally, we found the right subway stairs. "Finally, sunlight!" I cheered as we climbed back up to the street. "We made it!" Wayne laughed, glad to leave the underground.',
+      'We celebrated by ordering a giant pepperoni pizza. "Best pizza ever!" Wayne declared, pulling a huge, cheese-stretching slice. "Mmm, so good!" I mumbled, mouth full of delicious crust.',
+      'At sunset, we stood at a high observatory deck. The Empire State Building and Manhattan skyline stretched out before us. "Wow..." Wayne whispered. "It\'s breathtaking..." I agreed.',
+      'At the airport, holding our \'I Love NY\' souvenir bags and Statue of Liberty toys, we looked out at the planes. "Until next time, NY!" Wayne waved. And so, our amazing trip came to a happy, heartwarming end.'
     ],
     facts: (
       <>
-        <p><strong>Peking Duck</strong> is a famous Beijing dish consisting of thin, crispy skin and tender meat, typically wrapped in thin pancakes with sweet bean sauce, cucumbers, and scallions.</p>
-        <p><strong>Shichahai</strong> is a historical scenic area consisting of three lakes in central Beijing, surrounded by traditional Hutongs and lively cafes.</p>
-        <p><strong>Hutongs</strong> are traditional narrow alleys lined with courtyard homes (siheyuan) that represent the historic heart of local Beijing community life.</p>
+        <p><strong>New York-style Pizza</strong> is famous for its large, hand-tossed thin crust, which is traditionally folded in half to eat on the go.</p>
+        <p><strong>Observatory Decks</strong> in NYC (like Top of the Rock, Empire State Building, or Edge) offer panoramic views of the city skyline from hundreds of feet in the air.</p>
+        <p><strong>NYC Souvenirs</strong> like the classic "I ❤️ NY" t-shirts and miniature Statue of Liberty figures are popular ways to bring a piece of the city back home.</p>
       </>
     ),
-    lessonTitle: 'Gratitude and Friendship',
+    lessonTitle: 'Every Journey Has a Destination',
     lesson: (
       <>
-        <p>The best adventures are those that test our bonds and show us the kindness of strangers. Coming together to share a warm meal and make wishes for the future is the perfect end to any journey.</p>
+        <p>No matter how many wrong turns you take, pushing through the challenges leads to the sweetest rewards—like a warm slice of pizza and a breathtaking view. The memories we make are the best souvenirs.</p>
       </>
     ),
-    tip: 'Peking duck is best eaten fresh and hot at local specialty restaurants (like Quanjude or Dadong). When visiting Shichahai, rent a paddle boat or walk around the lakes during sunset for a magical view of the historic district.'
+    tip: 'Fold your pizza slice lengthwise (like a taco) to keep the grease from dripping and make it easier to eat. If visiting an observatory, book tickets online for a slot 30 minutes before sunset to see the city in both daylight and nighttime lights!'
   }
 ];
 
-// ── China Guide (collapsible) ──────────────────────────────────────
+// ── NYC Guide (collapsible) ────────────────────────────────────────
 
-function ChinaAdventureGuide() {
+function NycTravelGuide() {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden shadow-sm">
@@ -186,8 +186,8 @@ function ChinaAdventureGuide() {
             <MapPin className="w-4 h-4 text-pink-600" />
           </div>
           <div>
-            <p className="font-bold text-slate-800">Luna's Beijing Adventure Travel Guide</p>
-            <p className="text-xs text-slate-400 mt-0.5">Airport arrivals, market survival tips, and Peking duck wrapping etiquette!</p>
+            <p className="font-bold text-slate-800">Luna's NYC Chibi Storybook Travel Guide</p>
+            <p className="text-xs text-slate-400 mt-0.5">Subway transit tips, Central Park rowboats, and how to eat NYC pizza!</p>
           </div>
         </div>
         {open ? <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />}
@@ -204,22 +204,22 @@ function ChinaAdventureGuide() {
             <div className="border-t border-pink-50 px-6 py-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600 leading-relaxed font-sans">
               <div className="space-y-4">
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">✈️ Airport & Arrival Basics</p>
-                  <p>When arriving at PEK Airport, follow the flow to fingerprint scanners, then passport control, and finally the baggage claim. Setting up digital wallets like Alipay or WeChat Pay with your foreign card before arrival is highly recommended for seamless payments everywhere in Beijing.</p>
+                  <p className="font-semibold text-slate-800 mb-1">🚇 Subway Survival Basics</p>
+                  <p>When entering the subway station, verify the platform signs say "Uptown" (northbound) or "Downtown" (southbound) before passing through the turnstiles. Keep your mobile payment ready to tap at the OMNY reader.</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">🏰 Great Wall & Lakes</p>
-                  <p>For the Great Wall, take a morning bus or taxi to Mutianyu. For lakes, Shichahai is perfect in the evening to walk between the old bars, and Kunming Lake at the Summer Palace is beautiful for renting an electric boat or walking the Long Corridor.</p>
+                  <p className="font-semibold text-slate-800 mb-1">🌳 Central Park & Liberty Ferry</p>
+                  <p>Rent a rowboat at the Loeb Boathouse for a peaceful ride. For a cheap view of the Statue of Liberty, ride the free Staten Island Ferry, which departs every 15-30 minutes from the Whitehall Terminal.</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">🍖 Peking Duck Wrapping Guide</p>
-                  <p>1. Spread a thin pancake flat on your plate. 2. Dip a slice of crispy duck skin/meat into sweet bean sauce and place it in the center. 3. Add fresh cucumber strips and scallions. 4. Fold the bottom up, then fold both sides over to create a neat roll. Enjoy in one bite!</p>
+                  <p className="font-semibold text-slate-800 mb-1">🍕 NYC Pizza Etiquette</p>
+                  <p>Fold your large slice in half lengthwise. This helps control the cheese and prevents the crust from sagging, letting you eat it easily in one hand like a true New Yorker!</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-800 mb-1">🚨 Crowded Market Navigation</p>
-                  <p>Beijing markets get very busy. Always pin a meeting spot on your maps beforehand, keep your phone fully charged, and write down emergency phone numbers. If you get separated, stay in one place or ask a friendly vendor or police officer for help.</p>
+                  <p className="font-semibold text-slate-800 mb-1">🏙️ Skyline Sunset Spots</p>
+                  <p>Book observatory tickets at least 1-2 weeks in advance, especially for sunset slots. Top of the Rock offers the best view of the Empire State Building, while Edge features a glass floor overlooking the city.</p>
                 </div>
               </div>
             </div>
@@ -311,12 +311,12 @@ function StripCard({ strip }: { strip: typeof strips[0] }) {
 
 // ── Main page ────────────────────────────────────────────────────────
 
-export default function LunaComicChinaAdventure() {
+export default function LunaComicNyc() {
   return (
     <>
       <SEOHead
-        title="China's Adventure | Luna's Journey"
-        description="Follow Wayne and Luna's grand trip to China! An illustrated 4-part comic adventure through Beijing with travel guides, culture tips, and stories."
+        title="Luna & Wayne's Adventure to New York | Luna's Journey"
+        description="Follow Wayne and Luna's grand trip to New York City! An illustrated 4-part Chibi storybook adventure with subway guides, pizza tips, and sightseeing stories."
       />
 
       {/* Back nav */}
@@ -341,17 +341,17 @@ export default function LunaComicChinaAdventure() {
       >
         <div className="rounded-3xl overflow-hidden border-2 border-pink-100 shadow-md mb-7 max-w-4xl mx-auto aspect-[16/9] bg-pink-100 relative">
           <img
-            src="/images/comics/china-adventure/cover.jpg"
-            alt="China's Adventure"
+            src="/images/comics/nyc/cover.jpg"
+            alt="Luna & Wayne's Adventure to New York Cover"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent flex items-end p-6 justify-center">
             <div className="text-white text-center">
               <span className="inline-block px-3 py-1 bg-yellow-400 text-slate-900 text-xs font-bold rounded-full uppercase tracking-wider mb-2">
-                New Comic Book 🐰
+                Chibi Storybook Series 🐰
               </span>
               <h1 className="text-2xl sm:text-4xl font-bold font-header drop-shadow-md">
-                China's Adventure
+                Luna & Wayne's Adventure to New York
               </h1>
             </div>
           </div>
@@ -359,24 +359,24 @@ export default function LunaComicChinaAdventure() {
 
         <div className="flex flex-wrap justify-center items-center gap-3 mb-4">
           <span className="px-3 py-1 bg-pink-100 text-pink-800 text-xs font-bold rounded-full uppercase tracking-wide">
-            Travel Series · Issue #6
+            Travel Series · Issue #7
           </span>
           <span className="text-xs text-slate-400">June 2026 · 4 Strips</span>
         </div>
 
         <p className="text-slate-500 leading-relaxed mb-6 max-w-2xl mx-auto font-sans">
-          A four-part journey through Beijing! From arriving at the airport and exploring the Great Wall, to getting separated in a crowded market, reuniting with friendly locals, and wishing on lanterns at Shichahai Lake.
+          A chibi storybook journey through New York City! Follow Wayne and Luna as they land in NYC, get lost in the crowded subway system, discover the Statue of Liberty, row in Central Park, eat giant pizza slices, and view the sunset from a skyscraper.
         </p>
 
         <div className="flex justify-center">
           <ShareBar
-            title="China's Adventure"
-            summary="A fun 4-strip comic travel diary to China by Wayne and Luna!"
+            title="Luna & Wayne's Adventure to New York"
+            summary="A fun 4-strip chibi storybook travel diary to NYC by Wayne and Luna!"
           />
         </div>
       </motion.div>
 
-      {/* Comic Strips (vertical stack like Wayne's) */}
+      {/* Comic Strips */}
       <div className="space-y-8 mb-12 max-w-4xl mx-auto">
         {strips.map((strip) => (
           <motion.div
@@ -391,17 +391,17 @@ export default function LunaComicChinaAdventure() {
         ))}
       </div>
 
-      {/* China Guide (collapsible) */}
+      {/* NYC Guide */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mb-12 max-w-4xl mx-auto"
       >
-        <ChinaAdventureGuide />
+        <NycTravelGuide />
       </motion.div>
 
-      {/* Bottom Navigation / CTA */}
+      {/* Bottom Navigation */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -414,8 +414,8 @@ export default function LunaComicChinaAdventure() {
           ← Back to Comics Library
         </Link>
         <ShareBar
-          title="China's Adventure"
-          summary="An illustrated China travel diary."
+          title="Luna & Wayne's Adventure to New York"
+          summary="An illustrated NYC Chibi storybook travel diary."
         />
       </motion.div>
 

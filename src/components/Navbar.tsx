@@ -40,6 +40,7 @@ const Navbar = () => {
 
   const lunaLinks = [
     { name: t('nav.home'), path: '/luna', cls: lunaLinkClass },
+    { name: 'Comics', path: '/luna/comics', cls: lunaLinkClass },
     { name: t('nav.journey'), path: '/luna/all', cls: lunaLinkClass },
   ];
 

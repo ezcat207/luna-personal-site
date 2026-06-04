@@ -242,13 +242,13 @@ export default function LunaComicChina() {
       {/* Back nav */}
       <div className="mb-8">
         <Link
-          to="/luna"
+          to="/luna/comics"
           className="inline-flex items-center gap-2 text-sm text-pink-500 hover:text-pink-600 font-semibold transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Back to Journey
+          Back to Comics Library
         </Link>
       </div>
 
@@ -328,10 +328,10 @@ export default function LunaComicChina() {
         className="flex items-center justify-between py-6 border-t border-pink-100 mb-10 max-w-4xl mx-auto"
       >
         <Link
-          to="/luna"
+          to="/luna/comics"
           className="text-sm text-pink-500 hover:text-pink-600 font-bold transition-colors"
         >
-          ← Back to Luna's Journey
+          ← Back to Comics Library
         </Link>
         <ShareBar
           title="Wayne & Luna's Adventures in China"
