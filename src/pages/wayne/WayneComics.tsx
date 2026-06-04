@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'wateratm',
+    title: "Startup Stories #21: The Water ATM That Runs on Sunshine",
+    subtitle: 'Solar-powered kiosks sell clean water 70% cheaper than bottled.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Clean Water', 'Social Enterprise', 'Climate Finance'],
+    description:
+      '57% of Rwandans cannot reach clean water within a 30-minute walk. Yvette Ishimwe was 19 when she started treating lake water with a UV purifier and delivering by bicycle. She pivoted to solar-powered Water ATMs — decentralized purification kiosks that dispense clean water through prepaid meters. And when families stop boiling water over wood fires, the carbon savings fund free water for the poorest schools. Episode 21 of 25.',
+    cover: '/images/comics/wateratm/cover.jpg',
+    path: '/wayne/comics/wateratm',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'village-trust',
     title: "Startup Stories #20: The Girlfriend Network That Amazon Could Not Build",
     subtitle: 'Rural Indian women as last-mile e-commerce agents.',
