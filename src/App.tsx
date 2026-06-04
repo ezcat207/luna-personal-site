@@ -46,6 +46,7 @@ import WayneComicKindDesigns from './pages/wayne/WayneComicKindDesigns';
 import WayneComicPaperBattery from './pages/wayne/WayneComicPaperBattery';
 import WayneComicRiskHusk from './pages/wayne/WayneComicRiskHusk';
 import WayneComicUmamiSeafood from './pages/wayne/WayneComicUmamiSeafood';
+import WayneComicSatoyume from './pages/wayne/WayneComicSatoyume';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -130,6 +131,7 @@ function AppRoutes() {
           <Route path="wayne/comics/paper-battery" element={<WayneComicPaperBattery />} />
           <Route path="wayne/comics/risk-husk" element={<WayneComicRiskHusk />} />
           <Route path="wayne/comics/umami-seafood" element={<WayneComicUmamiSeafood />} />
+          <Route path="wayne/comics/satoyume" element={<WayneComicSatoyume />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -257,6 +259,7 @@ function AppRoutes() {
         <Route path="wayne/comics/paper-battery" element={<WayneComicPaperBattery />} />
         <Route path="wayne/comics/risk-husk" element={<WayneComicRiskHusk />} />
         <Route path="wayne/comics/umami-seafood" element={<WayneComicUmamiSeafood />} />
+        <Route path="wayne/comics/satoyume" element={<WayneComicSatoyume />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />

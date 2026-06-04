@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'satoyume',
+    title: "Startup Stories #18: The Village That Became a Hotel",
+    subtitle: 'Turning Japan\'s dying villages into living destinations.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Rural Revitalization', 'Tourism', 'Community Development'],
+    description:
+      'Kosuge Village: population 700, 45% over 65, 100 empty houses. The government said it would disappear. Satoyume asked a different question: "What does this village dream of becoming?" They turned the entire village into a distributed hotel — where abandoned houses become guest rooms, and residents become the world\'s best guides. Episode 18 of 25.',
+    cover: '/images/comics/satoyume/cover.jpg',
+    path: '/wayne/comics/satoyume',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'umami-seafood',
     title: "Startup Stories #17: Growing Real Fish Meat Without the Fish",
     subtitle: 'AI-powered bioreactors grow real fish cells — no ocean, no overfishing.',
