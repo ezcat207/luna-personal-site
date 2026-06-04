@@ -5,6 +5,34 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'easy-rice',
+    title: "Startup Stories #5: The AI That Checks Every Grain of Rice",
+    subtitle: 'Computer vision solving a centuries-old commodity fraud problem.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['AgriTech', 'Computer Vision', 'Fair Trade'],
+    description:
+      'In Thailand, jasmine rice commands a 3× price premium — but adulteration is rampant and manual inspection is impossible at scale. EasyRice uses AI cameras to inspect 10 million grains per minute, giving every farmer a verifiable quality certificate. Episode 5 of 25 real startup stories.',
+    cover: '/images/comics/easyrice/cover.jpg',
+    path: '/wayne/comics/easy-rice',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
+    id: 'ampd',
+    title: "Startup Stories #4: The Battery That Ships Software Updates",
+    subtitle: 'Construction sites run on diesel generators. Not for long.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['CleanTech', 'Hardware + Software', 'Construction'],
+    description:
+      'Diesel generators power 90% of construction sites — noisy, polluting, and increasingly illegal in dense cities. Ampd Energy\'s Enertainer is a software-defined battery that improves via OTA updates. After a lithium price crash made hardware cheap, the real moat is the software. Episode 4 of 25.',
+    cover: '/images/comics/ampd/cover.jpg',
+    path: '/wayne/comics/ampd',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'grand-canyon',
     title: "Luna & Wayne's Canyon Dreams",
     subtitle: 'Three stories from Grand Canyon National Park',

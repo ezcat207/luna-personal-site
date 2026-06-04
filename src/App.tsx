@@ -30,8 +30,10 @@ import WayneComics from './pages/wayne/WayneComics';
 import WayneComicGrandCanyon from './pages/wayne/WayneComicGrandCanyon';
 import WayneComicGenesisMars from './pages/wayne/WayneComicGenesisMars';
 import WayneComicTeamshares from './pages/wayne/WayneComicTeamshares';
+import WayneComicEasyRice from './pages/wayne/WayneComicEasyRice';
 import WayneComicAbridge from './pages/wayne/WayneComicAbridge';
 import WayneComicIAmGrounded from './pages/wayne/WayneComicIAmGrounded';
+import WayneComicAmpd from './pages/wayne/WayneComicAmpd';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -46,6 +48,8 @@ import LunaComicNyc from './pages/luna/LunaComicNyc';
 import LunaComicSeattle from './pages/luna/LunaComicSeattle';
 import LunaComicParis from './pages/luna/LunaComicParis';
 import LunaComicTeamshares from './pages/luna/LunaComicTeamshares';
+import LunaComicEasyRice from './pages/luna/LunaComicEasyRice';
+import LunaComicAmpd from './pages/luna/LunaComicAmpd';
 import LunaComicAbridge from './pages/luna/LunaComicAbridge';
 import LunaComicIAmGrounded from './pages/luna/LunaComicIAmGrounded';
 import LunaComics from './pages/luna/LunaComics';
@@ -98,8 +102,10 @@ function AppRoutes() {
           <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
           <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
           <Route path="wayne/comics/teamshares" element={<WayneComicTeamshares />} />
+          <Route path="wayne/comics/easy-rice" element={<WayneComicEasyRice />} />
           <Route path="wayne/comics/abridge" element={<WayneComicAbridge />} />
           <Route path="wayne/comics/i-am-grounded" element={<WayneComicIAmGrounded />} />
+          <Route path="wayne/comics/ampd" element={<WayneComicAmpd />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -126,6 +132,8 @@ function AppRoutes() {
           <Route path="luna/comics/seattle" element={<LunaComicSeattle />} />
           <Route path="luna/comics/paris" element={<LunaComicParis />} />
           <Route path="luna/comics/teamshares" element={<LunaComicTeamshares />} />
+          <Route path="luna/comics/easy-rice" element={<LunaComicEasyRice />} />
+          <Route path="luna/comics/ampd" element={<LunaComicAmpd />} />
           <Route path="luna/comics/abridge" element={<LunaComicAbridge />} />
           <Route path="luna/comics/i-am-grounded" element={<LunaComicIAmGrounded />} />
           {/* Legacy paths — keep alive */}
@@ -171,6 +179,8 @@ function AppRoutes() {
         <Route path="luna/comics/seattle" element={<LunaComicSeattle />} />
         <Route path="luna/comics/paris" element={<LunaComicParis />} />
         <Route path="luna/comics/teamshares" element={<LunaComicTeamshares />} />
+        <Route path="luna/comics/easy-rice" element={<LunaComicEasyRice />} />
+        <Route path="luna/comics/ampd" element={<LunaComicAmpd />} />
         <Route path="luna/comics/abridge" element={<LunaComicAbridge />} />
         <Route path="luna/comics/i-am-grounded" element={<LunaComicIAmGrounded />} />
         <Route path="roadmap" element={<Roadmap />} />
@@ -207,8 +217,10 @@ function AppRoutes() {
         <Route path="wayne/comics/grand-canyon" element={<WayneComicGrandCanyon />} />
         <Route path="wayne/comics/genesis-mars" element={<WayneComicGenesisMars />} />
         <Route path="wayne/comics/teamshares" element={<WayneComicTeamshares />} />
+        <Route path="wayne/comics/easy-rice" element={<WayneComicEasyRice />} />
         <Route path="wayne/comics/abridge" element={<WayneComicAbridge />} />
         <Route path="wayne/comics/i-am-grounded" element={<WayneComicIAmGrounded />} />
+        <Route path="wayne/comics/ampd" element={<WayneComicAmpd />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />

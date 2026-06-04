@@ -5,6 +5,26 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comics = [
   {
+    title: "Startup Stories #5: The Robot That Can Tell Fake Rice from Real Rice",
+    desc: "In Thailand, millions of farmers sell rice — but some sneaky sellers mix cheap rice in with expensive jasmine rice! A startup called EasyRice built an AI camera that checks 10 million grains of rice per minute so every farmer gets paid fairly.",
+    link: "/luna/comics/easy-rice",
+    cover: "/images/comics/easyrice/cover.jpg",
+    tag: "Startup Stories",
+    tagColor: "bg-indigo-100 text-indigo-700",
+    date: "June 2026",
+    panels: 4,
+  },
+  {
+    title: "Startup Stories #4: The Battery That Gets Smarter Over Time",
+    desc: "Construction sites are super loud and smelly because of diesel generators — yuck! A startup called Ampd Energy built a giant battery called the Enertainer that gets software updates just like your iPad, so it keeps getting better and cleaner.",
+    link: "/luna/comics/ampd",
+    cover: "/images/comics/ampd/cover.jpg",
+    tag: "Startup Stories",
+    tagColor: "bg-indigo-100 text-indigo-700",
+    date: "June 2026",
+    panels: 4,
+  },
+  {
     title: "Startup Stories #3: The Energy Bar Made from Trash",
     desc: "Did you know coffee is a fruit? And 80% of it gets thrown away every year — enough to fill 3,300 swimming pools! A startup called I Am Grounded turns that \"trash\" into a superfood energy bar that helps save the planet and Colombian farmers.",
     link: "/luna/comics/i-am-grounded",
