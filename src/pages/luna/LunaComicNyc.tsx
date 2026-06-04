@@ -84,11 +84,40 @@ const strips = [
   },
   {
     number: 2,
+    tag: 'NYC Sights',
+    tagColor: 'bg-green-100 text-green-700',
+    title: '2. Exploring the Big Apple',
+    teaser: 'Seeing the Statue of Liberty from the ferry, rowing a boat in Central Park, enjoying street music in Times Square, and taking a selfie on the Brooklyn Bridge.',
+    image: '/images/comics/nyc/strip-2.jpg',
+    imageAlt: "Wayne & Luna sightseeing in NYC. Panels show: standing on a ferry looking at the Statue of Liberty, rowing a boat on Central Park lake, enjoying street performers in Times Square at night, and taking a selfie on the Brooklyn Bridge at sunset.",
+    story: [
+      'We boarded the ferry to Liberty Island. "Look, Wayne! Liberty!" I cheered, pointing at the colossal green statue. "Okay, pretty cool," Wayne smiled, adjusting his eye patch.',
+      'Next, we rented a wooden boat at Central Park. "This is the best hot dog ever!" I cheered, eating my snack in the middle of the lake. "You\'re not rowing!" Wayne complained, sweating over the oars.',
+      'At night, we walked through the neon streets. Street guitarists were playing lively tunes, and people were chatting. "The city that never sleeps!" I yelled over the music.',
+      'We walked across the historic Brooklyn Bridge. We squeezed together for one last selfie: "#NYCAdventure! Sunset view." Behind us, the bridge towers glowed in the pink and orange sunset.'
+    ],
+    facts: (
+      <>
+        <p><strong>The Statue of Liberty</strong> was a gift from France to the United States and was dedicated in 1886 as a symbol of freedom and democracy.</p>
+        <p><strong>Central Park Lake</strong> allows visitors to rent classic wooden rowboats from the Loeb Boathouse to row around the 22-acre water body.</p>
+        <p><strong>The Brooklyn Bridge</strong> was completed in 1883 and is one of the oldest suspension bridges in the United States, connecting Manhattan and Brooklyn over the East River.</p>
+      </>
+    ),
+    lessonTitle: 'Balancing Work & Play',
+    lesson: (
+      <>
+        <p>A great adventure requires cooperation. While one companion rows (or works), the other can provide the moral support (or eat the hot dog!). Appreciating each other\'s efforts makes the sunset views even sweeter.</p>
+      </>
+    ),
+    tip: 'You can take the free Staten Island Ferry for a great view of the Statue of Liberty and the Manhattan skyline without waiting in long ticket lines. For Brooklyn Bridge, walk from Brooklyn to Manhattan during sunset for the best skyline views!'
+  },
+  {
+    number: 3,
     tag: 'Subway Labyrinth',
     tagColor: 'bg-amber-100 text-amber-700',
-    title: '2. Subway Spaghetti Labyrinth',
+    title: '3. Subway Spaghetti Labyrinth',
     teaser: 'Navigating the crowded subway stations, taking the wrong train in the wrong direction, and asking a helpful local for directions.',
-    image: '/images/comics/nyc/strip-2.jpg',
+    image: '/images/comics/nyc/strip-3.jpg',
     imageAlt: "Wayne & Luna getting lost in the subway. Panels show: crowded subway turnstiles at Times Square, looking worriedly inside a subway car going uptown, staring at a confusing subway map, and asking a local for directions on a station bench.",
     story: [
       'We walked down into the 42nd Street Subway station. "I think this is it... right?" I mumbled nervously. "So... many... people," Wayne muttered, squeezed between commuters.',
@@ -110,35 +139,6 @@ const strips = [
       </>
     ),
     tip: 'Use a transit app like Google Maps or Citymapper to plan subway trips. You can tap your phone or contact-less card at the OMNY readers to pay the fare directly without buying a MetroCard!'
-  },
-  {
-    number: 3,
-    tag: 'NYC Sights',
-    tagColor: 'bg-green-100 text-green-700',
-    title: '3. Exploring the Big Apple',
-    teaser: 'Seeing the Statue of Liberty from the ferry, rowing a boat in Central Park, enjoying street music in Times Square, and taking a selfie on the Brooklyn Bridge.',
-    image: '/images/comics/nyc/strip-3.jpg',
-    imageAlt: "Wayne & Luna sightseeing in NYC. Panels show: standing on a ferry looking at the Statue of Liberty, rowing a boat on Central Park lake, enjoying street performers in Times Square at night, and taking a selfie on the Brooklyn Bridge at sunset.",
-    story: [
-      'We boarded the ferry to Liberty Island. "Look, Wayne! Liberty!" I cheered, pointing at the colossal green statue. "Okay, pretty cool," Wayne smiled, adjusting his eye patch.',
-      'Next, we rented a wooden boat at Central Park. "This is the best hot dog ever!" I cheered, eating my snack in the middle of the lake. "You\'re not rowing!" Wayne complained, sweating over the oars.',
-      'At night, we walked through the neon streets. Street guitarists were playing lively tunes, and people were chatting. "The city that never sleeps!" I yelled over the music.',
-      'We walked across the historic Brooklyn Bridge. We squeezed together for one last selfie: "#NYCAdventure! Sunset view." Behind us, the bridge towers glowed in the pink and orange sunset.'
-    ],
-    facts: (
-      <>
-        <p><strong>The Statue of Liberty</strong> was a gift from France to the United States and was dedicated in 1886 as a symbol of freedom and democracy.</p>
-        <p><strong>Central Park Lake</strong> allows visitors to rent classic wooden rowboats from the Loeb Boathouse to row around the 22-acre water body.</p>
-        <p><strong>The Brooklyn Bridge</strong> was completed in 1883 and is one of the oldest suspension bridges in the United States, connecting Manhattan and Brooklyn over the East River.</p>
-      </>
-    ),
-    lessonTitle: 'Balancing Work & Play',
-    lesson: (
-      <>
-        <p>A great adventure requires cooperation. While one companion rows (or works), the other can provide the moral support (or eat the hot dog!). Appreciating each other's efforts makes the sunset views even sweeter.</p>
-      </>
-    ),
-    tip: 'You can take the free Staten Island Ferry for a great view of the Statue of Liberty and the Manhattan skyline without waiting in long ticket lines. For Brooklyn Bridge, walk from Brooklyn to Manhattan during sunset for the best skyline views!'
   },
   {
     number: 4,
