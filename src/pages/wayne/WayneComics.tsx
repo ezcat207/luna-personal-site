@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'vr-building',
+    title: "Startup Stories #13: The Machine That Builds the Machine That Builds the House",
+    subtitle: 'Mobile micro-factories for decentralized home construction.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Construction Tech', 'Manufacturing', 'Housing'],
+    description:
+      'Construction productivity has been flat for 50 years. Cuby Technologies puts a software-driven micro-factory in a shipping container — deployable anywhere, turning non-skilled workers into precision home builders with 10x less labor and 90% less waste. Episode 13 of 25.',
+    cover: '/images/comics/vr-building/cover.jpg',
+    path: '/wayne/comics/vr-building',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'amazon-carbon-credit',
     title: "Startup Stories #12: Making the Amazon Rainforest More Profitable Standing Than Cut Down",
     subtitle: 'Regenerative agroforestry at scale in the Brazilian Amazon.',
