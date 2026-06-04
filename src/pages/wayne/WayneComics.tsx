@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'kind-designs',
+    title: "Startup Stories #14: The 3D-Printed Wall That Grows an Ecosystem",
+    subtitle: 'Living Seawalls for coastal protection and ecosystem restoration.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Climate Tech', '3D Printing', 'Ocean Conservation'],
+    description:
+      'Miami\'s sea level has risen 8 inches since 1950. Standard concrete seawalls destroy marine life and make erosion worse. Kind Designs 3D-prints Living Seawalls — biomimetic, pH-neutral, priced the same as the toxic alternative — that grow oyster reefs, attract fish, and filter 50,000 gallons of seawater daily. Episode 14 of 25.',
+    cover: '/images/comics/kind-designs/cover.jpg',
+    path: '/wayne/comics/kind-designs',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'vr-building',
     title: "Startup Stories #13: The Machine That Builds the Machine That Builds the House",
     subtitle: 'Mobile micro-factories for decentralized home construction.',
