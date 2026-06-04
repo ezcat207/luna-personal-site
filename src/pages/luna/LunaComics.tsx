@@ -5,6 +5,26 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comics = [
   {
+    title: "Startup Stories #3: The Energy Bar Made from Trash",
+    desc: "Did you know coffee is a fruit? And 80% of it gets thrown away every year — enough to fill 3,300 swimming pools! A startup called I Am Grounded turns that \"trash\" into a superfood energy bar that helps save the planet and Colombian farmers.",
+    link: "/luna/comics/i-am-grounded",
+    cover: "/images/comics/i-am-grounded/cover.jpg",
+    tag: "Startup Stories",
+    tagColor: "bg-indigo-100 text-indigo-700",
+    date: "June 2026",
+    panels: 4,
+  },
+  {
+    title: "Startup Stories #2: The AI That Listens to the Doctor",
+    desc: "Luna notices something strange at the doctor's office — the doctor keeps staring at the computer instead of looking at her! A startup called Abridge uses AI to take the notes so doctors can finally look up and actually listen.",
+    link: "/luna/comics/abridge",
+    cover: "/images/comics/abridge/cover.jpg",
+    tag: "Startup Stories",
+    tagColor: "bg-indigo-100 text-indigo-700",
+    date: "June 2026",
+    panels: 4,
+  },
+  {
     title: "Startup Stories #1: When Grandpa's Shop Almost Closed",
     desc: "Luna and Wayne discover their favorite neighborhood store has a sign: \"Owner Retired.\" What happens to the employees? A real startup called Teamshares has a heartwarming answer — turn the workers into owners!",
     link: "/luna/comics/teamshares",
