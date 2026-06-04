@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'remote-monitor',
+    title: "Startup Stories #25: Grandma Travels 200km for a 5-Minute Checkup — and That Is the Best Option",
+    subtitle: 'B2B telemedicine platform redesigns Thailand\'s public hospital workflows for chronic disease management.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['HealthTech', 'Aging Population', 'Process Innovation'],
+    description:
+      'Thailand\'s public hospitals are drowning — an aging population and exploding chronic disease rates mean patients travel 200km for a 5-minute checkup. Dietz.Asia built a B2B telemedicine platform that plugs into hospital systems to redesign workflows: patients monitor vitals at home, data travels instead of people. 75% less staff workload, 98% patient satisfaction, better clinical outcomes. Episode 25 of 25 — the final episode.',
+    cover: '/images/comics/remote-monitor/cover.jpg',
+    path: '/wayne/comics/remote-monitor',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'petpharm',
     title: "Startup Stories #24: The B2B Engine That Turned 6,000 Pharmacies into Pet Pharmacies",
     subtitle: 'South Korean platform activating community pharmacies to sell affordable pet medication.',
