@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'petpharm',
+    title: "Startup Stories #24: The B2B Engine That Turned 6,000 Pharmacies into Pet Pharmacies",
+    subtitle: 'South Korean platform activating community pharmacies to sell affordable pet medication.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Pet Care', 'B2B Platform', 'Healthcare Distribution'],
+    description:
+      'In South Korea, 15 million pets need medication — but owners face paying double at the vet or finding nothing at pharmacies. PetPharm built a B2B platform giving 6,000 community pharmacies the supply chain, AI training, and infrastructure to sell pet meds at half the price. Then they obtained a drug manufacturing license to replace expensive imports with domestic brands. Episode 24 of 25.',
+    cover: '/images/comics/petpharm/cover.jpg',
+    path: '/wayne/comics/petpharm',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'forest-monitor',
     title: "Startup Stories #23: The AI That Listens to the Forest Like a Billion Ears",
     subtitle: 'Solar-powered smart microphones with transformer AI monitor biodiversity and detect illegal logging.',
