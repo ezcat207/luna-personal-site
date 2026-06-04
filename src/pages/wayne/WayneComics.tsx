@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'nutrix',
+    title: "Startup Stories #9: Spit in a Tube, Know Your Stress",
+    subtitle: 'The first at-home cortisol sensor for workplace stress management.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['Health Tech', 'Wearables', 'Workplace Wellness'],
+    description:
+      'Everyone talks about cortisol. Almost nobody actually measures it. Nutrix built CortiSense — a device that measures the stress hormone from a saliva sample at home, turning workplace wellness from guesswork into data science. CES 2025 Innovation Award. Episode 9 of 25.',
+    cover: '/images/comics/nutrix/cover.jpg',
+    path: '/wayne/comics/nutrix',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'bremmiller',
     title: "Startup Stories #8: The Rock Battery That Replaces Fossil Fuel Boilers",
     subtitle: 'Storing renewable energy as heat in crushed volcanic rock.',
