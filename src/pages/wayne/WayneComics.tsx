@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'paper-battery',
+    title: "Startup Stories #15: The Battery Made of Paper, Zinc, and Manganese",
+    subtitle: 'A biodegradable, non-flammable battery that costs 90% less than lithium-ion.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Energy Storage', 'Materials Science', 'Sustainability'],
+    description:
+      'Flint\'s paper battery replaces lithium, cobalt, and nickel with zinc, manganese, and cellulose. It is non-flammable, bendable, fully compostable in 6 weeks, and works on existing lithium battery production lines — all at 90% lower cost. Episode 15 of 25.',
+    cover: '/images/comics/paper-battery/cover.jpg',
+    path: '/wayne/comics/paper-battery',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'kind-designs',
     title: "Startup Stories #14: The 3D-Printed Wall That Grows an Ecosystem",
     subtitle: 'Living Seawalls for coastal protection and ecosystem restoration.',
