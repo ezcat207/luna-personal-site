@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'limex',
+    title: "Startup Stories #7: Paper and Plastic Made from Rocks",
+    subtitle: 'A Japanese unicorn turning limestone into sustainable materials.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['Circular Economy', 'Materials Science', 'Manufacturing'],
+    description:
+      'LIMEX is a material made mostly of crushed limestone that can replace both paper and plastic. It uses 97% less water than papermaking and zero trees. Founded by a used car salesman who refused to give up after a failed import business, TBM has grown into a Japanese unicorn with 10,000+ customers. Episode 7 of 25.',
+    cover: '/images/comics/limex/cover.jpg',
+    path: '/wayne/comics/limex',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'luxwall',
     title: "Startup Stories #6: The Window That Thinks It's a Wall",
     subtitle: 'Vacuum insulated glass that performs like a solid wall.',
