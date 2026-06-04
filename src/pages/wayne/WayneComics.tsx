@@ -32,6 +32,20 @@ const comicSeries = [
     tag: 'Sci-Fi Short',
     tagColor: 'bg-red-100 text-red-700',
   },
+  {
+    id: 'teamshares',
+    title: "Startup Stories #1: When Grandpa's Shop Almost Closed",
+    subtitle: 'A real startup turns workers into owners.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['Ownership', 'Community', 'Economics'],
+    description:
+      'Luna and Wayne discover their favorite neighborhood store has a sign: "Owner Retired." What happens to the employees? A real startup called Teamshares has a heartwarming answer — turn the workers into owners. Episode 1 of 25 real startup stories.',
+    cover: '/images/comics/teamshares/cover.jpg',
+    path: '/wayne/comics/teamshares',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
 ];
 
 export default function WayneComics() {
