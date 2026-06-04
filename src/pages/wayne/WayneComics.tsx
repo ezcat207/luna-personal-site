@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'zwitterco',
+    title: "Startup Stories #22: The Non-Stick Membrane That Makes the World's Nastiest Water Drinkable Again",
+    subtitle: 'Zwitterionic polymers that repulse fats, oils, and proteins — unlocking industrial water recycling.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Clean Water', 'Material Science', 'Industrial Innovation'],
+    description:
+      'For 40 years, filtration membranes have clogged instantly when exposed to fats, oils, and proteins — making industrial water recycling impossibly expensive. A former whitewater rafting guide turned CEO invented a zwitterionic "non-stick" coating that repels organic gunk. The result: 400% cost savings for factories and a whole new economics of water. Episode 22 of 25.',
+    cover: '/images/comics/zwitterco/cover.jpg',
+    path: '/wayne/comics/zwitterco',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'wateratm',
     title: "Startup Stories #21: The Water ATM That Runs on Sunshine",
     subtitle: 'Solar-powered kiosks sell clean water 70% cheaper than bottled.',
