@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'pharmexpress',
+    title: "Startup Stories #11: The 'Uber for Medicine' That Built Its Own Roads",
+    subtitle: 'Digitizing pharmacy supply chains across Southeast Asia.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Health Tech', 'Supply Chain', 'Emerging Markets'],
+    description:
+      '57,000 pharmacies. 1,500 distributors. No single supplier carries more than 200 products. Buymed built a digital B2B marketplace connecting both sides — and when Vietnam\'s roads weren\'t reliable enough, they built their own warehouses and delivery fleet too. Episode 11 of 25.',
+    cover: '/images/comics/pharmexpress/cover.jpg',
+    path: '/wayne/comics/pharmexpress',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'recycap',
     title: "Startup Stories #10: The Machine That Eats Coffee Capsules",
     subtitle: 'Automated coffee capsule recycling for homes and offices.',
