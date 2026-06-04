@@ -44,6 +44,7 @@ import WayneComicAmazonCarbonCredit from './pages/wayne/WayneComicAmazonCarbonCr
 import WayneComicVRBuilding from './pages/wayne/WayneComicVRBuilding';
 import WayneComicKindDesigns from './pages/wayne/WayneComicKindDesigns';
 import WayneComicPaperBattery from './pages/wayne/WayneComicPaperBattery';
+import WayneComicRiskHusk from './pages/wayne/WayneComicRiskHusk';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -126,6 +127,7 @@ function AppRoutes() {
           <Route path="wayne/comics/vr-building" element={<WayneComicVRBuilding />} />
           <Route path="wayne/comics/kind-designs" element={<WayneComicKindDesigns />} />
           <Route path="wayne/comics/paper-battery" element={<WayneComicPaperBattery />} />
+          <Route path="wayne/comics/risk-husk" element={<WayneComicRiskHusk />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -251,6 +253,7 @@ function AppRoutes() {
         <Route path="wayne/comics/vr-building" element={<WayneComicVRBuilding />} />
         <Route path="wayne/comics/kind-designs" element={<WayneComicKindDesigns />} />
         <Route path="wayne/comics/paper-battery" element={<WayneComicPaperBattery />} />
+        <Route path="wayne/comics/risk-husk" element={<WayneComicRiskHusk />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />

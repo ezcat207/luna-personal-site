@@ -19,6 +19,20 @@ const comicSeries = [
     tagColor: 'bg-indigo-100 text-indigo-700',
   },
   {
+    id: 'risk-husk',
+    title: "Startup Stories #16: Turning Rice Waste Into Car Tires",
+    subtitle: 'Zero-waste process converts rice husk ash into tire-grade silica.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Circular Economy', 'CleanTech', 'Materials Science'],
+    description:
+      'India generates 2-3 million tons of rice husk ash every year — a waste with no commercial value that pollutes air and water. But rice husk ash is 85% silica, the same material tire companies pay to mine from riverbeds. Brisil Technologies built a zero-waste process that connects these dots, and it is cheaper than the destructive alternative. Episode 16 of 25.',
+    cover: '/images/comics/risk-husk/cover.jpg',
+    path: '/wayne/comics/risk-husk',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'kind-designs',
     title: "Startup Stories #14: The 3D-Printed Wall That Grows an Ecosystem",
     subtitle: 'Living Seawalls for coastal protection and ecosystem restoration.',
