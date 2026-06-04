@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'umami-seafood',
+    title: "Startup Stories #17: Growing Real Fish Meat Without the Fish",
+    subtitle: 'AI-powered bioreactors grow real fish cells — no ocean, no overfishing.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Food Tech', 'Biotech', 'Sustainability'],
+    description:
+      'Only 7% of fisheries are sustainable. Demand will rise 50% by 2050. UMAMI Bioworks grows real fish tissue from cells in AI-powered bioreactors — not plant-based imitation, but actual fish meat. Their "Intel Inside" model licenses the technology to food companies instead of competing with them. Episode 17 of 25.',
+    cover: '/images/comics/umami-seafood/cover.jpg',
+    path: '/wayne/comics/umami-seafood',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'paper-battery',
     title: "Startup Stories #15: The Battery Made of Paper, Zinc, and Manganese",
     subtitle: 'A biodegradable, non-flammable battery that costs 90% less than lithium-ion.',
