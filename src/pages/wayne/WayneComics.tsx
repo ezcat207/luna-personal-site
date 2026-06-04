@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'bremmiller',
+    title: "Startup Stories #8: The Rock Battery That Replaces Fossil Fuel Boilers",
+    subtitle: 'Storing renewable energy as heat in crushed volcanic rock.',
+    date: 'June 2026',
+    strips: 4,
+    themes: ['Clean Energy', 'Industrial Heat', 'Climate Tech'],
+    description:
+      'Industrial heat is the blind spot of the energy transition — over 50% of industrial energy goes to making heat, and almost all of it comes from burning fossil fuels. Bremmiller Energy\'s bGen thermal battery heats crushed volcanic rock to 650°C, delivering clean steam on demand with 97% efficiency. Episode 8 of 25.',
+    cover: '/images/comics/bremmiller/cover.jpg',
+    path: '/wayne/comics/bremmiller',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'limex',
     title: "Startup Stories #7: Paper and Plastic Made from Rocks",
     subtitle: 'A Japanese unicorn turning limestone into sustainable materials.',
