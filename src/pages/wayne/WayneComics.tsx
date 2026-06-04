@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'recycap',
+    title: "Startup Stories #10: The Machine That Eats Coffee Capsules",
+    subtitle: 'Automated coffee capsule recycling for homes and offices.',
+    date: 'June 2026',
+    strips: 3,
+    themes: ['Circular Economy', 'Hardware', 'Sustainability'],
+    description:
+      '7 billion capsules per year. 70% end up in landfills. Aluminum takes 500 years to decompose. RecyCap built a machine that solves the convenience paradox — automatically separating coffee grounds from shells so recycling is as easy as making the coffee. Episode 10 of 25.',
+    cover: '/images/comics/recycap/cover.jpg',
+    path: '/wayne/comics/recycap',
+    tag: 'Startup Stories',
+    tagColor: 'bg-indigo-100 text-indigo-700',
+  },
+  {
     id: 'nutrix',
     title: "Startup Stories #9: Spit in a Tube, Know Your Stress",
     subtitle: 'The first at-home cortisol sensor for workplace stress management.',

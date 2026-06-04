@@ -38,6 +38,7 @@ import WayneComicLuxwall from './pages/wayne/WayneComicLuxwall';
 import WayneComicLimex from './pages/wayne/WayneComicLimex';
 import WayneComicBremmiller from './pages/wayne/WayneComicBremmiller';
 import WayneComicNutrix from './pages/wayne/WayneComicNutrix';
+import WayneComicRecyCap from './pages/wayne/WayneComicRecyCap';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -114,6 +115,7 @@ function AppRoutes() {
           <Route path="wayne/comics/limex" element={<WayneComicLimex />} />
           <Route path="wayne/comics/bremmiller" element={<WayneComicBremmiller />} />
           <Route path="wayne/comics/nutrix" element={<WayneComicNutrix />} />
+          <Route path="wayne/comics/recycap" element={<WayneComicRecyCap />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -233,6 +235,7 @@ function AppRoutes() {
         <Route path="wayne/comics/limex" element={<WayneComicLimex />} />
         <Route path="wayne/comics/bremmiller" element={<WayneComicBremmiller />} />
         <Route path="wayne/comics/nutrix" element={<WayneComicNutrix />} />
+        <Route path="wayne/comics/recycap" element={<WayneComicRecyCap />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
