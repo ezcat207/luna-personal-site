@@ -5,6 +5,16 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comics = [
   {
+    title: "Luna & Wayne: Japan Trip",
+    desc: "A beautiful chibi storybook journey through Japan! Follow Luna the rabbit and Wayne the cat as they fly to Tokyo, explore the bustling Shibuya Scramble Crossing, eat warm ramen, visit Senso-ji Temple, ride the Shinkansen, get separated at a lively Matsuri festival, and reunite under the Mt. Fuji sunset at Tokyo Skytree.",
+    link: "/luna/comics/japan",
+    cover: "/images/comics/japan/cover.jpg",
+    tag: "Japan Travel",
+    tagColor: "bg-red-100 text-red-700",
+    date: "June 2026",
+    panels: 4,
+  },
+  {
     title: "Startup Stories #5: The Robot That Can Tell Fake Rice from Real Rice",
     desc: "In Thailand, millions of farmers sell rice — but some sneaky sellers mix cheap rice in with expensive jasmine rice! A startup called EasyRice built an AI camera that checks 10 million grains of rice per minute so every farmer gets paid fairly.",
     link: "/luna/comics/easy-rice",

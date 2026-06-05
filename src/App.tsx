@@ -72,6 +72,7 @@ import LunaComicEasyRice from './pages/luna/LunaComicEasyRice';
 import LunaComicAmpd from './pages/luna/LunaComicAmpd';
 import LunaComicAbridge from './pages/luna/LunaComicAbridge';
 import LunaComicIAmGrounded from './pages/luna/LunaComicIAmGrounded';
+import LunaComicJapan from './pages/luna/LunaComicJapan';
 import LunaComics from './pages/luna/LunaComics';
 
 // Legacy pages
@@ -176,6 +177,7 @@ function AppRoutes() {
           <Route path="luna/comics/ampd" element={<LunaComicAmpd />} />
           <Route path="luna/comics/abridge" element={<LunaComicAbridge />} />
           <Route path="luna/comics/i-am-grounded" element={<LunaComicIAmGrounded />} />
+          <Route path="luna/comics/japan" element={<LunaComicJapan />} />
           {/* Legacy paths — keep alive */}
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
@@ -223,6 +225,7 @@ function AppRoutes() {
         <Route path="luna/comics/ampd" element={<LunaComicAmpd />} />
         <Route path="luna/comics/abridge" element={<LunaComicAbridge />} />
         <Route path="luna/comics/i-am-grounded" element={<LunaComicIAmGrounded />} />
+        <Route path="luna/comics/japan" element={<LunaComicJapan />} />
         <Route path="roadmap" element={<Roadmap />} />
         <Route path="blog/superlinear" element={<Superlinear />} />
         <Route path="blog/strategic-radar" element={<StrategicRadar />} />
