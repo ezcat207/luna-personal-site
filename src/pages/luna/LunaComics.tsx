@@ -1,9 +1,20 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Search, X } from 'lucide-react';
+import { useState } from 'react';
 import { SEOHead } from '../../components/SEOHead';
 
 const comics = [
+  {
+    title: "Luna & Wayne: Japan Trip",
+    desc: "A beautiful chibi storybook journey through Japan! Follow Luna the rabbit and Wayne the cat as they fly to Tokyo, explore the bustling Shibuya Scramble Crossing, eat warm ramen, visit Senso-ji Temple, ride the Shinkansen, get separated at a lively Matsuri festival, and reunite under the Mt. Fuji sunset at Tokyo Skytree.",
+    link: "/luna/comics/japan",
+    cover: "/images/comics/japan/cover.jpg",
+    tag: "Japan Travel",
+    tagColor: "bg-red-100 text-red-700",
+    date: "June 2026",
+    panels: 4,
+  },
   {
     title: "Startup Stories #5: The Robot That Can Tell Fake Rice from Real Rice",
     desc: "In Thailand, millions of farmers sell rice — but some sneaky sellers mix cheap rice in with expensive jasmine rice! A startup called EasyRice built an AI camera that checks 10 million grains of rice per minute so every farmer gets paid fairly.",
@@ -147,6 +158,14 @@ const comics = [
 ];
 
 export default function LunaComics() {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredComics = comics.filter(c => 
+    c.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    c.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    c.tag.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <SEOHead
@@ -178,58 +197,110 @@ export default function LunaComics() {
           </div>
         </motion.div>
 
-        {/* Back Link */}
-        <div className="flex justify-start">
+        {/* Back Link & Search Bar */}
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
           <Link
             to="/luna"
-            className="text-sm text-pink-500 hover:text-pink-600 font-bold flex items-center gap-1 transition-colors"
+            className="text-sm text-pink-500 hover:text-pink-600 font-bold flex items-center gap-1 transition-colors self-start sm:self-center"
           >
             ← Back to Journey
           </Link>
+          
+          <div className="w-full sm:max-w-md relative flex items-center">
+            <Search className="absolute left-4 w-4 h-4 text-slate-400 pointer-events-none" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search comics by title, tag, or description..."
+              className="w-full pl-10 pr-10 py-2.5 bg-white border-2 border-pink-100 rounded-2xl focus:border-pink-300 focus:outline-none text-slate-700 placeholder-slate-400 transition-colors shadow-sm text-sm"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 p-1 rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
+                title="Clear search"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
         </div>
 
-        {/* Comics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {comics.map((c, i) => (
+        {/* Empty State & Comics Grid */}
+        <AnimatePresence mode="wait">
+          {filteredComics.length === 0 && (
             <motion.div
-              key={c.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -4 }}
-              className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden hover:border-pink-300 hover:shadow-md transition-all flex flex-col h-full"
+              key="empty"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="text-center py-16 bg-white border-2 border-dashed border-pink-100 rounded-3xl shadow-sm w-full"
             >
-              <Link to={c.link} className="flex flex-col h-full">
-                <div className="aspect-[16/9] overflow-hidden bg-pink-50 border-b border-pink-100">
-                  <img
-                    src={c.cover}
-                    alt={c.title}
-                    className="w-full h-full object-cover hover:scale-103 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2.5 py-1 text-xs font-bold rounded-full ${c.tagColor}`}>
-                      {c.tag}
-                    </span>
-                    <span className="text-xs text-slate-400">{c.date}</span>
-                    <span className="text-xs text-slate-400">· {c.panels} {c.panels === 1 ? 'strip' : 'strips'}</span>
-                  </div>
-                  <h3 className="font-bold text-xl text-slate-900 mb-2 hover:text-pink-600 transition-colors">
-                    {c.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">
-                    {c.desc}
-                  </p>
-                  <span className="text-pink-500 text-sm font-semibold flex items-center gap-1 mt-auto">
-                    Read the Comic Book →
-                  </span>
-                </div>
-              </Link>
+              <span className="text-4xl mb-4 inline-block">🔍</span>
+              <p className="text-slate-700 text-lg font-bold mb-1">No comics match your search</p>
+              <p className="text-slate-400 text-sm max-w-sm mx-auto leading-relaxed px-4">
+                We couldn't find any results for "{searchQuery}". Try searching for destinations like "Paris", "Japan", or "Seattle".
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="mt-5 inline-flex items-center justify-center bg-pink-100 text-pink-600 hover:bg-pink-200 transition-colors font-bold text-xs px-5 py-2.5 rounded-xl shadow-sm"
+              >
+                Clear Search Query
+              </button>
             </motion.div>
-          ))}
-        </div>
+          )}
+
+          {filteredComics.length > 0 && (
+            <motion.div
+              key="grid"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+              {filteredComics.map((c, i) => (
+                <motion.div
+                  key={c.title}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  whileHover={{ y: -4 }}
+                  className="bg-white border-2 border-pink-100 rounded-3xl overflow-hidden hover:border-pink-300 hover:shadow-md transition-all flex flex-col h-full"
+                >
+                  <Link to={c.link} className="flex flex-col h-full">
+                    <div className="aspect-[16/9] overflow-hidden bg-pink-50 border-b border-pink-100">
+                      <img
+                        src={c.cover}
+                        alt={c.title}
+                        className="w-full h-full object-cover hover:scale-103 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className={`px-2.5 py-1 text-xs font-bold rounded-full ${c.tagColor}`}>
+                          {c.tag}
+                        </span>
+                        <span className="text-xs text-slate-400">{c.date}</span>
+                        <span className="text-xs text-slate-400">· {c.panels} {c.panels === 1 ? 'strip' : 'strips'}</span>
+                      </div>
+                      <h3 className="font-bold text-xl text-slate-900 mb-2 hover:text-pink-600 transition-colors">
+                        {c.title}
+                      </h3>
+                      <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">
+                        {c.desc}
+                      </p>
+                      <span className="text-pink-500 text-sm font-semibold flex items-center gap-1 mt-auto">
+                        Read the Comic Book →
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Bottom CTA */}
         <motion.div
