@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { getLunaWeekByNumber } from '../../data/lunaWeeks';
 import { LunaEntrySEO } from '../../components/SEOHead';
+import { CommentSection } from '../../components/CommentSection';
 
 const Section = ({ emoji, label, children, delay = 0, className = '' }: {
   emoji: string;
@@ -149,6 +150,7 @@ const LunaEntry = () => {
           </Link>
         )}
       </div>
+      <CommentSection />
     </div>
   );
 };

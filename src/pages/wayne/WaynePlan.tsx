@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
 import { getWayneWeekByNumber, wayneWeeks } from '../../data/wayneWeeks';
+import { CommentSection } from '../../components/CommentSection';
 import { WaynePlanSEO } from '../../components/SEOHead';
 
 const lunaSubdomain = import.meta.env.PROD
@@ -155,6 +156,7 @@ const WaynePlan = () => {
           )}
         </div>
       </div>
+      <CommentSection />
     </div>
   );
 };

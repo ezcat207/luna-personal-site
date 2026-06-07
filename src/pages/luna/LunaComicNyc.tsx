@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, MapPin, Sparkles } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 // ── Reusable sub-components (Luna's Premium Aesthetics) ────────────────
 
@@ -445,6 +446,7 @@ export default function LunaComicNyc() {
           </a>
         </div>
       </motion.div>
+      <CommentSection />
     </>
   );
 }

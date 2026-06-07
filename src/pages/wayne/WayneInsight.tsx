@@ -1,9 +1,10 @@
-import { useParams, Link } from 'react-router';
+import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { getWayneInsightById } from '../../data/wayneInsights';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
 import { PdfViewer } from '../../components/PdfViewer';
+import { CommentSection } from '../../components/CommentSection';
 
 // ── Language toggle ────────────────────────────────────────────────────────────
 
@@ -254,6 +255,7 @@ export default function WayneInsight() {
           )}
         </div>
       </article>
+      <CommentSection />
     </>
   );
 }

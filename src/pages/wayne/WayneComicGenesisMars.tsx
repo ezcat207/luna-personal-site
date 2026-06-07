@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../../components/SEOHead';
 import GenesisMars from '../blog/GenesisMars';
+import { CommentSection } from '../../components/CommentSection';
 
 export default function WayneComicGenesisMars() {
   return (
@@ -22,6 +23,7 @@ export default function WayneComicGenesisMars() {
         </Link>
         <GenesisMars />
       </div>
+      <CommentSection />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Lightbulb, BookOpen, Sparkles } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 function RealProblemBox({ children }: { children: React.ReactNode }) {
   return (
@@ -352,6 +353,7 @@ export default function LunaComicAmpd() {
           </div>
         </motion.div>
       </div>
+      <CommentSection />
     </>
   );
 }

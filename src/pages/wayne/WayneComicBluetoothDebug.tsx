@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, ArrowLeft } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
+import { CommentSection } from '../../components/CommentSection';
 
 // ─── Sub-components ────────────────────────────────────────────────────────
 
@@ -484,6 +485,7 @@ export default function WayneComicBluetoothDebug() {
           </div>
         </motion.div>
       </div>
+      <CommentSection />
     </>
   );
 }

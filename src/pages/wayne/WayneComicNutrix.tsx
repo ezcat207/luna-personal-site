@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 function LessonBox({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -376,6 +377,7 @@ export default function WayneComicNutrix() {
           </Link>
         </div>
       </motion.div>
+      <CommentSection />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Lightbulb, BookOpen, Sparkles } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 // ── Sub-components ────────────────────────────────────────────────────
 
@@ -385,6 +386,7 @@ export default function LunaComicAbridge() {
           </div>
         </motion.div>
       </div>
+      <CommentSection />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 function StorySection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -360,6 +361,7 @@ export default function LunaComicParis() {
           </a>
         </div>
       </motion.div>
+      <CommentSection />
     </>
   );
 }

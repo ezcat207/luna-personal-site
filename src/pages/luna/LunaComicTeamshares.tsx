@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Lightbulb, BookOpen, Sparkles } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 // ── Sub-components ────────────────────────────────────────────────────
 
@@ -386,6 +387,7 @@ export default function LunaComicTeamshares() {
           </div>
         </motion.div>
       </div>
+      <CommentSection />
     </>
   );
 }

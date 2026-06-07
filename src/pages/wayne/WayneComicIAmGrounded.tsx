@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
 import { ShareBar } from '../../components/ShareBar';
+import { CommentSection } from '../../components/CommentSection';
 
 // ── Reusable sub-components ──────────────────────────────────────────
 
@@ -495,6 +496,7 @@ function AboutIAmGrounded() {
           </motion.div>
         )}
       </AnimatePresence>
+      <CommentSection />
     </motion.div>
   );
 }
