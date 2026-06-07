@@ -54,6 +54,7 @@ import WayneComicZwitterCo from './pages/wayne/WayneComicZwitterCo';
 import WayneComicForestMonitor from './pages/wayne/WayneComicForestMonitor';
 import WayneComicPetPharm from './pages/wayne/WayneComicPetPharm';
 import WayneComicRemoteMonitor from './pages/wayne/WayneComicRemoteMonitor';
+import WayneComicBluetoothDebug from './pages/wayne/WayneComicBluetoothDebug';
 
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
@@ -147,6 +148,7 @@ function AppRoutes() {
           <Route path="wayne/comics/forest-monitor" element={<WayneComicForestMonitor />} />
           <Route path="wayne/comics/petpharm" element={<WayneComicPetPharm />} />
           <Route path="wayne/comics/remote-monitor" element={<WayneComicRemoteMonitor />} />
+          <Route path="wayne/comics/bluetooth-debug" element={<WayneComicBluetoothDebug />} />
           <Route path="wayne/tools" element={<WayneTools />} />
           <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
           <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
@@ -284,6 +286,7 @@ function AppRoutes() {
         <Route path="wayne/comics/forest-monitor" element={<WayneComicForestMonitor />} />
         <Route path="wayne/comics/petpharm" element={<WayneComicPetPharm />} />
         <Route path="wayne/comics/remote-monitor" element={<WayneComicRemoteMonitor />} />
+        <Route path="wayne/comics/bluetooth-debug" element={<WayneComicBluetoothDebug />} />
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />

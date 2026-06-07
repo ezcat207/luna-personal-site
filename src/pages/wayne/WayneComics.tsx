@@ -5,6 +5,20 @@ import { SEOHead } from '../../components/SEOHead';
 
 const comicSeries = [
   {
+    id: 'bluetooth-debug',
+    title: "The Case of the Phantom Pause",
+    subtitle: 'Two paths to fixing the same bug. One took all night. The other took an hour.',
+    date: 'June 2026',
+    strips: 6,
+    themes: ['AI Co-Pilot', 'Debugging', 'Windows Bluetooth'],
+    description:
+      "Wayne's Sennheiser earbuds kept pausing YouTube every five seconds. He tried it two ways: alone with Google (registry corrupted, 3+ hours, Discord silent at 4am) and with an AI co-pilot (root cause found in one scan, fixed in under an hour). Six strips. Both paths, side by side. One clear winner.",
+    cover: '/images/comics/bluetooth-debug/cover.jpeg',
+    path: '/wayne/comics/bluetooth-debug',
+    tag: 'Real-Life Tech',
+    tagColor: 'bg-slate-100 text-slate-700',
+  },
+  {
     id: 'remote-monitor',
     title: "Startup Stories #25: Grandma Travels 200km for a 5-Minute Checkup — and That Is the Best Option",
     subtitle: 'B2B telemedicine platform redesigns Thailand\'s public hospital workflows for chronic disease management.',
