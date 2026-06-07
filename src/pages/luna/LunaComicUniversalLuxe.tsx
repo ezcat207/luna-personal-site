@@ -263,6 +263,7 @@ export default function LunaComicUniversalLuxe() {
       <SEOHead
         title="Universal Luxe Adventure | Luna's Journey"
         description="Follow Luna and Wayne's luxurious trip to Universal Studios! A cute 2-strip comic adventure with deluxe travel tips and stories."
+        ogImage="/images/comics/universal/cover.jpg"
       />
 
       {/* Back nav */}

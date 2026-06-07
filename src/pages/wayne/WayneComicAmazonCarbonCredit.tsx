@@ -276,6 +276,7 @@ export default function WayneComicAmazonCarbonCredit() {
       <SEOHead
         title="Startup Stories #12: Belterra — Making the Amazon Rainforest More Profitable Standing Than Cut Down | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 12: Belterra Agroflorestas — the Brazilian company using agroforestry, carbon credits, and blended finance to restore the Amazon while making farmers more money than cattle or soy."
+        ogImage="/images/comics/amazon-carbon-credit/cover.jpg"
       />
 
       <div className="mb-8">

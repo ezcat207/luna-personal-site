@@ -262,6 +262,7 @@ export default function LunaComicEasyRice() {
       <SEOHead
         title="Startup Stories #5: The AI That Can Tell If Your Rice Is Fake — Luna's Comics"
         description="Luna and Wayne discover EasyRice, a Thai startup that uses AI to inspect rice grains and protect farmers from being cheated. 10 million training images, 95% accuracy, 3 minutes per test."
+        ogImage="/images/comics/easyrice/cover.jpg"
       />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">

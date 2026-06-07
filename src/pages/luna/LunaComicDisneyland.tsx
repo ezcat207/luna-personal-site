@@ -266,6 +266,7 @@ export default function LunaComicDisneyland() {
       <SEOHead
         title="Adventure to Disneyland | Luna's Journey"
         description="Follow Luna and Wayne's magical trip to Disneyland! A cute 2-strip comic adventure with travel tips and stories."
+        ogImage="/images/comics/disneyland/cover.jpg"
       />
 
       {/* Back nav */}

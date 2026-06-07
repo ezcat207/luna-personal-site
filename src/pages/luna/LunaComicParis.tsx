@@ -244,6 +244,7 @@ export default function LunaComicParis() {
       <SEOHead
         title="Luna & Wayne's Parisian Adventure | Luna's Journey"
         description="Join Wayne and Luna on their Parisian adventure! A 4-part chibi storybook comic about the Louvre, Montmartre, macarons, and a magical Eiffel Tower reunion."
+        ogImage="/images/comics/paris/cover.jpg"
       />
 
       <div className="mb-8">

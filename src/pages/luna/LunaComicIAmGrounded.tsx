@@ -318,6 +318,7 @@ export default function LunaComicIAmGrounded() {
       <SEOHead
         title="Startup Stories #3: The Energy Bar Made from Trash — Luna's Comics"
         description="Luna and Wayne discover that coffee is actually a fruit — and 80% of it gets thrown away! An Australian startup called I Am Grounded turns that waste into energy bars. A real story about upcycling, farming, and saving the planet."
+        ogImage="/images/comics/i-am-grounded/cover.jpg"
       />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">

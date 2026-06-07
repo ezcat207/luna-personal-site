@@ -275,6 +275,7 @@ export default function WayneComicRecyCap() {
       <SEOHead
         title="Startup Stories #10: RecyCap — The Coffee Capsule Recycling Machine | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 10: RecyCap — the Spanish startup that built an automated machine to recycle coffee capsules, solving the convenience paradox of single-serve coffee waste."
+        ogImage="/images/comics/recycap/cover.jpg"
       />
 
       <div className="mb-8">

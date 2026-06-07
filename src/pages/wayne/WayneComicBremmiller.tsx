@@ -305,6 +305,7 @@ export default function WayneComicBremmiller() {
       <SEOHead
         title="Startup Stories #8: Bremmiller — The Rock Battery That Replaces Fossil Fuel Boilers | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 8: Bremmiller Energy — using crushed volcanic rock to store renewable energy as industrial-grade heat, replacing fossil fuel boilers with a 30-year rock battery."
+        ogImage="/images/comics/bremmiller/cover.jpg"
       />
 
       <div className="mb-8">

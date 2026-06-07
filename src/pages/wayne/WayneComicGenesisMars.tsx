@@ -8,6 +8,7 @@ export default function WayneComicGenesisMars() {
       <SEOHead
         title="Genesis on Mars: Crimson Dawn — Wayne's Comics"
         description="A sci-fi short story: when Earth collapses, Wayne and Luna crash-land on Mars with one eye, broken mechs, and the last seed of human civilization."
+        ogImage="/images/comics/genesis-mars/cover.png"
       />
       <div>
         <Link

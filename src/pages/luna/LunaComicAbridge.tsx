@@ -263,6 +263,7 @@ export default function LunaComicAbridge() {
       <SEOHead
         title="Startup Stories #2: The AI Doctor's Note-Taker — Luna's Comics"
         description="Luna and Wayne discover Abridge AI — a real startup that listens to doctor-patient conversations and writes the medical notes automatically, so doctors can finally look their patients in the eye."
+        ogImage="/images/comics/abridge/cover.jpg"
       />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">

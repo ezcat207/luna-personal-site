@@ -299,6 +299,7 @@ export default function WayneComicGrandCanyon() {
       <SEOHead
         title="Luna & Wayne's Canyon Dreams — Grand Canyon 2024 | Comics"
         description="Three parent-child comic strips from the Grand Canyon — safety, Leave No Trace, and learning to see the ancient and vast. Plus a family travel guide."
+        ogImage="/images/comics/grand-canyon/cover.jpeg"
       />
 
       {/* Back nav */}

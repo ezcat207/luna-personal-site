@@ -317,6 +317,7 @@ export default function LunaComicSeattle() {
       <SEOHead
         title="Luna & Wayne: The Seattle Explorers | Luna's Journey"
         description="Join Wayne and Luna on their road trip to Seattle! An illustrated 4-part Chibi storybook travel comic featuring Pike Place Market, Space Needle reunions, and rain storms."
+        ogImage="/images/comics/seattle/cover.jpg"
       />
 
       {/* Back nav */}

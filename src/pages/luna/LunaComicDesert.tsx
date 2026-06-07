@@ -235,6 +235,7 @@ export default function LunaComicDesert() {
       <SEOHead
         title="Desert Adventure to Joshua Tree | Luna's Journey"
         description="Follow Luna and Wayne's road trip to Joshua Tree National Park! A cute 6-panel comic adventure with safety tips, ranger swearing-in, and stories."
+        ogImage="/images/comics/desert/cover.jpg"
       />
 
       {/* Back nav */}

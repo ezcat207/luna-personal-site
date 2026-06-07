@@ -276,6 +276,7 @@ export default function WayneComicKindDesigns() {
       <SEOHead
         title="Startup Stories #14: Kind Designs — 3D-Printed Living Seawalls | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 14: Kind Designs — 3D-printed Living Seawalls that protect coastlines while growing oyster reefs and attracting fish, priced the same as traditional concrete walls."
+        ogImage="/images/comics/kind-designs/cover.jpg"
       />
 
       <div className="mb-8">

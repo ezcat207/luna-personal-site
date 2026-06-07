@@ -250,6 +250,7 @@ export default function WayneComicTeamshares() {
       <SEOHead
         title="Startup Stories #1: Teamshares — When Workers Become Owners | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 1: Teamshares — what happens when a beloved neighborhood shop's owner retires, and how one company turns employees into owners."
+        ogImage="/images/comics/teamshares/cover.jpg"
       />
 
       {/* Back nav */}

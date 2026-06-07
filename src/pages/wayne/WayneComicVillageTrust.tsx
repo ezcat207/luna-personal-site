@@ -276,6 +276,7 @@ export default function WayneComicVillageTrust() {
       <SEOHead
         title="Startup Stories #20: Frontier Markets — The 'Girlfriend Network' Powering Rural India's E-Commerce | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 20: Frontier Markets — a social enterprise turning rural Indian women into a last-mile sales and delivery network that outperforms Amazon and Flipkart in 800 million underserved villages."
+        ogImage="/images/comics/village-trust/cover.jpg"
       />
 
       <div className="mb-8">

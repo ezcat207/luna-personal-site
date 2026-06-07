@@ -107,6 +107,7 @@ export default function WayneComicBluetoothDebug() {
       <SEOHead
         title="The Case of the Phantom Pause | Wayne's Comics"
         description="A real Bluetooth debugging story. Two paths, side by side. Without AI: 3+ hours, broken registry, alone at 4am. With AI: 1 hour, root cause found, fixed."
+        ogImage="/images/comics/bluetooth-debug/cover.jpeg"
       />
 
       <div className="max-w-3xl mx-auto space-y-12 pb-20">

@@ -277,6 +277,7 @@ export default function WayneComicPaperBattery() {
       <SEOHead
         title="Startup Stories #15: Flint — The Biodegradable Paper Battery | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 15: Flint — a Singapore startup making paper batteries from zinc, manganese, and cellulose that are non-flammable, flexible, fully compostable, and 90% cheaper than lithium-ion."
+        ogImage="/images/comics/paper-battery/cover.jpg"
       />
 
       <div className="mb-8">

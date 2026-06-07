@@ -264,6 +264,7 @@ export default function LunaComicTeamshares() {
       <SEOHead
         title="Startup Stories #1: When Grandpa's Shop Almost Closed — Luna's Comics"
         description="Luna and Wayne discover what happens when a shop owner retires and no one takes over. A real startup called Teamshares has an amazing solution — and it starts with the employees."
+        ogImage="/images/comics/teamshares/cover.jpg"
       />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">

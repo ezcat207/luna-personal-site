@@ -317,6 +317,7 @@ export default function WayneComicLimex() {
       <SEOHead
         title="Startup Stories #7: LIMEX — Paper and Plastic Made from Rocks | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 7: TBM's LIMEX — how a Japanese used car dealer turned crushed limestone into a revolutionary material that replaces both paper and plastic, saving forests, water, and fossil fuels."
+        ogImage="/images/comics/limex/cover.jpg"
       />
 
       <div className="mb-8">

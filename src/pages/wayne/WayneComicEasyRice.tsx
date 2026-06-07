@@ -391,6 +391,7 @@ export default function WayneComicEasyRice() {
       <SEOHead
         title="Startup Stories #5: EasyRice — The AI That Inspects Rice Grain by Grain | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 5: EasyRice — how a Thai founder solved the rice supply chain's billion-dollar trust problem with AI computer vision, and what it teaches about information asymmetry, distribution strategy, and platform building."
+        ogImage="/images/comics/easyrice/cover.jpg"
       />
 
       {/* Back nav */}

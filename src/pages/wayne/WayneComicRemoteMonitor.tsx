@@ -278,6 +278,7 @@ export default function WayneComicRemoteMonitor() {
       <SEOHead
         title="Startup Stories #25: Dietz.Asia — Remote Chronic Disease Management for Thailand's Aging Population | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 25: Dietz.Asia — a B2B telemedicine platform that integrates with Thailand's public hospitals to enable remote monitoring for diabetes, hypertension, and other chronic diseases. 75% less staff workload, 98% patient satisfaction."
+        ogImage="/images/comics/remote-monitor/cover.jpg"
       />
 
       <div className="mb-8">

@@ -297,6 +297,7 @@ export default function WayneComicAmpd() {
       <SEOHead
         title="Startup Stories #4: Ampd Energy — The Giant Battery That Silenced Construction Sites | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 4: Ampd Energy — replacing diesel generators on construction sites with the Enertainer, a smart battery system that is cleaner, quieter, and cheaper to run."
+        ogImage="/images/comics/ampd/cover.jpg"
       />
       <div className="mb-8">
         <Link to="/wayne/comics" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">

@@ -276,6 +276,7 @@ export default function WayneComicEcoPeace() {
       <SEOHead
         title="Startup Stories #19: EcoPeace — The Roomba for Lakes | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 19: EcoPeace — a Korean company that built solar-powered autonomous robots to clean toxic algae from lakes, using a Robot-as-a-Service model that turns water treatment from a cost center into a profit center."
+        ogImage="/images/comics/ecopeace/cover.jpg"
       />
 
       <div className="mb-8">

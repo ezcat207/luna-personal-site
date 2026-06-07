@@ -305,6 +305,7 @@ export default function WayneComicNutrix() {
       <SEOHead
         title="Startup Stories #9: Nutrix — The At-Home Cortisol Sensor | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 9: Nutrix and CortiSense — the first at-home salivary cortisol measurement device that turns workplace stress management from guesswork into data-driven science."
+        ogImage="/images/comics/nutrix/cover.jpg"
       />
 
       <div className="mb-8">

@@ -318,6 +318,7 @@ export default function WayneComicLuxwall() {
       <SEOHead
         title="Startup Stories #6: Luxwall — The Window That Thinks It's a Wall | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 6: Luxwall — how vacuum insulated glass turns the weakest part of every building into its strongest defense against energy waste, backed by Bill Gates and the US Department of Energy."
+        ogImage="/images/comics/luxwall/cover.jpg"
       />
 
       {/* Back nav */}

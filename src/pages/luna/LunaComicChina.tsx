@@ -237,6 +237,7 @@ export default function LunaComicChina() {
       <SEOHead
         title="Adventures in China | Luna's Journey"
         description="Follow Wayne and Luna's grand trip to China! An illustrated 8-panel comic adventure with travel guides, culture tips, and stories."
+        ogImage="/images/comics/china/cover.jpg"
       />
 
       {/* Back nav */}

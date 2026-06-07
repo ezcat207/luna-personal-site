@@ -275,6 +275,7 @@ export default function WayneComicForestMonitor() {
       <SEOHead
         title="Startup Stories #23: Synature — AI That Listens to Forests Like a Billion Bat Ears | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 23: Synature — a Swiss EPFL spin-off that builds solar-powered smart microphones with transformer-based AI to monitor biodiversity, detect illegal logging, and optimize agriculture — all from the sound of the forest."
+        ogImage="/images/comics/forest-monitor/cover.jpg"
       />
 
       <div className="mb-8">

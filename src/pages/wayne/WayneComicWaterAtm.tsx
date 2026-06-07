@@ -276,6 +276,7 @@ export default function WayneComicWaterAtm() {
       <SEOHead
         title="Startup Stories #21: IRIBA Water — Solar Water ATMs That Turn Clean Water into Carbon Credits | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 21: IRIBA Water Group — a 19-year-old Rwandan founder built solar-powered Water ATMs that sell clean water 70% cheaper than bottled, and uses carbon credits to fund free water for the poorest schools."
+        ogImage="/images/comics/wateratm/cover.jpg"
       />
 
       <div className="mb-8">

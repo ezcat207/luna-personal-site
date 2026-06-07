@@ -275,6 +275,7 @@ export default function WayneComicVRBuilding() {
       <SEOHead
         title="Startup Stories #13: Cuby Technologies — Mobile Micro-Factories for Home Construction | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 13: Cuby Technologies — the company putting software-driven micro-factories in shipping containers, bringing factory precision to any construction site with 90% less waste."
+        ogImage="/images/comics/vr-building/cover.jpg"
       />
 
       <div className="mb-8">

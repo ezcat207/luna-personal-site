@@ -276,6 +276,7 @@ export default function WayneComicPharmExpress() {
       <SEOHead
         title="Startup Stories #11: Buymed — Digitizing Pharmacy Supply Chains in Vietnam | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 11: Buymed — the Vietnamese health-tech platform connecting 38,000 pharmacies through a digital B2B marketplace and its own logistics network."
+        ogImage="/images/comics/pharmexpress/cover.jpg"
       />
 
       <div className="mb-8">

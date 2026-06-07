@@ -274,6 +274,7 @@ export default function WayneComicZwitterCo() {
       <SEOHead
         title="Startup Stories #22: ZwitterCo — Non-Stick Membranes That Unlock Industrial Water Recycling | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 22: ZwitterCo — a former whitewater rafting guide turned CEO invented a 'non-stick' filtration membrane that resists fouling from fats, oils, and proteins, turning industrial wastewater from a cost center into a profit center."
+        ogImage="/images/comics/zwitterco/cover.jpg"
       />
 
       <div className="mb-8">

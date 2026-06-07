@@ -254,6 +254,7 @@ export default function WayneComicIAmGrounded() {
       <SEOHead
         title="Startup Stories #3: I Am Grounded — The Energy Bar That Rescues 'Trash' | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 3: I Am Grounded — how an Australian startup turned 20 billion kg of discarded coffee pulp into superfood energy bars, empowering Colombian farmers in the process."
+        ogImage="/images/comics/i-am-grounded/cover.jpg"
       />
 
       {/* Back nav */}

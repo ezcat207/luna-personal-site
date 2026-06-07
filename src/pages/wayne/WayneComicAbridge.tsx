@@ -255,6 +255,7 @@ export default function WayneComicAbridge() {
       <SEOHead
         title="Startup Stories #2: Abridge — The AI Doctor's Note-Taker | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 2: Abridge AI — how a cardiologist's patient story led to an AI that listens to doctor-patient conversations and writes the notes automatically."
+        ogImage="/images/comics/abridge/cover.jpg"
       />
 
       {/* Back nav */}

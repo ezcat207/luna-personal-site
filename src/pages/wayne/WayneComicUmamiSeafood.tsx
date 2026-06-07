@@ -276,6 +276,7 @@ export default function WayneComicUmamiSeafood() {
       <SEOHead
         title="Startup Stories #17: UMAMI Bioworks — Growing Real Fish Meat Without the Fish | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 17: UMAMI Bioworks — a Singapore-based company growing real fish cells in bioreactors, using an 'Intel Inside' model to license their AI-powered CultivateOS platform to food companies."
+        ogImage="/images/comics/umami-seafood/cover.jpg"
       />
 
       <div className="mb-8">

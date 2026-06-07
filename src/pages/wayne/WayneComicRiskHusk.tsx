@@ -275,6 +275,7 @@ export default function WayneComicRiskHusk() {
       <SEOHead
         title="Startup Stories #16: Brisil Technologies — Turning Rice Waste Into Car Tires | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 16: Brisil Technologies — an Indian company turning 2-3 million tons of rice husk ash waste into high-performance silica for the tire industry, cheaper than mining river sand."
+        ogImage="/images/comics/risk-husk/cover.jpg"
       />
 
       <div className="mb-8">

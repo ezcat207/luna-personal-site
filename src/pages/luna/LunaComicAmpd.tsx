@@ -243,6 +243,7 @@ export default function LunaComicAmpd() {
       <SEOHead
         title="Startup Stories #4: The Giant Battery That Silenced Construction Sites — Luna's Comics"
         description="Luna and Wayne discover why construction sites are so noisy and polluting — and meet Ampd Energy, the Hong Kong startup that replaced diesel generators with a giant smart battery called the Enertainer."
+        ogImage="/images/comics/ampd/cover.jpg"
       />
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <Link

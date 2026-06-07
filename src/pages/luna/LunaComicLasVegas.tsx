@@ -235,6 +235,7 @@ export default function LunaComicLasVegas() {
       <SEOHead
         title="Las Vegas Strip Adventure | Luna's Journey"
         description="Follow Wayne and Luna's dazzling trip to Las Vegas! A cute 6-panel comic adventure with travel tips, fountain shows, and magic."
+        ogImage="/images/comics/las-vegas/cover.jpg"
       />
 
       {/* Back nav */}

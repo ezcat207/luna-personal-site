@@ -5,6 +5,8 @@ interface SEOProps {
   title?: string;
   description?: string;
   path?: string;
+  /** Relative path like /images/comics/foo/cover.jpg — auto-prefixed with site origin */
+  ogImage?: string;
 }
 
 const BASE = {
@@ -37,13 +39,16 @@ const BASE = {
   },
 };
 
-export const SEOHead = ({ title, description, path = '' }: SEOProps) => {
+export const SEOHead = ({ title, description, path = '', ogImage }: SEOProps) => {
   const persona = usePersona();
   const cfg = BASE[persona];
 
   const pageTitle = title ? `${title} | ${cfg.siteName}` : cfg.defaultTitle;
   const pageDesc = description ?? cfg.defaultDesc;
   const canonical = `${cfg.origin}${path}`;
+  const resolvedOgImage = ogImage
+    ? ogImage.startsWith('http') ? ogImage : `${cfg.origin}${ogImage}`
+    : cfg.ogImage;
 
   return (
     <Helmet>
@@ -59,7 +64,7 @@ export const SEOHead = ({ title, description, path = '' }: SEOProps) => {
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDesc} />
       <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={cfg.ogImage} />
+      <meta property="og:image" content={resolvedOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
 
@@ -68,7 +73,7 @@ export const SEOHead = ({ title, description, path = '' }: SEOProps) => {
       <meta name="twitter:site" content={cfg.twitterHandle} />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDesc} />
-      <meta name="twitter:image" content={cfg.ogImage} />
+      <meta name="twitter:image" content={resolvedOgImage} />
 
       {/* Crawling */}
       <meta name="robots" content="index, follow" />

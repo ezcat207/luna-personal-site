@@ -317,6 +317,7 @@ export default function LunaComicNyc() {
       <SEOHead
         title="Luna & Wayne's Adventure to New York | Luna's Journey"
         description="Follow Wayne and Luna's grand trip to New York City! An illustrated 4-part Chibi storybook adventure with subway guides, pizza tips, and sightseeing stories."
+        ogImage="/images/comics/nyc/cover.jpg"
       />
 
       {/* Back nav */}

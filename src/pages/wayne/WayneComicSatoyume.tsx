@@ -276,6 +276,7 @@ export default function WayneComicSatoyume() {
       <SEOHead
         title="Startup Stories #18: Satoyume — Turning Japan's Dying Villages Into Hotels | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 18: Satoyume — a Japanese company transforming abandoned rural villages into distributed hotels by redefining empty houses and elderly residents as valuable assets."
+        ogImage="/images/comics/satoyume/cover.jpg"
       />
 
       <div className="mb-8">

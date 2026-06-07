@@ -242,6 +242,7 @@ export default function LunaComicJapan() {
       <SEOHead
         title="Luna & Wayne: Japan Trip | Luna's Journey"
         description="Join Wayne and Luna on their Japanese adventure! A 4-part chibi storybook comic about Tokyo, Shibuya Crossing, ramen, bullet trains, matsuri festivals, and Skytree reunions."
+        ogImage="/images/comics/japan/cover.jpg"
       />
 
       <div className="mb-8">

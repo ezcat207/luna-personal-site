@@ -277,6 +277,7 @@ export default function WayneComicPetPharm() {
       <SEOHead
         title="Startup Stories #24: PetPharm — Turning 6,000 Pharmacies into Pet Medication Retailers | Wayne's Comics"
         description="A parent-child comic series about real startups. Episode 24: PetPharm — a Korean B2B platform that activated 50% of the country's pharmacies to sell pet medication, then became a manufacturer to replace expensive imported drugs with domestic alternatives."
+        ogImage="/images/comics/petpharm/cover.jpg"
       />
 
       <div className="mb-8">
