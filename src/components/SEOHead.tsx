@@ -37,6 +37,14 @@ const BASE = {
     ogImage: 'https://luna.bunnyuniverse.com/og-luna.jpg',
     twitterHandle: '@bunnyuniverse',
   },
+  log: {
+    origin: 'https://log.bunnyuniverse.com',
+    siteName: "Luna's Summer Log",
+    defaultTitle: "Luna's Summer Log 🐰",
+    defaultDesc: "Luna's daily summer study tracker — tasks, time, self-rating, and dad's notes.",
+    ogImage: 'https://log.bunnyuniverse.com/og-luna.jpg',
+    twitterHandle: '@bunnyuniverse',
+  },
 };
 
 export const SEOHead = ({ title, description, path = '', ogImage }: SEOProps) => {

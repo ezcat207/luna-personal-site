@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { usePersona } from './hooks/usePersona';
 import Layout from './layouts/Layout';
 import WayneLayout from './layouts/WayneLayout';
+import LogLayout from './layouts/LogLayout';
+import LogHome from './pages/log/LogHome';
 
 // Hub
 import HubHome from './pages/HubHome';
@@ -98,6 +100,16 @@ import Roadmap from './pages/Roadmap';
 
 function AppRoutes() {
   const persona = usePersona();
+
+  if (persona === 'log') {
+    return (
+      <Routes>
+        <Route path="/" element={<LogLayout />}>
+          <Route index element={<LogHome />} />
+        </Route>
+      </Routes>
+    );
+  }
 
   if (persona === 'wayne') {
     return (
@@ -242,6 +254,9 @@ function AppRoutes() {
         <Route path="blog/gemini-canvas" element={<GeminiCanvas />} />
         <Route path="blog/notebooklm" element={<NotebookLM />} />
         <Route path="blog/superlinear-start" element={<SuperlinearStart />} />
+      </Route>
+      <Route path="/" element={<LogLayout />}>
+        <Route path="log" element={<LogHome />} />
       </Route>
       <Route path="/" element={<WayneLayout />}>
         <Route path="wayne" element={<WayneHome />} />
