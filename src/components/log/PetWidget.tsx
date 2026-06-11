@@ -169,7 +169,6 @@ function checkDayRollover(onDrop: () => void): PetScore {
 // ─── Main Widget ──────────────────────────────────────────────────────────────
 
 export function PetWidget({ tasks, ctfUnlocked, lang, size = 'normal' }: PetWidgetProps) {
-  const [storedScore,  setStoredScore]  = useState<PetScore>(2);
   const [showAngry,    setShowAngry]    = useState(false);
   const [justLevelUp,  setJustLevelUp]  = useState(false);
   const prevDisplayRef = useRef<PetScore>(2);
@@ -182,7 +181,7 @@ export function PetWidget({ tasks, ctfUnlocked, lang, size = 'normal' }: PetWidg
       if (angryTimer.current) clearTimeout(angryTimer.current);
       angryTimer.current = setTimeout(() => setShowAngry(false), 1600);
     });
-    setStoredScore(score);
+    void score; // score still saved to localStorage via checkDayRollover; not needed in state
     return () => { if (angryTimer.current) clearTimeout(angryTimer.current); };
   }, []);
 
@@ -190,14 +189,15 @@ export function PetWidget({ tasks, ctfUnlocked, lang, size = 'normal' }: PetWidg
   const displayScore: PetScore = (() => {
     const done  = tasks.filter(t => t.status === 'done').length;
     const total = tasks.length;
-    if (total === 0) return storedScore;
+    // No tasks added yet → score 1 (hungry bunny waiting for work)
+    if (total === 0) return 1;
 
     const rate = done / total;
     let base: number;
-    if (rate === 1)      base = 3;
-    else if (rate >= 0.5) base = 2;
-    else if (rate > 0)   base = 1;
-    else                 base = Math.max(0, storedScore - 1);
+    if (rate === 1)       base = 3;  // 100% done
+    else if (rate >= 0.5) base = 2;  // ≥50% done
+    else if (rate > 0)    base = 1;  // some done
+    else                  base = 0;  // tasks exist but 0% done → sad
 
     if (ctfUnlocked) base = Math.min(3, base + 1);
     return Math.max(0, Math.min(3, base)) as PetScore;
@@ -223,8 +223,14 @@ export function PetWidget({ tasks, ctfUnlocked, lang, size = 'normal' }: PetWidg
 
   const cfg = STATE_CFG[showAngry ? 0 : displayScore];
   const imgSrc = showAngry ? '/lunaimage/bunny_angry.jpeg' : cfg.img;
-  const label  = lang === 'zh' ? (showAngry ? '😤 哎呀！' : cfg.labelZh)
-                               : (showAngry ? '😤 Oh no!' : cfg.labelEn);
+
+  // Use waiting label when no tasks have been added yet (score is 1 but reason is different)
+  const noTasks = tasks.length === 0;
+  const label = showAngry
+    ? (lang === 'zh' ? '😤 哎呀！' : '😤 Oh no!')
+    : noTasks
+      ? (lang === 'zh' ? '🥕 快来添加任务吧！' : '🥕 Add tasks to start!')
+      : (lang === 'zh' ? cfg.labelZh : cfg.labelEn);
 
   // Animation variants per score — typed explicitly to satisfy Framer Motion's TargetAndTransition
   const bunnyVariants: Record<PetScore, TargetAndTransition> = {
