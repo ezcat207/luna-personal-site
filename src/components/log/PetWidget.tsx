@@ -12,8 +12,8 @@ interface PetWidgetProps {
   tasks: Task[];
   ctfUnlocked: boolean;
   lang: string;
-  /** compact = horizontal strip inside card; normal = standalone vertical widget */
-  size?: 'compact' | 'normal';
+  /** compact = horizontal strip; normal = vertical widget; hero = large centered display */
+  size?: 'compact' | 'normal' | 'hero';
 }
 
 // ─── Config ───────────────────────────────────────────────────────────────────
@@ -298,6 +298,60 @@ export function PetWidget({ tasks, ctfUnlocked, lang, size = 'normal' }: PetWidg
             </div>
           )}
         </div>
+      </div>
+    );
+  }
+
+  // ── Hero (large centered, used in collapsed form view) ────────────────────
+  if (size === 'hero') {
+    return (
+      <div className={`relative flex flex-col items-center py-6 w-full bg-gradient-to-b ${cfg.bgFrom} ${cfg.bgTo} select-none overflow-hidden`}>
+        {/* Level-up flash */}
+        <AnimatePresence>
+          {justLevelUp && (
+            <motion.div className="absolute inset-0 bg-yellow-100 z-10 pointer-events-none"
+              initial={{ opacity: 0.8 }} animate={{ opacity: 0 }} exit={{ opacity: 0 }}
+              transition={{ duration: 0.7 }} />
+          )}
+        </AnimatePresence>
+
+        {/* Particles — more, all active */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {particles.map((p, i) => (
+            <Particle key={`hero-${displayScore}-${i}`} emoji={p} index={i} />
+          ))}
+        </div>
+
+        {/* Big bunny */}
+        <div className="relative z-10">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={imgSrc}
+              src={imgSrc}
+              alt="Bunny pet"
+              className="w-40 h-40 object-contain drop-shadow-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1, ...(variant as object) } as TargetAndTransition}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ opacity: { duration: 0.35 }, scale: { duration: 0.35 } }}
+            />
+          </AnimatePresence>
+        </div>
+
+        {/* Hearts — bigger */}
+        <div className="flex gap-1 justify-center mt-2 relative z-10">
+          {[0, 1, 2].map(i => (
+            <motion.span key={i}
+              className={`text-xl transition-all duration-500 ${i < (showAngry ? 0 : displayScore) ? cfg.heartColor : 'text-slate-200'}`}
+              animate={i < (showAngry ? 0 : displayScore) ? { scale: [1, 1.4, 1] } : {}}
+              transition={{ delay: i * 0.15, duration: 0.4 }}>
+              {i < (showAngry ? 0 : displayScore) ? '♥' : '♡'}
+            </motion.span>
+          ))}
+        </div>
+
+        {/* Label */}
+        <p className="mt-2 text-sm font-bold text-slate-600 relative z-10">{label}</p>
       </div>
     );
   }

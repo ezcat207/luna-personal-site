@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../../lib/supabase';
 import { PetWidget } from '../../components/log/PetWidget';
@@ -399,6 +399,22 @@ export default function LogHome() {
   // Encouragement chips shown in the dad's comment section
   const [encouragements, setEncouragements] = useState<string[]>(() => pickRandom(ENCOURAGEMENTS, 6));
 
+  // ── Collapse / expand form ──
+  // Default is collapsed (bunny hero view). User can toggle; setting persists in localStorage.
+  const [formCollapsed,     setFormCollapsed]     = useState<boolean>(() => {
+    return localStorage.getItem('log-form-default') !== 'expanded';
+  });
+  const [showFormSettings,  setShowFormSettings]  = useState(false);
+
+  function toggleCollapse() {
+    setFormCollapsed(v => !v);
+    setShowFormSettings(false);
+  }
+  function saveDefaultMode(mode: 'collapsed' | 'expanded') {
+    localStorage.setItem('log-form-default', mode);
+    setShowFormSettings(false);
+  }
+
   // Initialise language: log page defaults to English unless user has saved a log-specific pref
   useEffect(() => {
     const saved = localStorage.getItem('log-lang');
@@ -688,14 +704,96 @@ export default function LogHome() {
               <p className="text-pink-100 text-[10px] mt-0.5">{formatDateFull(currentDate, lang)}</p>
             </div>
             <div className="flex gap-2 items-center">
+              {/* Weather */}
               {(['sunny', 'cloudy', 'rainy'] as const).map(w => (
                 <button key={w} onClick={() => updateLog({ weather: w })}
                   className={`text-lg transition-all ${log.weather === w ? 'scale-125' : 'opacity-40 hover:opacity-70'}`}>
                   {w === 'sunny' ? '☀️' : w === 'cloudy' ? '☁️' : '🌧️'}
                 </button>
               ))}
+              {/* Settings popover anchor */}
+              <div className="relative">
+                <button onClick={() => setShowFormSettings(v => !v)}
+                  className="text-white/70 hover:text-white text-base transition-all leading-none px-0.5"
+                  title={lang === 'zh' ? '设置' : 'Settings'}>
+                  ⚙️
+                </button>
+                <AnimatePresence>
+                  {showFormSettings && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -4, scale: 0.95 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute right-0 top-7 z-50 bg-white rounded-xl shadow-lg border border-slate-100 p-2 w-44 text-xs">
+                      <p className="text-slate-400 font-bold px-1 pb-1 border-b border-slate-100 mb-1">
+                        {lang === 'zh' ? '默认展示方式' : 'Default view'}
+                      </p>
+                      {(['collapsed', 'expanded'] as const).map(mode => (
+                        <button key={mode} onClick={() => saveDefaultMode(mode)}
+                          className={`w-full text-left px-2 py-1.5 rounded-lg transition-all flex items-center gap-2 ${
+                            localStorage.getItem('log-form-default') === mode ||
+                            (mode === 'collapsed' && !localStorage.getItem('log-form-default'))
+                              ? 'bg-pink-50 text-pink-600 font-bold'
+                              : 'text-slate-600 hover:bg-slate-50'}`}>
+                          <span>{mode === 'collapsed' ? '🐰' : '📋'}</span>
+                          {mode === 'collapsed'
+                            ? (lang === 'zh' ? '默认折叠（兔兔优先）' : 'Default: bunny view')
+                            : (lang === 'zh' ? '默认展开（表格优先）' : 'Default: form view')}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              {/* Collapse / expand toggle */}
+              <button onClick={toggleCollapse}
+                className="text-white/80 hover:text-white text-base transition-all leading-none px-0.5"
+                title={formCollapsed ? (lang === 'zh' ? '展开表格' : 'Show form') : (lang === 'zh' ? '收起表格' : 'Collapse form')}>
+                {formCollapsed ? '📋' : '🔼'}
+              </button>
             </div>
           </div>
+
+          {/* ── Collapsed hero view (bunny takes center stage) ── */}
+          <AnimatePresence initial={false}>
+            {formCollapsed && (
+              <motion.div
+                key="hero"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.35, ease: 'easeInOut' }}
+                style={{ overflow: 'hidden' }}>
+                <PetWidget tasks={tasks} ctfUnlocked={ctfStatus === 'unlocked'} lang={lang} size="hero" />
+                {/* Quick stats + expand CTA */}
+                <div className="px-4 py-3 flex flex-col items-center gap-2 bg-white">
+                  {totalTasks > 0 && (
+                    <div className="text-xs text-slate-400">
+                      <span className="font-bold text-pink-500">{doneTasks}</span>
+                      <span> / {totalTasks} </span>
+                      <span>{lang === 'zh' ? '任务完成' : 'tasks done'}</span>
+                    </div>
+                  )}
+                  <button onClick={toggleCollapse}
+                    className="w-full max-w-xs py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-sm font-bold transition-all shadow-sm active:scale-95">
+                    📋 {lang === 'zh' ? '展开填写' : 'Fill in tasks'}
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* ── Expanded form body ── */}
+          <AnimatePresence initial={false}>
+            {!formCollapsed && (
+              <motion.div
+                key="form"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.35, ease: 'easeInOut' }}
+                style={{ overflow: 'hidden' }}>
 
           {/* ── Pet Widget strip ── */}
           {isToday && (
@@ -910,6 +1008,10 @@ export default function LogHome() {
               {syncStatus === 'saving' ? t('log.auto_saving') : t('log.auto_saved')}
             </span>
           </div>
+
+              </motion.div>
+            )}
+          </AnimatePresence>
 
         </motion.div>
       )}
