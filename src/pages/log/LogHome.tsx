@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../../lib/supabase';
+import { PetWidget } from '../../components/log/PetWidget';
 
 // ─── Encouragement Phrases (100 entries, for dad's comment section) ───────────
 
@@ -695,6 +696,13 @@ export default function LogHome() {
               ))}
             </div>
           </div>
+
+          {/* ── Pet Widget strip ── */}
+          {isToday && (
+            <div className="px-3 py-2 border-b border-pink-100">
+              <PetWidget tasks={tasks} ctfUnlocked={ctfStatus === 'unlocked'} lang={lang} size="compact" />
+            </div>
+          )}
 
           {/* ── Signature row ── */}
           <div className="px-3 py-1.5 bg-amber-50/40 border-b border-amber-100 flex items-center justify-between text-[11px] text-slate-400">
