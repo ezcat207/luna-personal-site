@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, MessageCircle, Send, ChevronDown, ChevronUp } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { usePersona } from '../hooks/usePersona';
+import { useAuth } from '../hooks/useAuth';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -70,6 +71,7 @@ export function CommentSection() {
   const pageId = pathname;
   const persona = usePersona();
   const isWayne = persona === 'wayne';
+  const { user } = useAuth();
 
   // Theming
   const accentBorder  = isWayne ? 'border-indigo-200' : 'border-pink-200';
@@ -97,15 +99,18 @@ export function CommentSection() {
   const [justPosted,      setJustPosted]      = useState(false);
   const [formError,       setFormError]       = useState('');
 
-  // ── On mount ──
+  // ── On mount / user change: prefer Google auth over localStorage ──
   useEffect(() => {
-    const storedEmail = localStorage.getItem(EMAIL_KEY) ?? '';
-    const storedName  = localStorage.getItem(NAME_KEY)  ?? '';
+    const authEmail = user?.email ?? '';
+    const authName  = (user?.user_metadata?.full_name as string | undefined) ?? '';
+    const storedEmail = authEmail || (localStorage.getItem(EMAIL_KEY) ?? '');
+    const storedName  = authName  || (localStorage.getItem(NAME_KEY)  ?? '');
     setCEmail(storedEmail);
     setCName(storedName);
     setLikeEmailInput(storedEmail);
     loadLikes(storedEmail);
-  }, [pageId]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pageId, user?.email]);
 
   async function loadLikes(storedEmail: string) {
     if (!supabase) return;
@@ -161,6 +166,8 @@ export function CommentSection() {
   }
 
   function handleLikeClick() {
+    // If signed in with Google, use their email directly — no prompt needed
+    if (user?.email) { toggleLike(user.email); return; }
     const stored = localStorage.getItem(EMAIL_KEY);
     if (stored) { toggleLike(stored); return; }
     setShowLikeInput(v => !v);
@@ -331,23 +338,37 @@ export function CommentSection() {
                 Leave a comment
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <input
-                  type="email"
-                  required
-                  value={cEmail}
-                  onChange={e => setCEmail(e.target.value)}
-                  placeholder="Email (required)"
-                  className="text-sm border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:border-slate-400 placeholder-slate-400 w-full"
-                />
-                <input
-                  type="text"
-                  value={cName}
-                  onChange={e => setCName(e.target.value)}
-                  placeholder={cEmail ? `Name (or: ${emailPrefix(cEmail)})` : 'Name (optional)'}
-                  className="text-sm border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:border-slate-400 placeholder-slate-400 w-full"
-                />
-              </div>
+              {/* Email + name — hidden when signed in with Google */}
+              {user ? (
+                <div className={`flex items-center gap-2.5 px-3 py-2 rounded-xl border ${accentBorder} ${accentBg}`}>
+                  {user.user_metadata?.avatar_url && (
+                    <img src={user.user_metadata.avatar_url as string} alt="" className="w-7 h-7 rounded-full" referrerPolicy="no-referrer" />
+                  )}
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold text-slate-700 truncate">{cName || emailPrefix(cEmail)}</p>
+                    <p className="text-[10px] text-slate-400 truncate">{cEmail}</p>
+                  </div>
+                  <span className="ml-auto text-[10px] text-slate-400">via Google</span>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <input
+                    type="email"
+                    required
+                    value={cEmail}
+                    onChange={e => setCEmail(e.target.value)}
+                    placeholder="Email (required)"
+                    className="text-sm border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:border-slate-400 placeholder-slate-400 w-full"
+                  />
+                  <input
+                    type="text"
+                    value={cName}
+                    onChange={e => setCName(e.target.value)}
+                    placeholder={cEmail ? `Name (or: ${emailPrefix(cEmail)})` : 'Name (optional)'}
+                    className="text-sm border border-slate-200 rounded-xl px-3 py-2 focus:outline-none focus:border-slate-400 placeholder-slate-400 w-full"
+                  />
+                </div>
+              )}
 
               <textarea
                 required

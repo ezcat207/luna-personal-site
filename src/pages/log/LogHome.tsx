@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../../lib/supabase';
 import { PetWidget } from '../../components/log/PetWidget';
+import { AuthButton } from '../../components/AuthButton';
+import { useAuth } from '../../hooks/useAuth';
 
 // ─── Encouragement Phrases (100 entries, for dad's comment section) ───────────
 
@@ -172,6 +174,8 @@ interface DailyLog {
   self_handwriting: number;
   luna_notes: string | null;
   dad_comment: string | null;
+  user_id: string | null;
+  is_public: boolean;
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -372,6 +376,7 @@ export default function LogHome() {
   const { t, i18n } = useTranslation();
   const today = todayStr();
   const lang  = i18n.language;
+  const { user, authLoading } = useAuth();
 
   const [currentDate, setCurrentDate]     = useState(today);
   const [log,         setLog]             = useState<DailyLog | null>(null);
@@ -428,29 +433,35 @@ export default function LogHome() {
     localStorage.setItem('log-lang', next);
   }
 
-  // Load day whenever currentDate changes — also cancel any pending sync first
+  // Load day whenever currentDate OR signed-in user changes
   useEffect(() => {
+    if (authLoading) return;          // wait until we know if user is signed in
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
     setSyncStatus('idle');
     if (!supabase) { setLoading(false); return; }
-    loadDay(currentDate);
+    loadDay(currentDate, user?.id ?? null);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentDate]);
+  }, [currentDate, user?.id, authLoading]);
 
-  async function loadDay(date: string) {
+  async function loadDay(date: string, userId: string | null) {
     if (!supabase) return;
     setLoading(true);
 
-    let { data: logRow } = await supabase
-      .from('luna_daily_logs')
-      .select('*')
-      .eq('log_date', date)
-      .maybeSingle();
+    // Filter by user: signed-in users see only their own logs;
+    // anonymous visitors see the default log (user_id IS NULL = Luna's data).
+    let query = supabase.from('luna_daily_logs').select('*').eq('log_date', date);
+    query = userId ? query.eq('user_id', userId) : query.is('user_id', null);
+
+    let { data: logRow } = await query.maybeSingle();
 
     if (!logRow && date === today) {
+      const insertData: Record<string, unknown> = {
+        log_date: date, template, weather: 'sunny', is_public: true,
+        ...(userId ? { user_id: userId } : {}),
+      };
       const { data: created } = await supabase
         .from('luna_daily_logs')
-        .insert({ log_date: date, template, weather: 'sunny' })
+        .insert(insertData)
         .select()
         .single();
       logRow = created;
@@ -605,6 +616,7 @@ export default function LogHome() {
       self_handwriting: log.self_handwriting,
       luna_notes:       log.luna_notes,
       dad_comment:      log.dad_comment,
+      is_public:        log.is_public ?? true,
       updated_at:       new Date().toISOString(),
     }).eq('id', log.id);
 
@@ -639,7 +651,7 @@ export default function LogHome() {
   return (
     <div className="space-y-3 pb-10">
 
-      {/* ── Top bar: Template Tabs + Lang Switch ── */}
+      {/* ── Top bar: Template Tabs + Lang Switch + Auth ── */}
       <div className="flex items-center gap-2">
         <div className="flex gap-2 overflow-x-auto pb-0.5 flex-1">
           {(Object.keys(TEMPLATES) as TemplateId[]).map(tid => (
@@ -661,7 +673,24 @@ export default function LogHome() {
           className="shrink-0 px-2.5 py-1.5 rounded-full text-xs font-bold border border-slate-200 bg-white text-slate-500 hover:border-pink-300 transition-all whitespace-nowrap">
           {t('log.lang_switch')}
         </button>
+        {/* Google Sign-in / user profile */}
+        <AuthButton
+          lang={lang}
+          isPublic={log?.is_public ?? true}
+          onPrivacyChange={user ? (v) => updateLog({ is_public: v }) : undefined}
+        />
       </div>
+
+      {/* ── Sign-in nudge (only when anonymous) ── */}
+      {!authLoading && !user && (
+        <div className="bg-white/70 border border-pink-100 rounded-xl px-3 py-2 flex items-center justify-between gap-2">
+          <span className="text-[11px] text-slate-500">
+            {lang === 'zh'
+              ? '👀 当前显示的是 Luna 的默认打卡记录'
+              : "👀 Showing Luna's default log — sign in to track your own"}
+          </span>
+        </div>
+      )}
 
       {/* ── Date Navigation ── */}
       <div className="flex items-center justify-between">
@@ -699,9 +728,16 @@ export default function LogHome() {
           <div className="bg-gradient-to-r from-pink-400 via-pink-350 to-pink-300 px-4 py-2.5 flex items-center justify-between">
             <div>
               <p className="text-white font-black text-sm tracking-wide">
-                🐰 Luna {t(`log.templates.${template}.cardTitle`)}
+                🐰 {user ? (user.user_metadata?.given_name ?? user.user_metadata?.full_name?.split(' ')[0] ?? 'My') : 'Luna'} {t(`log.templates.${template}.cardTitle`)}
               </p>
-              <p className="text-pink-100 text-[10px] mt-0.5">{formatDateFull(currentDate, lang)}</p>
+              <p className="text-pink-100 text-[10px] mt-0.5">
+                {formatDateFull(currentDate, lang)}
+                {user && (
+                  <span className="ml-2 opacity-80">
+                    {log?.is_public ? '🌐' : '🔒'}
+                  </span>
+                )}
+              </p>
             </div>
             <div className="flex gap-2 items-center">
               {/* Weather */}
