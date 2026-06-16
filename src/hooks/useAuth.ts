@@ -35,8 +35,9 @@ export function useAuth(): UseAuthReturn {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        // Redirect back to the same page after login
-        redirectTo: window.location.href,
+        // Use origin + pathname only — never include existing hash/query
+        // to avoid double-# in the callback URL
+        redirectTo: window.location.origin + window.location.pathname,
       },
     });
   }
