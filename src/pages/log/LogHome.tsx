@@ -447,10 +447,10 @@ export default function LogHome() {
     if (!supabase) return;
     setLoading(true);
 
-    // Filter by user: signed-in users see only their own logs;
-    // anonymous visitors see the default log (user_id IS NULL = Luna's data).
+    // Signed-in users see only their own logs.
+    // Anonymous visitors see whatever is in the DB for that date (the existing default data).
     let query = supabase.from('luna_daily_logs').select('*').eq('log_date', date);
-    query = userId ? query.eq('user_id', userId) : query.is('user_id', null);
+    if (userId) query = query.eq('user_id', userId);
 
     let { data: logRow } = await query.maybeSingle();
 
@@ -487,10 +487,10 @@ export default function LogHome() {
       setTasks([]);
     }
 
-    // History: last 14 days — scoped to same user as main view
+    // History: last 14 days — scoped to signed-in user, or all existing data for anonymous
     const pastDates = Array.from({ length: 14 }, (_, i) => offsetDate(today, -i));
     let histQuery = supabase.from('luna_daily_logs').select('id, log_date').in('log_date', pastDates);
-    histQuery = userId ? histQuery.eq('user_id', userId) : histQuery.is('user_id', null);
+    if (userId) histQuery = histQuery.eq('user_id', userId);
     const { data: histLogs } = await histQuery;
 
     if (histLogs && histLogs.length > 0) {
