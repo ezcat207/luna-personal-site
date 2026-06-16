@@ -454,12 +454,17 @@ export default function LogHome() {
 
     let { data: logRow } = await query.maybeSingle();
 
-    // Only auto-create a new log for today when the user is signed in.
-    // Anonymous visitors see Luna's existing data read-only — we never create rows for them.
-    if (!logRow && date === today && userId) {
+    // Auto-create today's log if missing.
+    // Anonymous → no user_id (shared default data anyone can edit).
+    // Signed-in → user_id set (their own private log).
+    if (!logRow && date === today) {
+      const insertData: Record<string, unknown> = {
+        log_date: date, template, weather: 'sunny', is_public: true,
+        ...(userId ? { user_id: userId } : {}),
+      };
       const { data: created } = await supabase
         .from('luna_daily_logs')
-        .insert({ log_date: date, template, weather: 'sunny', is_public: true, user_id: userId })
+        .insert(insertData)
         .select()
         .single();
       logRow = created;
@@ -641,8 +646,6 @@ export default function LogHome() {
   const totalEst    = tasks.reduce((s, tk) => s + (tk.est_mins || 0), 0);
   const totalActual = tasks.reduce((s, tk) => s + (tk.actual_mins || 0), 0);
   const isToday     = currentDate === today;
-  // Anonymous visitors see Luna's data in read-only mode
-  const readOnly    = !user;
 
   if (!supabase) return <div className="text-center py-16 text-pink-400">{t('log.no_config')}</div>;
   if (loading)   return <div className="text-center py-16 text-4xl animate-pulse">🐰</div>;
@@ -685,8 +688,8 @@ export default function LogHome() {
         <div className="bg-white/70 border border-pink-100 rounded-xl px-3 py-2 flex items-center justify-between gap-2 flex-wrap">
           <span className="text-[11px] text-slate-500">
             {lang === 'zh'
-              ? "👀 正在查看 Luna 的打卡记录（只读）"
-              : "👀 Viewing Luna's log (read-only)"}
+              ? '✏️ 这是共享打卡本，登录可创建你自己的私人记录'
+              : '✏️ This is the shared log — sign in to keep your own private one'}
           </span>
           <AuthButton lang={lang} variant="nav" />
         </div>
@@ -742,9 +745,8 @@ export default function LogHome() {
             <div className="flex gap-2 items-center">
               {/* Weather */}
               {(['sunny', 'cloudy', 'rainy'] as const).map(w => (
-                <button key={w} onClick={readOnly ? undefined : () => updateLog({ weather: w })}
-                  disabled={readOnly}
-                  className={`text-lg transition-all ${log.weather === w ? 'scale-125' : 'opacity-40'} ${!readOnly ? 'hover:opacity-70' : 'cursor-default'}`}>
+                <button key={w} onClick={() => updateLog({ weather: w })}
+                  className={`text-lg transition-all ${log.weather === w ? 'scale-125' : 'opacity-40 hover:opacity-70'}`}>
                   {w === 'sunny' ? '☀️' : w === 'cloudy' ? '☁️' : '🌧️'}
                 </button>
               ))}
@@ -812,17 +814,10 @@ export default function LogHome() {
                       <span>{lang === 'zh' ? '任务完成' : 'tasks done'}</span>
                     </div>
                   )}
-                  {readOnly ? (
-                    <button onClick={toggleCollapse}
-                      className="w-full max-w-xs py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold transition-all shadow-sm active:scale-95">
-                      👀 {lang === 'zh' ? '查看日志详情' : "View Luna's log"}
-                    </button>
-                  ) : (
-                    <button onClick={toggleCollapse}
-                      className="w-full max-w-xs py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-sm font-bold transition-all shadow-sm active:scale-95">
-                      📋 {lang === 'zh' ? '展开填写' : 'Fill in tasks'}
-                    </button>
-                  )}
+                  <button onClick={toggleCollapse}
+                    className="w-full max-w-xs py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-sm font-bold transition-all shadow-sm active:scale-95">
+                    📋 {lang === 'zh' ? '展开填写' : 'Fill in tasks'}
+                  </button>
                 </div>
               </motion.div>
             )}
@@ -887,15 +882,15 @@ export default function LogHome() {
               key={subj.key}
               subj={subj}
               tasks={tasks.filter(tk => tk.subject === subj.key).sort((a, b) => a.sort_order - b.sort_order)}
-              onAdd={readOnly ? () => {} : () => addTask(subj.key)}
-              onUpdate={readOnly ? () => {} : updateTask}
-              onDelete={readOnly ? () => {} : deleteTask}
-              onToggle={readOnly ? () => {} : toggleStatus}
+              onAdd={() => addTask(subj.key)}
+              onUpdate={updateTask}
+              onDelete={deleteTask}
+              onToggle={toggleStatus}
             />
           ))}
 
-          {/* Add subject (custom only, signed-in only) */}
-          {template === 'custom' && !readOnly && (
+          {/* Add subject (custom only) */}
+          {template === 'custom' && (
             <AddSubjectRow onAdd={addCustomSubject} />
           )}
 
@@ -904,14 +899,14 @@ export default function LogHome() {
             <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[11px] text-slate-500">
               <label className="flex items-center gap-1.5">
                 <span>{t('log.wake')}</span>
-                <input type="time" value={log.wake_time ?? ''} readOnly={readOnly}
-                  onChange={readOnly ? undefined : e => updateLog({ wake_time: e.target.value || null })}
+                <input type="time" value={log.wake_time ?? ''}
+                  onChange={e => updateLog({ wake_time: e.target.value || null })}
                   className="border-b border-dashed border-slate-300 bg-transparent focus:outline-none text-xs flex-1 min-w-0" />
               </label>
               <label className="flex items-center gap-1.5">
                 <span>{t('log.sleep')}</span>
-                <input type="time" value={log.sleep_time ?? ''} readOnly={readOnly}
-                  onChange={readOnly ? undefined : e => updateLog({ sleep_time: e.target.value || null })}
+                <input type="time" value={log.sleep_time ?? ''}
+                  onChange={e => updateLog({ sleep_time: e.target.value || null })}
                   className="border-b border-dashed border-slate-300 bg-transparent focus:outline-none text-xs flex-1 min-w-0" />
               </label>
               {totalEst > 0 && <div>{t('log.est_study', { min: totalEst })}</div>}
@@ -929,11 +924,10 @@ export default function LogHome() {
               {t('log.memo_title')}
             </p>
             <textarea value={log.luna_notes ?? ''}
-              readOnly={readOnly}
-              onChange={readOnly ? undefined : e => updateLog({ luna_notes: e.target.value || null })}
-              placeholder={readOnly ? '' : t('log.memo_ph')}
+              onChange={e => updateLog({ luna_notes: e.target.value || null })}
+              placeholder={t('log.memo_ph')}
               rows={2}
-              className={`w-full text-xs border border-dashed border-amber-200 rounded-lg px-2 py-1.5 focus:outline-none focus:border-pink-300 bg-amber-50/20 resize-none placeholder-slate-300 ${readOnly ? 'cursor-default' : ''}`} />
+              className="w-full text-xs border border-dashed border-amber-200 rounded-lg px-2 py-1.5 focus:outline-none focus:border-pink-300 bg-amber-50/20 resize-none placeholder-slate-300" />
           </div>
 
           {/* ── Self Rating ── */}
@@ -949,7 +943,7 @@ export default function LogHome() {
               ].map(item => (
                 <div key={item.field} className="flex items-center gap-2">
                   <span className="text-xs text-slate-500 w-16 shrink-0">{t(item.labelKey)}</span>
-                  <Stars value={log[item.field]} onChange={readOnly ? undefined : v => updateLog({ [item.field]: v })} />
+                  <Stars value={log[item.field]} onChange={v => updateLog({ [item.field]: v })} />
                 </div>
               ))}
             </div>
