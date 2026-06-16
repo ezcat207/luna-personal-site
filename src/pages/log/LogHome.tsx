@@ -181,7 +181,8 @@ interface DailyLog {
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function todayStr() {
-  return new Date().toISOString().slice(0, 10);
+  // Use Pacific Time so the date matches the US West Coast day
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
 }
 
 function offsetDate(base: string, days: number) {
@@ -454,10 +455,10 @@ export default function LogHome() {
 
     let { data: logRow } = await query.maybeSingle();
 
-    // Auto-create today's log if missing.
+    // Auto-create log if missing for any date (today or history).
     // Anonymous → no user_id (shared default data anyone can edit).
     // Signed-in → user_id set (their own private log).
-    if (!logRow && date === today) {
+    if (!logRow) {
       const insertData: Record<string, unknown> = {
         log_date: date, template, weather: 'sunny', is_public: true,
         ...(userId ? { user_id: userId } : {}),
@@ -685,13 +686,12 @@ export default function LogHome() {
 
       {/* ── Sign-in nudge (only when anonymous) ── */}
       {!authLoading && !user && (
-        <div className="bg-white/70 border border-pink-100 rounded-xl px-3 py-2 flex items-center justify-between gap-2 flex-wrap">
+        <div className="bg-white/70 border border-pink-100 rounded-xl px-3 py-2">
           <span className="text-[11px] text-slate-500">
             {lang === 'zh'
-              ? '✏️ 这是共享打卡本，登录可创建你自己的私人记录'
-              : '✏️ This is the shared log — sign in to keep your own private one'}
+              ? '✏️ 这是共享打卡本，点右上角登录可创建你自己的私人记录'
+              : '✏️ Shared log — sign in (top right) to keep your own private one'}
           </span>
-          <AuthButton lang={lang} variant="nav" />
         </div>
       )}
 
@@ -712,12 +712,6 @@ export default function LogHome() {
         </button>
       </div>
 
-      {/* ── No Record for Past Day ── */}
-      {!log && !isToday && (
-        <div className="bg-white rounded-2xl border border-slate-100 p-10 text-center text-slate-400 text-sm">
-          {t('log.no_record')}
-        </div>
-      )}
 
       {/* ── Paper Form Card ── */}
       {log && (
