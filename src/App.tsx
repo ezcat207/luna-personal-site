@@ -3,10 +3,14 @@ import { usePersona } from './hooks/usePersona';
 import Layout from './layouts/Layout';
 import WayneLayout from './layouts/WayneLayout';
 import LogLayout from './layouts/LogLayout';
+import FutureLayout from './layouts/FutureLayout';
 import LogHome from './pages/log/LogHome';
 
 // Hub
 import HubHome from './pages/HubHome';
+
+// Future section
+import FutureHome from './pages/future/FutureHome';
 
 // Wayne section
 import WayneHome from './pages/wayne/WayneHome';
@@ -61,6 +65,9 @@ import WayneComicBluetoothDebug from './pages/wayne/WayneComicBluetoothDebug';
 // Luna section
 import LunaHome from './pages/luna/LunaHome';
 import LunaEntry from './pages/luna/LunaEntry';
+import DetectiveHome from './pages/luna/DetectiveHome';
+import DetectiveCase from './pages/luna/DetectiveCase';
+import DetectiveStart from './pages/luna/DetectiveStart';
 import LunaComicDisneyland from './pages/luna/LunaComicDisneyland';
 import LunaComicUniversalLuxe from './pages/luna/LunaComicUniversalLuxe';
 import LunaComicDesert from './pages/luna/LunaComicDesert';
@@ -106,6 +113,16 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<LogLayout />}>
           <Route index element={<LogHome />} />
+        </Route>
+      </Routes>
+    );
+  }
+
+  if (persona === 'future') {
+    return (
+      <Routes>
+        <Route path="/" element={<FutureLayout />}>
+          <Route index element={<FutureHome />} />
         </Route>
       </Routes>
     );
@@ -192,6 +209,9 @@ function AppRoutes() {
           <Route path="luna/comics/abridge" element={<LunaComicAbridge />} />
           <Route path="luna/comics/i-am-grounded" element={<LunaComicIAmGrounded />} />
           <Route path="luna/comics/japan" element={<LunaComicJapan />} />
+          <Route path="luna/detective" element={<DetectiveHome />} />
+          <Route path="luna/detective/start" element={<DetectiveStart />} />
+          <Route path="luna/detective/:caseId" element={<DetectiveCase />} />
           {/* Legacy paths — keep alive */}
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="future" element={<Future />} />
@@ -240,6 +260,9 @@ function AppRoutes() {
         <Route path="luna/comics/abridge" element={<LunaComicAbridge />} />
         <Route path="luna/comics/i-am-grounded" element={<LunaComicIAmGrounded />} />
         <Route path="luna/comics/japan" element={<LunaComicJapan />} />
+        <Route path="luna/detective" element={<DetectiveHome />} />
+        <Route path="luna/detective/start" element={<DetectiveStart />} />
+        <Route path="luna/detective/:caseId" element={<DetectiveCase />} />
         <Route path="roadmap" element={<Roadmap />} />
         <Route path="blog/superlinear" element={<Superlinear />} />
         <Route path="blog/strategic-radar" element={<StrategicRadar />} />
@@ -305,6 +328,9 @@ function AppRoutes() {
         <Route path="wayne/tools" element={<WayneTools />} />
         <Route path="wayne/tools/gap-gain" element={<WayneToolGapGain />} />
         <Route path="wayne/tools/must-have" element={<WayneToolMustHave />} />
+      </Route>
+      <Route path="/" element={<FutureLayout />}>
+        <Route path="future" element={<FutureHome />} />
       </Route>
     </Routes>
   );

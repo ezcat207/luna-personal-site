@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Shield } from 'lucide-react';
 import { lunaWeeks } from '../../data/lunaWeeks';
+import { ctfCases } from '../../data/ctfCases';
 import lunaAvatar from '../../assets/luna-avatar.jpg';
 
 const archiveEntries = [
@@ -186,6 +187,34 @@ const LunaHome = () => {
             className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-sm transition-all transform hover:scale-[1.02] shrink-0"
           >
             Explore Comics Library →
+          </Link>
+        </div>
+      </motion.section>
+
+      {/* 🔍 Detective Course Banner */}
+      <motion.section
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="px-4 md:px-0"
+      >
+        <div className="bg-gradient-to-r from-indigo-50 via-slate-50 to-indigo-50 border-2 border-indigo-100 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="flex items-center gap-4 text-left">
+            <div className="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-md shrink-0">
+              <Shield className="w-6 h-6" />
+            </div>
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">CTF 侦探故事集 🔍</h2>
+              <p className="text-slate-500 text-sm mt-1">
+                {ctfCases.filter(c => c.story.crimeScene !== '').length} 个案件已发布 · 读故事 or 亲手破案，你选
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/luna/detective"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-sm transition-all transform hover:scale-[1.02] shrink-0"
+          >
+            进入侦探课程 →
           </Link>
         </div>
       </motion.section>
