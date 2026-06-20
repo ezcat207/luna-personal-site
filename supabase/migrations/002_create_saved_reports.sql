@@ -1,6 +1,6 @@
 -- Create saved reports table for log analysis
 CREATE TABLE IF NOT EXISTS luna_saved_reports (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
   report_name TEXT NOT NULL,
   date_start DATE NOT NULL,
