@@ -5,6 +5,7 @@ import WayneLayout from './layouts/WayneLayout';
 import LogLayout from './layouts/LogLayout';
 import FutureLayout from './layouts/FutureLayout';
 import LogHome from './pages/log/LogHome';
+import LogAnalysis from './pages/log/LogAnalysis';
 
 // Hub
 import HubHome from './pages/HubHome';
@@ -113,6 +114,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<LogLayout />}>
           <Route index element={<LogHome />} />
+          <Route path="analysis" element={<LogAnalysis />} />
         </Route>
       </Routes>
     );

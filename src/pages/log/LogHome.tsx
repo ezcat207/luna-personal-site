@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../../lib/supabase';
@@ -671,6 +672,14 @@ export default function LogHome() {
             </button>
           ))}
         </div>
+        {/* Analysis Link */}
+        <Link
+          to="/analysis"
+          className="shrink-0 px-3 py-1.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all whitespace-nowrap flex items-center gap-1"
+        >
+          <span>📊</span>
+          <span className="hidden sm:inline">Analysis</span>
+        </Link>
         {/* Language toggle */}
         <button onClick={toggleLang}
           className="shrink-0 px-2.5 py-1.5 rounded-full text-xs font-bold border border-slate-200 bg-white text-slate-500 hover:border-pink-300 transition-all whitespace-nowrap">
