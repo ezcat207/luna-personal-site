@@ -33,25 +33,25 @@ export function DateRangePicker({ startDate, endDate, onRangeChange }: DateRange
   const isValid = endDate >= startDate && endDate <= maxDate;
 
   return (
-    <div className="bg-white rounded-xl border border-pink-100 p-4 shadow-sm">
+    <div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
       <div className="flex flex-col md:flex-row gap-3 items-start md:items-center">
         {/* Custom date inputs */}
         <div className="flex items-center gap-2 flex-wrap">
-          <label className="text-xs font-bold text-slate-500">From</label>
+          <label className="text-xs font-semibold text-slate-600">From</label>
           <input
             type="date"
             value={startDate}
             onChange={(e) => onRangeChange(e.target.value, endDate)}
             max={maxDate}
             className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 ${
-              isValid ? 'border-slate-200 focus:ring-pink-300' : 'border-red-400 focus:ring-red-300'
+              isValid ? 'border-slate-300 focus:ring-indigo-300' : 'border-red-400 focus:ring-red-300'
             }`}
           />
 
-          <span className="text-slate-300 hidden sm:inline">─────</span>
-          <span className="text-slate-300 sm:hidden">to</span>
+          <span className="text-slate-300 hidden sm:inline">→</span>
+          <span className="text-slate-300 sm:hidden text-xs">to</span>
 
-          <label className="text-xs font-bold text-slate-500">To</label>
+          <label className="text-xs font-semibold text-slate-600">To</label>
           <input
             type="date"
             value={endDate}
@@ -59,7 +59,7 @@ export function DateRangePicker({ startDate, endDate, onRangeChange }: DateRange
             min={startDate}
             max={maxDate}
             className={`border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 ${
-              isValid ? 'border-slate-200 focus:ring-pink-300' : 'border-red-400 focus:ring-red-300'
+              isValid ? 'border-slate-300 focus:ring-indigo-300' : 'border-red-400 focus:ring-red-300'
             }`}
           />
         </div>
@@ -68,19 +68,19 @@ export function DateRangePicker({ startDate, endDate, onRangeChange }: DateRange
         <div className="flex gap-2 flex-wrap">
           <button
             onClick={setLast7Days}
-            className="px-3 py-1.5 rounded-full text-xs font-bold bg-pink-100 text-pink-600 hover:bg-pink-200 transition-colors"
+            className="px-3 py-1.5 rounded-md text-xs font-semibold bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors"
           >
             Last 7 Days
           </button>
           <button
             onClick={setLast30Days}
-            className="px-3 py-1.5 rounded-full text-xs font-bold bg-pink-100 text-pink-600 hover:bg-pink-200 transition-colors"
+            className="px-3 py-1.5 rounded-md text-xs font-semibold bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors"
           >
             Last 30 Days
           </button>
           <button
             onClick={setThisMonth}
-            className="px-3 py-1.5 rounded-full text-xs font-bold bg-pink-100 text-pink-600 hover:bg-pink-200 transition-colors"
+            className="px-3 py-1.5 rounded-md text-xs font-semibold bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors"
           >
             This Month
           </button>
@@ -89,7 +89,7 @@ export function DateRangePicker({ startDate, endDate, onRangeChange }: DateRange
 
       {/* Validation error */}
       {!isValid && (
-        <div className="mt-2 text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+        <div className="mt-2 text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
           ⚠️ End date must be after start date and not in the future
         </div>
       )}
