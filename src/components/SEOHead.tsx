@@ -45,6 +45,15 @@ const BASE = {
     ogImage: 'https://log.bunnyuniverse.com/og-luna.jpg',
     twitterHandle: '@bunnyuniverse',
   },
+  future: {
+    origin: 'https://future.bunnyuniverse.com',
+    siteName: 'LunaWayne | AI Education',
+    defaultTitle: 'LunaWayne - AI Education for the Future',
+    defaultDesc:
+      'Gamified AI education for teens. Take the AI Age test, explore free tools, and start your learning journey with Quest 0 — always free!',
+    ogImage: 'https://future.bunnyuniverse.com/og-future.png',
+    twitterHandle: '@bunnyuniverse',
+  },
 };
 
 export const SEOHead = ({ title, description, path = '', ogImage }: SEOProps) => {

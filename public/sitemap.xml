@@ -10,5 +10,8 @@
   <sitemap>
     <loc>https://luna.bunnyuniverse.com/sitemap-luna.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://future.bunnyuniverse.com/sitemap-future.xml</loc>
+  </sitemap>
 
 </sitemapindex>
