@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../hooks/useAuth';
 import { useLogAnalysis } from '../../hooks/useLogAnalysis';
 import { useSavedReports } from '../../hooks/useSavedReports';
@@ -100,12 +100,14 @@ function AnalysisTaskRow({ task }: { task: Task }) {
   );
 }
 
-// ─── Subject section row (same structure as LogHome SubjectSection) ──────────
+// ─── Subject section row (collapsible) ──────────────────────────────────────
 function AnalysisSubjectSection({ subject, tasks }: { subject: string; tasks: Task[] }) {
-  const color = getSubjectColor(subject);
-  const done  = tasks.filter(t => t.status === 'done').length;
+  const [expanded, setExpanded] = useState(false);
+  const color       = getSubjectColor(subject);
+  const done        = tasks.filter(t => t.status === 'done').length;
   const totalActual = tasks.reduce((s, t) => s + (t.actual_mins ?? 0), 0);
   const totalEst    = tasks.reduce((s, t) => s + (t.est_mins ?? 0), 0);
+  const totalWrong  = tasks.reduce((s, t) => s + (t.wrong_count ?? 0), 0);
 
   return (
     <div className="flex border-b border-amber-100 last:border-b-0">
@@ -120,21 +122,37 @@ function AnalysisSubjectSection({ subject, tasks }: { subject: string; tasks: Ta
         <span className="text-[8px] text-pink-500 mt-0.5 font-bold">{formatMins(totalActual)}</span>
       </div>
 
-      {/* Task rows */}
+      {/* Right area */}
       <div className="flex-1 min-w-0 px-1">
-        {tasks.map(task => (
-          <AnalysisTaskRow key={task.id} task={task} />
-        ))}
-        {/* Subject totals row */}
+        {/* Individual task rows — only when expanded */}
+        <AnimatePresence initial={false}>
+          {expanded && (
+            <motion.div
+              key="tasks"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              style={{ overflow: 'hidden' }}>
+              {tasks.map(task => (
+                <AnalysisTaskRow key={task.id} task={task} />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Summary / totals row — always visible */}
         <div className="grid items-center gap-0.5 py-1 bg-amber-50/40 text-[9px] font-bold text-slate-500"
           style={{ gridTemplateColumns: ROW_COLS }}>
-          <span className="pl-1 text-slate-400">Total</span>
+          <button
+            onClick={() => setExpanded(v => !v)}
+            className="pl-1 text-left text-pink-500 hover:text-pink-700 transition-colors font-bold">
+            {expanded ? '▲ hide' : '▼ details'}
+          </button>
           <span className="text-center">{done}/{tasks.length}</span>
           <span className="text-center">{totalEst || '—'}</span>
           <span className="text-center text-pink-600">{totalActual || '—'}</span>
-          <span className="text-center text-red-400">
-            {tasks.reduce((s, t) => s + (t.wrong_count ?? 0), 0) || '—'}
-          </span>
+          <span className="text-center text-red-400">{totalWrong || '—'}</span>
         </div>
       </div>
     </div>
