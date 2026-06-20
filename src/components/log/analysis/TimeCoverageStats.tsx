@@ -12,60 +12,60 @@ export function TimeCoverageStats({ stats }: TimeCoverageStatsProps) {
   const coverageDiff = actualCoverage - plannedCoverage;
 
   return (
-    <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <h3 className="text-base font-semibold text-slate-800 mb-4 flex items-center gap-2">
+    <div className="bg-white/90 backdrop-blur-sm rounded-2xl border-2 border-pink-100 p-4 shadow-sm">
+      <h3 className="text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
         <span>⏰ Time Coverage</span>
-        <span className="text-xs text-slate-500 font-normal">
+        <span className="text-[10px] text-slate-500 font-normal">
           ({totalDays} {totalDays === 1 ? 'day' : 'days'})
         </span>
       </h3>
 
-      <div className="space-y-2.5 text-sm text-slate-700">
+      <div className="space-y-1.5 text-xs text-slate-700">
         <div className="flex justify-between">
           <span className="text-slate-600">Total Available:</span>
-          <span className="font-semibold text-slate-800">{formatMins(totalAvailableMins)}</span>
+          <span className="font-bold text-slate-800">{formatMins(totalAvailableMins)}</span>
         </div>
         <div className="flex justify-between">
           <span className="text-blue-600">📊 Planned Time:</span>
-          <span className="font-semibold text-blue-700">{formatMins(totalPlannedMins)} <span className="text-xs">({plannedCoverage.toFixed(1)}%)</span></span>
+          <span className="font-bold text-blue-700">{formatMins(totalPlannedMins)} <span className="text-[10px]">({plannedCoverage.toFixed(1)}%)</span></span>
         </div>
         <div className="flex justify-between">
           <span className="text-green-600">✅ Actual Time:</span>
-          <span className="font-semibold text-green-700">{formatMins(totalActualMins)} <span className="text-xs">({actualCoverage.toFixed(1)}%)</span></span>
+          <span className="font-bold text-green-700">{formatMins(totalActualMins)} <span className="text-[10px]">({actualCoverage.toFixed(1)}%)</span></span>
         </div>
       </div>
 
       {/* Dual progress bar */}
-      <div className="mt-4 relative h-7 bg-slate-100 rounded-lg overflow-hidden">
+      <div className="mt-3 relative h-6 bg-amber-100 rounded-full overflow-hidden">
         {/* Planned time bar (blue, background layer) */}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${Math.min(plannedCoverage, 100)}%` }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
           className="absolute inset-y-0 left-0 bg-blue-300 opacity-60"
         />
         {/* Actual time bar (green, foreground layer) */}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${Math.min(actualCoverage, 100)}%` }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-          className="absolute inset-y-0 left-0 bg-green-500"
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+          className="absolute inset-y-0 left-0 bg-green-400"
         />
         {/* Labels */}
-        <div className="relative h-full flex items-center justify-between px-3 text-xs font-semibold">
-          <span className="text-blue-800">Planned</span>
-          <span className="text-green-800">Actual</span>
+        <div className="relative h-full flex items-center justify-between px-2 text-[10px] font-bold">
+          <span className="text-blue-700">Planned</span>
+          <span className="text-green-700">Actual</span>
         </div>
       </div>
 
       {/* Insight */}
       {coverageDiff < -1 && (
-        <p className="mt-3 text-xs text-amber-700 bg-amber-50 px-3 py-2 rounded">
+        <p className="mt-2 text-[10px] text-amber-700 bg-amber-50 px-2 py-1.5 rounded-lg border border-amber-200">
           ⚠️ You planned {formatMins(totalPlannedMins - totalActualMins)} more than you completed
         </p>
       )}
       {coverageDiff > 1 && (
-        <p className="mt-3 text-xs text-green-700 bg-green-50 px-3 py-2 rounded">
+        <p className="mt-2 text-[10px] text-green-700 bg-green-50 px-2 py-1.5 rounded-lg border border-green-200">
           🎉 Great job! You exceeded your plan by {formatMins(totalActualMins - totalPlannedMins)}
         </p>
       )}

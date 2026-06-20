@@ -91,24 +91,26 @@ export default function LogAnalysis() {
   const doneTasks = subjects.reduce((s, sub) => s + sub.doneTasks, 0);
   const totalHours = timeCoverage ? timeCoverage.totalActualMins / 60 : 0;
 
-  // Filter subjects with actual data (totalTasks > 0)
-  const activeSubjects = subjects.filter(s => s.totalTasks > 0);
+  // Filter subjects with actual time spent (totalActualMins > 0)
+  const activeSubjects = subjects.filter(s => s.totalActualMins > 0);
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <div className="max-w-7xl mx-auto space-y-4">
+    <div className="min-h-screen bg-amber-50 p-3 sm:p-6">
+      <div className="max-w-6xl mx-auto space-y-3">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <Link
-              to="/"
-              className="text-indigo-600 hover:text-indigo-700 text-sm font-medium transition-colors"
-            >
-              ← Back to Log
-            </Link>
-            <h1 className="text-2xl font-bold text-slate-800">📊 Learning Analysis</h1>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl border-2 border-pink-200 px-4 py-3 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <Link
+                to="/"
+                className="text-pink-600 hover:text-pink-700 text-sm font-bold transition-colors"
+              >
+                ← Back to Log
+              </Link>
+              <h1 className="text-xl sm:text-2xl font-bold text-slate-700">📊 Learning Analysis</h1>
+            </div>
+            <AuthButton lang="en" />
           </div>
-          <AuthButton lang="en" />
         </div>
 
         {/* Date Range + Export */}
@@ -140,7 +142,7 @@ export default function LogAnalysis() {
 
         {/* No Data State */}
         {activeSubjects.length === 0 && (
-          <div className="bg-white rounded-xl border border-slate-200 p-8 text-center shadow-sm">
+          <div className="bg-white rounded-2xl border-2 border-pink-100 p-8 text-center shadow-sm">
             <div className="text-6xl mb-4">🐰</div>
             <h3 className="text-lg font-bold text-slate-700 mb-2">No data yet!</h3>
             <p className="text-sm text-slate-500 mb-6">
@@ -148,7 +150,7 @@ export default function LogAnalysis() {
             </p>
             <Link
               to="/"
-              className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              className="inline-block px-6 py-3 bg-pink-500 text-white rounded-xl font-bold hover:bg-pink-600 transition-colors"
             >
               Go to Daily Log
             </Link>
@@ -158,17 +160,17 @@ export default function LogAnalysis() {
         {/* Subject Cards Grid */}
         {activeSubjects.length > 0 && (
           <>
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {activeSubjects.map((subject, index) => (
                 <SubjectCard key={subject.subject} data={subject} index={index} />
               ))}
             </div>
 
             {/* Actions Row */}
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3">
               <button
                 onClick={() => setShowSaveModal(true)}
-                className="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-pink-500 text-white rounded-xl font-bold hover:bg-pink-600 transition-colors flex items-center justify-center gap-2"
               >
                 <span>💾</span>
                 <span>Save This Report</span>
@@ -176,7 +178,7 @@ export default function LogAnalysis() {
 
               {/* Saved Reports Dropdown */}
               {reports.length > 0 && (
-                <div className="bg-white rounded-lg border border-slate-200 px-4 py-3 shadow-sm">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl border-2 border-pink-100 px-4 py-3 shadow-sm">
                   <SavedReportsList
                     reports={reports}
                     onSelect={handleSelectReport}

@@ -1,0 +1,47 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - button "中文" [ref=e6]
+      - button "EN" [ref=e7]
+      - button "日本語" [ref=e8]
+      - button "한국어" [ref=e9]
+      - button "ไทย" [ref=e10]
+      - button "Tiếng Việt" [ref=e11]
+      - button "Bahasa" [ref=e12]
+      - button "繁體中文" [ref=e13]
+      - button "粵語" [ref=e14]
+  - generic [ref=e15]:
+    - generic [ref=e274]:
+      - generic [ref=e277]: 1 / 15
+      - generic [ref=e279]:
+        - generic [ref=e280]: 第 2 题
+        - heading "面对突如其来的变化，你通常会" [level=2] [ref=e299]
+        - generic [ref=e282]:
+          - button "A 感到焦虑，需要时间适应" [ref=e300]:
+            - generic [ref=e284]:
+              - generic [ref=e285]: A
+              - generic [ref=e286]: 感到焦虑，需要时间适应
+          - button "B 保持冷静，观察情况" [active] [ref=e301]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: B
+              - generic [ref=e290]: 保持冷静，观察情况
+          - button "C 兴奋期待，享受新鲜感" [ref=e302]:
+            - generic [ref=e292]:
+              - generic [ref=e293]: C
+              - generic [ref=e294]: 兴奋期待，享受新鲜感
+      - generic [ref=e295]:
+        - button "← 上一题" [ref=e296]
+        - generic [ref=e297]: 1/15 已完成
+    - contentinfo [ref=e264]:
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - text: "原作者:"
+          - link "B站@蛆肉儿串儿" [ref=e267] [cursor=pointer]:
+            - /url: https://space.bilibili.com/417038183
+        - generic [ref=e268]: ·
+        - generic [ref=e269]: 本站仅供娱乐
+        - generic [ref=e270]: ·
+        - generic [ref=e271]:
+          - text: Powered by
+          - link "ClawDaddy" [ref=e272] [cursor=pointer]:
+            - /url: https://clawdaddy.run/#hosting

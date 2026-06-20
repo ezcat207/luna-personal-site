@@ -1,0 +1,303 @@
+- generic [active] [ref=e1]:
+  - navigation "Language" [ref=e2]:
+    - generic [ref=e3]: 中文
+    - link "EN" [ref=e4] [cursor=pointer]:
+      - /url: /en/
+    - link "日本語" [ref=e5] [cursor=pointer]:
+      - /url: /ja/
+    - link "한국어" [ref=e6] [cursor=pointer]:
+      - /url: /ko/
+    - link "ไทย" [ref=e7] [cursor=pointer]:
+      - /url: /th/
+    - link "Tiếng Việt" [ref=e8] [cursor=pointer]:
+      - /url: /vi/
+    - link "Bahasa" [ref=e9] [cursor=pointer]:
+      - /url: /id/
+    - link "繁體中文" [ref=e10] [cursor=pointer]:
+      - /url: /tw/
+    - link "粵語" [ref=e11] [cursor=pointer]:
+      - /url: /hk/
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 🧪
+          - generic [ref=e17]: 15个维度 · 5大模型 · 26种人格
+        - heading "SBTI 测试 — 人格测试" [level=1] [ref=e18]
+        - paragraph [ref=e19]:
+          - strong [ref=e20]: MBTI 已经过时，SBTI 来了。
+          - text: 一场荒诞又精准的人格审判，30 道题看穿你的 15 个灵魂维度。不用注册，不用付费，不用交出你的隐私。
+        - generic [ref=e21]: 已有 65,412 人完成测试
+        - button "开始测试" [ref=e23] [cursor=pointer]:
+          - text: 开始测试
+          - img [ref=e24]
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: 👑 人气排行
+          - generic [ref=e29]: 65,412 人已测
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - img "LOVE-R" [ref=e32]
+            - generic [ref=e33]:
+              - generic [ref=e34]:
+                - generic [ref=e35]: 🥇
+                - generic [ref=e36]: LOVE-R
+                - generic [ref=e37]: ·
+                - generic [ref=e38]: 多情者
+                - generic [ref=e39]: 10.8%
+              - generic [ref=e40]: 「爱意太满，现实显得有点贫瘠。」
+          - generic [ref=e43]:
+            - img "SEXY" [ref=e44]
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: 🥈
+                - generic [ref=e48]: SEXY
+                - generic [ref=e49]: ·
+                - generic [ref=e50]: 尤物
+                - generic [ref=e51]: 9.7%
+              - generic [ref=e52]: 「你就是天生的尤物！」
+          - generic [ref=e55]:
+            - img "MALO" [ref=e56]
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]: 🥉
+                - generic [ref=e60]: MALO
+                - generic [ref=e61]: ·
+                - generic [ref=e62]: 吗喽
+                - generic [ref=e63]: 6.4%
+              - generic [ref=e64]: 「人生是个副本，而我只是一只吗喽。」
+          - generic [ref=e67]:
+            - img "OJBK" [ref=e68]
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - generic [ref=e71]: "4"
+                - generic [ref=e72]: OJBK
+                - generic [ref=e73]: ·
+                - generic [ref=e74]: 无所谓人
+                - generic [ref=e75]: 4.9%
+              - generic [ref=e76]: 「我说随便，是真的随便。」
+          - generic [ref=e79]:
+            - img "CTRL" [ref=e80]
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - generic [ref=e83]: "5"
+                - generic [ref=e84]: CTRL
+                - generic [ref=e85]: ·
+                - generic [ref=e86]: 拿捏者
+                - generic [ref=e87]: 4.7%
+              - generic [ref=e88]: 「怎么样，被我拿捏了吧？」
+        - generic [ref=e91]:
+          - text: 🎲 稀有人格
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - text: IMFW
+              - generic [ref=e94]: 废物
+              - generic [ref=e95]: 0.4%
+            - generic [ref=e96]:
+              - text: POOR
+              - generic [ref=e97]: 贫困者
+              - generic [ref=e98]: 0.7%
+            - generic [ref=e99]:
+              - text: DEAD
+              - generic [ref=e100]: 死者
+              - generic [ref=e101]: 1.6%
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic: 6666做完题还被骂了一句。
+      - button "ON" [ref=e102] [cursor=pointer]:
+        - img [ref=e103]:
+          - generic [ref=e105]: 弹
+        - generic [ref=e106]: "ON"
+    - generic [ref=e107]:
+      - paragraph [ref=e109]: SBTI（Satirical Behavioral Type Indicator，讽刺行为类型指标）是一款基于 5 大心理模型、15 个人格维度的娱乐型人格测试。它用 30 道精心设计的题目，通过三级评分（L/M/H）和模式匹配算法，为你匹配 26 种独特的人格类型——每一种都带着善意的毒舌和精准的洞察。
+      - generic [ref=e110]:
+        - heading "SBTI 测试 是什么？" [level=2] [ref=e111]
+        - paragraph [ref=e112]: SBTI（Satirical Behavioral Type Indicator，讽刺行为类型指标）是一款基于 5 大心理模型、15 个人格维度的娱乐型人格测试。它用 30 道精心设计的题目，通过三级评分（L/M/H）和模式匹配算法，为你匹配 26 种独特的人格类型——每一种都带着善意的毒舌和精准的洞察。
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - heading "自我模型" [level=3] [ref=e115]
+            - paragraph [ref=e116]: S1 · S2 · S3
+          - generic [ref=e117]:
+            - heading "情感模型" [level=3] [ref=e118]
+            - paragraph [ref=e119]: E1 · E2 · E3
+          - generic [ref=e120]:
+            - heading "态度模型" [level=3] [ref=e121]
+            - paragraph [ref=e122]: A1 · A2 · A3
+          - generic [ref=e123]:
+            - heading "行动驱力模型" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Ac1 · Ac2 · Ac3
+          - generic [ref=e126]:
+            - heading "社交模型" [level=3] [ref=e127]
+            - paragraph [ref=e128]: So1 · So2 · So3
+      - generic [ref=e129]:
+        - heading "26 种人格类型" [level=2] [ref=e130]
+        - paragraph [ref=e131]: 你会是哪一种？测完才知道。
+        - generic [ref=e132]:
+          - link "CTRL 拿捏者" [ref=e133] [cursor=pointer]:
+            - /url: /types/ctrl
+            - generic [ref=e134]: CTRL
+            - generic [ref=e135]: 拿捏者
+          - link "ATM-er 送钱者" [ref=e136] [cursor=pointer]:
+            - /url: /types/atm-er
+            - generic [ref=e137]: ATM-er
+            - generic [ref=e138]: 送钱者
+          - link "Dior-s 屌丝" [ref=e139] [cursor=pointer]:
+            - /url: /types/dior-s
+            - generic [ref=e140]: Dior-s
+            - generic [ref=e141]: 屌丝
+          - link "BOSS 领导者" [ref=e142] [cursor=pointer]:
+            - /url: /types/boss
+            - generic [ref=e143]: BOSS
+            - generic [ref=e144]: 领导者
+          - link "THAN-K 感恩者" [ref=e145] [cursor=pointer]:
+            - /url: /types/than-k
+            - generic [ref=e146]: THAN-K
+            - generic [ref=e147]: 感恩者
+          - link "OH-NO 哦不人" [ref=e148] [cursor=pointer]:
+            - /url: /types/oh-no
+            - generic [ref=e149]: OH-NO
+            - generic [ref=e150]: 哦不人
+          - link "GOGO 行者" [ref=e151] [cursor=pointer]:
+            - /url: /types/gogo
+            - generic [ref=e152]: GOGO
+            - generic [ref=e153]: 行者
+          - link "SEXY 尤物" [ref=e154] [cursor=pointer]:
+            - /url: /types/sexy
+            - generic [ref=e155]: SEXY
+            - generic [ref=e156]: 尤物
+          - link "LOVE-R 多情者" [ref=e157] [cursor=pointer]:
+            - /url: /types/love-r
+            - generic [ref=e158]: LOVE-R
+            - generic [ref=e159]: 多情者
+          - link "MUM 妈妈" [ref=e160] [cursor=pointer]:
+            - /url: /types/mum
+            - generic [ref=e161]: MUM
+            - generic [ref=e162]: 妈妈
+          - link "FAKE 伪人" [ref=e163] [cursor=pointer]:
+            - /url: /types/fake
+            - generic [ref=e164]: FAKE
+            - generic [ref=e165]: 伪人
+          - link "OJBK 无所谓人" [ref=e166] [cursor=pointer]:
+            - /url: /types/ojbk
+            - generic [ref=e167]: OJBK
+            - generic [ref=e168]: 无所谓人
+          - link "MALO 吗喽" [ref=e169] [cursor=pointer]:
+            - /url: /types/malo
+            - generic [ref=e170]: MALO
+            - generic [ref=e171]: 吗喽
+          - link "JOKE-R 小丑" [ref=e172] [cursor=pointer]:
+            - /url: /types/joke-r
+            - generic [ref=e173]: JOKE-R
+            - generic [ref=e174]: 小丑
+          - link "WOC! 握草人" [ref=e175] [cursor=pointer]:
+            - /url: /types/woc
+            - generic [ref=e176]: WOC!
+            - generic [ref=e177]: 握草人
+          - link "THIN-K 思考者" [ref=e178] [cursor=pointer]:
+            - /url: /types/thin-k
+            - generic [ref=e179]: THIN-K
+            - generic [ref=e180]: 思考者
+          - link "SHIT 愤世者" [ref=e181] [cursor=pointer]:
+            - /url: /types/shit
+            - generic [ref=e182]: SHIT
+            - generic [ref=e183]: 愤世者
+          - link "ZZZZ 装死者" [ref=e184] [cursor=pointer]:
+            - /url: /types/zzzz
+            - generic [ref=e185]: ZZZZ
+            - generic [ref=e186]: 装死者
+          - link "POOR 贫困者" [ref=e187] [cursor=pointer]:
+            - /url: /types/poor
+            - generic [ref=e188]: POOR
+            - generic [ref=e189]: 贫困者
+          - link "MONK 僧人" [ref=e190] [cursor=pointer]:
+            - /url: /types/monk
+            - generic [ref=e191]: MONK
+            - generic [ref=e192]: 僧人
+          - link "IMSB 傻者" [ref=e193] [cursor=pointer]:
+            - /url: /types/imsb
+            - generic [ref=e194]: IMSB
+            - generic [ref=e195]: 傻者
+          - link "SOLO 孤儿" [ref=e196] [cursor=pointer]:
+            - /url: /types/solo
+            - generic [ref=e197]: SOLO
+            - generic [ref=e198]: 孤儿
+          - link "FUCK 草者" [ref=e199] [cursor=pointer]:
+            - /url: /types/fuck
+            - generic [ref=e200]: FUCK
+            - generic [ref=e201]: 草者
+          - link "DEAD 死者" [ref=e202] [cursor=pointer]:
+            - /url: /types/dead
+            - generic [ref=e203]: DEAD
+            - generic [ref=e204]: 死者
+          - link "IMFW 废物" [ref=e205] [cursor=pointer]:
+            - /url: /types/imfw
+            - generic [ref=e206]: IMFW
+            - generic [ref=e207]: 废物
+      - generic [ref=e208]:
+        - heading "SBTI vs MBTI 对比" [level=2] [ref=e209]
+        - table [ref=e210]:
+          - rowgroup [ref=e211]:
+            - row "对比项 MBTI SBTI 测试" [ref=e212]:
+              - columnheader "对比项" [ref=e213]
+              - columnheader "MBTI" [ref=e214]
+              - columnheader "SBTI 测试" [ref=e215]
+          - rowgroup [ref=e216]:
+            - row "理论基础 荣格心理类型理论 5大心理模型（自我/情感/态度/行动/社交）" [ref=e217]:
+              - cell "理论基础" [ref=e218]
+              - cell "荣格心理类型理论" [ref=e219]
+              - cell "5大心理模型（自我/情感/态度/行动/社交）" [ref=e220]
+            - row "维度数量 4 个维度 15 个维度" [ref=e221]:
+              - cell "维度数量" [ref=e222]
+              - cell "4 个维度" [ref=e223]
+              - cell "15 个维度" [ref=e224]
+            - row "评分方式 二分法（E/I, S/N...） 三级评分（L/M/H）" [ref=e225]:
+              - cell "评分方式" [ref=e226]
+              - cell "二分法（E/I, S/N...）" [ref=e227]
+              - cell "三级评分（L/M/H）" [ref=e228]
+            - row "类型数量 16 种 26 种 + 2 种特殊" [ref=e229]:
+              - cell "类型数量" [ref=e230]
+              - cell "16 种" [ref=e231]
+              - cell "26 种 + 2 种特殊" [ref=e232]
+            - row "风格 正式、心理学 讽刺、娱乐" [ref=e233]:
+              - cell "风格" [ref=e234]
+              - cell "正式、心理学" [ref=e235]
+              - cell "讽刺、娱乐" [ref=e236]
+            - row "题目数量 93 题 30 题（3-5分钟）" [ref=e237]:
+              - cell "题目数量" [ref=e238]
+              - cell "93 题" [ref=e239]
+              - cell "30 题（3-5分钟）" [ref=e240]
+            - row "费用 官方版收费 完全免费" [ref=e241]:
+              - cell "费用" [ref=e242]
+              - cell "官方版收费" [ref=e243]
+              - cell "完全免费" [ref=e244]
+      - generic [ref=e245]:
+        - heading "常见问题" [level=2] [ref=e246]
+        - group [ref=e247]:
+          - generic "SBTI 测试准确吗？ +" [ref=e248] [cursor=pointer]
+        - group [ref=e249]:
+          - generic "测试需要多久？ +" [ref=e250] [cursor=pointer]
+        - group [ref=e251]:
+          - generic "我的数据安全吗？ +" [ref=e252] [cursor=pointer]
+        - group [ref=e253]:
+          - generic "可以分享结果吗？ +" [ref=e254] [cursor=pointer]
+        - group [ref=e255]:
+          - generic "SBTI 和 MBTI 有什么区别？ +" [ref=e256] [cursor=pointer]
+        - group [ref=e257]:
+          - generic "SBTI 有多少种人格类型？ +" [ref=e258] [cursor=pointer]
+        - group [ref=e259]:
+          - generic "SBTI 测试的评分算法是什么？ +" [ref=e260] [cursor=pointer]
+    - generic [ref=e261]:
+      - generic [ref=e262]:
+        - text: 原作者：
+        - link "B站@蛆肉儿串儿" [ref=e263] [cursor=pointer]:
+          - /url: https://space.bilibili.com/417038183
+      - generic [ref=e264]: ·
+      - generic [ref=e265]: 本站仅供娱乐
+      - generic [ref=e266]: ·
+      - generic [ref=e267]:
+        - text: Powered by
+        - link "ClawDaddy" [ref=e268] [cursor=pointer]:
+          - /url: https://clawdaddy.run/#hosting

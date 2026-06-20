@@ -17,26 +17,25 @@ interface StatCardProps {
 
 function StatCard({ icon, label, value, color, index }: StatCardProps) {
   const colorClasses = {
-    blue: 'bg-blue-50 border-blue-200 text-blue-600',
-    green: 'bg-green-50 border-green-200 text-green-600',
-    purple: 'bg-purple-50 border-purple-200 text-purple-600',
-    pink: 'bg-pink-50 border-pink-200 text-pink-600',
-    red: 'bg-red-50 border-red-200 text-red-600',
+    blue: 'bg-blue-50/80 border-blue-200 text-blue-600',
+    green: 'bg-green-50/80 border-green-200 text-green-600',
+    purple: 'bg-purple-50/80 border-purple-200 text-purple-600',
+    pink: 'bg-pink-50/80 border-pink-200 text-pink-600',
+    red: 'bg-red-50/80 border-red-200 text-red-600',
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
-      className={`rounded-lg p-4 border shadow-sm ${colorClasses[color]}`}
-      style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+      transition={{ duration: 0.2, delay: index * 0.03 }}
+      className={`rounded-2xl p-3 border-2 shadow-sm backdrop-blur-sm ${colorClasses[color]}`}
     >
-      <div className="text-2xl mb-1">{icon}</div>
-      <div className={`text-3xl font-bold ${colorClasses[color].split(' ')[2]}`}>
+      <div className="text-xl mb-0.5">{icon}</div>
+      <div className={`text-2xl font-bold ${colorClasses[color].split(' ')[2]}`}>
         {value}
       </div>
-      <div className="text-xs text-slate-600 font-medium mt-1">{label}</div>
+      <div className="text-[10px] text-slate-600 font-bold mt-0.5">{label}</div>
     </motion.div>
   );
 }

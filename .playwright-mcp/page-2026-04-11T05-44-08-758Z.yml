@@ -1,0 +1,47 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - button "中文" [ref=e6]
+      - button "EN" [ref=e7]
+      - button "日本語" [ref=e8]
+      - button "한국어" [ref=e9]
+      - button "ไทย" [ref=e10]
+      - button "Tiếng Việt" [ref=e11]
+      - button "Bahasa" [ref=e12]
+      - button "繁體中文" [ref=e13]
+      - button "粵語" [ref=e14]
+  - generic [ref=e15]:
+    - generic [ref=e274]:
+      - generic [ref=e277]: 0 / 15
+      - generic [ref=e279]:
+        - generic [ref=e280]: 第 1 题
+        - heading "朋友带了ta的朋友一起来玩，你最可能的状态是" [level=2] [ref=e281]
+        - generic [ref=e282]:
+          - button "A 对\"朋友的朋友\"天然有点距离感，怕影响二人关系" [ref=e283]:
+            - generic [ref=e284]:
+              - generic [ref=e285]: A
+              - generic [ref=e286]: 对"朋友的朋友"天然有点距离感，怕影响二人关系
+          - button "B 看对方，能玩就玩。" [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]: B
+              - generic [ref=e290]: 看对方，能玩就玩。
+          - button "C 朋友的朋友应该也算我的朋友！要热情聊天" [ref=e291]:
+            - generic [ref=e292]:
+              - generic [ref=e293]: C
+              - generic [ref=e294]: 朋友的朋友应该也算我的朋友！要热情聊天
+      - generic [ref=e295]:
+        - button "← 上一题" [disabled] [ref=e296]
+        - generic [ref=e297]: 0/15 已完成
+    - contentinfo [ref=e264]:
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - text: "原作者:"
+          - link "B站@蛆肉儿串儿" [ref=e267] [cursor=pointer]:
+            - /url: https://space.bilibili.com/417038183
+        - generic [ref=e268]: ·
+        - generic [ref=e269]: 本站仅供娱乐
+        - generic [ref=e270]: ·
+        - generic [ref=e271]:
+          - text: Powered by
+          - link "ClawDaddy" [ref=e272] [cursor=pointer]:
+            - /url: https://clawdaddy.run/#hosting

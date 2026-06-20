@@ -1,0 +1,358 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FUnluckyNinja%2FSBTI-test
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=UnluckyNinja%2FSBTI-test
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]:
+          - img [ref=e67]
+          - link "UnluckyNinja" [ref=e70] [cursor=pointer]:
+            - /url: /UnluckyNinja
+          - generic [ref=e71]: /
+          - strong [ref=e72]:
+            - link "SBTI-test" [ref=e73] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test
+          - generic [ref=e74]: Public
+        - generic [ref=e75]:
+          - list:
+            - listitem [ref=e76]:
+              - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                - /url: /login?return_to=%2FUnluckyNinja%2FSBTI-test
+                - img [ref=e78]
+                - text: Notifications
+            - listitem [ref=e80]:
+              - link "Fork 241" [ref=e81] [cursor=pointer]:
+                - /url: /login?return_to=%2FUnluckyNinja%2FSBTI-test
+                - img [ref=e82]
+                - text: Fork
+                - generic "241" [ref=e84]
+            - listitem [ref=e85]:
+              - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                - /url: /login?return_to=%2FUnluckyNinja%2FSBTI-test
+                - img [ref=e88]
+                - text: Star
+                - generic "282 users starred this repository" [ref=e90]: "282"
+      - navigation "Repository" [ref=e91]:
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Code" [ref=e94] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test
+              - img [ref=e95]
+              - generic [ref=e97]: Code
+          - listitem [ref=e98]:
+            - link "Actions" [ref=e99] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/actions
+              - img [ref=e100]
+              - generic [ref=e102]: Actions
+          - listitem [ref=e103]:
+            - link "Security and quality" [ref=e104] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/security
+              - img [ref=e105]
+              - generic [ref=e107]: Security and quality
+          - listitem [ref=e108]:
+            - link "Insights" [ref=e109] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/pulse
+              - img [ref=e110]
+              - generic [ref=e112]: Insights
+    - generic [ref=e125]:
+      - heading "UnluckyNinja/SBTI-test" [level=1] [ref=e127]
+      - generic [ref=e128]:
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - generic [ref=e133]:
+              - button "main branch" [ref=e135] [cursor=pointer]:
+                - generic [ref=e136]:
+                  - generic [ref=e138]:
+                    - img [ref=e140]
+                    - generic [ref=e143]: main
+                  - generic:
+                    - img
+              - generic [ref=e144]:
+                - link "1 Branch" [ref=e145] [cursor=pointer]:
+                  - /url: /UnluckyNinja/SBTI-test/branches
+                  - generic [ref=e146]:
+                    - generic:
+                      - img
+                    - generic [ref=e148]:
+                      - strong [ref=e149]: "1"
+                      - text: Branch
+                - link "0 Tags" [ref=e150] [cursor=pointer]:
+                  - /url: /UnluckyNinja/SBTI-test/tags
+                  - generic [ref=e151]:
+                    - generic:
+                      - img
+                    - generic [ref=e153]:
+                      - strong [ref=e154]: "0"
+                      - text: Tags
+            - generic [ref=e155]:
+              - generic [ref=e159]:
+                - img [ref=e161]
+                - combobox "Go to file" [ref=e163]
+              - button "Code" [ref=e164] [cursor=pointer]:
+                - generic [ref=e165]:
+                  - generic:
+                    - img
+                  - generic [ref=e166]: Code
+                  - generic:
+                    - img
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - heading "Folders and files" [level=2] [ref=e169]
+              - table "Folders and files" [ref=e170]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e171]:
+                  - 'row "Latest commit UnluckyNinja commits by UnluckyNinja chore: update readme Open commit details success Commit 873df9e · Apr 10, 202610 hours ago History 2 Commits" [ref=e172]':
+                    - 'cell "Latest commit UnluckyNinja commits by UnluckyNinja chore: update readme Open commit details success Commit 873df9e · Apr 10, 202610 hours ago History 2 Commits" [ref=e173]':
+                      - generic [ref=e174]:
+                        - heading "Latest commit" [level=2] [ref=e175]
+                        - generic [ref=e176]:
+                          - generic [ref=e178]:
+                            - link "UnluckyNinja" [ref=e179] [cursor=pointer]:
+                              - /url: /UnluckyNinja
+                              - img "UnluckyNinja" [ref=e180]
+                            - link "commits by UnluckyNinja" [ref=e181] [cursor=pointer]:
+                              - /url: /UnluckyNinja/SBTI-test/commits?author=UnluckyNinja
+                              - text: UnluckyNinja
+                          - generic [ref=e182]:
+                            - 'link "chore: update readme" [ref=e185] [cursor=pointer]':
+                              - /url: /UnluckyNinja/SBTI-test/commit/873df9ea2617cda03e73ba54e4a6268bc93f5cc5
+                            - button "Open commit details" [ref=e186] [cursor=pointer]:
+                              - img [ref=e187]
+                            - button "success" [ref=e189] [cursor=pointer]:
+                              - img [ref=e190]
+                        - generic [ref=e192]:
+                          - generic [ref=e194]:
+                            - link "Commit 873df9e" [ref=e195] [cursor=pointer]:
+                              - /url: /UnluckyNinja/SBTI-test/commit/873df9ea2617cda03e73ba54e4a6268bc93f5cc5
+                              - text: 873df9e
+                            - text: ·
+                            - generic "Apr 10, 2026, 12:42 PM PDT" [ref=e196]: Apr 10, 202610 hours ago
+                          - generic [ref=e197]:
+                            - heading "History" [level=2] [ref=e198]
+                            - link "2 Commits" [ref=e199] [cursor=pointer]:
+                              - /url: /UnluckyNinja/SBTI-test/commits/main/
+                              - generic [ref=e200]:
+                                - generic:
+                                  - img
+                                - generic [ref=e201]: 2 Commits
+                  - 'row "image, (Directory) chore: first commit Apr 9, 20262 days ago" [ref=e202]':
+                    - cell "image, (Directory)" [ref=e203]:
+                      - generic [ref=e204]:
+                        - img [ref=e205]
+                        - link "image, (Directory)" [ref=e210] [cursor=pointer]:
+                          - /url: /UnluckyNinja/SBTI-test/tree/main/image
+                          - text: image
+                    - 'cell "chore: first commit" [ref=e211]':
+                      - 'link "chore: first commit" [ref=e214] [cursor=pointer]':
+                        - /url: /UnluckyNinja/SBTI-test/commit/9fe4bf80747cc7d03f8da28e3bcc043782a3818b
+                    - cell "Apr 9, 20262 days ago" [ref=e215]:
+                      - generic [ref=e216]: Apr 9, 20262 days ago
+                  - 'row ".gitignore, (File) chore: first commit Apr 9, 20262 days ago" [ref=e217]':
+                    - cell ".gitignore, (File)" [ref=e218]:
+                      - generic [ref=e219]:
+                        - img [ref=e220]
+                        - link ".gitignore, (File)" [ref=e225] [cursor=pointer]:
+                          - /url: /UnluckyNinja/SBTI-test/blob/main/.gitignore
+                          - text: .gitignore
+                    - 'cell "chore: first commit" [ref=e226]':
+                      - 'link "chore: first commit" [ref=e229] [cursor=pointer]':
+                        - /url: /UnluckyNinja/SBTI-test/commit/9fe4bf80747cc7d03f8da28e3bcc043782a3818b
+                    - cell "Apr 9, 20262 days ago" [ref=e230]:
+                      - generic [ref=e231]: Apr 9, 20262 days ago
+                  - 'row "README.md, (File) chore: update readme Apr 10, 202610 hours ago" [ref=e232]':
+                    - cell "README.md, (File)" [ref=e233]:
+                      - generic [ref=e234]:
+                        - img [ref=e235]
+                        - link "README.md, (File)" [ref=e240] [cursor=pointer]:
+                          - /url: /UnluckyNinja/SBTI-test/blob/main/README.md
+                          - text: README.md
+                    - 'cell "chore: update readme" [ref=e241]':
+                      - 'link "chore: update readme" [ref=e244] [cursor=pointer]':
+                        - /url: /UnluckyNinja/SBTI-test/commit/873df9ea2617cda03e73ba54e4a6268bc93f5cc5
+                    - cell "Apr 10, 202610 hours ago" [ref=e245]:
+                      - generic [ref=e246]: Apr 10, 202610 hours ago
+                  - 'row "index.html, (File) chore: first commit Apr 9, 20262 days ago" [ref=e247]':
+                    - cell "index.html, (File)" [ref=e248]:
+                      - generic [ref=e249]:
+                        - img [ref=e250]
+                        - link "index.html, (File)" [ref=e255] [cursor=pointer]:
+                          - /url: /UnluckyNinja/SBTI-test/blob/main/index.html
+                          - text: index.html
+                    - 'cell "chore: first commit" [ref=e256]':
+                      - 'link "chore: first commit" [ref=e259] [cursor=pointer]':
+                        - /url: /UnluckyNinja/SBTI-test/commit/9fe4bf80747cc7d03f8da28e3bcc043782a3818b
+                    - cell "Apr 9, 20262 days ago" [ref=e260]:
+                      - generic [ref=e261]: Apr 9, 20262 days ago
+            - generic [ref=e263]:
+              - generic [ref=e264]:
+                - heading "Repository files navigation" [level=2] [ref=e265]
+                - navigation "Repository files" [ref=e266]:
+                  - list [ref=e267]:
+                    - listitem [ref=e268]:
+                      - link "README" [ref=e269] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e271]
+                        - generic [ref=e273]: README
+              - article [ref=e275]:
+                - generic [ref=e276]:
+                  - heading "SBTI 测试（镜像）" [level=1] [ref=e277]
+                  - 'link "Permalink: SBTI 测试（镜像）" [ref=e278] [cursor=pointer]':
+                    - /url: "#sbti-测试镜像"
+                    - img [ref=e279]
+                - paragraph [ref=e281]: 图片和html已拆分
+                - paragraph [ref=e282]:
+                  - text: 注意建立这个repo只是因为网页自身就是全部源码，
+                  - strong [ref=e283]: 原作者并未声明license
+                  - text: 所以本repo也不包含license，一切行为请自行斟酌，不要给原作者添麻烦
+                - paragraph [ref=e284]:
+                  - text: 地址：
+                  - link "https://sbti.unun.dev" [ref=e285] [cursor=pointer]:
+                    - /url: https://sbti.unun.dev
+                  - text: 原作者：B站@蛆肉儿串儿
+        - generic [ref=e289]:
+          - generic [ref=e292]:
+            - heading "About" [level=2] [ref=e293]
+            - paragraph [ref=e294]: 注意建立这个repo只是因为网页自身就是全部源码，原作者并未声明license所以本repo也不包含license，一切行为请自行斟酌，不要给原作者添麻烦。 原作者：B站@蛆肉儿串儿
+            - generic [ref=e295]:
+              - img [ref=e296]
+              - link "sbti.unun.dev" [ref=e299] [cursor=pointer]:
+                - /url: https://sbti.unun.dev
+            - heading "Resources" [level=3] [ref=e300]
+            - link "Readme" [ref=e302] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+              - img [ref=e303]
+              - text: Readme
+            - link "Activity" [ref=e306] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/activity
+              - img [ref=e307]
+              - text: Activity
+            - heading "Stars" [level=3] [ref=e309]
+            - link "282 stars" [ref=e311] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/stargazers
+              - img [ref=e312]
+              - strong [ref=e314]: "282"
+              - text: stars
+            - heading "Watchers" [level=3] [ref=e315]
+            - link "0 watching" [ref=e317] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/watchers
+              - img [ref=e318]
+              - strong [ref=e320]: "0"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e321]
+            - link "241 forks" [ref=e323] [cursor=pointer]:
+              - /url: /UnluckyNinja/SBTI-test/forks
+              - img [ref=e324]
+              - strong [ref=e326]: "241"
+              - text: forks
+            - link "Report repository" [ref=e328] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FUnluckyNinja%2FSBTI-test&report=UnluckyNinja+%28user%29
+          - generic [ref=e330]:
+            - heading "Contributors 1" [level=2] [ref=e331]:
+              - link "Contributors 1" [ref=e332] [cursor=pointer]:
+                - /url: /UnluckyNinja/SBTI-test/graphs/contributors
+                - text: Contributors
+                - generic "1" [ref=e333]
+            - list [ref=e334]:
+              - listitem [ref=e335]:
+                - link "@UnluckyNinja" [ref=e336] [cursor=pointer]:
+                  - /url: https://github.com/UnluckyNinja
+                  - img "@UnluckyNinja" [ref=e337]
+                - link "UnluckyNinja UnluckyNinja" [ref=e339] [cursor=pointer]:
+                  - /url: https://github.com/UnluckyNinja
+                  - strong [ref=e340]: UnluckyNinja
+                  - text: UnluckyNinja
+          - generic [ref=e342]:
+            - heading "Languages" [level=2] [ref=e343]
+            - list [ref=e347]:
+              - listitem [ref=e348]:
+                - link "HTML 100.0%" [ref=e349] [cursor=pointer]:
+                  - /url: /UnluckyNinja/SBTI-test/search?l=html
+                  - img [ref=e350]
+                  - generic [ref=e352]: HTML
+                  - generic [ref=e353]: 100.0%
+  - contentinfo [ref=e355]:
+    - heading "Footer" [level=2] [ref=e356]
+    - generic [ref=e357]:
+      - generic [ref=e358]:
+        - link "GitHub Homepage" [ref=e359] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e360]
+        - generic [ref=e362]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e363]:
+        - heading "Footer navigation" [level=3] [ref=e364]
+        - list "Footer navigation" [ref=e365]:
+          - listitem [ref=e366]:
+            - link "Terms" [ref=e367] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e368]:
+            - link "Privacy" [ref=e369] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e370]:
+            - link "Security" [ref=e371] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e372]:
+            - link "Status" [ref=e373] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e374]:
+            - link "Community" [ref=e375] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e376]:
+            - link "Docs" [ref=e377] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e378]:
+            - link "Contact" [ref=e379] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e380]:
+            - button "Manage cookies" [ref=e382] [cursor=pointer]
+          - listitem [ref=e383]:
+            - button "Do not share my personal information" [ref=e385] [cursor=pointer]

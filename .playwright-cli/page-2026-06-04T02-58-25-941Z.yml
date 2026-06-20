@@ -1,0 +1,138 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "W Wayne's Plans" [ref=e8] [cursor=pointer]:
+          - /url: /wayne
+          - generic [ref=e10]: W
+          - generic [ref=e11]: Wayne's Plans
+        - navigation [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /wayne
+            - img [ref=e14]
+            - text: Home
+          - link "Teaching Plans" [ref=e17] [cursor=pointer]:
+            - /url: /wayne/plans
+            - img [ref=e18]
+            - text: Teaching Plans
+          - link "Insights" [ref=e20] [cursor=pointer]:
+            - /url: /wayne/insights
+            - img [ref=e21]
+            - text: Insights
+          - link "Courses" [ref=e23] [cursor=pointer]:
+            - /url: /wayne/courses
+            - img [ref=e24]
+            - text: Courses
+          - link "Comics" [ref=e27] [cursor=pointer]:
+            - /url: /wayne/comics
+            - img [ref=e28]
+            - text: Comics
+          - link "Tools" [ref=e31] [cursor=pointer]:
+            - /url: /wayne/tools
+            - img [ref=e32]
+            - text: Tools
+          - link "Roadmap" [ref=e34] [cursor=pointer]:
+            - /url: /wayne/roadmap
+            - img [ref=e35]
+            - text: Roadmap
+      - generic [ref=e37]:
+        - button "Search ⌘K" [ref=e38]:
+          - img [ref=e39]
+          - generic [ref=e42]: Search
+          - generic [ref=e43]: ⌘K
+        - button "中文" [ref=e44]
+        - link "🐰 Luna's Journey →" [ref=e45] [cursor=pointer]:
+          - /url: https://luna.bunnyuniverse.com
+        - link "Bunny Universe" [ref=e46] [cursor=pointer]:
+          - /url: https://bunnyuniverse.com
+  - main [ref=e47]:
+    - generic [ref=e48]:
+      - link "All Comics" [ref=e50] [cursor=pointer]:
+        - /url: /wayne/comics
+        - img [ref=e51]
+        - text: All Comics
+      - generic [ref=e53]:
+        - img "Luna & Wayne's Canyon Dreams — cover" [ref=e55]
+        - generic [ref=e56]:
+          - generic [ref=e57]: "Comic Series · Issue #1"
+          - generic [ref=e58]: Summer 2024 · 3 strips
+        - heading "Luna & Wayne's Canyon Dreams" [level=1] [ref=e59]
+        - paragraph [ref=e60]: Grand Canyon, 2024. Three moments, three things learned — about fences, about rocks that belong to the canyon, and about how to actually look at something that doesn't perform for you.
+        - generic [ref=e61]:
+          - generic [ref=e62]: Share
+          - button "Share on X" [ref=e63]:
+            - img [ref=e64]
+          - button "Share on LinkedIn" [ref=e66]:
+            - img [ref=e67]
+          - button "Copy link" [ref=e69]:
+            - img [ref=e70]
+            - text: Copy link
+      - generic [ref=e73]:
+        - generic [ref=e75]:
+          - generic:
+            - img "Luna and Wayne arrive at the Grand Canyon viewpoint. Luna tries to lean over the fence. Wayne teaches her about danger. They end up watching together, safely."
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Safety First
+              - generic [ref=e79]: Story 1 of 3
+            - heading "The Fence Is Not Decorative" [level=2] [ref=e80]
+            - paragraph [ref=e81]: The first thing Luna wanted to do at the viewpoint was lean over the fence. She moved fast, the way 8-year-olds do when they're excited. The railing creaked. I grabbed her arm — and then came the conversation I wanted to get right.
+          - button "Read the full story, facts & lesson" [ref=e82]:
+            - generic [ref=e83]: Read the full story, facts & lesson
+            - img [ref=e84]
+        - generic [ref=e87]:
+          - img "Luna finds a beautiful red rock and wants to throw it. Wayne explains every pebble belongs to the canyon's story. Luna says goodbye to the little stone." [ref=e89]
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: Leave No Trace
+              - generic [ref=e93]: Story 2 of 3
+            - heading "The Rock That Belongs to the Canyon" [level=2] [ref=e94]
+            - paragraph [ref=e95]: "Luna found a beautiful red rock — deep red with white veins, warm from the sun. It was in her pocket before I noticed. Then: \"I'm going to throw it to hear the echo!\" The rule here isn't complicated. The explanation, if you want it to stick, is."
+          - button "Read the full story, facts & lesson" [ref=e96]:
+            - generic [ref=e97]: Read the full story, facts & lesson
+            - img [ref=e98]
+        - generic [ref=e101]:
+          - img "Luna at sunrise says the canyon is just a big hole. Wayne explains the layers are millions of years old. Luna imagines the ancient glowing canyon — Sometimes the unseen is more magical." [ref=e103]
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - generic [ref=e106]: Learning to See
+              - generic [ref=e107]: Story 3 of 3
+            - heading "It's Just a Really Big Hole (Until It Isn't)" [level=2] [ref=e108]
+            - paragraph [ref=e109]: Luna's first real reaction to the Grand Canyon — after the initial "it's so BIG" — was disappointment. She'd seen pictures. She was expecting something. What she saw was a very large hole with some orange walls. "What's so special?" The answer took twenty minutes.
+          - button "Read the full story, facts & lesson" [ref=e110]:
+            - generic [ref=e111]: Read the full story, facts & lesson
+            - img [ref=e112]
+      - 'button "Plan Your Visit: Family Travel Guide What to bring, best age, South vs North Rim, sunrise tips" [ref=e116]':
+        - generic [ref=e117]:
+          - img [ref=e119]
+          - generic [ref=e122]:
+            - paragraph [ref=e123]: "Plan Your Visit: Family Travel Guide"
+            - paragraph [ref=e124]: What to bring, best age, South vs North Rim, sunrise tips
+        - img [ref=e125]
+      - generic [ref=e127]:
+        - link "← All Comics" [ref=e128] [cursor=pointer]:
+          - /url: /wayne/comics
+        - generic [ref=e129]:
+          - generic [ref=e130]: Share
+          - button "Share on X" [ref=e131]:
+            - img [ref=e132]
+          - button "Share on LinkedIn" [ref=e134]:
+            - img [ref=e135]
+          - button "Copy link" [ref=e137]:
+            - img [ref=e138]
+            - text: Copy link
+      - generic [ref=e141]:
+        - heading "Enjoyed the stories?" [level=2] [ref=e142]
+        - paragraph [ref=e143]: Wayne publishes weekly teaching plans and insights. Luna shares what she discovers every Sunday.
+        - generic [ref=e144]:
+          - link "Read Wayne's Insights" [ref=e145] [cursor=pointer]:
+            - /url: /wayne/insights
+          - link "Visit Luna's Journey" [ref=e146] [cursor=pointer]:
+            - /url: https://luna.bunnyuniverse.com
+  - contentinfo [ref=e147]:
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - text: Wayne's Plans ·
+        - link "Bunny Universe" [ref=e150] [cursor=pointer]:
+          - /url: https://bunnyuniverse.com
+      - generic [ref=e151]: Real teaching. Real results. Every week.

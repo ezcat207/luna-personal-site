@@ -1,0 +1,139 @@
+- generic [ref=e3]:
+  - generic:
+    - generic: ✏️
+  - navigation:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /luna
+        - link "Comics" [ref=e7] [cursor=pointer]:
+          - /url: /luna/comics
+        - link "Learning Journey" [ref=e8] [cursor=pointer]:
+          - /url: /luna/all
+      - link "🐰 Bunny Universe" [ref=e9] [cursor=pointer]:
+        - /url: https://bunnyuniverse.com
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - link "← Back to Luna's World" [ref=e13] [cursor=pointer]:
+        - /url: /luna
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 📚 Startup Stories
+          - generic [ref=e17]: Episode 1 of 25
+        - heading "When Grandpa's Shop Almost Closed Forever" [level=1] [ref=e18]:
+          - text: When Grandpa's Shop
+          - text: Almost Closed Forever
+        - paragraph [ref=e19]:
+          - text: What happens when a shop owner retires and nobody takes over? Luna and Wayne discover a real startup called
+          - strong [ref=e20]: Teamshares
+          - text: that has a heartwarming answer.
+        - generic [ref=e21]:
+          - img "Luna and Wayne discover Teamshares — a startup that turns employees into owners"
+        - generic [ref=e22]:
+          - generic [ref=e23]: 📅 June 2026
+          - generic [ref=e24]: ·
+          - generic [ref=e25]: 4 comic strips
+          - generic [ref=e26]: ·
+          - generic [ref=e27]: 🇺🇸 Based on a real American startup
+        - generic [ref=e28]:
+          - generic [ref=e29]: Share
+          - button "Share on X" [ref=e30]:
+            - img [ref=e31]
+          - button "Share on LinkedIn" [ref=e33]:
+            - img [ref=e34]
+          - button "Copy link" [ref=e36]:
+            - img [ref=e37]
+            - text: Copy link
+      - generic [ref=e40]:
+        - paragraph [ref=e41]:
+          - img [ref=e42]
+          - text: About This Series
+        - paragraph [ref=e45]:
+          - strong [ref=e46]: Startup Stories
+          - text: is a comic series based on 25 real businesses discovered by AI researchers at Tencent Research Institute. These are not famous billion-dollar companies — they're small, scrappy startups solving
+          - emphasis [ref=e47]: real problems
+          - text: in the real world. Every story starts with a problem a real person noticed, and a solution that made lives better.
+        - paragraph [ref=e48]:
+          - text: Each comic strip has a
+          - strong [ref=e49]: "\"Learn More\" button"
+          - text: below it — tap it to go deeper into the real story, discover the company, and think through questions that might change how you see the world. 👇
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: "#1"
+              - generic [ref=e56]: The Problem
+            - heading "1. The Closed Shop" [level=3] [ref=e57]
+            - paragraph [ref=e58]: "Luna and Wayne notice their favorite neighborhood store has a sign: \"Owner Retired.\" But nobody told the shop what to do next…"
+          - generic [ref=e59]:
+            - img "Luna and Wayne discover their neighborhood store is closed with an \"Owner Retired\" sign. Luna peeks inside and asks why it closed. Wayne explains the owner worked his whole life but his children moved to big cities."
+          - button "Learn More About the Real Story →" [ref=e61]:
+            - img [ref=e62]
+            - text: Learn More About the Real Story →
+            - img [ref=e64]
+        - generic [ref=e66]:
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: "#2"
+              - generic [ref=e71]: The Obstacle
+            - heading "2. \"Boss, We Can't…\"" [level=3] [ref=e72]
+            - paragraph [ref=e73]: "Luna has a brilliant idea: let the employees run the store! But Grandpa Tom already tried asking them, and they said \"we can't.\" Why is it so hard?"
+          - generic [ref=e74]:
+            - img "Luna runs to Grandpa Tom with an idea. Grandpa Tom explains he already asked employees but they said they can't. Luna asks why. Wayne explains running a store requires accounting, management, and the courage to make decisions."
+          - button "Learn More About the Real Story →" [ref=e76]:
+            - img [ref=e77]
+            - text: Learn More About the Real Story →
+            - img [ref=e79]
+        - generic [ref=e81]:
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - generic [ref=e85]: "#3"
+              - generic [ref=e86]: The Discovery
+            - heading "3. Teamshares to the Rescue!" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Wayne finds a company called Teamshares on his laptop. It helps employees become the new owners! Luna can't believe it — the cashiers and stock ladies could actually become bosses?
+          - generic [ref=e89]:
+            - img "Wayne and Luna look at a laptop showing the Teamshares website. Wayne asks if employees like cashiers and stocking ladies could become bosses. A thought bubble shows employees learning purchasing, scheduling, and accounting together. Luna gets excited that Grandpa Tom's store could be saved."
+          - button "Learn More About the Real Story →" [ref=e91]:
+            - img [ref=e92]
+            - text: Learn More About the Real Story →
+            - img [ref=e94]
+        - generic [ref=e96]:
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: "#4"
+              - generic [ref=e101]: The Resolution
+            - heading "4. From Clerk to Boss — Step by Step" [level=3] [ref=e102]
+            - paragraph [ref=e103]: "A few months later, Grandpa Tom's store has a new sign: \"Employee Collaborative Management.\" The stocking ladies are smiling. Wayne and Luna watch as the community discovers that together, people can do what one person cannot."
+          - generic [ref=e104]:
+            - img "Wayne explains Teamshares teaches employees step by step — not dumping everything at once. A few months later the store shows employees in collaborative management. Wayne concludes what one person can't do, a group of people can."
+          - button "Learn More About the Real Story →" [ref=e106]:
+            - img [ref=e107]
+            - text: Learn More About the Real Story →
+            - img [ref=e109]
+      - generic [ref=e111]:
+        - generic [ref=e112]: 🌟
+        - heading "The End — For Now!" [level=2] [ref=e113]
+        - paragraph [ref=e114]:
+          - text: Teamshares is a real company. The employees who became owners are real people. And the next time you see a small shop in your neighborhood, you might wonder —
+          - emphasis [ref=e115]: who will run it when the owner retires?
+        - generic [ref=e116]:
+          - link "← More Comics" [ref=e117] [cursor=pointer]:
+            - /url: /luna
+          - link "Visit Teamshares.com ↗" [ref=e118] [cursor=pointer]:
+            - /url: https://www.teamshares.com
+        - generic [ref=e120]:
+          - generic [ref=e121]: Share
+          - button "Share on X" [ref=e122]:
+            - img [ref=e123]
+          - button "Share on LinkedIn" [ref=e125]:
+            - img [ref=e126]
+          - button "Copy link" [ref=e128]:
+            - img [ref=e129]
+            - text: Copy link
+  - contentinfo [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]: 🚀
+      - generic [ref=e135]: 🎨
+      - generic [ref=e136]: 💻
+    - paragraph [ref=e137]: Built with ❤️ and 🤖 | Journal Version 3.1
+    - paragraph [ref=e138]: Prop of Luna. Keep out (unless you're Wayne or a friendly robot).

@@ -1,0 +1,216 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "W Wayne's Plans" [ref=e8] [cursor=pointer]:
+          - /url: /wayne
+          - generic [ref=e10]: W
+          - generic [ref=e11]: Wayne's Plans
+        - navigation [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /wayne
+            - img [ref=e14]
+            - text: Home
+          - link "Teaching Plans" [ref=e17] [cursor=pointer]:
+            - /url: /wayne/plans
+            - img [ref=e18]
+            - text: Teaching Plans
+          - link "Insights" [ref=e20] [cursor=pointer]:
+            - /url: /wayne/insights
+            - img [ref=e21]
+            - text: Insights
+          - link "Courses" [ref=e23] [cursor=pointer]:
+            - /url: /wayne/courses
+            - img [ref=e24]
+            - text: Courses
+          - link "Comics" [ref=e27] [cursor=pointer]:
+            - /url: /wayne/comics
+            - img [ref=e28]
+            - text: Comics
+          - link "Tools" [ref=e31] [cursor=pointer]:
+            - /url: /wayne/tools
+            - img [ref=e32]
+            - text: Tools
+          - link "Roadmap" [ref=e34] [cursor=pointer]:
+            - /url: /wayne/roadmap
+            - img [ref=e35]
+            - text: Roadmap
+      - generic [ref=e37]:
+        - button "Search ⌘K" [ref=e38]:
+          - img [ref=e39]
+          - generic [ref=e42]: Search
+          - generic [ref=e43]: ⌘K
+        - button "中文" [ref=e44]
+        - link "🐰 Luna's Journey →" [ref=e45] [cursor=pointer]:
+          - /url: /?persona=luna
+        - link "Bunny Universe" [ref=e46] [cursor=pointer]:
+          - /url: /?persona=hub
+  - main [ref=e47]:
+    - article [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - link "Back to Insights" [ref=e52] [cursor=pointer]:
+            - /url: /wayne/insights
+            - img [ref=e53]
+            - text: Back to Insights
+          - button "EN" [ref=e55]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - time [ref=e58]: May 30, 2026
+            - generic [ref=e59]:
+              - generic [ref=e60]: AI
+              - generic [ref=e61]: token定价
+              - generic [ref=e62]: 硬件原理
+              - generic [ref=e63]: 超能力
+              - generic [ref=e64]: LLM
+              - generic [ref=e65]: 技术科普
+          - heading "Token 快车：读懂 AI 定价，你就拿到了一项超能力" [level=1] [ref=e66]
+          - paragraph [ref=e67]: 为什么同一个 Token，价格可以相差 50 倍？答案藏在 GPU 的物理规律里
+          - paragraph [ref=e68]: 你有没有注意过，ChatGPT / Claude 的 API 定价里，"输出 token"比"输入 token"贵 5 倍？而"缓存 token"又比输入便宜 10 倍？这不是随机定的，而是硬件物理规律直接决定的结果。本文用一列火车的比喻，从零开始讲清楚 AI 定价背后的物理逻辑——15 岁、没有任何计算机基础的人读完，也能用这套思路去反推任何 AI 公司的硬件架构。这是一项真正有用的超能力。
+          - generic [ref=e69]:
+            - generic [ref=e70]: Share
+            - button "Share on X" [ref=e71]:
+              - img [ref=e72]
+            - button "Share on LinkedIn" [ref=e74]:
+              - img [ref=e75]
+            - button "Copy link" [ref=e77]:
+              - img [ref=e78]
+              - text: Copy link
+        - generic [ref=e82]:
+          - img [ref=e83]
+          - generic [ref=e87]: 原始讲义 — Token 快车
+          - link "Open ↗" [ref=e88] [cursor=pointer]:
+            - /url: /pdfs/the-token-express.pdf
+        - generic [ref=e96]:
+          - heading "一个奇怪的发现" [level=2] [ref=e97]
+          - paragraph [ref=e98]: 有一天我在看 AI 的 API 账单，发现了一件很奇怪的事情。
+          - paragraph [ref=e99]: 同样是"token"，同样是让 AI 处理的文字，价格差了整整 50 倍。输出 token 比输入 token 贵 5 倍，而"缓存 token"又比普通输入便宜 10 倍。这不是打折促销，也不是平台随意定价。每一个价格差异背后，都有一个严格的物理原因。
+          - paragraph [ref=e100]: 搞清楚这个原因之后，你会得到一项奇怪的超能力：只要看一眼任何 AI 公司的定价页面，你就能猜出他们用的是什么硬件、哪里是瓶颈、为什么他们的速度是现在这个样子。这不是魔法，这是物理学。
+          - paragraph [ref=e101]: 我们从最基础的概念开始。
+          - heading "先搞清楚一个词：Token 是什么" [level=2] [ref=e102]
+          - paragraph [ref=e103]: 你发给 AI 的每一条消息，AI 回复的每一段话，不是直接以"字"为单位处理的，而是拆成更小的碎片——这个碎片就叫 Token。
+          - paragraph [ref=e104]: 你可以把它理解成火车上的乘客。你说的每个词、每个字、每个标点，都是一个乘客。AI 要做的事情，就是把所有乘客运上火车，带他们完成一段旅程，然后"想出"一个回答，一个乘客接着一个乘客地送出来。
+          - paragraph [ref=e105]: 一般来说，英文 1 个 token 大约等于 0.75 个单词；中文 1 个 token 大约是 1 到 2 个字。你发一句 100 字的中文消息，大概产生 80 到 120 个 token。AI 每回复一个字，就产生一个输出 token，就多一笔花费。
+          - heading "欢迎登上 Token 快车" [level=2] [ref=e106]
+          - paragraph [ref=e107]: 为了讲清楚定价，我们用一个比喻：把 AI 的运行想象成一趟高速列车系统。
+          - paragraph [ref=e108]: 火车本身（GPU）是一辆巨型机车，极其昂贵，开动它需要消耗大量能量。列车的引擎（模型权重）是 AI 大脑里那几千亿个参数，它们的体积极其庞大，就像一台超重的引擎，拖着整列火车跑。站台的闸门（内存带宽）决定了乘客能多快上车——闸门越宽，上车越快。每一个 token，就是一位乘客。
+          - paragraph [ref=e109]: 有一条重要的运行规则：这列火车每 20 毫秒发一班，不管有没有坐满，准时开车。乘客坐满了更好；没坐满也得开。这个规则后面会解释为什么很重要。
+          - paragraph [ref=e110]: 现在，我们来看三种完全不同的乘车场景，价格差异就藏在这三种场景里。
+          - heading "场景 A：团体游览（你发送提示词）" [level=2] [ref=e111]
+          - paragraph [ref=e112]: 当你向 AI 发送一条消息，比如"帮我写一首关于春天的诗"，这条消息里的所有 token，会在同一时刻全部涌入火车。这叫"预填充"（Prefill）阶段。
+          - paragraph [ref=e113]: 关键点：所有乘客同时上车，站台闸门一次性全部打开，大家并排冲进去。AI 可以同时处理你消息里的所有 token，并行计算，互不等待。这个阶段，瓶颈在引擎的速度（计算速度），而不是闸门的宽度。
+          - paragraph [ref=e114]: 结论：乘客多、但费用摊薄了，所以输入 token 便宜。API 账单上的"Input tokens"就是这个阶段产生的费用。
+          - heading "场景 B：独行侠通勤（AI 在生成回复）" [level=2] [ref=e115]
+          - paragraph [ref=e116]: 现在 AI 开始回复你了。它一个字、一个字地"想出来"，一个 token 接着一个 token 地写。这叫"解码"（Decode）阶段。
+          - paragraph [ref=e117]: 这里出现了一个严重的问题。每生成一个 token，AI 就必须把整个模型（那个超重的引擎）从内存里重新加载一遍，才能计算出下一个词是什么。整整几千亿个参数，每次只用来生成一个词，然后再重新加载，再生成一个词，再重新加载……
+          - paragraph [ref=e118]: 用火车比喻就是：整列超重机车出动，就为了运送一位乘客，然后返回，再运一位，再返回。机车大半时间都在等那扇"闸门"把超重的引擎推上来。闸门速度成了唯一的瓶颈，而不是引擎本身。
+          - paragraph [ref=e119]: 这就是"内存带宽瓶颈"。AI 芯片大半时间在空转，就等内存把数据推过来。等的时间越长，花的钱越多。
+          - paragraph [ref=e120]: 结论：输出 token 贵得多——通常是输入 token 价格的 5 倍。这不是 AI 公司在坑你，是物理规律决定的。他们自己也没办法。
+          - heading "隐藏税：KV Cache 是什么" [level=2] [ref=e121]
+          - paragraph [ref=e122]: AI 要生成连贯的回复，必须"记住"整个对话历史——你之前说过什么，它之前回复了什么。这些记忆在技术上叫 KV Cache，你可以把它理解成每位乘客随身携带的行李。
+          - paragraph [ref=e123]: 问题是：每生成一个新 token，那趟超重的火车除了要加载引擎，还得把"所有人的行李"也一起从内存搬上来，才能计算下一个词。
+          - paragraph [ref=e124]: 当对话刚刚开始，行李很少，还好。但当对话进行到第 200,000 个 token，每位乘客都扛着一个巨型行李箱，站台闸门彻底堵死，搬行李占用的时间远超运行引擎本身的时间。
+          - paragraph [ref=e125]: 这就是为什么超长对话会越来越慢、越来越贵——不是 AI 在偷懒，是它在不断搬运越来越重的行李。这个"行李税"是隐藏的，但非常真实。
+          - heading "场景 C：VIP 候车室（提示词缓存）" [level=2] [ref=e126]
+          - paragraph [ref=e127]: 现在假设一个聪明的优化方案：与其每次重新搬行李，不如直接在站台旁边租一个储物柜，把行李存在那里。下次乘客来了，行李已经在站台上等着，不用从遥远的内存搬过来。
+          - paragraph [ref=e128]: 这就是"提示词缓存"（Prompt Caching）。如果你的 AI 应用每次对话都用同一段系统指令（比如"你是一个专业的法律助手，请用正式语气回答"），你可以把这段话缓存起来。下次调用时，AI 直接从缓存里拿，省去了重新处理的全部成本。
+          - paragraph [ref=e129]: 结论：缓存命中（Cache Hit）是三种场景里最便宜的——比普通输入便宜约 10 倍。这是因为行李已经在站台上，不需要等闸门，几乎没有等待时间。
+          - heading "车站的秘密：为什么要批次运行" [level=2] [ref=e130]
+          - paragraph [ref=e131]: 上面说过，火车每 20 毫秒发一班，不等人。为什么要这样设计？
+          - paragraph [ref=e132]: 想象一下极端情况：如果整列超重火车每次只运送 1 位乘客，那个乘客要独自承担移动整列火车的全部成本。理论上，这个成本无限高。
+          - paragraph [ref=e133]: 但如果同时有 2,000 位乘客上车，这列火车的启动成本被 2,000 人平摊，每个人分到的成本就变得非常小。这就是"批次处理"（Batching）的核心逻辑：把成千上万个用户的请求打包在一起，用同一趟列车运送，共同分摊超重引擎的启动成本。
+          - paragraph [ref=e134]: 数学上，当同时处理约 2,000 个独立请求时，系统才达到"每个 token 成本最低"的平衡点——计算时间刚好等于内存加载时间。低于这个数字，成本急剧上升；超过这个数字，成本几乎不再下降。所以 AI 公司面临的最大挑战之一，就是让每一班"列车"坐满人。坐不满的列车，就是白白浪费钱。
+          - heading "铁律：你为那个慢的付钱" [level=2] [ref=e135]
+          - paragraph [ref=e136]: 这里有一条贯穿所有 AI 定价的物理铁律，叫"Roofline Rule"（屋顶线规则）：
+          - paragraph [ref=e137]: 延迟 = 取最慢的那个（计算时间，内存加载时间）
+          - paragraph [ref=e138]: 用通俗的话说：AI 运行的速度，不是计算速度和内存速度的平均值，而是两者里更慢的那个。就像两扇门的宽度，决定你能走多快的，是那扇更窄的门。
+          - paragraph [ref=e139]: 场景 A（输入）：计算速度慢，内存够快，受计算限制，付计算的钱。场景 B（输出）：内存搬数据太慢，芯片空转等，受内存限制，付等待的钱。场景 C（缓存命中）：行李已在站台，两者都不是瓶颈，几乎没有等待。
+          - paragraph [ref=e140]: 这就是为什么三种 token 价格完全不同。它们对应着三种不同的物理瓶颈，而你在为那个"卡住"的地方付钱。
+          - heading "你现在是定价侦探了" [level=2] [ref=e141]
+          - paragraph [ref=e142]: AI 公司很少公布他们具体用了什么硬件、模型有多少参数、内存带宽是多少。但他们在定价页面上泄露了一切。
+          - paragraph [ref=e143]: 一位叫 Reiner Pope 的工程师（他之前在 Google 做 TPU 架构，后来创立了芯片公司 MatX）在一次讲座里说了一句话："他们通过定价泄露了太多信息。"
+          - paragraph [ref=e144]: 当你理解了 Token 快车的物理规律，你就获得了一副特殊的眼镜——戴上它，你看定价页面看到的不是数字，而是背后的硬件架构。让我们用这副眼镜来做两道推理题。
+          - heading "侦探线索一：输出 token 贵出 5 倍说明了什么" [level=2] [ref=e145]
+          - paragraph [ref=e146]: 假设某 AI 服务定价如下：输入 token 3 美元 / 百万，输出 token 15 美元 / 百万。
+          - paragraph [ref=e147]: 推理过程：输入（Prefill）是并行处理，受计算速度限制；输出（Decode）是顺序生成，受内存带宽限制。两者价格差了 5 倍，说明这家公司的 GPU 内存带宽相对于计算速度严重不足——芯片的计算能力很强，但内存"闸门"太窄，每次生成 token 都要等很久。
+          - paragraph [ref=e148]: 结论：他们的芯片有严重的内存带宽瓶颈。他们收 5 倍的输出费，是因为他们的芯片在生成每个 token 时，会有 5 倍于计算时间的空转等待。这是他们的真实成本，你的账单如实反映了他们的硬件局限。
+          - heading "侦探线索二：超过 20 万 token 就涨价 50%，为什么" [level=2] [ref=e149]
+          - paragraph [ref=e150]: 某 AI 服务定价：20 万 token 以内，正常价格；超过 20 万 token，涨价 50%。
+          - paragraph [ref=e151]: 推理过程：当对话不长时，每生成一个 token，加载模型权重的时间远大于加载对话历史（KV Cache）的时间，内存瓶颈主要在权重上。但随着对话越来越长，对话历史（行李）越来越重，加载行李的时间线性增长，而计算时间几乎不变（它只取决于模型大小）。
+          - paragraph [ref=e152]: 当对话到达某个临界点，加载行李的时间超过了计算时间，内存彻底成为新的主要瓶颈。这个临界点就是 20 万 token——这是他们具体硬件的数学分界线，超过就开始收加时费。
+          - paragraph [ref=e153]: 结论：从这个临界点，你甚至可以推算出这家公司的大致内存带宽配置。这是他们"无意泄露"的硬件规格。
+          - heading "小游戏：从缓存策略推断硬件" [level=2] [ref=e154]
+          - paragraph [ref=e155]: 这道题来自原始资料里的一个真实练习。某 AI 服务提供两种提示词缓存方案：热缓存（5 分钟后失效），温缓存（1 小时后失效）。问题：这两种缓存用的是什么硬件？
+          - paragraph [ref=e156]: 推理工具：每种存储介质都有一个"排空时间"（存储容量除以读取带宽）。你可以把它理解成"把整个柜子里的东西全部搬出来要多久"。HBM（高带宽内存，直接在芯片上）：约 15-20 毫秒。DDR 内存（普通电脑内存）：约 1-10 秒。Flash 闪存（SSD 硬盘）：约 1 分钟。机械硬盘：约 1 小时。
+          - paragraph [ref=e157]: 5 分钟失效的热缓存，说明数据存在一个可以在 5 分钟内被完整读取一遍的存储介质里。DDR 太快（几秒就读完了），Flash 大约匹配（约 1 分钟到几分钟）。所以 5 分钟 ≈ HBM 或 Flash 的边界区。1 小时失效的温缓存，排空时间约 1 小时——这精确对应机械硬盘的特征。
+          - paragraph [ref=e158]: 答案：5 分钟缓存 = HBM（高带宽内存），1 小时缓存 = Flash / 机械硬盘。他们用了不同的存储层级，用失效时间来区分缓存的存储位置。这个推理完全基于物理规律，不需要任何内部信息。
+          - heading "总结：你真正在为什么付钱" [level=2] [ref=e159]
+          - paragraph [ref=e160]: 把上面所有内容收拢成四句话：
+          - paragraph [ref=e161]: 输入（Prefill）= 计算瓶颈，便宜。所有 token 同时处理，像团体旅游，人越多越摊薄成本。输出（Decode）= 内存带宽瓶颈，贵。一次只生成一个 token，整列超重火车为一个乘客服务，又贵又慢。KV Cache = 隐藏税。对话越长，行李越重，内存负担线性增长，直到完全堵死。缓存命中（Prompt Cache）= 最便宜。行李已在站台，不需要等闸门，直接开车。
+          - paragraph [ref=e162]: 最后一句话，也是最重要的一句话——下次你看 AI 的 API 账单，你不是在为"人工智能"付钱，你是在为"内存带宽"付钱。AI 公司的核心成本不是算法，是内存。这是当前 AI 行业最被低估的物理事实。
+          - heading "课后作业：去做一个真正的定价侦探" [level=2] [ref=e163]
+          - paragraph [ref=e164]: 现在你有了这套工具，可以去做真实的练习。以下是三道具体的侦探题，每道题都有公开的数据可以查到：
+          - paragraph [ref=e165]: 作业 1：打开 Claude 的 API 定价页面（anthropic.com/api），找到以下数据：Claude 3.5 Sonnet 的输入 token 价格和输出 token 价格。计算两者的比值。根据这个比值，这款模型的内存带宽瓶颈有多严重？比值越大，说明内存等待时间相对于计算时间越长。
+          - paragraph [ref=e166]: 作业 2：打开 OpenAI 的定价页面（openai.com/api/pricing），找到 GPT-4o 的输入、输出、以及"缓存输入"（cached input）的价格。计算三者的比值，验证是否符合我们讲的规律：输出 > 输入 > 缓存输入。如果缓存输入比普通输入便宜了约 10 倍，你就验证了整个 Token 快车理论。
+          - paragraph [ref=e167]: "作业 3：打开 Google Gemini 的 API 定价页面，查找 Gemini 1.5 Pro 的分层定价——是否存在某个 context 长度的临界点，超过后价格上涨？如果存在，记录这个临界点是多少 token，然后思考：根据 Clue #2 的逻辑，这个临界点暗示了 Google 的硬件在什么地方出现了内存带宽切换？"
+          - paragraph [ref=e168]: 做完这三道题，你就完成了一次真实的"定价侦探"调查。你没有进过任何一家公司的内部，但你用物理规律推断出了他们的硬件决策。这就是这套思维框架最有意思的地方：定价是公开的，而物理规律是永恒的。两者结合，就能看见别人看不见的东西。
+        - generic [ref=e169]:
+          - link "← All Insights" [ref=e170] [cursor=pointer]:
+            - /url: /wayne/insights
+          - generic [ref=e171]:
+            - generic [ref=e172]: Share
+            - button "Share on X" [ref=e173]:
+              - img [ref=e174]
+            - button "Share on LinkedIn" [ref=e176]:
+              - img [ref=e177]
+            - button "Copy link" [ref=e179]:
+              - img [ref=e180]
+              - text: Copy link
+        - generic [ref=e183]:
+          - heading "核心总结" [level=2] [ref=e184]
+          - list [ref=e185]:
+            - listitem [ref=e186]:
+              - generic [ref=e187]: •
+              - generic [ref=e188]: 输出 token 比输入 token 贵 3-5 倍，不是定价策略，是内存带宽瓶颈的直接反映——AI 在生成每个词时，都要把几千亿参数从内存里搬一遍
+            - listitem [ref=e189]:
+              - generic [ref=e190]: •
+              - generic [ref=e191]: KV Cache（对话记忆）是隐藏税：对话越长行李越重，超过临界点后内存成为主要瓶颈，价格突然上涨
+            - listitem [ref=e192]:
+              - generic [ref=e193]: •
+              - generic [ref=e194]: 缓存命中（Prompt Cache）比普通输入便宜约 10 倍，因为行李已经在站台，省去了最慢的内存加载步骤
+            - listitem [ref=e195]:
+              - generic [ref=e196]: •
+              - generic [ref=e197]: 批次处理是 AI 经济学的生命线：需要约 2,000 个并发用户同时"上车"，才能把超重引擎的启动成本摊薄到可接受的水平
+            - listitem [ref=e198]:
+              - generic [ref=e199]: •
+              - generic [ref=e200]: AI 定价是硬件架构的泄露：输入/输出价格比揭示内存带宽瓶颈，价格突变点揭示内存层级切换，缓存失效时间揭示存储介质——你不是在猜，你是在用物理定律推理
+        - generic [ref=e201]:
+          - heading "相关资源" [level=2] [ref=e202]
+          - list [ref=e203]:
+            - listitem [ref=e204]:
+              - link "The Token Express（原始 PDF 讲义）" [ref=e205] [cursor=pointer]:
+                - /url: https://notebooklm.google.com/notebook/812414ae-a6b0-4ab1-a651-92232a77748d
+                - text: The Token Express（原始 PDF 讲义）
+                - img [ref=e206]
+            - listitem [ref=e208]:
+              - link "Claude API 定价页面" [ref=e209] [cursor=pointer]:
+                - /url: https://www.anthropic.com/pricing#anthropic-api
+                - text: Claude API 定价页面
+                - img [ref=e210]
+            - listitem [ref=e212]:
+              - link "OpenAI API 定价页面" [ref=e213] [cursor=pointer]:
+                - /url: https://openai.com/api/pricing
+                - text: OpenAI API 定价页面
+                - img [ref=e214]
+            - listitem [ref=e216]:
+              - link "Google Gemini API 定价页面" [ref=e217] [cursor=pointer]:
+                - /url: https://ai.google.dev/gemini-api/docs/pricing
+                - text: Google Gemini API 定价页面
+                - img [ref=e218]
+  - contentinfo [ref=e220]:
+    - generic [ref=e221]:
+      - generic [ref=e222]:
+        - text: Wayne's Plans ·
+        - link "Bunny Universe" [ref=e223] [cursor=pointer]:
+          - /url: /?persona=hub
+      - generic [ref=e224]: Real teaching. Real results. Every week.

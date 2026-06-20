@@ -1,0 +1,145 @@
+- generic [ref=e3]:
+  - generic:
+    - generic: ✏️
+  - navigation:
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - link "🐱 Wayne's Plans" [ref=e7] [cursor=pointer]:
+        - /url: https://wayne.bunnyuniverse.com
+      - link "🐰 Luna's Journey" [ref=e8] [cursor=pointer]:
+        - /url: https://luna.bunnyuniverse.com
+  - main [ref=e9]:
+    - generic [ref=e11]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: 🐰
+        - heading "Bunny Universe" [level=1] [ref=e17]
+        - paragraph [ref=e18]: A family learning together with AI
+      - generic [ref=e19]:
+        - 'link "Wayne Wayne''s Plans Wayne · Dad · Teacher Weekly teaching notes from a dad figuring it out Latest This Week · Week 1 Git vs GitHub: Teaching Version Control Through a Real Broken Project We skipped the slides and went straight to a real GitHub repo — Stella''s FandomTrivia site — where a live bug was sitting right there waiting. The site wasn''t updating even though Vercel showed a preview change. The culprit: wrong branch, no pull request. We used that to explain the whole Git/GitHub mental model. Then Luna did her first CTF to cap it off. 📋 🛠️ 💡 Read Plans →" [ref=e20] [cursor=pointer]':
+          - /url: https://wayne.bunnyuniverse.com
+          - generic [ref=e21]:
+            - generic [ref=e23]:
+              - img "Wayne" [ref=e25]
+              - generic [ref=e26]:
+                - heading "Wayne's Plans" [level=2] [ref=e27]
+                - paragraph [ref=e28]: Wayne · Dad · Teacher
+            - paragraph [ref=e29]: Weekly teaching notes from a dad figuring it out
+            - generic [ref=e30]:
+              - paragraph [ref=e31]: Latest This Week · Week 1
+              - paragraph [ref=e32]: "Git vs GitHub: Teaching Version Control Through a Real Broken Project"
+              - paragraph [ref=e33]: "We skipped the slides and went straight to a real GitHub repo — Stella's FandomTrivia site — where a live bug was sitting right there waiting. The site wasn't updating even though Vercel showed a preview change. The culprit: wrong branch, no pull request. We used that to explain the whole Git/GitHub mental model. Then Luna did her first CTF to cap it off."
+            - generic [ref=e34]:
+              - generic [ref=e35]:
+                - generic [ref=e36]: 📋
+                - generic [ref=e37]: 🛠️
+                - generic [ref=e38]: 💡
+              - generic [ref=e39]: Read Plans →
+        - link "Luna Luna's Journey Luna · 8 years old · Learner What I learned this week (I'm 8!) Latest This Week · Week 3 Two Flags in One Day! (Plus a Competition) We hacked into a server with broken-up files, then flooded another server until it surrendered and gave us the flag. Oh — and we had a competition. Stella and Mom tied for first place. Dad got third. 🌟 🎨 🚀 See My Journey →" [ref=e40] [cursor=pointer]:
+          - /url: https://luna.bunnyuniverse.com
+          - generic [ref=e41]:
+            - generic [ref=e43]:
+              - img "Luna" [ref=e45]
+              - generic [ref=e46]:
+                - heading "Luna's Journey" [level=2] [ref=e47]
+                - paragraph [ref=e48]: Luna · 8 years old · Learner
+            - paragraph [ref=e49]: What I learned this week (I'm 8!)
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: Latest This Week · Week 3
+              - paragraph [ref=e52]: Two Flags in One Day! (Plus a Competition)
+              - paragraph [ref=e53]: We hacked into a server with broken-up files, then flooded another server until it surrendered and gave us the flag. Oh — and we had a competition. Stella and Mom tied for first place. Dad got third.
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]: 🌟
+                - generic [ref=e57]: 🎨
+                - generic [ref=e58]: 🚀
+              - generic [ref=e59]: See My Journey →
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - heading "📓 Latest from the Blog" [level=2] [ref=e62]
+          - paragraph [ref=e63]: What we've been learning, building, and cracking open
+        - 'link "📌 Latest 2026-06-09 Book Review Parenting The Gap and The Gain: Why I Stopped Measuring Luna Against \"Where She Should Be\" Dan Sullivan''s framework changed how I track my daughter''s progress — and my own confidence as a dad-teacher Most parents (including me) spend half our energy measuring our kids against an ideal — what they \"should\" know by now, how fast they \"should\" be progressing. Dan Sullivan calls this the Gap. The Gain is the opposite: measure backward, from where you started. After reading this book, I completely changed how I run these weekly sessions. Here''s what shifted. Read more →" [ref=e64] [cursor=pointer]':
+          - /url: https://wayne.bunnyuniverse.com/wayne/insights/37
+          - generic [ref=e65]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: 📌 Latest
+              - generic [ref=e69]: 2026-06-09
+              - generic [ref=e70]: Book Review
+              - generic [ref=e71]: Parenting
+            - 'heading "The Gap and The Gain: Why I Stopped Measuring Luna Against \"Where She Should Be\"" [level=3] [ref=e72]'
+            - paragraph [ref=e73]: Dan Sullivan's framework changed how I track my daughter's progress — and my own confidence as a dad-teacher
+            - paragraph [ref=e74]: "Most parents (including me) spend half our energy measuring our kids against an ideal — what they \"should\" know by now, how fast they \"should\" be progressing. Dan Sullivan calls this the Gap. The Gain is the opposite: measure backward, from where you started. After reading this book, I completely changed how I run these weekly sessions. Here's what shifted."
+            - paragraph [ref=e75]: Read more →
+        - generic [ref=e76]:
+          - link "2026-06-06 1 小时 Debug vs 3 天谷歌：蓝牙耳机自动暂停，AI 怎么拆案？ YouTube 播放几秒就自动暂停。耳机已连接，驱动没报错，重启无效。这是 Windows 蓝牙音频的经典顽疾。这篇文章记录了一次完整的人机协作 Debug 过程——用了约 1 小时，AI 提出假设、写排查脚本，人类执行并反馈。如果只靠谷歌搜索，同样的问题大概需要 2~3 天。这次排查揭示了一种可以复用的协作模式，以及它能往哪些方向延伸。 AI协作 Debug" [ref=e77] [cursor=pointer]:
+            - /url: https://wayne.bunnyuniverse.com/wayne/insights/36
+            - paragraph [ref=e78]: 2026-06-06
+            - heading "1 小时 Debug vs 3 天谷歌：蓝牙耳机自动暂停，AI 怎么拆案？" [level=4] [ref=e79]
+            - paragraph [ref=e80]: YouTube 播放几秒就自动暂停。耳机已连接，驱动没报错，重启无效。这是 Windows 蓝牙音频的经典顽疾。这篇文章记录了一次完整的人机协作 Debug 过程——用了约 1 小时，AI 提出假设、写排查脚本，人类执行并反馈。如果只靠谷歌搜索，同样的问题大概需要 2~3 天。这次排查揭示了一种可以复用的协作模式，以及它能往哪些方向延伸。
+            - generic [ref=e81]:
+              - generic [ref=e82]: AI协作
+              - generic [ref=e83]: Debug
+          - link "2026-06-01 你每天在用的这五种\"网页产品\"，其实根本不是同一类东西 很多人开始做产品的第一句话是\"我想做一个网站\"。但\"网站\"其实不是一种产品，而是五种完全不同形态的统称：普通网站、Web App、PWA、浏览器插件、页面增强脚本（userscript）。选错了类型，你的功能可能根本实现不了，或者实现了用户也用不起来。本文从用户的日常视角出发，每种形态给你一个最简单的定义、一个最熟悉的例子、一个最火的产品——读完你就能在五分钟内判断自己该做哪一种。 产品设计 Web开发" [ref=e84] [cursor=pointer]:
+            - /url: https://wayne.bunnyuniverse.com/wayne/insights/35
+            - paragraph [ref=e85]: 2026-06-01
+            - heading "你每天在用的这五种\"网页产品\"，其实根本不是同一类东西" [level=4] [ref=e86]
+            - paragraph [ref=e87]: 很多人开始做产品的第一句话是"我想做一个网站"。但"网站"其实不是一种产品，而是五种完全不同形态的统称：普通网站、Web App、PWA、浏览器插件、页面增强脚本（userscript）。选错了类型，你的功能可能根本实现不了，或者实现了用户也用不起来。本文从用户的日常视角出发，每种形态给你一个最简单的定义、一个最熟悉的例子、一个最火的产品——读完你就能在五分钟内判断自己该做哪一种。
+            - generic [ref=e88]:
+              - generic [ref=e89]: 产品设计
+              - generic [ref=e90]: Web开发
+          - link "2026-05-31 Token 快车：读懂 AI 定价，你就拿到了一项超能力 你有没有注意过，ChatGPT / Claude 的 API 定价里，\"输出 token\"比\"输入 token\"贵 5 倍？而\"缓存 token\"又比输入便宜 10 倍？这不是随机定的，而是硬件物理规律直接决定的结果。本文用一列火车的比喻，从零开始讲清楚 AI 定价背后的物理逻辑——15 岁、没有任何计算机基础的人读完，也能用这套思路去反推任何 AI 公司的硬件架构。这是一项真正有用的超能力。 AI token定价" [ref=e91] [cursor=pointer]:
+            - /url: https://wayne.bunnyuniverse.com/wayne/insights/34
+            - paragraph [ref=e92]: 2026-05-31
+            - heading "Token 快车：读懂 AI 定价，你就拿到了一项超能力" [level=4] [ref=e93]
+            - paragraph [ref=e94]: 你有没有注意过，ChatGPT / Claude 的 API 定价里，"输出 token"比"输入 token"贵 5 倍？而"缓存 token"又比输入便宜 10 倍？这不是随机定的，而是硬件物理规律直接决定的结果。本文用一列火车的比喻，从零开始讲清楚 AI 定价背后的物理逻辑——15 岁、没有任何计算机基础的人读完，也能用这套思路去反推任何 AI 公司的硬件架构。这是一项真正有用的超能力。
+            - generic [ref=e95]:
+              - generic [ref=e96]: AI
+              - generic [ref=e97]: token定价
+        - link "All posts →" [ref=e99] [cursor=pointer]:
+          - /url: https://wayne.bunnyuniverse.com/wayne/insights
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - heading "🛠️ What We've Built" [level=2] [ref=e102]
+          - paragraph [ref=e103]: Real tools and projects — made by this family, free to use.
+        - generic [ref=e104]:
+          - link "⚡ Game FandomTrivia Harry Potter trivia for all 7 books. 100 questions, Google login, built by Luna in 2 days. www.fandom-trivia.com" [ref=e105] [cursor=pointer]:
+            - /url: https://www.fandom-trivia.com
+            - generic [ref=e106]: ⚡
+            - text: Game
+            - heading "FandomTrivia" [level=3] [ref=e107]
+            - paragraph [ref=e108]: Harry Potter trivia for all 7 books. 100 questions, Google login, built by Luna in 2 days.
+            - paragraph [ref=e109]: www.fandom-trivia.com
+          - link "🧠 AI Tool VRAM Calculator Can your GPU run this LLM? Instant VRAM estimates for 60+ models across Nvidia and Apple Silicon. vram.bunnyuniverse.com" [ref=e110] [cursor=pointer]:
+            - /url: https://vram.bunnyuniverse.com
+            - generic [ref=e111]: 🧠
+            - text: AI Tool
+            - heading "VRAM Calculator" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Can your GPU run this LLM? Instant VRAM estimates for 60+ models across Nvidia and Apple Silicon.
+            - paragraph [ref=e114]: vram.bunnyuniverse.com
+          - link "🎬 Entertainment DramaScout Find your next Asian drama. Smart recommendations across genres, countries, and vibes. dramascout.com" [ref=e115] [cursor=pointer]:
+            - /url: https://dramascout.com
+            - generic [ref=e116]: 🎬
+            - text: Entertainment
+            - heading "DramaScout" [level=3] [ref=e117]
+            - paragraph [ref=e118]: Find your next Asian drama. Smart recommendations across genres, countries, and vibes.
+            - paragraph [ref=e119]: dramascout.com
+      - generic [ref=e121]:
+        - heading "How This Works" [level=3] [ref=e123]
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]: Every Wednesday
+              - generic [ref=e128]: Wayne
+            - paragraph [ref=e129]: publishes this week's teaching plan — what we tried, what worked, what to steal.
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: Every Sunday
+              - generic [ref=e133]: Luna
+            - paragraph [ref=e134]: publishes her learning results — raw, honest, and sometimes hilarious.
+  - contentinfo [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]: 🚀
+      - generic [ref=e138]: 🎨
+      - generic [ref=e139]: 💻
+    - paragraph [ref=e140]: Built with ❤️ and 🤖 | Journal Version 3.1
+    - paragraph [ref=e141]: Prop of Luna. Keep out (unless you're Wayne or a friendly robot).
