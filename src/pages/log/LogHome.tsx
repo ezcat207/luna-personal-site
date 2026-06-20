@@ -655,9 +655,10 @@ export default function LogHome() {
   return (
     <div className="space-y-3 pb-10">
 
-      {/* ── Top bar: Template Tabs + Lang Switch + Auth ── */}
-      <div className="flex items-center gap-2">
-        <div className="flex gap-2 overflow-x-auto pb-0.5 flex-1">
+      {/* ── Top bar: two rows, no scroll ── */}
+      <div className="space-y-1.5">
+        {/* Row 1: Template tabs */}
+        <div className="flex gap-2 flex-wrap">
           {(Object.keys(TEMPLATES) as TemplateId[]).map(tid => (
             <button key={tid}
               onClick={() => {
@@ -672,25 +673,27 @@ export default function LogHome() {
             </button>
           ))}
         </div>
-        {/* Analysis Link */}
-        <Link
-          to="/analysis"
-          className="shrink-0 px-3 py-1.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all whitespace-nowrap flex items-center gap-1"
-        >
-          <span>📊</span>
-          <span className="hidden sm:inline">Analysis</span>
-        </Link>
-        {/* Language toggle */}
-        <button onClick={toggleLang}
-          className="shrink-0 px-2.5 py-1.5 rounded-full text-xs font-bold border border-slate-200 bg-white text-slate-500 hover:border-pink-300 transition-all whitespace-nowrap">
-          {t('log.lang_switch')}
-        </button>
-        {/* Google Sign-in / user profile */}
-        <AuthButton
-          lang={lang}
-          isPublic={log?.is_public ?? true}
-          onPrivacyChange={user ? (v) => updateLog({ is_public: v }) : undefined}
-        />
+        {/* Row 2: Utility buttons */}
+        <div className="flex items-center gap-2 justify-between">
+          <Link
+            to="/analysis"
+            className="px-3 py-1.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all whitespace-nowrap flex items-center gap-1"
+          >
+            <span>📊</span>
+            <span>Analysis</span>
+          </Link>
+          <div className="flex items-center gap-2">
+            <button onClick={toggleLang}
+              className="px-2.5 py-1.5 rounded-full text-xs font-bold border border-slate-200 bg-white text-slate-500 hover:border-pink-300 transition-all whitespace-nowrap">
+              {t('log.lang_switch')}
+            </button>
+            <AuthButton
+              lang={lang}
+              isPublic={log?.is_public ?? true}
+              onPrivacyChange={user ? (v) => updateLog({ is_public: v }) : undefined}
+            />
+          </div>
+        </div>
       </div>
 
       {/* ── Sign-in nudge (only when anonymous) ── */}
