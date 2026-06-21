@@ -429,13 +429,9 @@ export default function LogHome() {
       : { year: v.year, month: v.month - 1 });
   }
   function calNextMonth() {
-    const now = new Date();
-    setCalView(v => {
-      if (v.year === now.getFullYear() && v.month === now.getMonth()) return v; // already at current month
-      return v.month === 11
-        ? { year: v.year + 1, month: 0 }
-        : { year: v.year, month: v.month + 1 };
-    });
+    setCalView(v => v.month === 11
+      ? { year: v.year + 1, month: 0 }
+      : { year: v.year, month: v.month + 1 });
   }
 
   // CTF unlock
@@ -797,11 +793,9 @@ export default function LogHome() {
 
           {/* Calendar popup */}
           {showCalendar && (() => {
-            const todayDate = new Date();
             const firstDay  = new Date(calView.year, calView.month, 1);
             const daysInMon = new Date(calView.year, calView.month + 1, 0).getDate();
             const startDow  = firstDay.getDay(); // 0=Sun
-            const isCurrentMonth = calView.year === todayDate.getFullYear() && calView.month === todayDate.getMonth();
             const monthLabel = new Date(calView.year, calView.month, 1)
               .toLocaleString('en-US', { month: 'long', year: 'numeric' });
             // Build a set of dates that have history entries
@@ -817,8 +811,7 @@ export default function LogHome() {
                   </button>
                   <span className="text-xs font-bold text-slate-700">{monthLabel}</span>
                   <button onClick={calNextMonth}
-                    disabled={isCurrentMonth}
-                    className="px-2 py-0.5 rounded-lg hover:bg-pink-50 text-slate-500 hover:text-pink-500 text-sm transition-colors disabled:opacity-30">
+                    className="px-2 py-0.5 rounded-lg hover:bg-pink-50 text-slate-500 hover:text-pink-500 text-sm transition-colors">
                     ›
                   </button>
                 </div>
@@ -836,26 +829,28 @@ export default function LogHome() {
                   {Array.from({ length: startDow }).map((_, i) => <div key={`e${i}`} />)}
                   {/* Day buttons */}
                   {Array.from({ length: daysInMon }, (_, i) => i + 1).map(day => {
-                    const dateStr = `${calView.year}-${String(calView.month + 1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-                    const isFuture  = dateStr > today;
+                    const dateStr    = `${calView.year}-${String(calView.month + 1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+                    const isFuture   = dateStr > today;
                     const isSelected = dateStr === currentDate;
                     const isTodayDay = dateStr === today;
-                    const hasLog    = historyDates.has(dateStr);
+                    const hasLog     = historyDates.has(dateStr);
                     return (
                       <button
                         key={day}
-                        disabled={isFuture}
                         onClick={() => { setCurrentDate(dateStr); setShowCalendar(false); }}
-                        className={`relative text-[11px] font-medium h-7 w-7 mx-auto rounded-lg transition-all
-                          ${isFuture   ? 'text-slate-300 cursor-not-allowed' : 'hover:bg-pink-50 cursor-pointer'}
-                          ${isSelected ? 'bg-pink-400 text-white hover:bg-pink-500 font-bold' : ''}
-                          ${isTodayDay && !isSelected ? 'ring-2 ring-pink-300 text-pink-600' : ''}
-                          ${!isSelected && !isFuture ? 'text-slate-700' : ''}
+                        className={`relative text-[11px] font-medium h-7 w-7 mx-auto rounded-lg transition-all cursor-pointer
+                          ${isSelected  ? 'bg-pink-400 text-white hover:bg-pink-500 font-bold' : ''}
+                          ${isTodayDay && !isSelected ? 'ring-2 ring-pink-300 text-pink-600 hover:bg-pink-50' : ''}
+                          ${isFuture  && !isSelected ? 'text-blue-400 hover:bg-blue-50' : ''}
+                          ${!isSelected && !isFuture && !isTodayDay ? 'text-slate-700 hover:bg-pink-50' : ''}
                         `}
                       >
                         {day}
                         {hasLog && !isSelected && (
                           <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-green-400" />
+                        )}
+                        {isFuture && !isSelected && (
+                          <span className="absolute top-0.5 right-0.5 w-1 h-1 rounded-full bg-blue-300" />
                         )}
                       </button>
                     );
@@ -876,9 +871,8 @@ export default function LogHome() {
           })()}
         </div>
 
-        <button onClick={() => setCurrentDate(d => { const n = offsetDate(d, 1); return n <= today ? n : d; })}
-          disabled={currentDate >= today}
-          className="px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs text-slate-500 hover:border-pink-300 transition-all disabled:opacity-30">
+        <button onClick={() => setCurrentDate(d => offsetDate(d, 1))}
+          className="px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs text-slate-500 hover:border-pink-300 transition-all">
           {t('log.tomorrow')}
         </button>
       </div>
