@@ -489,6 +489,10 @@ export default function LogHome() {
 
   async function loadDay(date: string, userId: string | null) {
     if (!supabase) return;
+    // Clear immediately so the UI never shows a previous user's tasks
+    // while the new query is in-flight.
+    setTasks([]);
+    setLog(null);
     setLoading(true);
 
     // Always scope to the correct "lane":
