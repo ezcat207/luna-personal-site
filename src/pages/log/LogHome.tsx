@@ -449,16 +449,24 @@ export default function LogHome() {
     if (!supabase) return;
     setLoading(true);
 
-    // Signed-in users see only their own logs.
-    // Anonymous visitors see whatever is in the DB for that date (the existing default data).
+    // Always scope to the correct "lane":
+    //   Signed-in  → rows where user_id = their UUID
+    //   Anonymous  → rows where user_id IS NULL (shared/demo data)
+    // Using .limit(1) instead of .maybeSingle() avoids silent errors when
+    // duplicate rows exist (maybeSingle returns null on multiple matches).
     let query = supabase.from('luna_daily_logs').select('*').eq('log_date', date);
-    if (userId) query = query.eq('user_id', userId);
+    if (userId) {
+      query = query.eq('user_id', userId);
+    } else {
+      query = query.is('user_id', null);
+    }
 
-    let { data: logRow } = await query.maybeSingle();
+    const { data: logRows } = await query.limit(1);
+    let logRow = logRows?.[0] ?? null;
 
     // Auto-create log if missing for any date (today or history).
-    // Anonymous → no user_id (shared default data anyone can edit).
-    // Signed-in → user_id set (their own private log).
+    // Anonymous → user_id null (shared demo data).
+    // Signed-in → user_id set (private log).
     if (!logRow) {
       const insertData: Record<string, unknown> = {
         log_date: date, template, weather: 'sunny', is_public: true,
@@ -494,10 +502,14 @@ export default function LogHome() {
       setTasks([]);
     }
 
-    // History: last 14 days — scoped to signed-in user, or all existing data for anonymous
+    // History: last 14 days — scoped to the same lane as above
     const pastDates = Array.from({ length: 14 }, (_, i) => offsetDate(today, -i));
     let histQuery = supabase.from('luna_daily_logs').select('id, log_date').in('log_date', pastDates);
-    if (userId) histQuery = histQuery.eq('user_id', userId);
+    if (userId) {
+      histQuery = histQuery.eq('user_id', userId);
+    } else {
+      histQuery = histQuery.is('user_id', null);
+    }
     const { data: histLogs } = await histQuery;
 
     if (histLogs && histLogs.length > 0) {
