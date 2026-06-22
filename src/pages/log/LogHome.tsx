@@ -246,18 +246,48 @@ function StatusBtn({ status, onClick }: { status: TaskStatus; onClick: () => voi
   );
 }
 
+// ─── Time unit helpers ────────────────────────────────────────────────────────
+
+type TimeUnit = 'min' | 'hm';
+
+/** Format minutes → display string for the given unit mode */
+function fmtTaskTime(mins: number | null | undefined, unit: TimeUnit): string {
+  if (mins == null || mins === 0) return '';
+  if (unit === 'min') return String(mins);
+  const h = Math.floor(mins / 60);
+  const m = mins % 60;
+  if (h === 0) return `${m}m`;
+  if (m === 0) return `${h}h`;
+  return `${h}h${m}m`;
+}
+
+/** Parse display string → minutes (supports "1h30m", "1h", "45m", "90") */
+function parseTaskTime(s: string): number | null {
+  const t = s.trim().toLowerCase();
+  if (!t) return null;
+  const hm = t.match(/^(\d+)h\s*(\d*)m?$/);
+  if (hm) return parseInt(hm[1]) * 60 + (parseInt(hm[2]) || 0);
+  const m = t.match(/^(\d+)m?$/);
+  if (m) return parseInt(m[1]);
+  return null;
+}
+
 // ─── Task Row ─────────────────────────────────────────────────────────────────
 
 // columns: [task-text flex] [status 28px] [est 36px] [actual 36px] [wrong 30px] [del 18px]
 const ROW_COLS = '1fr 28px 36px 36px 30px 18px';
 
-function TaskRow({ task, onUpdate, onDelete, onToggle }: {
+function TaskRow({ task, onUpdate, onDelete, onToggle, timeUnit }: {
   task: Task;
   onUpdate: (id: string, f: Partial<Task>) => void;
   onDelete: (id: string) => void;
   onToggle: (id: string) => void;
+  timeUnit: TimeUnit;
 }) {
   const { t } = useTranslation();
+
+  const timeInputCls = 'w-full text-center text-xs border border-slate-200 rounded px-0.5 py-0.5 focus:outline-none focus:border-pink-300 bg-transparent';
+
   return (
     <div className="grid items-center gap-0.5 border-b border-dashed border-amber-100 py-1"
       style={{ gridTemplateColumns: ROW_COLS }}>
@@ -272,15 +302,38 @@ function TaskRow({ task, onUpdate, onDelete, onToggle }: {
       <div className="flex justify-center">
         <StatusBtn status={task.status} onClick={() => onToggle(task.id)} />
       </div>
-      <input type="number" min={0} value={task.est_mins ?? ''} placeholder="--"
-        onChange={e => onUpdate(task.id, { est_mins: e.target.value ? +e.target.value : null })}
-        className="w-full text-center text-xs border border-slate-200 rounded px-0.5 py-0.5 focus:outline-none focus:border-pink-300 bg-transparent" />
-      <input type="number" min={0} value={task.actual_mins ?? ''} placeholder="--"
-        onChange={e => onUpdate(task.id, { actual_mins: e.target.value ? +e.target.value : null })}
-        className="w-full text-center text-xs border border-slate-200 rounded px-0.5 py-0.5 focus:outline-none focus:border-pink-300 bg-transparent" />
+
+      {/* Est — min mode: number input; hm mode: text input with h:m format */}
+      {timeUnit === 'min' ? (
+        <input type="number" min={0} value={task.est_mins ?? ''} placeholder="--"
+          onChange={e => onUpdate(task.id, { est_mins: e.target.value ? +e.target.value : null })}
+          className={timeInputCls} />
+      ) : (
+        <input type="text" value={fmtTaskTime(task.est_mins, 'hm')} placeholder="--"
+          onChange={e => {
+            const v = parseTaskTime(e.target.value);
+            onUpdate(task.id, { est_mins: v });
+          }}
+          className={timeInputCls} />
+      )}
+
+      {/* Actual — same toggle */}
+      {timeUnit === 'min' ? (
+        <input type="number" min={0} value={task.actual_mins ?? ''} placeholder="--"
+          onChange={e => onUpdate(task.id, { actual_mins: e.target.value ? +e.target.value : null })}
+          className={timeInputCls} />
+      ) : (
+        <input type="text" value={fmtTaskTime(task.actual_mins, 'hm')} placeholder="--"
+          onChange={e => {
+            const v = parseTaskTime(e.target.value);
+            onUpdate(task.id, { actual_mins: v });
+          }}
+          className={timeInputCls} />
+      )}
+
       <input type="number" min={0} value={task.wrong_count || ''} placeholder="0"
         onChange={e => onUpdate(task.id, { wrong_count: +e.target.value || 0 })}
-        className="w-full text-center text-xs border border-slate-200 rounded px-0.5 py-0.5 focus:outline-none focus:border-pink-300 bg-transparent" />
+        className={timeInputCls} />
       <button onClick={() => onDelete(task.id)} className="text-slate-200 hover:text-red-400 text-xs text-center">✕</button>
     </div>
   );
@@ -288,13 +341,14 @@ function TaskRow({ task, onUpdate, onDelete, onToggle }: {
 
 // ─── Subject Section ──────────────────────────────────────────────────────────
 
-function SubjectSection({ subj, tasks, onAdd, onUpdate, onDelete, onToggle }: {
+function SubjectSection({ subj, tasks, onAdd, onUpdate, onDelete, onToggle, timeUnit }: {
   subj: SubjectDef;
   tasks: Task[];
   onAdd: () => void;
   onUpdate: (id: string, f: Partial<Task>) => void;
   onDelete: (id: string) => void;
   onToggle: (id: string) => void;
+  timeUnit: TimeUnit;
 }) {
   const { t } = useTranslation();
   const done = tasks.filter(tk => tk.status === 'done').length;
@@ -317,7 +371,7 @@ function SubjectSection({ subj, tasks, onAdd, onUpdate, onDelete, onToggle }: {
       {/* Task rows area */}
       <div className="flex-1 min-w-0 px-1">
         {tasks.map(task => (
-          <TaskRow key={task.id} task={task} onUpdate={onUpdate} onDelete={onDelete} onToggle={onToggle} />
+          <TaskRow key={task.id} task={task} onUpdate={onUpdate} onDelete={onDelete} onToggle={onToggle} timeUnit={timeUnit} />
         ))}
         <button onClick={onAdd}
           className="w-full text-left text-[10px] text-pink-400 hover:text-pink-600 py-1 px-1 hover:bg-pink-50/40 transition-colors">
@@ -509,6 +563,17 @@ export default function LogHome() {
     return localStorage.getItem('log-form-default') !== 'expanded';
   });
   const [showFormSettings,  setShowFormSettings]  = useState(false);
+  const [timeUnit,          setTimeUnit]          = useState<TimeUnit>(() => {
+    return (localStorage.getItem('log-time-unit') as TimeUnit) ?? 'min';
+  });
+
+  function toggleTimeUnit() {
+    setTimeUnit(u => {
+      const next: TimeUnit = u === 'min' ? 'hm' : 'min';
+      localStorage.setItem('log-time-unit', next);
+      return next;
+    });
+  }
 
   function toggleCollapse() {
     setFormCollapsed(v => !v);
@@ -999,6 +1064,17 @@ export default function LogHome() {
                             : (lang === 'zh' ? '默认展开（表格优先）' : 'Default: form view')}
                         </button>
                       ))}
+                      <p className="text-slate-400 font-bold px-1 pb-1 border-b border-slate-100 mt-2 mb-1">
+                        {lang === 'zh' ? '时间显示单位' : 'Time display'}
+                      </p>
+                      <button onClick={toggleTimeUnit}
+                        className="w-full text-left px-2 py-1.5 rounded-lg transition-all flex items-center gap-2 text-slate-600 hover:bg-slate-50">
+                        <span>{timeUnit === 'min' ? '🔢' : '🕐'}</span>
+                        {timeUnit === 'min'
+                          ? (lang === 'zh' ? '当前：分钟（点击切换 h:m）' : 'Now: minutes → switch to h:m')
+                          : (lang === 'zh' ? '当前：时分（点击切换分钟）' : 'Now: h:m → switch to minutes')
+                        }
+                      </button>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -1082,8 +1158,8 @@ export default function LogHome() {
               style={{ gridTemplateColumns: ROW_COLS }}>
               <span className="text-left pl-1">{t('log.col_plan')}</span>
               <span>{t('log.col_done')}</span>
-              <span style={{ whiteSpace: 'pre-line' }}>{t('log.col_est')}</span>
-              <span style={{ whiteSpace: 'pre-line' }}>{t('log.col_actual')}</span>
+              <span style={{ whiteSpace: 'pre-line' }}>{t('log.col_est')}{'\n'}<span className="font-normal opacity-60">{timeUnit === 'min' ? 'min' : 'h:m'}</span></span>
+              <span style={{ whiteSpace: 'pre-line' }}>{t('log.col_actual')}{'\n'}<span className="font-normal opacity-60">{timeUnit === 'min' ? 'min' : 'h:m'}</span></span>
               <span>{t('log.col_wrong')}</span>
               <span></span>
             </div>
@@ -1104,6 +1180,7 @@ export default function LogHome() {
               onUpdate={updateTask}
               onDelete={deleteTask}
               onToggle={toggleStatus}
+              timeUnit={timeUnit}
             />
           ))}
 
@@ -1127,8 +1204,8 @@ export default function LogHome() {
                   onChange={e => updateLog({ sleep_time: e.target.value || null })}
                   className="border-b border-dashed border-slate-300 bg-transparent focus:outline-none text-xs flex-1 min-w-0" />
               </label>
-              {totalEst > 0 && <div>{t('log.est_study', { min: totalEst })}</div>}
-              {totalActual > 0 && <div>{t('log.actual_time', { min: totalActual })}</div>}
+              {totalEst > 0 && <div>{t('log.est_study', { min: fmtTaskTime(totalEst, timeUnit) })}</div>}
+              {totalActual > 0 && <div>{t('log.actual_time', { min: fmtTaskTime(totalActual, timeUnit) })}</div>}
             </div>
             <div className="mt-1 text-[11px] text-slate-500">
               {t('log.wrong_prefix')} <strong className="text-red-500 text-sm">{totalWrong}</strong>
