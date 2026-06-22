@@ -286,6 +286,11 @@ function TaskRow({ task, onUpdate, onDelete, onToggle, timeUnit }: {
 }) {
   const { t } = useTranslation();
 
+  // Local draft state for h:m text inputs — avoids mid-typing reformatting.
+  // null = not being edited (show formatted value from props).
+  const [estDraft,    setEstDraft]    = useState<string | null>(null);
+  const [actualDraft, setActualDraft] = useState<string | null>(null);
+
   const timeInputCls = 'w-full text-center text-xs border border-slate-200 rounded px-0.5 py-0.5 focus:outline-none focus:border-pink-300 bg-transparent';
 
   return (
@@ -303,32 +308,48 @@ function TaskRow({ task, onUpdate, onDelete, onToggle, timeUnit }: {
         <StatusBtn status={task.status} onClick={() => onToggle(task.id)} />
       </div>
 
-      {/* Est — min mode: number input; hm mode: text input with h:m format */}
+      {/* Est */}
       {timeUnit === 'min' ? (
         <input type="number" min={0} value={task.est_mins ?? ''} placeholder="--"
           onChange={e => onUpdate(task.id, { est_mins: e.target.value ? +e.target.value : null })}
           className={timeInputCls} />
       ) : (
-        <input type="text" value={fmtTaskTime(task.est_mins, 'hm')} placeholder="--"
-          onChange={e => {
-            const v = parseTaskTime(e.target.value);
-            onUpdate(task.id, { est_mins: v });
+        <input
+          type="text"
+          value={estDraft ?? fmtTaskTime(task.est_mins, 'hm')}
+          placeholder="1h30m"
+          onFocus={() => setEstDraft(fmtTaskTime(task.est_mins, 'hm'))}
+          onChange={e => setEstDraft(e.target.value)}
+          onBlur={() => {
+            if (estDraft !== null) {
+              onUpdate(task.id, { est_mins: parseTaskTime(estDraft) });
+              setEstDraft(null);
+            }
           }}
-          className={timeInputCls} />
+          className={timeInputCls}
+        />
       )}
 
-      {/* Actual — same toggle */}
+      {/* Actual */}
       {timeUnit === 'min' ? (
         <input type="number" min={0} value={task.actual_mins ?? ''} placeholder="--"
           onChange={e => onUpdate(task.id, { actual_mins: e.target.value ? +e.target.value : null })}
           className={timeInputCls} />
       ) : (
-        <input type="text" value={fmtTaskTime(task.actual_mins, 'hm')} placeholder="--"
-          onChange={e => {
-            const v = parseTaskTime(e.target.value);
-            onUpdate(task.id, { actual_mins: v });
+        <input
+          type="text"
+          value={actualDraft ?? fmtTaskTime(task.actual_mins, 'hm')}
+          placeholder="1h30m"
+          onFocus={() => setActualDraft(fmtTaskTime(task.actual_mins, 'hm'))}
+          onChange={e => setActualDraft(e.target.value)}
+          onBlur={() => {
+            if (actualDraft !== null) {
+              onUpdate(task.id, { actual_mins: parseTaskTime(actualDraft) });
+              setActualDraft(null);
+            }
           }}
-          className={timeInputCls} />
+          className={timeInputCls}
+        />
       )}
 
       <input type="number" min={0} value={task.wrong_count || ''} placeholder="0"
