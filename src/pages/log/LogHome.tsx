@@ -434,6 +434,65 @@ export default function LogHome() {
       : { year: v.year, month: v.month + 1 });
   }
 
+  // ── Copy to Tomorrow ──
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copying' | 'done' | 'error'>('idle');
+
+  async function copyToTomorrow() {
+    if (!supabase || !log || tasks.length === 0) return;
+    setCopyStatus('copying');
+    try {
+      const tomorrowDate = offsetDate(currentDate, 1);
+
+      // 1. Get or create tomorrow's log
+      let tomorrowQuery = supabase.from('luna_daily_logs').select('*').eq('log_date', tomorrowDate);
+      if (user?.id) {
+        tomorrowQuery = tomorrowQuery.eq('user_id', user.id);
+      } else {
+        tomorrowQuery = tomorrowQuery.is('user_id', null);
+      }
+      const { data: tomorrowRows } = await tomorrowQuery.limit(1);
+      let tomorrowLog = tomorrowRows?.[0] ?? null;
+
+      if (!tomorrowLog) {
+        const insertData: Record<string, unknown> = {
+          log_date: tomorrowDate,
+          template: log.template,
+          weather: 'sunny',
+          is_public: log.is_public,
+          ...(user?.id ? { user_id: user.id } : {}),
+        };
+        const { data: created } = await supabase
+          .from('luna_daily_logs').insert(insertData).select().single();
+        tomorrowLog = created;
+      }
+      if (!tomorrowLog) throw new Error('no log');
+
+      // 2. Clear tomorrow's existing tasks
+      await supabase.from('luna_log_tasks').delete().eq('log_id', tomorrowLog.id);
+
+      // 3. Copy today's tasks — reset all progress
+      const newTasks = tasks.map(tk => ({
+        log_id: tomorrowLog!.id,
+        subject:    tk.subject,
+        task_text:  tk.task_text,
+        est_mins:   tk.est_mins,
+        sort_order: tk.sort_order,
+        status:     'none' as const,
+        wrong_count: 0,
+        actual_mins: 0,
+        completed:  false,
+      }));
+      await supabase.from('luna_log_tasks').insert(newTasks);
+
+      setCopyStatus('done');
+      setTimeout(() => setCopyStatus('idle'), 2500);
+    } catch (err) {
+      console.error('copyToTomorrow failed:', err);
+      setCopyStatus('error');
+      setTimeout(() => setCopyStatus('idle'), 2500);
+    }
+  }
+
   // CTF unlock
   const [ctfInput,   setCtfInput]   = useState('');
   const [ctfStatus,  setCtfStatus]  = useState<CtfStatus>('idle');
@@ -1197,9 +1256,29 @@ export default function LogHome() {
           </div>
 
           {/* ── Footer ── */}
-          <div className="border-t border-amber-100 bg-amber-50/30 px-3 py-1.5 flex justify-between items-center">
-            <span className="text-[10px] text-slate-400 italic">{t('log.footer')}</span>
-            <span className={`text-[9px] font-medium transition-opacity duration-300 ${
+          <div className="border-t border-amber-100 bg-amber-50/30 px-3 py-1.5 flex justify-between items-center gap-2">
+            {/* Copy to Tomorrow */}
+            {tasks.length > 0 ? (
+              <button
+                onClick={copyToTomorrow}
+                disabled={copyStatus === 'copying'}
+                className={`text-[10px] font-bold px-2.5 py-1 rounded-lg transition-all border
+                  ${copyStatus === 'done'
+                    ? 'bg-green-50 border-green-200 text-green-600'
+                    : copyStatus === 'error'
+                    ? 'bg-red-50 border-red-200 text-red-500'
+                    : 'bg-blue-50 border-blue-200 text-blue-500 hover:bg-blue-100 active:scale-95'
+                  } disabled:opacity-60`}
+              >
+                {copyStatus === 'copying' ? '⏳ Copying…'
+                 : copyStatus === 'done'  ? '✅ Copied to tomorrow!'
+                 : copyStatus === 'error' ? '❌ Failed, retry?'
+                 : '📋 Copy to Tomorrow'}
+              </button>
+            ) : (
+              <span className="text-[10px] text-slate-400 italic">{t('log.footer')}</span>
+            )}
+            <span className={`text-[9px] font-medium transition-opacity duration-300 shrink-0 ${
               syncStatus === 'idle' ? 'opacity-0' :
               syncStatus === 'saving' ? 'text-amber-400 opacity-100' :
               'text-green-500 opacity-100'}`}>
