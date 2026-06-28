@@ -1,11 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { usePersona } from './hooks/usePersona';
 import Layout from './layouts/Layout';
 import WayneLayout from './layouts/WayneLayout';
 import LogLayout from './layouts/LogLayout';
+import TodoLayout from './layouts/TodoLayout';
 import FutureLayout from './layouts/FutureLayout';
 import LogHome from './pages/log/LogHome';
 import LogAnalysis from './pages/log/LogAnalysis';
+
+// Todo section
+import TodoToday from './pages/todo/TodoToday';
+import TodoFocus from './pages/todo/TodoFocus';
+import TodoReview from './pages/todo/TodoReview';
 
 // Hub
 import HubHome from './pages/HubHome';
@@ -115,6 +121,14 @@ function AppRoutes() {
         <Route path="/" element={<LogLayout />}>
           <Route index element={<LogHome />} />
           <Route path="analysis" element={<LogAnalysis />} />
+        </Route>
+
+        {/* Todo Star routes */}
+        <Route path="/todo" element={<TodoLayout />}>
+          <Route index element={<Navigate to="today" replace />} />
+          <Route path="today" element={<TodoToday />} />
+          <Route path="focus" element={<TodoFocus />} />
+          <Route path="review" element={<TodoReview />} />
         </Route>
       </Routes>
     );
