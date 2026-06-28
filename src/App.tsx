@@ -122,9 +122,14 @@ function AppRoutes() {
           <Route index element={<LogHome />} />
           <Route path="analysis" element={<LogAnalysis />} />
         </Route>
+      </Routes>
+    );
+  }
 
-        {/* Todo Star routes */}
-        <Route path="/todo" element={<TodoLayout />}>
+  if (persona === 'todo') {
+    return (
+      <Routes>
+        <Route path="/" element={<TodoLayout />}>
           <Route index element={<Navigate to="today" replace />} />
           <Route path="today" element={<TodoToday />} />
           <Route path="focus" element={<TodoFocus />} />

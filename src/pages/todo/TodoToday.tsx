@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useTodoTasks } from '../../hooks/useTodoTasks';
+import { useTodoTasksUnified } from '../../hooks/useTodoTasksUnified';
 import { useAuth } from '../../hooks/useAuth';
 import TaskCard from '../../components/todo/TaskCard';
 import QuickAddTask from '../../components/todo/QuickAddTask';
@@ -17,7 +17,7 @@ export default function TodoToday() {
     deleteTask,
     toggleComplete,
     toggleTop3,
-  } = useTodoTasks();
+  } = useTodoTasksUnified();
 
   // Filter tasks
   const top3Tasks = useMemo(() => tasks.filter(t => t.is_top3 && t.status !== 'completed'), [tasks]);
@@ -33,29 +33,28 @@ export default function TodoToday() {
     await updateTask(id, { title });
   };
 
-  // Not logged in state
-  if (!user) {
-    return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-4">
-            Sign in to start managing your tasks
-          </h2>
-          <p className="text-slate-600 mb-6">
-            Your tasks will be synced across all your devices
+  // Anonymous mode banner (show at top if not logged in)
+  const anonymousBanner = !user && (
+    <div className="mb-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">⚠️</span>
+        <div className="flex-1">
+          <h3 className="font-semibold text-yellow-900 mb-1">
+            You're using Todo Star in anonymous mode
+          </h3>
+          <p className="text-sm text-yellow-700 mb-3">
+            Your tasks are saved locally on this device only. Sign in to sync across all your devices.
           </p>
-          <div className="flex justify-center">
-            <Link
-              to="/"
-              className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-            >
-              Back to Home
-            </Link>
-          </div>
+          <button
+            onClick={() => {/* AuthButton will handle this */}}
+            className="text-sm font-medium text-yellow-900 hover:text-yellow-700 underline"
+          >
+            Sign in to sync your data →
+          </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 
   // Loading state
   if (loading) {
@@ -83,6 +82,9 @@ export default function TodoToday() {
 
   return (
     <div className="space-y-8">
+      {/* Anonymous mode banner */}
+      {anonymousBanner}
+
       {/* Page Header */}
       <div>
         <h1 className="text-3xl font-bold text-slate-900 mb-2">Today's Plan</h1>

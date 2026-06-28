@@ -54,6 +54,15 @@ const BASE = {
     ogImage: 'https://future.bunnyuniverse.com/og-future.png',
     twitterHandle: '@bunnyuniverse',
   },
+  todo: {
+    origin: 'https://todo.bunnyuniverse.com',
+    siteName: 'Todo Star | Time Management',
+    defaultTitle: 'Todo Star - SOP-Based Task & Time Management',
+    defaultDesc:
+      'A productivity tool based on 8 Standard Operating Procedures. Manage your Top 3 priorities, use Pomodoro technique, and do daily reviews. Works offline — sign in to sync.',
+    ogImage: 'https://todo.bunnyuniverse.com/og-todo.png',
+    twitterHandle: '@bunnyuniverse',
+  },
 };
 
 export const SEOHead = ({ title, description, path = '', ogImage }: SEOProps) => {
